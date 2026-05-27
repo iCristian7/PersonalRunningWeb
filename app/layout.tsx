@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Running Plan · Cristian',
-  description: 'Detalle de entrenamientos de running (minimalista).',
+  description: 'Histórico y planes de running (minimalista).',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
 };
 

@@ -1,10 +1,11 @@
 {
   "workouts": [
     {
-      "id": "miercoles-calidad-controlada",
+      "id": "plan-2026-05-28-miercoles-calidad-controlada",
       "date": "2026-05-28",
-      "dayLabel": "Miércoles",
-      "title": "Calidad controlada",
+      "displayDate": "28/05/2026",
+      "kind": "plan",
+      "title": "Miércoles · Calidad controlada",
       "objective": "Activar calidad sin fatigar (gemelos/tibia en control)",
       "totalDistance": "7,5–8 km",
       "intensity": "Moderada controlada",
@@ -54,6 +55,1974 @@
         "plan": "Plan personalizado",
         "goal": "Galway Half Marathon",
         "eventDate": "2026-10-03"
+      }
+    },
+    {
+      "id": "2025-01-21-nd-54",
+      "date": "2025-01-21",
+      "displayDate": "21/01/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.4,
+        "paceAvg": "7'34",
+        "hrAvg": 170,
+        "cadenceAvg": 135,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-01-23-nd-248",
+      "date": "2025-01-23",
+      "displayDate": "23/01/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 2.48,
+        "paceAvg": "7'28",
+        "hrAvg": 164,
+        "cadenceAvg": 131,
+        "elevationM": 3,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-01-26-nd-562",
+      "date": "2025-01-26",
+      "displayDate": "26/01/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.62,
+        "paceAvg": "7'10",
+        "hrAvg": 179,
+        "cadenceAvg": 140,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-01-29-nd-522",
+      "date": "2025-01-29",
+      "displayDate": "29/01/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.22,
+        "paceAvg": "7'47",
+        "hrAvg": 154,
+        "cadenceAvg": 132,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-01-30-nd-496",
+      "date": "2025-01-30",
+      "displayDate": "30/01/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 4.96,
+        "paceAvg": "8'04",
+        "hrAvg": 163,
+        "cadenceAvg": 133,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-02-nd-518",
+      "date": "2025-02-02",
+      "displayDate": "02/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.18,
+        "paceAvg": "7'44",
+        "hrAvg": 163,
+        "cadenceAvg": 135,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-04-nd-648",
+      "date": "2025-02-04",
+      "displayDate": "04/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.48,
+        "paceAvg": "8'30",
+        "hrAvg": 147,
+        "cadenceAvg": 126,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-06-nd-473",
+      "date": "2025-02-06",
+      "displayDate": "06/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 4.73,
+        "paceAvg": "8'05",
+        "hrAvg": 146,
+        "cadenceAvg": 129,
+        "elevationM": 3,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-09-nd-671",
+      "date": "2025-02-09",
+      "displayDate": "09/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.71,
+        "paceAvg": "7'28",
+        "hrAvg": 160,
+        "cadenceAvg": 133,
+        "elevationM": 24,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-11-nd-705",
+      "date": "2025-02-11",
+      "displayDate": "11/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 7.05,
+        "paceAvg": "7'48",
+        "hrAvg": 159,
+        "cadenceAvg": 136,
+        "elevationM": 18,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-13-nd-504",
+      "date": "2025-02-13",
+      "displayDate": "13/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.04,
+        "paceAvg": "7'57",
+        "hrAvg": 159,
+        "cadenceAvg": 126,
+        "elevationM": 18,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-16-nd-511",
+      "date": "2025-02-16",
+      "displayDate": "16/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.11,
+        "paceAvg": "5'52",
+        "hrAvg": 170,
+        "cadenceAvg": 157,
+        "elevationM": 3,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-18-nd-595",
+      "date": "2025-02-18",
+      "displayDate": "18/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.95,
+        "paceAvg": "10'05",
+        "hrAvg": 150,
+        "cadenceAvg": 108,
+        "elevationM": 20,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-20-nd-54",
+      "date": "2025-02-20",
+      "displayDate": "20/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.4,
+        "paceAvg": "7'07",
+        "hrAvg": 171,
+        "cadenceAvg": 144,
+        "elevationM": 18,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-23-nd-815",
+      "date": "2025-02-23",
+      "displayDate": "23/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 8.15,
+        "paceAvg": "7'22",
+        "hrAvg": 168,
+        "cadenceAvg": 137,
+        "elevationM": 24,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-02-25-nd-868",
+      "date": "2025-02-25",
+      "displayDate": "25/02/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 8.68,
+        "paceAvg": "8'06",
+        "hrAvg": 159,
+        "cadenceAvg": 132,
+        "elevationM": 18,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-03-25-nd-552",
+      "date": "2025-03-25",
+      "displayDate": "25/03/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.52,
+        "paceAvg": "7'20",
+        "hrAvg": 169,
+        "cadenceAvg": 130,
+        "elevationM": 12,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-03-27-nd-701",
+      "date": "2025-03-27",
+      "displayDate": "27/03/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 7.01,
+        "paceAvg": "7'02",
+        "hrAvg": 178,
+        "cadenceAvg": 140,
+        "elevationM": 15,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-04-06-carrera-75",
+      "date": "2025-04-06",
+      "displayDate": "06/04/2025",
+      "kind": "race",
+      "title": "Carrera",
+      "metrics": {
+        "distanceKm": 7.5,
+        "paceAvg": "6'21",
+        "hrAvg": 188,
+        "cadenceAvg": 158,
+        "elevationM": null,
+        "workoutType": "Carrera",
+        "notes": "Carrera oficial"
+      }
+    },
+    {
+      "id": "2025-04-08-rodaje-456",
+      "date": "2025-04-08",
+      "displayDate": "08/04/2025",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 4.56,
+        "paceAvg": "6'33",
+        "hrAvg": 176,
+        "cadenceAvg": 158,
+        "elevationM": 21,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-04-10-progresivo-40",
+      "date": "2025-04-10",
+      "displayDate": "10/04/2025",
+      "kind": "log",
+      "title": "Progresivo",
+      "metrics": {
+        "distanceKm": 4.0,
+        "paceAvg": "6'16",
+        "hrAvg": 177,
+        "cadenceAvg": 157,
+        "elevationM": 6,
+        "workoutType": "Progresivo",
+        "notes": "Parciales: 6'23 / 6'22 / 6'08 / 5'51"
+      }
+    },
+    {
+      "id": "2025-04-13-tirada-larga-80",
+      "date": "2025-04-13",
+      "displayDate": "13/04/2025",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'26",
+        "hrAvg": 178,
+        "cadenceAvg": 158,
+        "elevationM": 21,
+        "workoutType": "Tirada larga",
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-05-19-rodaje-40",
+      "date": "2025-05-19",
+      "displayDate": "19/05/2025",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 4.0,
+        "paceAvg": "6'03",
+        "hrAvg": 181,
+        "cadenceAvg": 150,
+        "elevationM": 12,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-05-21-rodaje-50",
+      "date": "2025-05-21",
+      "displayDate": "21/05/2025",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "6'18",
+        "hrAvg": 181,
+        "cadenceAvg": 148,
+        "elevationM": 6,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-05-24-nd-80",
+      "date": "2025-05-24",
+      "displayDate": "24/05/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'24",
+        "hrAvg": 170,
+        "cadenceAvg": 151,
+        "elevationM": 18,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-05-26-nd-50",
+      "date": "2025-05-26",
+      "displayDate": "26/05/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "6'42",
+        "hrAvg": 181,
+        "cadenceAvg": 154,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-05-28-nd-60",
+      "date": "2025-05-28",
+      "displayDate": "28/05/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'23",
+        "hrAvg": 181,
+        "cadenceAvg": 156,
+        "elevationM": 15,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-05-31-nd-90",
+      "date": "2025-05-31",
+      "displayDate": "31/05/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 9.0,
+        "paceAvg": "6'20",
+        "hrAvg": 183,
+        "cadenceAvg": 160,
+        "elevationM": 15,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-06-04-nd-60",
+      "date": "2025-06-04",
+      "displayDate": "04/06/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'09",
+        "hrAvg": 177,
+        "cadenceAvg": 158,
+        "elevationM": 3,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-06-07-nd-90",
+      "date": "2025-06-07",
+      "displayDate": "07/06/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 9.0,
+        "paceAvg": "6'15",
+        "hrAvg": 180,
+        "cadenceAvg": 157,
+        "elevationM": 21,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-06-09-nd-40",
+      "date": "2025-06-09",
+      "displayDate": "09/06/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 4.0,
+        "paceAvg": "6'26",
+        "hrAvg": 177,
+        "cadenceAvg": 155,
+        "elevationM": 3,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-06-11-nd-40",
+      "date": "2025-06-11",
+      "displayDate": "11/06/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 4.0,
+        "paceAvg": "6'01",
+        "hrAvg": 181,
+        "cadenceAvg": 157,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-06-14-carrera-100",
+      "date": "2025-06-14",
+      "displayDate": "14/06/2025",
+      "kind": "race",
+      "title": "Carrera",
+      "metrics": {
+        "distanceKm": 10.0,
+        "paceAvg": "5'52",
+        "hrAvg": 183,
+        "cadenceAvg": 158,
+        "elevationM": 9,
+        "workoutType": "Carrera",
+        "notes": "Carrera oficial"
+      }
+    },
+    {
+      "id": "2025-06-23-nd-40",
+      "date": "2025-06-23",
+      "displayDate": "23/06/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 4.0,
+        "paceAvg": "6'23",
+        "hrAvg": 180,
+        "cadenceAvg": 151,
+        "elevationM": 3,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-06-25-nd-50",
+      "date": "2025-06-25",
+      "displayDate": "25/06/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "6'02",
+        "hrAvg": 189,
+        "cadenceAvg": 156,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-06-28-nd-90",
+      "date": "2025-06-28",
+      "displayDate": "28/06/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 9.0,
+        "paceAvg": "6'21",
+        "hrAvg": 180,
+        "cadenceAvg": 158,
+        "elevationM": 24,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-06-30-nd-50",
+      "date": "2025-06-30",
+      "displayDate": "30/06/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "6'30",
+        "hrAvg": 180,
+        "cadenceAvg": 156,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-07-02-nd-60",
+      "date": "2025-07-02",
+      "displayDate": "02/07/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'06",
+        "hrAvg": 178,
+        "cadenceAvg": 157,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-07-05-nd-100",
+      "date": "2025-07-05",
+      "displayDate": "05/07/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 10.0,
+        "paceAvg": "6'20",
+        "hrAvg": 175,
+        "cadenceAvg": 159,
+        "elevationM": 24,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-07-07-nd-50",
+      "date": "2025-07-07",
+      "displayDate": "07/07/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "6'18",
+        "hrAvg": 168,
+        "cadenceAvg": 158,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-07-09-nd-60",
+      "date": "2025-07-09",
+      "displayDate": "09/07/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'00",
+        "hrAvg": 180,
+        "cadenceAvg": 156,
+        "elevationM": 12,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-07-12-nd-110",
+      "date": "2025-07-12",
+      "displayDate": "12/07/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 11.0,
+        "paceAvg": "6'14",
+        "hrAvg": 177,
+        "cadenceAvg": 159,
+        "elevationM": 33,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-01-nd-50",
+      "date": "2025-09-01",
+      "displayDate": "01/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "6'17",
+        "hrAvg": 189,
+        "cadenceAvg": 149,
+        "elevationM": 15,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-03-nd-40",
+      "date": "2025-09-03",
+      "displayDate": "03/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 4.0,
+        "paceAvg": "6'42",
+        "hrAvg": 175,
+        "cadenceAvg": 148,
+        "elevationM": 3,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-06-nd-90",
+      "date": "2025-09-06",
+      "displayDate": "06/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 9.0,
+        "paceAvg": "6'33",
+        "hrAvg": 181,
+        "cadenceAvg": 149,
+        "elevationM": 27,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-08-nd-50",
+      "date": "2025-09-08",
+      "displayDate": "08/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "6'29",
+        "hrAvg": 183,
+        "cadenceAvg": 153,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-10-nd-60",
+      "date": "2025-09-10",
+      "displayDate": "10/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'29",
+        "hrAvg": 183,
+        "cadenceAvg": 157,
+        "elevationM": 3,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-13-nd-90",
+      "date": "2025-09-13",
+      "displayDate": "13/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 9.0,
+        "paceAvg": "6'36",
+        "hrAvg": 182,
+        "cadenceAvg": 156,
+        "elevationM": 24,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-15-nd-50",
+      "date": "2025-09-15",
+      "displayDate": "15/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "6'21",
+        "hrAvg": 178,
+        "cadenceAvg": 157,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-17-nd-60",
+      "date": "2025-09-17",
+      "displayDate": "17/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'16",
+        "hrAvg": 180,
+        "cadenceAvg": 158,
+        "elevationM": 6,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-20-nd-100",
+      "date": "2025-09-20",
+      "displayDate": "20/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 10.0,
+        "paceAvg": "6'29",
+        "hrAvg": 172,
+        "cadenceAvg": 161,
+        "elevationM": 24,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-22-nd-80",
+      "date": "2025-09-22",
+      "displayDate": "22/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'29",
+        "hrAvg": 167,
+        "cadenceAvg": 157,
+        "elevationM": 21,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-24-nd-90",
+      "date": "2025-09-24",
+      "displayDate": "24/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 9.0,
+        "paceAvg": "6'10",
+        "hrAvg": 170,
+        "cadenceAvg": 158,
+        "elevationM": 21,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-09-26-nd-929",
+      "date": "2025-09-26",
+      "displayDate": "26/09/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 9.29,
+        "paceAvg": "6'35",
+        "hrAvg": 169,
+        "cadenceAvg": 156,
+        "elevationM": 33,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-01-nd-60",
+      "date": "2025-10-01",
+      "displayDate": "01/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'10",
+        "hrAvg": 177,
+        "cadenceAvg": 157,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-04-nd-100",
+      "date": "2025-10-04",
+      "displayDate": "04/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 10.0,
+        "paceAvg": "6'22",
+        "hrAvg": 174,
+        "cadenceAvg": 156,
+        "elevationM": 24,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-06-nd-60",
+      "date": "2025-10-06",
+      "displayDate": "06/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'00",
+        "hrAvg": 175,
+        "cadenceAvg": 157,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-08-nd-70",
+      "date": "2025-10-08",
+      "displayDate": "08/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'04",
+        "hrAvg": 179,
+        "cadenceAvg": 158,
+        "elevationM": 12,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-12-nd-110",
+      "date": "2025-10-12",
+      "displayDate": "12/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 11.0,
+        "paceAvg": "6'10",
+        "hrAvg": 172,
+        "cadenceAvg": 152,
+        "elevationM": 37,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-14-nd-70",
+      "date": "2025-10-14",
+      "displayDate": "14/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'12",
+        "hrAvg": 178,
+        "cadenceAvg": 156,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-16-nd-573",
+      "date": "2025-10-16",
+      "displayDate": "16/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.73,
+        "paceAvg": "6'06",
+        "hrAvg": 176,
+        "cadenceAvg": 150,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-19-carrera-50",
+      "date": "2025-10-19",
+      "displayDate": "19/10/2025",
+      "kind": "race",
+      "title": "Carrera",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "5'10",
+        "hrAvg": null,
+        "cadenceAvg": 159,
+        "elevationM": 9,
+        "workoutType": "Carrera",
+        "notes": "Carrera oficial"
+      }
+    },
+    {
+      "id": "2025-10-21-nd-50",
+      "date": "2025-10-21",
+      "displayDate": "21/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "6'13",
+        "hrAvg": 173,
+        "cadenceAvg": 161,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-23-nd-60",
+      "date": "2025-10-23",
+      "displayDate": "23/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'12",
+        "hrAvg": 181,
+        "cadenceAvg": 157,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-28-nd-70",
+      "date": "2025-10-28",
+      "displayDate": "28/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'06",
+        "hrAvg": 180,
+        "cadenceAvg": 158,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-10-30-nd-70",
+      "date": "2025-10-30",
+      "displayDate": "30/10/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "5'57",
+        "hrAvg": 175,
+        "cadenceAvg": 158,
+        "elevationM": 33,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-11-02-nd-110",
+      "date": "2025-11-02",
+      "displayDate": "02/11/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 11.0,
+        "paceAvg": "6'04",
+        "hrAvg": 181,
+        "cadenceAvg": 160,
+        "elevationM": 33,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-11-04-nd-60",
+      "date": "2025-11-04",
+      "displayDate": "04/11/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'09",
+        "hrAvg": 178,
+        "cadenceAvg": 159,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2025-11-11-nd-80",
+      "date": "2025-11-11",
+      "displayDate": "11/11/2025",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'12",
+        "hrAvg": 181,
+        "cadenceAvg": 158,
+        "elevationM": 15,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-01-15-nd-30",
+      "date": "2026-01-15",
+      "displayDate": "15/01/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 3.0,
+        "paceAvg": "6'53",
+        "hrAvg": 181,
+        "cadenceAvg": 151,
+        "elevationM": 9,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-01-18-nd-40",
+      "date": "2026-01-18",
+      "displayDate": "18/01/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 4.0,
+        "paceAvg": "6'52",
+        "hrAvg": 182,
+        "cadenceAvg": 152,
+        "elevationM": 24,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-01-20-nd-50",
+      "date": "2026-01-20",
+      "displayDate": "20/01/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "6'36",
+        "hrAvg": 186,
+        "cadenceAvg": 153,
+        "elevationM": 21,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-01-22-nd-60",
+      "date": "2026-01-22",
+      "displayDate": "22/01/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'19",
+        "hrAvg": 182,
+        "cadenceAvg": 155,
+        "elevationM": 19,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-01-25-nd-70",
+      "date": "2026-01-25",
+      "displayDate": "25/01/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'25",
+        "hrAvg": 184,
+        "cadenceAvg": 158,
+        "elevationM": 81,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-01-27-nd-60",
+      "date": "2026-01-27",
+      "displayDate": "27/01/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'30",
+        "hrAvg": 185,
+        "cadenceAvg": 159,
+        "elevationM": 40,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-02-nd-60",
+      "date": "2026-02-02",
+      "displayDate": "02/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'22",
+        "hrAvg": 177,
+        "cadenceAvg": 161,
+        "elevationM": 67,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-04-nd-65",
+      "date": "2026-02-04",
+      "displayDate": "04/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.5,
+        "paceAvg": "6'05",
+        "hrAvg": 159,
+        "cadenceAvg": 159,
+        "elevationM": 21,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-07-nd-80",
+      "date": "2026-02-07",
+      "displayDate": "07/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'02",
+        "hrAvg": 175,
+        "cadenceAvg": 159,
+        "elevationM": 17,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-09-nd-60",
+      "date": "2026-02-09",
+      "displayDate": "09/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "6'06",
+        "hrAvg": 166,
+        "cadenceAvg": 160,
+        "elevationM": 13,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-11-nd-65",
+      "date": "2026-02-11",
+      "displayDate": "11/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 6.5,
+        "paceAvg": "5'53",
+        "hrAvg": 175,
+        "cadenceAvg": 159,
+        "elevationM": 14,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-14-nd-85",
+      "date": "2026-02-14",
+      "displayDate": "14/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 8.5,
+        "paceAvg": "5'54",
+        "hrAvg": 159,
+        "cadenceAvg": 160,
+        "elevationM": 70,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-16-nd-70",
+      "date": "2026-02-16",
+      "displayDate": "16/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'04",
+        "hrAvg": 163,
+        "cadenceAvg": 160,
+        "elevationM": 25,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-18-nd-50",
+      "date": "2026-02-18",
+      "displayDate": "18/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 5.0,
+        "paceAvg": "5'48",
+        "hrAvg": 165,
+        "cadenceAvg": 158,
+        "elevationM": 24,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-21-nd-108",
+      "date": "2026-02-21",
+      "displayDate": "21/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 10.8,
+        "paceAvg": "5'58",
+        "hrAvg": 180,
+        "cadenceAvg": 162,
+        "elevationM": 47,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-23-nd-704",
+      "date": "2026-02-23",
+      "displayDate": "23/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 7.04,
+        "paceAvg": "7'10",
+        "hrAvg": 163,
+        "cadenceAvg": 159,
+        "elevationM": 41,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-25-nd-70",
+      "date": "2026-02-25",
+      "displayDate": "25/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'18",
+        "hrAvg": 172,
+        "cadenceAvg": 160,
+        "elevationM": 11,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-02-28-nd-110",
+      "date": "2026-02-28",
+      "displayDate": "28/02/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 11.0,
+        "paceAvg": "5'55",
+        "hrAvg": 183,
+        "cadenceAvg": 164,
+        "elevationM": 28,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-03-02-rodaje-70",
+      "date": "2026-03-02",
+      "displayDate": "02/03/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'55",
+        "hrAvg": 160,
+        "cadenceAvg": 161,
+        "elevationM": 12,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-03-04-series-891",
+      "date": "2026-03-04",
+      "displayDate": "04/03/2026",
+      "kind": "log",
+      "title": "Series",
+      "metrics": {
+        "distanceKm": 8.91,
+        "paceAvg": "6'02",
+        "hrAvg": 174,
+        "cadenceAvg": 159,
+        "elevationM": 48,
+        "workoutType": "Series",
+        "notes": "3x1,5km: 5'39 / 5'37 / 5'33"
+      }
+    },
+    {
+      "id": "2026-03-07-tirada-larga-110",
+      "date": "2026-03-07",
+      "displayDate": "07/03/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 11.0,
+        "paceAvg": "5'56",
+        "hrAvg": 177,
+        "cadenceAvg": 162,
+        "elevationM": 32,
+        "workoutType": "Tirada larga",
+        "notes": "Buen rendimiento"
+      }
+    },
+    {
+      "id": "2026-03-09-rodaje-70",
+      "date": "2026-03-09",
+      "displayDate": "09/03/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'39",
+        "hrAvg": 167,
+        "cadenceAvg": 162,
+        "elevationM": 34,
+        "workoutType": "Rodaje",
+        "notes": "Ruta con pendientes"
+      }
+    },
+    {
+      "id": "2026-03-11-series-859",
+      "date": "2026-03-11",
+      "displayDate": "11/03/2026",
+      "kind": "log",
+      "title": "Series",
+      "metrics": {
+        "distanceKm": 8.59,
+        "paceAvg": "6'01",
+        "hrAvg": 175,
+        "cadenceAvg": 163,
+        "elevationM": 70,
+        "workoutType": "Series",
+        "notes": "4x1km: 5'28 / 5'30 / 5'29 / 5'34"
+      }
+    },
+    {
+      "id": "2026-03-14-quedadagrupo-100",
+      "date": "2026-03-14",
+      "displayDate": "14/03/2026",
+      "kind": "log",
+      "title": "Quedada/grupo",
+      "metrics": {
+        "distanceKm": 10.0,
+        "paceAvg": "5'52",
+        "hrAvg": 177,
+        "cadenceAvg": 163,
+        "elevationM": 46,
+        "workoutType": "Quedada/grupo",
+        "notes": "Buenas sensaciones"
+      }
+    },
+    {
+      "id": "2026-03-16-rodaje-70",
+      "date": "2026-03-16",
+      "displayDate": "16/03/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'33",
+        "hrAvg": 164,
+        "cadenceAvg": 165,
+        "elevationM": 15,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-03-18-series-958",
+      "date": "2026-03-18",
+      "displayDate": "18/03/2026",
+      "kind": "log",
+      "title": "Series",
+      "metrics": {
+        "distanceKm": 9.58,
+        "paceAvg": "6'05",
+        "hrAvg": 167,
+        "cadenceAvg": 162,
+        "elevationM": 5,
+        "workoutType": "Series",
+        "notes": "5 series: 5'26 / 5'27 / 5'24 / 5'29 / 5'33"
+      }
+    },
+    {
+      "id": "2026-03-21-recuperacion-40",
+      "date": "2026-03-21",
+      "displayDate": "21/03/2026",
+      "kind": "log",
+      "title": "Recuperación",
+      "metrics": {
+        "distanceKm": 4.0,
+        "paceAvg": "7'56",
+        "hrAvg": 148,
+        "cadenceAvg": 148,
+        "elevationM": 13,
+        "workoutType": "Recuperación",
+        "notes": "Tras pádel"
+      }
+    },
+    {
+      "id": "2026-03-23-rodaje-80",
+      "date": "2026-03-23",
+      "displayDate": "23/03/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'13",
+        "hrAvg": 167,
+        "cadenceAvg": 161,
+        "elevationM": 77,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-03-25-tempo-85",
+      "date": "2026-03-25",
+      "displayDate": "25/03/2026",
+      "kind": "log",
+      "title": "Tempo",
+      "metrics": {
+        "distanceKm": 8.5,
+        "paceAvg": "5'51",
+        "hrAvg": 172,
+        "cadenceAvg": 161,
+        "elevationM": 7,
+        "workoutType": "Tempo",
+        "notes": "Bloque principal 5km a 5'32"
+      }
+    },
+    {
+      "id": "2026-03-28-tirada-larga-110",
+      "date": "2026-03-28",
+      "displayDate": "28/03/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 11.0,
+        "paceAvg": "5'48",
+        "hrAvg": 173,
+        "cadenceAvg": 163,
+        "elevationM": 89,
+        "workoutType": "Tirada larga",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-03-30-rodaje-80",
+      "date": "2026-03-30",
+      "displayDate": "30/03/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'26",
+        "hrAvg": 164,
+        "cadenceAvg": 161,
+        "elevationM": 10,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-04-01-series-845",
+      "date": "2026-04-01",
+      "displayDate": "01/04/2026",
+      "kind": "log",
+      "title": "Series",
+      "metrics": {
+        "distanceKm": 8.45,
+        "paceAvg": "5'55",
+        "hrAvg": 174,
+        "cadenceAvg": 161,
+        "elevationM": 31,
+        "workoutType": "Series",
+        "notes": "5'18 / 5'28 / 5'18 / 5'27"
+      }
+    },
+    {
+      "id": "2026-04-04-rodaje-fuerte-975",
+      "date": "2026-04-04",
+      "displayDate": "04/04/2026",
+      "kind": "log",
+      "title": "Rodaje fuerte",
+      "metrics": {
+        "distanceKm": 9.75,
+        "paceAvg": "5'48",
+        "hrAvg": 174,
+        "cadenceAvg": 158,
+        "elevationM": 178,
+        "workoutType": "Rodaje fuerte",
+        "notes": "Muy buenas piernas"
+      }
+    },
+    {
+      "id": "2026-04-06-rodaje-60",
+      "date": "2026-04-06",
+      "displayDate": "06/04/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 6.0,
+        "paceAvg": "5'45",
+        "hrAvg": 176,
+        "cadenceAvg": 160,
+        "elevationM": 24,
+        "workoutType": "Rodaje",
+        "notes": "Antes de viaje"
+      }
+    },
+    {
+      "id": "2026-04-11-entreno-pre-carrera-36",
+      "date": "2026-04-11",
+      "displayDate": "11/04/2026",
+      "kind": "race",
+      "title": "Entreno pre carrera",
+      "metrics": {
+        "distanceKm": 3.6,
+        "paceAvg": "6'30",
+        "hrAvg": 165,
+        "cadenceAvg": 153,
+        "elevationM": 52,
+        "workoutType": "Entreno pre carrera",
+        "notes": "Entreno pre carrera"
+      }
+    },
+    {
+      "id": "2026-04-12-carrera-10k-100",
+      "date": "2026-04-12",
+      "displayDate": "12/04/2026",
+      "kind": "race",
+      "title": "Carrera 10K",
+      "metrics": {
+        "distanceKm": 10.0,
+        "paceAvg": "5'09",
+        "hrAvg": null,
+        "cadenceAvg": 167,
+        "elevationM": 82,
+        "workoutType": "Carrera 10K",
+        "notes": "Tiempo 51'38"
+      }
+    },
+    {
+      "id": "2026-04-15-rodaje-70",
+      "date": "2026-04-15",
+      "displayDate": "15/04/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'10",
+        "hrAvg": 168,
+        "cadenceAvg": 161,
+        "elevationM": 32,
+        "workoutType": "Rodaje",
+        "notes": "Inicio preparación media"
+      }
+    },
+    {
+      "id": "2026-04-18-rodaje-80",
+      "date": "2026-04-18",
+      "displayDate": "18/04/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'08",
+        "hrAvg": 168,
+        "cadenceAvg": 161,
+        "elevationM": 38,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-04-20-rodaje-70",
+      "date": "2026-04-20",
+      "displayDate": "20/04/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 7.0,
+        "paceAvg": "6'11",
+        "hrAvg": 166,
+        "cadenceAvg": 159,
+        "elevationM": 24,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-04-22-series-75",
+      "date": "2026-04-22",
+      "displayDate": "22/04/2026",
+      "kind": "log",
+      "title": "Series",
+      "metrics": {
+        "distanceKm": 7.5,
+        "paceAvg": "6'26",
+        "hrAvg": 165,
+        "cadenceAvg": 162,
+        "elevationM": 36,
+        "workoutType": "Series",
+        "notes": "5'42 / 5'34 / 5'44 / 5'52"
+      }
+    },
+    {
+      "id": "2026-04-25-tirada-larga-90",
+      "date": "2026-04-25",
+      "displayDate": "25/04/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 9.0,
+        "paceAvg": "6'35",
+        "hrAvg": 167,
+        "cadenceAvg": 159,
+        "elevationM": 51,
+        "workoutType": "Tirada larga",
+        "notes": "FC difícil de controlar"
+      }
+    },
+    {
+      "id": "2026-04-27-rodaje-80",
+      "date": "2026-04-27",
+      "displayDate": "27/04/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'32",
+        "hrAvg": 168,
+        "cadenceAvg": 159,
+        "elevationM": 43,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-04-29-series-733",
+      "date": "2026-04-29",
+      "displayDate": "29/04/2026",
+      "kind": "log",
+      "title": "Series",
+      "metrics": {
+        "distanceKm": 7.33,
+        "paceAvg": "6'18",
+        "hrAvg": 168,
+        "cadenceAvg": 161,
+        "elevationM": 33,
+        "workoutType": "Series",
+        "notes": "5'30 / 5'36 / 5'47 / 5'42"
+      }
+    },
+    {
+      "id": "2026-05-02-tirada-larga-100",
+      "date": "2026-05-02",
+      "displayDate": "02/05/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 10.0,
+        "paceAvg": "6'41",
+        "hrAvg": 163,
+        "cadenceAvg": 159,
+        "elevationM": 71,
+        "workoutType": "Tirada larga",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-05-04-rodaje-80",
+      "date": "2026-05-04",
+      "displayDate": "04/05/2026",
+      "kind": "log",
+      "title": "Rodaje",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'27",
+        "hrAvg": 163,
+        "cadenceAvg": 163,
+        "elevationM": 42,
+        "workoutType": "Rodaje",
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-05-06-series-733",
+      "date": "2026-05-06",
+      "displayDate": "06/05/2026",
+      "kind": "log",
+      "title": "Series",
+      "metrics": {
+        "distanceKm": 7.33,
+        "paceAvg": "6'25",
+        "hrAvg": 160,
+        "cadenceAvg": 158,
+        "elevationM": 29,
+        "workoutType": "Series",
+        "notes": "5'33 / 5'47 / 5'45 / 5'36"
+      }
+    },
+    {
+      "id": "2026-05-09-tirada-larga-110",
+      "date": "2026-05-09",
+      "displayDate": "09/05/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 11.0,
+        "paceAvg": "6'25",
+        "hrAvg": 177,
+        "cadenceAvg": 164,
+        "elevationM": 28,
+        "workoutType": "Tirada larga",
+        "notes": "Después de comida pesada + Revolution"
+      }
+    },
+    {
+      "id": "2026-05-11-nd-80",
+      "date": "2026-05-11",
+      "displayDate": "11/05/2026",
+      "kind": "log",
+      "title": "Entrenamiento",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'25",
+        "hrAvg": 161,
+        "cadenceAvg": 161,
+        "elevationM": 29,
+        "workoutType": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "2026-05-13-series-808",
+      "date": "2026-05-13",
+      "displayDate": "13/05/2026",
+      "kind": "log",
+      "title": "Series",
+      "metrics": {
+        "distanceKm": 8.08,
+        "paceAvg": "6'18",
+        "hrAvg": 168,
+        "cadenceAvg": 161,
+        "elevationM": 30,
+        "workoutType": "Series",
+        "notes": "5'38 / 5'54 / 5'47 / 5'40 / 5'38"
+      }
+    },
+    {
+      "id": "2026-05-16-tirada-larga-120",
+      "date": "2026-05-16",
+      "displayDate": "16/05/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 12.0,
+        "paceAvg": "6'41",
+        "hrAvg": 170,
+        "cadenceAvg": 163,
+        "elevationM": 48,
+        "workoutType": "Tirada larga",
+        "notes": "Piernas muy pesadas"
+      }
+    },
+    {
+      "id": "2026-05-18-recuperacion-75",
+      "date": "2026-05-18",
+      "displayDate": "18/05/2026",
+      "kind": "log",
+      "title": "Recuperación",
+      "metrics": {
+        "distanceKm": 7.5,
+        "paceAvg": "6'48",
+        "hrAvg": 166,
+        "cadenceAvg": 161,
+        "elevationM": 30,
+        "workoutType": "Recuperación",
+        "notes": "Molestias tibia/gemelos"
+      }
+    },
+    {
+      "id": "2026-05-20-recuperacion-65",
+      "date": "2026-05-20",
+      "displayDate": "20/05/2026",
+      "kind": "log",
+      "title": "Recuperación",
+      "metrics": {
+        "distanceKm": 6.5,
+        "paceAvg": "6'49",
+        "hrAvg": 159,
+        "cadenceAvg": 162,
+        "elevationM": 15,
+        "workoutType": "Recuperación",
+        "notes": "Molestias leves continuadas"
+      }
+    },
+    {
+      "id": "2026-05-23-tirada-larga-100",
+      "date": "2026-05-23",
+      "displayDate": "23/05/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 10.0,
+        "paceAvg": "6'35",
+        "hrAvg": 170,
+        "cadenceAvg": 163,
+        "elevationM": 30,
+        "workoutType": "Tirada larga",
+        "notes": "Mucho mejores piernas"
+      }
+    },
+    {
+      "id": "2026-05-25-rodaje-aerobico-controlado-80",
+      "date": "2026-05-25",
+      "displayDate": "25/05/2026",
+      "kind": "log",
+      "title": "Rodaje aeróbico controlado",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'19",
+        "hrAvg": 168,
+        "cadenceAvg": 160,
+        "elevationM": 24,
+        "workoutType": "Rodaje aeróbico controlado",
+        "notes": "Piernas poco cargadas, molestia leve"
       }
     }
   ]

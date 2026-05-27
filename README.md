@@ -1,29 +1,14 @@
-# Running Plan Web (minimalista)
+# Running Plan Web (v4)
 
-Web minimalista para consultar entrenamientos desde cualquier sitio (móvil) y desplegar en Vercel.
+Actualizada con el histórico definitivo exportado desde Samsung Health.
 
-## Novedad v2
-- Listado completo de entrenamientos
-- Buscador por fecha (input date)
-- Texto libre de búsqueda
-- El último entreno aparece destacado arriba
-
-## Requisitos
-- Node.js 18+ (recomendado 20)
+- Entrenamientos importados: 123
+- Incluye también: 1 plan (Miércoles · Calidad controlada)
 
 ## Desarrollo
-```bash
 npm install
 npm run dev
-```
 
-## Cómo actualizar entrenamientos
-1. Edita `data/workouts.json`
-2. Añade una nueva entrada en el array `workouts`
-3. Haz commit y push a GitHub (Vercel redeploy automático)
+## Deploy
+Vercel (Next.js)
 
-## Endpoints
-- `GET /api/workouts` devuelve el JSON completo.
-
-## Tip
-Guarda la web como acceso directo en el móvil (Añadir a pantalla de inicio).

@@ -1,7 +1,3 @@
 import data from '@/data/workouts.json';
-
 export const dynamic = 'force-static';
-
-export async function GET() {
-  return Response.json(data);
-}
+export async function GET() { return Response.json(data); }
