@@ -1,0 +1,60 @@
+{
+  "workouts": [
+    {
+      "id": "miercoles-calidad-controlada",
+      "date": "2026-05-28",
+      "dayLabel": "Miércoles",
+      "title": "Calidad controlada",
+      "objective": "Activar calidad sin fatigar (gemelos/tibia en control)",
+      "totalDistance": "7,5–8 km",
+      "intensity": "Moderada controlada",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'30–6'45/km (muy cómodo)",
+            "Sensación: respiración fácil; piernas se sueltan progresivo",
+            "Si la molestia aumenta, baja ritmo y acorta"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "orange",
+          "items": [
+            "3 × 1 km a 5'45–5'50/km (controlado)",
+            "Recuperación: 2' trote muy suave (6'45–7'15/km)",
+            "Regla: acabar pensando “podría hacer 1 más”"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'30–7'00/km",
+            "Bajar pulsaciones y soltar musculatura"
+          ]
+        }
+      ],
+      "rules": [
+        "Si dudas, ve más lento (prioridad: salud y consistencia).",
+        "No bajar de 5'45/km en las repeticiones; hoy es control, no velocidad.",
+        "Para las series si aparece dolor tibial o gemelo se carga de forma anormal.",
+        "Acaba con sensación de energía: “podría hacer una más”."
+      ],
+      "post": {
+        "title": "Después del entreno (5–10 min)",
+        "items": [
+          "Estirar suave gemelos/sóleo + glúteo",
+          "Si hay carga: hielo 10'",
+          "Reporta: km, ritmo, FC, cadencia, desnivel y sensaciones"
+        ]
+      },
+      "meta": {
+        "plan": "Plan personalizado",
+        "goal": "Galway Half Marathon",
+        "eventDate": "2026-10-03"
+      }
+    }
+  ]
+}
