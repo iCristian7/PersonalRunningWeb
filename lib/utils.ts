@@ -46,6 +46,5 @@ export function sortByDateDesc(a: Workout, b: Workout) {
   const bv = isValidISODate(b.date) ? b.date! : '';
   if (av && bv) return av < bv ? 1 : -1;
   if (av && !bv) return -1;
-  if (!av && bv) return 1;
-  return 0;
+  return bv ? 1 : 0;
 }

@@ -1,14 +1,14 @@
-# Running Plan Web (v4)
+# Running Plan Web v5
 
-Actualizada con el histórico definitivo exportado desde Samsung Health.
+Entrenamientos: 123 + 1 plan
 
-- Entrenamientos importados: 123
-- Incluye también: 1 plan (Miércoles · Calidad controlada)
+## Cambios v5
+- Scroll infinito (carga de 15 en 15)
+- Cards clickables (sin botón)
+- CSS restaurado y mejorado
 
-## Desarrollo
-npm install
-npm run dev
+## Dev
+npm install && npm run dev
 
 ## Deploy
 Vercel (Next.js)
-
