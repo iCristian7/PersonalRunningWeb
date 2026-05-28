@@ -173,3 +173,45 @@ select.input option { background: #111827; color: var(--text); }
   .toolbar { gap: 8px; }
   .input { padding: 9px 10px; font-size: 13px; }
 }
+.seg-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 6px 0 14px;
+}
+.seg-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(17,24,39,.55);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color .2s, background .2s, transform .15s;
+}
+.seg-btn:hover {
+  border-color: var(--border2);
+  background: rgba(22,32,52,.8);
+}
+.seg-btn.active {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(96,165,250,.12);
+}
+.seg-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(34,48,72,.8);
+  background: rgba(0,0,0,.2);
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 12px;
+}
