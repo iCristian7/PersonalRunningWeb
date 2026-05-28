@@ -2,8 +2,8 @@
   "workouts": [
     {
       "id": "plan-2026-05-28-miercoles-calidad-controlada",
-      "date": "2026-05-27",
-      "displayDate": "27/05/2026",
+      "date": "2026-05-28",
+      "displayDate": "28/05/2026",
       "kind": "plan",
       "title": "Miércoles · Calidad controlada",
       "objective": "Activar calidad sin fatigar (gemelos/tibia en control)",
@@ -14,18 +14,18 @@
           "name": "1) Calentamiento",
           "tag": "blue",
           "items": [
-            "2 km a 6'30–6'45/km (muy cómodo)",
-            "Sensación: respiración fácil; piernas se sueltan progresivo",
-            "Si la molestia aumenta, baja ritmo y acorta"
+            "2 km a 6'30–6'45/km",
+            "Sensación: respiración fácil",
+            "Si la molestia aumenta, baja ritmo"
           ]
         },
         {
           "name": "2) Bloque principal",
           "tag": "orange",
           "items": [
-            "3 × 1 km a 5'45–5'50/km (controlado)",
-            "Recuperación: 2' trote muy suave (6'45–7'15/km)",
-            "Regla: acabar pensando “podría hacer 1 más”"
+            "3 × 1 km a 5'45–5'50/km",
+            "Recuperación: 2' trote suave",
+            "Acabar pensando: podría hacer 1 más"
           ]
         },
         {
@@ -38,23 +38,68 @@
         }
       ],
       "rules": [
-        "Si dudas, ve más lento (prioridad: salud y consistencia).",
-        "No bajar de 5'45/km en las repeticiones; hoy es control, no velocidad.",
-        "Para las series si aparece dolor tibial o gemelo se carga de forma anormal.",
-        "Acaba con sensación de energía: “podría hacer una más”."
+        "Si dudas, ve más lento.",
+        "No bajar de 5'45/km.",
+        "Parar si dolor tibial/gemelo anormal.",
+        "Acabar con energía."
       ],
       "post": {
-        "title": "Después del entreno (5–10 min)",
+        "title": "Post-entreno (5–10 min)",
         "items": [
-          "Estirar suave gemelos/sóleo + glúteo",
-          "Si hay carga: hielo 10'",
-          "Reporta: km, ritmo, FC, cadencia, desnivel y sensaciones"
+          "Estirar gemelos/sóleo",
+          "Si carga: hielo 10'",
+          "Reportar sensaciones"
         ]
-      },
-      "meta": {
-        "plan": "Plan personalizado",
-        "goal": "Galway Half Marathon",
-        "eventDate": "2026-10-03"
+      }
+    },
+    {
+      "id": "plan-2026-05-30-tirada-larga-controlada",
+      "date": "2026-05-30",
+      "displayDate": "30/05/2026",
+      "kind": "plan",
+      "title": "Tirada larga progresiva",
+      "objective": "Construir resistencia sin agravar molestias",
+      "totalDistance": "10–11 km",
+      "intensity": "Aeróbico controlado",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'45–7'00/km",
+            "Evaluar tibia y gemelos"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "6–7 km a 6'20–6'30/km",
+            "Ritmo constante, sin forzar"
+          ]
+        },
+        {
+          "name": "3) Progresivo final",
+          "tag": "orange",
+          "items": [
+            "2 km: 6'15 → 6'00",
+            "Solo si te sientes bien"
+          ]
+        }
+      ],
+      "rules": [
+        "Prioridad: control y continuidad",
+        "Si hay dolor, reduce distancia",
+        "No convertir en calidad",
+        "Terminar con energía"
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar gemelos/tibia",
+          "Hielo si hay molestias",
+          "Reportar sensaciones"
+        ]
       }
     },
     {
@@ -2026,72 +2071,20 @@
       }
     },
     {
-  "id": "2026-05-27-calidad-controlada-792",
-  "date": "2026-05-27",
-  "displayDate": "27/05/2026",
-  "kind": "log",
-  "title": "Calidad controlada",
-  "metrics": {
-    "distanceKm": 7.92,
-    "paceAvg": "6'29",
-    "hrAvg": 167,
-    "cadenceAvg": 159,
-    "elevationM": 26,
-    "workoutType": "Calidad controlada",
-    "notes": "Dolor leve en tibia al inicio, mejora durante series. Piernas algo cargadas al final. Series: 5'49 / 5'43 / 5'43"
-  }
-},
-{
-  "id": "2026-05-30-tirada-larga-controlada",
-  "date": "2026-05-30",
-  "displayDate": "30/05/2026",
-  "kind": "plan",
-  "title": "Tirada larga progresiva",
-  "objective": "Construir resistencia sin agravar molestias",
-  "totalDistance": "10–11 km",
-  "intensity": "Aeróbico controlado",
-  "blocks": [
-    {
-      "name": "1) Calentamiento",
-      "tag": "blue",
-      "items": [
-        "2 km a 6'45–7'00/km",
-        "Sensación cómoda",
-        "Evaluar tibia y gemelos"
-      ]
-    },
-    {
-      "name": "2) Bloque principal",
-      "tag": "green",
-      "items": [
-        "6–7 km a 6'20–6'30/km",
-        "Ritmo constante",
-        "Sin forzar"
-      ]
-    },
-    {
-      "name": "3) Progresivo final",
-      "tag": "orange",
-      "items": [
-        "2 km progresivo: 6'15 → 6'00",
-        "Solo si te sientes bien"
-      ]
+      "id": "2026-05-27-calidad-controlada-792",
+      "date": "2026-05-27",
+      "displayDate": "27/05/2026",
+      "kind": "log",
+      "title": "Calidad controlada",
+      "metrics": {
+        "distanceKm": 7.92,
+        "paceAvg": "6'29",
+        "hrAvg": 167,
+        "cadenceAvg": 159,
+        "elevationM": 26,
+        "workoutType": "Calidad controlada",
+        "notes": "Dolor leve tibia al inicio, mejora en series. Series: 5'49 / 5'43 / 5'43"
+      }
     }
-  ],
-  "rules": [
-    "Prioridad absoluta: control y continuidad",
-    "Si hay dolor, reduce distancia",
-    "No convertir en entreno de calidad",
-    "Debes terminar con sensación de energía"
-  ],
-  "post": {
-    "title": "Después del entreno",
-    "items": [
-      "Estirar suave gemelos/tibia",
-      "Hielo si hay molestias",
-      "Reportar sensaciones"
-    ]
-  }
-}
   ]
 }

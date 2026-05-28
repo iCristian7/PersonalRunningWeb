@@ -1,0 +1,95 @@
+{
+  "name": "Cristian Pérez Segura",
+  "weightKg": 86,
+  "heightCm": 183,
+  "device": "Samsung Galaxy Watch 7",
+  "shoes": [
+    {
+      "name": "Nike Pegasus",
+      "role": "Principal"
+    },
+    {
+      "name": "Nike Revolution 5",
+      "role": "Ocasional"
+    }
+  ],
+  "terrain": "Asfalto urbano",
+  "trainingDays": [
+    "Lunes",
+    "Miércoles",
+    "Sábado"
+  ],
+  "strengthDays": [
+    "Martes",
+    "Jueves"
+  ],
+  "fcMax": 189,
+  "fcZones": [
+    {
+      "zone": "Z1",
+      "label": "Recuperación",
+      "min": 0,
+      "max": 150
+    },
+    {
+      "zone": "Z2",
+      "label": "Aeróbico suave",
+      "min": 150,
+      "max": 165
+    },
+    {
+      "zone": "Z3",
+      "label": "Aeróbico vivo",
+      "min": 165,
+      "max": 175
+    },
+    {
+      "zone": "Z4",
+      "label": "Umbral / Series",
+      "min": 175,
+      "max": 183
+    },
+    {
+      "zone": "Z5",
+      "label": "Máximo",
+      "min": 183,
+      "max": 200
+    }
+  ],
+  "pbs": [
+    {
+      "distance": "5 km",
+      "time": "25:50",
+      "pace": "5'10",
+      "date": "19/10/2025",
+      "context": "Carrera"
+    },
+    {
+      "distance": "7,5 km",
+      "time": "47:37",
+      "pace": "6'21",
+      "date": "06/04/2025",
+      "context": "Carrera"
+    },
+    {
+      "distance": "10 km",
+      "time": "51:38",
+      "pace": "5'09",
+      "date": "12/04/2026",
+      "context": "Carrera"
+    },
+    {
+      "distance": "12 km",
+      "time": "~80:12",
+      "pace": "6'41",
+      "date": "16/05/2026",
+      "context": "Tirada larga"
+    }
+  ],
+  "goal": {
+    "event": "Media Maratón de Galway",
+    "distance": "21,1 km",
+    "date": "03/10/2026"
+  },
+  "longTermGoal": "Maratón completa"
+}

@@ -215,3 +215,79 @@ select.input option { background: #111827; color: var(--text); }
   font-weight: 800;
   font-size: 12px;
 }
+
+/* ══════════════════════════════════════════════════════
+   PROFILE SECTION CSS  (v7)
+   ══════════════════════════════════════════════════════ */
+
+/* ── Segmented tabs ───────────────────────────────── */
+.seg-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 14px;}
+.seg-btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;border:1px solid var(--border);background:rgba(17,24,39,.55);color:var(--text);font-weight:700;font-size:13px;cursor:pointer;transition:border-color .2s, background .2s;}
+.seg-btn:hover{border-color:var(--border2);background:rgba(22,32,52,.8)}
+.seg-btn.active{border-color:var(--brand);box-shadow:0 0 0 3px rgba(96,165,250,.12)}
+.seg-count{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:20px;padding:0 8px;border-radius:999px;border:1px solid rgba(34,48,72,.8);background:rgba(0,0,0,.2);color:var(--muted);font-weight:800;font-size:12px;}
+
+/* ── Profile layout ───────────────────────────────── */
+.pf{display:flex;flex-direction:column;gap:16px}
+.pf-section{display:flex;flex-direction:column;gap:8px}
+.pf-title{font-size:18px;margin:0}
+
+/* ── Info grid ─────────────────────────────────────── */
+.pf-info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;font-size:14px;line-height:1.6}
+
+/* ── Goal card ─────────────────────────────────────── */
+.pf-goal{display:flex;flex-direction:column;gap:10px}
+.pf-goal-event{font-size:20px;font-weight:700;color:var(--brand);margin:4px 0}
+.pf-goal-long{font-size:13px}
+
+/* ── Stats grid ────────────────────────────────────── */
+.pf-stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.pf-stat{border:1px solid var(--border);border-radius:14px;padding:14px;text-align:center;background:rgba(17,24,39,.5)}
+.pf-stat-val{font-size:26px;font-weight:800;line-height:1.2}
+.pf-stat-lbl{font-size:12px;color:var(--muted);margin-top:4px}
+.pf-stat-sub{font-size:11px;color:var(--muted)}
+
+/* ── PBs ───────────────────────────────────────────── */
+.pf-pbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.pf-pb{border:1px solid var(--border);border-radius:14px;padding:14px;background:rgba(17,24,39,.4)}
+.pf-pb-dist{font-size:13px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.pf-pb-time{font-size:22px;font-weight:800;color:var(--ok);margin:4px 0 2px}
+.pf-pb-pace{font-size:13px;color:var(--brand)}
+
+/* ── Bar chart ─────────────────────────────────────── */
+.pf-bars{display:flex;align-items:flex-end;gap:4px;height:200px;padding-top:24px;overflow-x:auto}
+.pf-bar-col{flex:1;min-width:32px;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%}
+.pf-bar-track{flex:1;width:100%;display:flex;align-items:flex-end;justify-content:center}
+.pf-bar-fill{width:80%;border-radius:4px 4px 0 0;min-height:2px;transition:height .4s ease}
+.pf-bar-tip{font-size:10px;color:var(--muted);white-space:nowrap;text-align:center}
+.pf-bar-lbl{font-size:10px;color:var(--muted);white-space:nowrap;writing-mode:vertical-lr;transform:rotate(180deg);max-height:50px;overflow:hidden}
+
+/* ── Line chart ────────────────────────────────────── */
+.pf-chart-legend{margin-bottom:6px;font-size:12px}
+
+/* ── Horizontal bars ───────────────────────────────── */
+.pf-hbars{display:flex;flex-direction:column;gap:8px}
+.pf-hbar-row{display:grid;grid-template-columns:120px 1fr 40px;gap:10px;align-items:center;font-size:13px}
+.pf-hbar-lbl{color:var(--muted);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pf-hbar-track{height:20px;border-radius:10px;background:rgba(34,48,72,.4);overflow:hidden}
+.pf-hbar-fill{height:100%;border-radius:10px;transition:width .4s ease}
+.pf-hbar-val{font-weight:700;text-align:right}
+
+/* ── FC zone rows ──────────────────────────────────── */
+.pf-zone-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.pf-zone-tag{padding:4px 10px;border-radius:8px;color:#fff;font-size:12px;font-weight:700;min-width:36px;text-align:center}
+.pf-zone-info{flex:1}
+.pf-zone-info>div:first-child{font-size:13px;margin-bottom:4px}
+.pf-zone-track{height:10px;border-radius:6px;background:rgba(34,48,72,.4);overflow:hidden}
+.pf-zone-fill{height:100%;border-radius:6px;transition:width .4s ease}
+.pf-zone-pct{font-weight:700;font-size:14px;min-width:40px;text-align:right}
+
+/* ── Responsive ────────────────────────────────────── */
+@media(max-width:600px){
+  .pf-stats-grid{grid-template-columns:repeat(2,1fr)}
+  .pf-pbs{grid-template-columns:repeat(2,1fr)}
+  .pf-info-grid{grid-template-columns:1fr 1fr}
+  .pf-hbar-row{grid-template-columns:90px 1fr 36px}
+  .pf-bars{height:160px}
+  .pf-stat-val{font-size:22px}
+}
