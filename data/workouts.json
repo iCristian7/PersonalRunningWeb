@@ -15,8 +15,8 @@
           "tag": "blue",
           "items": [
             "2 km a 6'30–6'45/km",
-            "Sensación: respiración fácil",
-            "Si la molestia aumenta, baja ritmo"
+            "Respiración fácil",
+            "Si molestia aumenta, baja ritmo"
           ]
         },
         {
@@ -33,72 +33,76 @@
           "tag": "blue",
           "items": [
             "2 km a 6'30–7'00/km",
-            "Bajar pulsaciones y soltar musculatura"
+            "Bajar pulsaciones"
           ]
         }
       ],
       "rules": [
         "Si dudas, ve más lento.",
         "No bajar de 5'45/km.",
-        "Parar si dolor tibial/gemelo anormal.",
+        "Parar si dolor anormal.",
         "Acabar con energía."
       ],
       "post": {
-        "title": "Post-entreno (5–10 min)",
+        "title": "Post-entreno",
         "items": [
           "Estirar gemelos/sóleo",
-          "Si carga: hielo 10'",
+          "Hielo si carga",
           "Reportar sensaciones"
         ]
       }
     },
     {
-      "id": "plan-2026-05-30-tirada-larga-controlada",
-      "date": "2026-05-30",
-      "displayDate": "30/05/2026",
+      "id": "plan-2026-06-01-rodaje-suave-progresivo",
+      "date": "2026-06-01",
+      "displayDate": "01/06/2026",
       "kind": "plan",
-      "title": "Tirada larga progresiva",
-      "objective": "Construir resistencia sin agravar molestias",
-      "totalDistance": "10–11 km",
-      "intensity": "Aeróbico controlado",
+      "title": "Lunes · Rodaje suave progresivo",
+      "objective": "Recuperación activa post tirada larga con progresión final si las sensaciones lo permiten.",
+      "totalDistance": "8 km",
+      "intensity": "Suave-moderada",
       "blocks": [
         {
           "name": "1) Calentamiento",
           "tag": "blue",
           "items": [
-            "2 km a 6'45–7'00/km",
-            "Evaluar tibia y gemelos"
+            "Km 1–2 a 6'40–6'30/km",
+            "Soltar piernas progresivamente",
+            "Evaluar estado de tibia y gemelos"
           ]
         },
         {
           "name": "2) Bloque principal",
           "tag": "green",
           "items": [
-            "6–7 km a 6'20–6'30/km",
-            "Ritmo constante, sin forzar"
+            "Km 3–7 a 6'20–6'30/km",
+            "Ritmo cómodo y constante",
+            "Respiración controlada",
+            "FC objetivo: < 168 ppm"
           ]
         },
         {
-          "name": "3) Progresivo final",
+          "name": "3) Cierre progresivo",
           "tag": "orange",
           "items": [
-            "2 km: 6'15 → 6'00",
-            "Solo si te sientes bien"
+            "Km 8 a 6'10–6'20/km (SOLO si te encuentras bien)",
+            "Si hay carga o molestia → mantener 6'30",
+            "No es obligatorio, es adaptativo"
           ]
         }
       ],
       "rules": [
-        "Prioridad: control y continuidad",
-        "Si hay dolor, reduce distancia",
-        "No convertir en calidad",
-        "Terminar con energía"
+        "Prioridad: llegar al miércoles fresco.",
+        "Si las piernas no responden → quédate en 6'30 todo el entreno.",
+        "El km 8 progresivo es opcional, no obligatorio.",
+        "Acabar con sensación de 'podría hacer 2 km más fácilmente'."
       ],
       "post": {
-        "title": "Post-entreno",
+        "title": "Post-entreno (5 min)",
         "items": [
-          "Estirar gemelos/tibia",
-          "Hielo si hay molestias",
-          "Reportar sensaciones"
+          "Estirar suave gemelos + sóleo",
+          "Hidratación",
+          "Reportar: km, ritmo, FC, cadencia, desnivel y sensaciones"
         ]
       }
     },
@@ -2084,6 +2088,22 @@
         "elevationM": 26,
         "workoutType": "Calidad controlada",
         "notes": "Dolor leve tibia al inicio, mejora en series. Series: 5'49 / 5'43 / 5'43"
+      }
+    },
+    {
+      "id": "2026-05-30-tirada-larga-110",
+      "date": "2026-05-30",
+      "displayDate": "30/05/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 11.0,
+        "paceAvg": "6'16",
+        "hrAvg": 169,
+        "cadenceAvg": 158,
+        "elevationM": 42,
+        "workoutType": "Tirada larga",
+        "notes": "Buenas sensaciones, casi nada de molestia, acabé con energía"
       }
     }
   ]
