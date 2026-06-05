@@ -161,6 +161,75 @@
       }
     },
     {
+      "id": "plan-2026-06-06-tirada-larga-controlada",
+      "date": "2026-06-06",
+      "displayDate": "06/06/2026",
+      "kind": "plan",
+      "title": "Sábado · Tirada larga adaptativa",
+      "objective": "Acumular km aeróbicos. 10 km base con opción de llegar a 12 km si las piernas y la tibia responden bien.",
+      "totalDistance": "10–12 km (adaptativo)",
+      "intensity": "Aeróbico controlado",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'45–7'00/km",
+            "Soltar piernas",
+            "Evaluar tibia desde el primer km"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "6–8 km a 6'25–6'35/km",
+            "Ritmo constante y cómodo",
+            "FC objetivo: < 170 ppm",
+            "No bajar de 6'20 aunque te encuentres bien"
+          ]
+        },
+        {
+          "name": "3) Decisión en el km 8",
+          "tag": "orange",
+          "items": [
+            "PREGUNTA 1: ¿Cómo está la tibia? → Igual o mejor = seguir",
+            "PREGUNTA 2: ¿Piernas con energía? → Sí = seguir",
+            "PREGUNTA 3: ¿Podría mantener ritmo 30 min más? → Sí = seguir",
+            "Si las 3 son SÍ → continúa hasta 12 km",
+            "Si alguna es NO → enfriamiento y 10 km total"
+          ]
+        },
+        {
+          "name": "4) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'40–6'50/km",
+            "Bajar pulsaciones suavemente"
+          ]
+        }
+      ],
+      "rules": [
+        "Si la tibia EMPEORA durante el entreno → paras donde estés (aunque sean 8 km).",
+        "La decisión 10 vs 12 se toma en el km 8, no antes.",
+        "No bajar de 6'20/km en ningún momento.",
+        "Acabar con sensación de energía (tanto en 10 como en 12)."
+      ],
+      "post": {
+        "title": "Post-entreno (obligatorio)",
+        "items": [
+          "Estirar gemelos + sóleo (5-10 min)",
+          "Hielo en tibia 10-15 min",
+          "Reportar: sensaciones + estado de la tibia + distancia final elegida"
+        ]
+      },
+      "techFocus": [
+        "Cadera alta: piensa 'corro alto' cada 2 km",
+        "Pasos cortos bajo el cuerpo (no alargar zancada)",
+        "Especialmente importante a partir del km 10 donde la técnica se deteriora por fatiga"
+      ]
+    },
+    {
       "id": "2025-01-21-e-54",
       "date": "2025-01-21",
       "displayDate": "21/01/2025",
@@ -2174,6 +2243,22 @@
         "elevationM": 31,
         "workoutType": "Rodaje aerobico controlado",
         "notes": "Molestia leve tibia y gemelo durante todo el entreno. Piernas cansadas al final. FC reloj no fiable (marcaba ~150 pero sensación real ~167-170). No podía mantener conversación."
+      }
+    },
+    {
+      "id": "2026-06-03-calidad-controlada-739",
+      "date": "2026-06-03",
+      "displayDate": "03/06/2026",
+      "kind": "log",
+      "title": "Calidad controlada",
+      "metrics": {
+        "distanceKm": 7.39,
+        "paceAvg": "6'24",
+        "hrAvg": 165,
+        "cadenceAvg": 159,
+        "elevationM": 47,
+        "workoutType": "Calidad controlada",
+        "notes": "Dolor leve tibial anterior, sobre todo al finalizar. Series: 5'57 / 5'53 / 5'54"
       }
     }
   ]
