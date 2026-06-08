@@ -210,10 +210,10 @@
         }
       ],
       "rules": [
-        "Si la tibia EMPEORA durante el entreno → paras donde estés (aunque sean 8 km).",
+        "Si la tibia EMPEORA durante el entreno → paras donde estés.",
         "La decisión 10 vs 12 se toma en el km 8, no antes.",
         "No bajar de 6'20/km en ningún momento.",
-        "Acabar con sensación de energía (tanto en 10 como en 12)."
+        "Acabar con sensación de energía."
       ],
       "post": {
         "title": "Post-entreno (obligatorio)",
@@ -222,11 +222,61 @@
           "Hielo en tibia 10-15 min",
           "Reportar: sensaciones + estado de la tibia + distancia final elegida"
         ]
+      }
+    },
+    {
+      "id": "plan-2026-06-08-rodaje-controlado",
+      "date": "2026-06-08",
+      "displayDate": "08/06/2026",
+      "kind": "plan",
+      "title": "Lunes · Rodaje controlado",
+      "objective": "Recuperación activa post tirada larga de 12 km. Soltar piernas sin generar fatiga. Llegar al miércoles fresco para más calidad.",
+      "totalDistance": "8 km",
+      "intensity": "Suave-moderada",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "1,5 km a 6'45–6'55/km",
+            "Soltar piernas progresivamente",
+            "Evaluar tibia y gemelos"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "5 km a 6'20–6'30/km",
+            "Ritmo cómodo y constante",
+            "FC objetivo: < 168 ppm"
+          ]
+        },
+        {
+          "name": "3) Cierre progresivo (opcional)",
+          "tag": "orange",
+          "items": [
+            "1,5 km a 6'10–6'20/km (solo si piernas OK)",
+            "Si tibia molesta más de lo normal → mantener 6'30–6'40"
+          ]
+        }
+      ],
+      "rules": [
+        "Si la tibia molesta más de lo normal post-12km → todo el entreno a 6'30–6'40.",
+        "Cierre progresivo es opcional.",
+        "Prioridad: llegar al miércoles fresco.",
+        "Acabar con sensación de 'podría seguir fácilmente'."
+      ],
+      "post": {
+        "title": "Post-entreno (5 min)",
+        "items": [
+          "Estirar gemelos + sóleo",
+          "Reportar sensaciones"
+        ]
       },
       "techFocus": [
-        "Cadera alta: piensa 'corro alto' cada 2 km",
-        "Pasos cortos bajo el cuerpo (no alargar zancada)",
-        "Especialmente importante a partir del km 10 donde la técnica se deteriora por fatiga"
+        "Cadera alta: piensa 'corro alto'",
+        "Pasos cortos bajo el cuerpo"
       ]
     },
     {
@@ -2242,7 +2292,7 @@
         "cadenceAvg": 158,
         "elevationM": 31,
         "workoutType": "Rodaje aerobico controlado",
-        "notes": "Molestia leve tibia y gemelo durante todo el entreno. Piernas cansadas al final. FC reloj no fiable (marcaba ~150 pero sensación real ~167-170). No podía mantener conversación."
+        "notes": "Molestia leve tibia y gemelo durante todo el entreno. Piernas cansadas al final. FC reloj no fiable (marcaba ~150 pero sensación real ~167-170)."
       }
     },
     {
@@ -2259,6 +2309,22 @@
         "elevationM": 47,
         "workoutType": "Calidad controlada",
         "notes": "Dolor leve tibial anterior, sobre todo al finalizar. Series: 5'57 / 5'53 / 5'54"
+      }
+    },
+    {
+      "id": "2026-06-06-tirada-larga-adaptativa-120",
+      "date": "2026-06-06",
+      "displayDate": "06/06/2026",
+      "kind": "log",
+      "title": "Tirada larga adaptativa",
+      "metrics": {
+        "distanceKm": 12.0,
+        "paceAvg": "6'34",
+        "hrAvg": 170,
+        "cadenceAvg": 160,
+        "elevationM": 47,
+        "workoutType": "Tirada larga adaptativa",
+        "notes": "Buenas sensaciones, molestias mínimas en las piernas, acabé con energía. Eligió 12 km (máximo adaptativo)."
       }
     }
   ]
