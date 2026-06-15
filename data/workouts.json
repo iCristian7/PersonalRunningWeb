@@ -22,7 +22,7 @@
           "tag": "orange",
           "items": [
             "3 × 1 km a 5'45–5'50/km",
-            "Recuperación: 2' trote suave"
+            "Rec: 2'"
           ]
         },
         {
@@ -66,21 +66,19 @@
           "name": "2) Bloque principal",
           "tag": "green",
           "items": [
-            "Km 3–7 a 6'20–6'30/km",
-            "FC < 168 ppm"
+            "Km 3–7 a 6'20–6'30/km"
           ]
         },
         {
-          "name": "3) Cierre progresivo",
+          "name": "3) Cierre",
           "tag": "orange",
           "items": [
-            "Km 8 a 6'10–6'20/km (si te encuentras bien)"
+            "Km 8 a 6'10–6'20/km (si OK)"
           ]
         }
       ],
       "rules": [
-        "Prioridad: llegar al miércoles fresco.",
-        "Cierre progresivo es opcional."
+        "Prioridad: llegar al miércoles fresco."
       ],
       "post": {
         "title": "Post-entreno",
@@ -96,7 +94,7 @@
       "displayDate": "03/06/2026",
       "kind": "plan",
       "title": "Miércoles · Calidad muy controlada",
-      "objective": "Calidad sin agravar tibiales. Consolidar.",
+      "objective": "Calidad sin agravar tibiales.",
       "totalDistance": "7,5–8 km",
       "intensity": "Moderada-conservadora",
       "blocks": [
@@ -112,7 +110,7 @@
           "tag": "orange",
           "items": [
             "3 × 1 km a 5'50–5'55/km",
-            "Recuperación: 2'30"
+            "Rec: 2'30"
           ]
         },
         {
@@ -124,15 +122,13 @@
         }
       ],
       "rules": [
-        "Si tibia duele más que 'leve' → paras series.",
-        "No bajar de 5'45/km."
+        "Si tibia duele más que 'leve' → paras series."
       ],
       "post": {
         "title": "Post-entreno",
         "items": [
           "Estirar gemelos/sóleo",
-          "Hielo tibia 10 min",
-          "Reportar sensaciones + tibia"
+          "Hielo tibia 10 min"
         ]
       }
     },
@@ -142,7 +138,7 @@
       "displayDate": "06/06/2026",
       "kind": "plan",
       "title": "Sábado · Tirada larga adaptativa",
-      "objective": "10 km base con opción de 12 km.",
+      "objective": "10–12 km adaptativo.",
       "totalDistance": "10–12 km",
       "intensity": "Aeróbico controlado",
       "blocks": [
@@ -157,16 +153,14 @@
           "name": "2) Bloque principal",
           "tag": "green",
           "items": [
-            "6–8 km a 6'25–6'35/km",
-            "FC < 170"
+            "6–8 km a 6'25–6'35/km"
           ]
         },
         {
           "name": "3) Decisión km 8",
           "tag": "orange",
           "items": [
-            "3 preguntas: tibia + piernas + podría seguir",
-            "3 SÍ → 12 km / Alguna NO → 10 km"
+            "3 preguntas → 12 o 10 km"
           ]
         },
         {
@@ -179,15 +173,13 @@
       ],
       "rules": [
         "Si tibia empeora → paras.",
-        "Decisión en km 8.",
-        "Acabar con energía."
+        "Decisión en km 8."
       ],
       "post": {
         "title": "Post-entreno",
         "items": [
           "Estirar gemelos + sóleo",
-          "Hielo tibia",
-          "Reportar distancia + sensaciones"
+          "Hielo tibia"
         ]
       }
     },
@@ -197,7 +189,7 @@
       "displayDate": "08/06/2026",
       "kind": "plan",
       "title": "Lunes · Rodaje controlado",
-      "objective": "Recuperación activa post 12 km. Llegar al miércoles fresco.",
+      "objective": "Recuperación post 12 km.",
       "totalDistance": "8 km",
       "intensity": "Suave-moderada",
       "blocks": [
@@ -212,27 +204,24 @@
           "name": "2) Bloque principal",
           "tag": "green",
           "items": [
-            "5 km a 6'20–6'30/km",
-            "FC < 168"
+            "5 km a 6'20–6'30/km"
           ]
         },
         {
           "name": "3) Cierre (opcional)",
           "tag": "orange",
           "items": [
-            "1,5 km a 6'10–6'20/km (si piernas OK)"
+            "1,5 km a 6'10–6'20/km"
           ]
         }
       ],
       "rules": [
-        "Si tibia molesta → todo a 6'30–6'40.",
-        "Cierre progresivo opcional."
+        "Si tibia molesta → todo a 6'30–6'40."
       ],
       "post": {
         "title": "Post-entreno",
         "items": [
-          "Estirar gemelos + sóleo",
-          "Reportar sensaciones"
+          "Estirar gemelos + sóleo"
         ]
       }
     },
@@ -242,7 +231,7 @@
       "displayDate": "10/06/2026",
       "kind": "plan",
       "title": "Miércoles · Calidad con progresión",
-      "objective": "Subir estímulo: 4 series, ritmo más rápido.",
+      "objective": "4 series, ritmo más rápido.",
       "totalDistance": "~8,5 km",
       "intensity": "Moderada-alta",
       "blocks": [
@@ -258,8 +247,7 @@
           "tag": "orange",
           "items": [
             "4 × 1 km a 5'40–5'48/km",
-            "Recuperación: 2 min trote suave",
-            "Serie 1: ~5'48 / Serie 2: ~5'45 / Serie 3: ~5'42 / Serie 4: ~5'40"
+            "Rec: 2 min"
           ]
         },
         {
@@ -271,16 +259,14 @@
         }
       ],
       "rules": [
-        "Si tibia protesta → volver a 3×1km a 5'50–5'55.",
-        "Si serie 4 fatigado → saltar y enfriar.",
+        "Si tibia protesta → 3×1km a 5'50.",
         "No bajar de 5'35/km."
       ],
       "post": {
         "title": "Post-entreno",
         "items": [
           "Estirar gemelos + sóleo",
-          "Hielo tibia si molestia",
-          "Reportar series + sensaciones + tibia"
+          "Hielo tibia si molestia"
         ]
       }
     },
@@ -290,17 +276,15 @@
       "displayDate": "13/06/2026",
       "kind": "plan",
       "title": "Sábado · Tirada larga adaptativa",
-      "objective": "Subir distancia máxima: 12 km base con opción de 14 km si todo responde bien. Acercarse a distancias de media maratón.",
-      "totalDistance": "12–14 km (adaptativo)",
+      "objective": "12–14 km adaptativo.",
+      "totalDistance": "12–14 km",
       "intensity": "Aeróbico controlado",
       "blocks": [
         {
           "name": "1) Calentamiento",
           "tag": "blue",
           "items": [
-            "2 km a 6'40–6'50/km",
-            "Soltar piernas",
-            "Evaluar tibia"
+            "2 km a 6'40–6'50/km"
           ]
         },
         {
@@ -308,49 +292,92 @@
           "tag": "green",
           "items": [
             "8–10 km a 6'20–6'30/km",
-            "Ritmo constante y cómodo",
-            "FC objetivo: < 172 ppm",
-            "No bajar de 6'15/km aunque te sientas volando"
+            "FC < 172"
           ]
         },
         {
-          "name": "3) Decisión en el km 10",
+          "name": "3) Decisión km 10",
           "tag": "orange",
           "items": [
-            "PREGUNTA 1: ¿Tibia OK? → Igual o mejor = seguir",
-            "PREGUNTA 2: ¿Piernas con energía? → Sí = seguir",
-            "PREGUNTA 3: ¿Podría seguir 30 min? → Sí = seguir",
-            "Las 3 SÍ → continúa hasta 14 km",
-            "Alguna NO → enfriamiento y 12 km"
+            "3 preguntas → 14 o 12 km"
           ]
         },
         {
           "name": "4) Enfriamiento",
           "tag": "blue",
           "items": [
-            "2 km a 6'40–6'50/km",
-            "Bajar pulsaciones"
+            "2 km a 6'40–6'50/km"
           ]
         }
       ],
       "rules": [
-        "Si tibia empeora durante el entreno → paras donde estés.",
-        "Decisión en km 10, no antes.",
-        "No bajar de 6'15/km.",
-        "Acabar con energía (tanto en 12 como en 14)."
+        "Si tibia empeora → paras.",
+        "Decisión en km 10.",
+        "No bajar de 6'15/km."
       ],
       "post": {
-        "title": "Post-entreno (obligatorio)",
+        "title": "Post-entreno",
         "items": [
           "Estirar gemelos + sóleo (10 min)",
-          "Hielo tibia si hay molestia",
-          "Reportar: distancia elegida + sensaciones + tibia"
+          "Hielo tibia"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-06-15-rodaje-suave",
+      "date": "2026-06-15",
+      "displayDate": "15/06/2026",
+      "kind": "plan",
+      "title": "Lunes · Rodaje suave recuperación",
+      "objective": "Recuperación post-14 km (récord de distancia). Evaluar rodillas + tibia. Sesión conservadora.",
+      "totalDistance": "7–8 km",
+      "intensity": "Suave",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "1,5 km a 6'50–7'00/km",
+            "Evaluar rodillas y tibia desde el inicio"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "4,5–5 km a 6'25–6'35/km",
+            "Ritmo cómodo",
+            "FC objetivo: < 168 ppm",
+            "No bajar de 6'20"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "1 km a 6'50–7'00/km",
+            "Sin cierre progresivo hoy → recuperación pura"
+          ]
+        }
+      ],
+      "rules": [
+        "Si rodillas molestan más que el sábado → acortas a 6 km.",
+        "No bajar de 6'20.",
+        "NO hay cierre progresivo esta vez.",
+        "Acabar con sensación de 'podría seguir fácilmente'."
+      ],
+      "post": {
+        "title": "Post-entreno (10 min)",
+        "items": [
+          "Estirar cuádriceps + isquios + gemelos (proteger rodillas)",
+          "Hielo si hay molestia en rodillas o tibia",
+          "Reportar: estado de rodillas + tibia"
         ]
       },
       "techFocus": [
-        "Cadera alta cada 2 km",
-        "Pasos cortos especialmente a partir del km 10",
-        "Hombros relajados en los últimos km"
+        "Cadera alta → descarga rodillas",
+        "Pasos cortos → menos impacto articular",
+        "No alargar zancada → protege rodilla"
       ]
     },
     {
@@ -2334,7 +2361,7 @@
         "cadenceAvg": 159,
         "elevationM": 26,
         "workoutType": "Calidad controlada",
-        "notes": "Dolor leve tibia al inicio, mejora en series. Series: 5'49 / 5'43 / 5'43"
+        "notes": "Series: 5'49 / 5'43 / 5'43"
       }
     },
     {
@@ -2350,7 +2377,7 @@
         "cadenceAvg": 158,
         "elevationM": 42,
         "workoutType": "Tirada larga",
-        "notes": "Buenas sensaciones, casi nada de molestia, acabé con energía"
+        "notes": "Buenas sensaciones, acabé con energía"
       }
     },
     {
@@ -2366,7 +2393,7 @@
         "cadenceAvg": 158,
         "elevationM": 31,
         "workoutType": "Rodaje aerobico controlado",
-        "notes": "Molestia leve tibia y gemelo. FC reloj no fiable."
+        "notes": "FC reloj no fiable."
       }
     },
     {
@@ -2382,7 +2409,7 @@
         "cadenceAvg": 159,
         "elevationM": 47,
         "workoutType": "Calidad controlada",
-        "notes": "Dolor leve tibial anterior. Series: 5'57 / 5'53 / 5'54"
+        "notes": "Series: 5'57 / 5'53 / 5'54"
       }
     },
     {
@@ -2414,7 +2441,7 @@
         "cadenceAvg": 160,
         "elevationM": 50,
         "workoutType": "Rodaje controlado",
-        "notes": "Piernas cansadas al principio, molestias leves, mejorando durante el entreno."
+        "notes": "Piernas cansadas al principio, mejorando durante el entreno."
       }
     },
     {
@@ -2430,7 +2457,23 @@
         "cadenceAvg": 161,
         "elevationM": 28,
         "workoutType": "Calidad con progresión",
-        "notes": "Pequeña molestia piernas, buenas sensaciones. Series: 5'50 / 5'47 / 5'40 / 5'41"
+        "notes": "Series: 5'50 / 5'47 / 5'40 / 5'41. Buenas sensaciones."
+      }
+    },
+    {
+      "id": "2026-06-13-tirada-larga-140",
+      "date": "2026-06-13",
+      "displayDate": "13/06/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 14.0,
+        "paceAvg": "6'22",
+        "hrAvg": 168,
+        "cadenceAvg": 160,
+        "elevationM": 85,
+        "workoutType": "Tirada larga",
+        "notes": "Mínimas molestias tibia/gemelos. Molestia leve rodillas km 7-8 (derecha más). Buenas sensaciones generales. Récord de distancia."
       }
     }
   ]
