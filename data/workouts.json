@@ -83,8 +83,7 @@
       "post": {
         "title": "Post-entreno",
         "items": [
-          "Estirar gemelos + sóleo",
-          "Reportar sensaciones"
+          "Estirar gemelos + sóleo"
         ]
       }
     },
@@ -172,8 +171,7 @@
         }
       ],
       "rules": [
-        "Si tibia empeora → paras.",
-        "Decisión en km 8."
+        "Si tibia empeora → paras."
       ],
       "post": {
         "title": "Post-entreno",
@@ -259,8 +257,7 @@
         }
       ],
       "rules": [
-        "Si tibia protesta → 3×1km a 5'50.",
-        "No bajar de 5'35/km."
+        "Si tibia protesta → 3×1km a 5'50."
       ],
       "post": {
         "title": "Post-entreno",
@@ -291,8 +288,7 @@
           "name": "2) Bloque principal",
           "tag": "green",
           "items": [
-            "8–10 km a 6'20–6'30/km",
-            "FC < 172"
+            "8–10 km a 6'20–6'30/km"
           ]
         },
         {
@@ -343,8 +339,7 @@
           "name": "2) Bloque principal",
           "tag": "green",
           "items": [
-            "4,5–5 km a 6'25–6'35/km",
-            "FC < 168"
+            "4,5–5 km a 6'25–6'35/km"
           ]
         },
         {
@@ -358,7 +353,6 @@
       ],
       "rules": [
         "Si rodillas molestan → acortar a 6 km.",
-        "No bajar de 6'20.",
         "Recuperación pura."
       ],
       "post": {
@@ -374,57 +368,58 @@
       "date": "2026-06-17",
       "displayDate": "17/06/2026",
       "kind": "plan",
-      "title": "Miércoles · Calidad con progresión (consolidación)",
-      "objective": "Repetir formato 4×1km de la semana pasada. Ser más consistente entre series. Consolidar antes de subir más.",
+      "title": "Miércoles · Calidad consolidación (series largas)",
+      "objective": "Consolidar calidad real: mismo ritmo que últimas semanas pero series más largas (1,2 km). Más específico para media maratón: sostener ritmo más tiempo.",
       "totalDistance": "~8,5–9 km",
-      "intensity": "Moderada-alta",
+      "intensity": "Moderada (consolidación)",
       "blocks": [
         {
           "name": "1) Calentamiento",
           "tag": "blue",
           "items": [
-            "2 km a 6'30–6'40/km",
-            "Evaluar piernas y tibia"
+            "2 km a 6'35–6'50/km",
+            "Muy tranquilo",
+            "Evaluar: tibia, gemelos, rodillas"
           ]
         },
         {
           "name": "2) Bloque principal",
           "tag": "orange",
           "items": [
-            "4 × 1 km a 5'38–5'45/km",
-            "Recuperación: 2 min trote suave (6'45–7'00)",
-            "Serie 1: ~5'45 (entrada controlada)",
-            "Serie 2: ~5'42 (estabilizar)",
-            "Serie 3: ~5'40 (mantener)",
-            "Serie 4: ~5'38–5'40 (cerrar fuerte si todo OK)"
+            "3 × 1,2 km a 5'45–5'55/km",
+            "Recuperación: 2 min trote suave (6'45–7'15)",
+            "Serie 1: 5'50–5'55/km (entrada conservadora)",
+            "Serie 2: 5'45–5'50/km (estabilizar)",
+            "Serie 3: 5'45–5'50/km (mantener)",
+            "Volumen calidad: 3,6 km (vs 4 km semana pasada → misma carga, esfuerzos más largos)"
           ]
         },
         {
           "name": "3) Enfriamiento",
           "tag": "blue",
           "items": [
-            "2 km a 6'40–6'55/km",
+            "2 km a 6'35–7'00/km",
             "Soltar bien"
           ]
         }
       ],
       "rules": [
-        "Si serie 1 sale a 5'50+ → no pasa nada, ajusta las siguientes.",
-        "Si tibia protesta → baja a 5'50 y mantén.",
-        "Objetivo: consistencia entre las 4 series (poca variación).",
-        "Acabar con sensación de 'podría hacer 1 más'."
+        "No buscar correr más rápido → buscar sostener ritmo más tiempo.",
+        "Si tibia protesta → acortar series a 1 km.",
+        "Acabar con sensación de 'podría hacer 1 serie más'.",
+        "Esta semana es consolidación, no subida."
       ],
       "post": {
-        "title": "Post-entreno (10 min)",
+        "title": "Post-entreno",
         "items": [
-          "Estirar gemelos + cuádriceps + isquios",
-          "Reportar: series + sensaciones + tibia"
+          "Estirar gemelos + cuádriceps + isquios (10 min)",
+          "Reportar: ritmos de cada serie + sensaciones + tibia"
         ]
       },
       "techFocus": [
         "Cadera alta",
-        "Hombros relajados (se tensan en series)",
-        "Pasos cortos y rápidos"
+        "Hombros relajados",
+        "Pasos cortos y constantes (ritmo sostenido)"
       ]
     },
     {
