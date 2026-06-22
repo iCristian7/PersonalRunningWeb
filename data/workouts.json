@@ -440,39 +440,41 @@
       "date": "2026-06-22",
       "displayDate": "22/06/2026",
       "kind": "plan",
-      "title": "Lunes · Rodaje + fuerza específica rodillas",
-      "objective": "Recuperación post-14 km + introducción de fuerza específica para rodillas (patrón detectado de molestia en km 10+ de tiradas largas).",
-      "totalDistance": "7,5 km",
-      "intensity": "Suave",
+      "title": "Lunes · Rodaje progresivo + fuerza rodillas",
+      "objective": "Plan combinado: mantener distancia (8 km) con cierre progresivo opcional + fuerza específica para rodillas (clave por patrón de molestias en km 10+).",
+      "totalDistance": "8 km",
+      "intensity": "Suave-moderada",
       "blocks": [
         {
           "name": "1) Calentamiento",
           "tag": "blue",
           "items": [
-            "1,5 km a 6'45–6'55/km",
-            "Evaluar rodillas desde inicio"
+            "Km 1–2 a 6'45–6'35/km",
+            "Muy tranquilo",
+            "Evaluar: rodillas, tibia, gemelos, sensación general de piernas"
           ]
         },
         {
           "name": "2) Bloque principal",
           "tag": "green",
           "items": [
-            "5 km a 6'25–6'35/km",
-            "Ritmo cómodo",
-            "FC objetivo: < 168 ppm",
-            "No bajar de 6'25"
+            "Km 3–7 a 6'25–6'35/km",
+            "Ritmo cómodo y estable",
+            "Sensación: 'podría mantener este ritmo bastante más tiempo'",
+            "FC objetivo: < 168 ppm"
           ]
         },
         {
-          "name": "3) Enfriamiento",
-          "tag": "blue",
+          "name": "3) Cierre adaptativo",
+          "tag": "orange",
           "items": [
-            "1 km a 6'45–7'00/km",
-            "Soltar"
+            "Si te encuentras bien → Km 8 a 6'15–6'25/km",
+            "Si notas cualquier molestia → mantener 6'25–6'35/km del bloque principal",
+            "No obligatorio, decisión basada en sensaciones"
           ]
         },
         {
-          "name": "4) FUERZA ESPECÍFICA (post-rodaje o en otro momento)",
+          "name": "4) FUERZA ESPECÍFICA RODILLAS (no opcional)",
           "tag": "orange",
           "items": [
             "Sentadilla isométrica pared: 3×30-45 seg",
@@ -480,27 +482,28 @@
             "Sentadilla búlgara: 2×8 por pierna",
             "Step-ups: 3×12 por pierna",
             "Total: ~10-15 min",
-            "Frecuencia: 2x/semana (lunes y jueves recomendado)"
+            "Post-rodaje o en otro momento del día",
+            "Frecuencia recomendada: 2x/semana (lunes + jueves)"
           ]
         }
       ],
       "rules": [
-        "Si rodillas molestan hoy → acortar rodaje a 6 km.",
-        "La fuerza es lo MÁS importante esta semana (no opcional).",
-        "No bajar de 6'25 en el rodaje.",
+        "La fuerza es PRIORIDAD esta semana (patrón claro de rodillas en km 10+ de tiradas largas).",
+        "Cierre progresivo opcional → solo si las sensaciones son buenas.",
+        "No bajar de 6'15/km en ningún momento.",
         "Acabar con sensación de 'podría seguir'."
       ],
       "post": {
-        "title": "Post-entreno",
+        "title": "Post-entreno (importante)",
         "items": [
           "Estirar cuádriceps + isquios + gemelos (10 min)",
           "Hielo rodillas 10 min (preventivo, aunque no molesten)",
-          "Reportar: sensaciones + estado rodillas"
+          "Reportar: sensaciones + estado rodillas + si hiciste fuerza"
         ]
       },
       "techFocus": [
         "Cadera alta → descarga rodillas",
-        "Pasos cortos → menos impacto",
+        "Pasos cortos → menos impacto articular",
         "En bajadas: controlar con cuádriceps"
       ]
     },
