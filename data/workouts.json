@@ -34,14 +34,12 @@
         }
       ],
       "rules": [
-        "Si dudas, ve más lento.",
-        "No bajar de 5'45/km."
+        "Si dudas, ve más lento."
       ],
       "post": {
         "title": "Post-entreno",
         "items": [
-          "Estirar gemelos/sóleo",
-          "Reportar sensaciones"
+          "Estirar gemelos/sóleo"
         ]
       }
     },
@@ -51,7 +49,7 @@
       "displayDate": "01/06/2026",
       "kind": "plan",
       "title": "Lunes · Rodaje suave progresivo",
-      "objective": "Recuperación activa con progresión final opcional.",
+      "objective": "Recuperación activa.",
       "totalDistance": "8 km",
       "intensity": "Suave-moderada",
       "blocks": [
@@ -73,12 +71,12 @@
           "name": "3) Cierre",
           "tag": "orange",
           "items": [
-            "Km 8 a 6'10–6'20/km (si OK)"
+            "Km 8 a 6'10–6'20/km"
           ]
         }
       ],
       "rules": [
-        "Prioridad: llegar al miércoles fresco."
+        "Llegar al miércoles fresco."
       ],
       "post": {
         "title": "Post-entreno",
@@ -108,8 +106,7 @@
           "name": "2) Bloque principal",
           "tag": "orange",
           "items": [
-            "3 × 1 km a 5'50–5'55/km",
-            "Rec: 2'30"
+            "3 × 1 km a 5'50–5'55/km"
           ]
         },
         {
@@ -121,13 +118,12 @@
         }
       ],
       "rules": [
-        "Si tibia duele más que 'leve' → paras series."
+        "Si tibia duele → paras series."
       ],
       "post": {
         "title": "Post-entreno",
         "items": [
-          "Estirar gemelos/sóleo",
-          "Hielo tibia 10 min"
+          "Estirar gemelos/sóleo"
         ]
       }
     },
@@ -159,7 +155,7 @@
           "name": "3) Decisión km 8",
           "tag": "orange",
           "items": [
-            "3 preguntas → 12 o 10 km"
+            "3 preguntas → 12 o 10"
           ]
         },
         {
@@ -176,8 +172,7 @@
       "post": {
         "title": "Post-entreno",
         "items": [
-          "Estirar gemelos + sóleo",
-          "Hielo tibia"
+          "Estirar gemelos + sóleo"
         ]
       }
     },
@@ -206,7 +201,7 @@
           ]
         },
         {
-          "name": "3) Cierre (opcional)",
+          "name": "3) Cierre",
           "tag": "orange",
           "items": [
             "1,5 km a 6'10–6'20/km"
@@ -214,7 +209,7 @@
         }
       ],
       "rules": [
-        "Si tibia molesta → todo a 6'30–6'40."
+        "Si tibia molesta → 6'30–6'40."
       ],
       "post": {
         "title": "Post-entreno",
@@ -229,7 +224,7 @@
       "displayDate": "10/06/2026",
       "kind": "plan",
       "title": "Miércoles · Calidad con progresión",
-      "objective": "4 series, ritmo más rápido.",
+      "objective": "4 series.",
       "totalDistance": "~8,5 km",
       "intensity": "Moderada-alta",
       "blocks": [
@@ -244,8 +239,7 @@
           "name": "2) Bloque principal",
           "tag": "orange",
           "items": [
-            "4 × 1 km a 5'40–5'48/km",
-            "Rec: 2 min"
+            "4 × 1 km a 5'40–5'48/km"
           ]
         },
         {
@@ -257,13 +251,12 @@
         }
       ],
       "rules": [
-        "Si tibia protesta → 3×1km a 5'50."
+        "No bajar de 5'35/km."
       ],
       "post": {
         "title": "Post-entreno",
         "items": [
-          "Estirar gemelos + sóleo",
-          "Hielo tibia si molestia"
+          "Estirar gemelos + sóleo"
         ]
       }
     },
@@ -295,7 +288,7 @@
           "name": "3) Decisión km 10",
           "tag": "orange",
           "items": [
-            "3 preguntas → 14 o 12 km"
+            "3 preguntas → 14 o 12"
           ]
         },
         {
@@ -307,14 +300,12 @@
         }
       ],
       "rules": [
-        "Si tibia empeora → paras.",
         "Decisión en km 10."
       ],
       "post": {
         "title": "Post-entreno",
         "items": [
-          "Estirar gemelos + sóleo (10 min)",
-          "Hielo tibia"
+          "Estirar gemelos + sóleo (10 min)"
         ]
       }
     },
@@ -324,7 +315,7 @@
       "displayDate": "15/06/2026",
       "kind": "plan",
       "title": "Lunes · Rodaje suave recuperación",
-      "objective": "Recuperación post-14 km. Evaluar rodillas + tibia.",
+      "objective": "Recuperación post-14 km.",
       "totalDistance": "7–8 km",
       "intensity": "Suave",
       "blocks": [
@@ -346,13 +337,12 @@
           "name": "3) Enfriamiento",
           "tag": "blue",
           "items": [
-            "1 km a 6'50–7'00/km",
-            "Sin cierre progresivo"
+            "1 km a 6'50–7'00/km"
           ]
         }
       ],
       "rules": [
-        "Si rodillas molestan → acortar a 6 km."
+        "Si rodillas → 6 km."
       ],
       "post": {
         "title": "Post-entreno",
@@ -367,9 +357,9 @@
       "displayDate": "17/06/2026",
       "kind": "plan",
       "title": "Miércoles · Calidad consolidación (3 × 1,2 km)",
-      "objective": "Consolidar calidad: mismo ritmo pero series más largas.",
+      "objective": "Series más largas.",
       "totalDistance": "~8,5–9 km",
-      "intensity": "Moderada (consolidación)",
+      "intensity": "Moderada",
       "blocks": [
         {
           "name": "1) Calentamiento",
@@ -382,8 +372,7 @@
           "name": "2) Bloque principal",
           "tag": "orange",
           "items": [
-            "3 × 1,2 km a 5'45–5'55/km",
-            "Rec: 2 min trote suave"
+            "3 × 1,2 km a 5'45–5'55/km"
           ]
         },
         {
@@ -395,13 +384,12 @@
         }
       ],
       "rules": [
-        "No buscar correr más rápido → sostener ritmo más tiempo."
+        "Sostener ritmo más tiempo."
       ],
       "post": {
         "title": "Post-entreno",
         "items": [
-          "Estirar gemelos + cuádriceps + isquios",
-          "Reportar series + sensaciones"
+          "Estirar gemelos + cuádriceps + isquios"
         ]
       }
     },
@@ -411,7 +399,7 @@
       "displayDate": "20/06/2026",
       "kind": "plan",
       "title": "Sábado · Tirada larga consolidación 14 km",
-      "objective": "Consolidar 14 km tras 3 semanas seguidas subiendo carga. No subir distancia. Asentar antes de seguir progresando.",
+      "objective": "Consolidar 14 km.",
       "totalDistance": "14 km",
       "intensity": "Aeróbico controlado",
       "blocks": [
@@ -419,48 +407,101 @@
           "name": "1) Calentamiento",
           "tag": "blue",
           "items": [
-            "2 km a 6'40–6'50/km",
-            "Soltar piernas",
-            "Evaluar tibia y rodillas"
+            "2 km a 6'40–6'50/km"
           ]
         },
         {
           "name": "2) Bloque principal",
           "tag": "green",
           "items": [
-            "10 km a 6'20–6'30/km",
-            "Ritmo constante y controlado",
-            "FC objetivo: < 170 ppm",
-            "No bajar de 6'15/km"
+            "10 km a 6'20–6'30/km"
           ]
         },
         {
           "name": "3) Enfriamiento",
           "tag": "blue",
           "items": [
-            "2 km a 6'40–6'50/km",
-            "Bajar pulsaciones"
+            "2 km a 6'40–6'50/km"
           ]
         }
       ],
       "rules": [
-        "NO subir a 15+ km esta semana → consolidar 14 km.",
-        "Si rodillas vuelven a aparecer (como 13/06) → mantener distancia pero bajar ritmo a 6'30–6'40.",
-        "Si tibia empeora → paras donde estés.",
-        "Acabar con energía."
+        "NO subir a 15+ km esta semana."
       ],
       "post": {
-        "title": "Post-entreno (obligatorio)",
+        "title": "Post-entreno",
         "items": [
-          "Estirar gemelos + cuádriceps + isquios (10 min)",
-          "Hielo tibia si hay molestia",
-          "Reportar: sensaciones + estado tibia + rodillas"
+          "Estirar gemelos + cuádriceps + isquios"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-06-22-rodaje-fuerza-rodillas",
+      "date": "2026-06-22",
+      "displayDate": "22/06/2026",
+      "kind": "plan",
+      "title": "Lunes · Rodaje + fuerza específica rodillas",
+      "objective": "Recuperación post-14 km + introducción de fuerza específica para rodillas (patrón detectado de molestia en km 10+ de tiradas largas).",
+      "totalDistance": "7,5 km",
+      "intensity": "Suave",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "1,5 km a 6'45–6'55/km",
+            "Evaluar rodillas desde inicio"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "5 km a 6'25–6'35/km",
+            "Ritmo cómodo",
+            "FC objetivo: < 168 ppm",
+            "No bajar de 6'25"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "1 km a 6'45–7'00/km",
+            "Soltar"
+          ]
+        },
+        {
+          "name": "4) FUERZA ESPECÍFICA (post-rodaje o en otro momento)",
+          "tag": "orange",
+          "items": [
+            "Sentadilla isométrica pared: 3×30-45 seg",
+            "Zancadas estáticas: 3×10 por pierna",
+            "Sentadilla búlgara: 2×8 por pierna",
+            "Step-ups: 3×12 por pierna",
+            "Total: ~10-15 min",
+            "Frecuencia: 2x/semana (lunes y jueves recomendado)"
+          ]
+        }
+      ],
+      "rules": [
+        "Si rodillas molestan hoy → acortar rodaje a 6 km.",
+        "La fuerza es lo MÁS importante esta semana (no opcional).",
+        "No bajar de 6'25 en el rodaje.",
+        "Acabar con sensación de 'podría seguir'."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar cuádriceps + isquios + gemelos (10 min)",
+          "Hielo rodillas 10 min (preventivo, aunque no molesten)",
+          "Reportar: sensaciones + estado rodillas"
         ]
       },
       "techFocus": [
-        "Cadera alta cada 2 km",
-        "Pasos cortos a partir del km 10",
-        "Hombros relajados en últimos km"
+        "Cadera alta → descarga rodillas",
+        "Pasos cortos → menos impacto",
+        "En bajadas: controlar con cuádriceps"
       ]
     },
     {
@@ -2588,7 +2629,23 @@
         "cadenceAvg": 159,
         "elevationM": 30,
         "workoutType": "Calidad series largas",
-        "notes": "Series: 5'52 / 5'42 / 5'41. Molestias leves en piernas, buenas sensaciones. Primera vez con series de 1,2 km."
+        "notes": "Series: 5'52 / 5'42 / 5'41. Molestias leves en piernas, buenas sensaciones."
+      }
+    },
+    {
+      "id": "2026-06-20-tirada-larga-consolidacion-140",
+      "date": "2026-06-20",
+      "displayDate": "20/06/2026",
+      "kind": "log",
+      "title": "Tirada larga consolidación",
+      "metrics": {
+        "distanceKm": 14.0,
+        "paceAvg": "6'26",
+        "hrAvg": 167,
+        "cadenceAvg": 159,
+        "elevationM": 86,
+        "workoutType": "Tirada larga consolidación",
+        "notes": "Molestia rodillas últimos km. Buenas sensaciones generales."
       }
     }
   ]
