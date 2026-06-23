@@ -441,7 +441,7 @@
       "displayDate": "22/06/2026",
       "kind": "plan",
       "title": "Lunes · Rodaje progresivo + fuerza rodillas",
-      "objective": "Plan combinado: mantener distancia (8 km) con cierre progresivo opcional + fuerza específica para rodillas (clave por patrón de molestias en km 10+).",
+      "objective": "Plan combinado.",
       "totalDistance": "8 km",
       "intensity": "Suave-moderada",
       "blocks": [
@@ -449,32 +449,25 @@
           "name": "1) Calentamiento",
           "tag": "blue",
           "items": [
-            "Km 1–2 a 6'45–6'35/km",
-            "Muy tranquilo",
-            "Evaluar: rodillas, tibia, gemelos, sensación general de piernas"
+            "Km 1–2 a 6'45–6'35/km"
           ]
         },
         {
           "name": "2) Bloque principal",
           "tag": "green",
           "items": [
-            "Km 3–7 a 6'25–6'35/km",
-            "Ritmo cómodo y estable",
-            "Sensación: 'podría mantener este ritmo bastante más tiempo'",
-            "FC objetivo: < 168 ppm"
+            "Km 3–7 a 6'25–6'35/km"
           ]
         },
         {
           "name": "3) Cierre adaptativo",
           "tag": "orange",
           "items": [
-            "Si te encuentras bien → Km 8 a 6'15–6'25/km",
-            "Si notas cualquier molestia → mantener 6'25–6'35/km del bloque principal",
-            "No obligatorio, decisión basada en sensaciones"
+            "Km 8 a 6'15–6'25 (si OK)"
           ]
         },
         {
-          "name": "4) FUERZA ESPECÍFICA RODILLAS (no opcional)",
+          "name": "4) FUERZA",
           "tag": "orange",
           "items": [
             "Sentadilla isométrica pared: 3×30-45 seg",
@@ -482,30 +475,153 @@
             "Sentadilla búlgara: 2×8 por pierna",
             "Step-ups: 3×12 por pierna",
             "Total: ~10-15 min",
-            "Post-rodaje o en otro momento del día",
-            "Frecuencia recomendada: 2x/semana (lunes + jueves)"
+            "Proteína post-sesión (60 min)"
           ]
         }
       ],
       "rules": [
-        "La fuerza es PRIORIDAD esta semana (patrón claro de rodillas en km 10+ de tiradas largas).",
-        "Cierre progresivo opcional → solo si las sensaciones son buenas.",
-        "No bajar de 6'15/km en ningún momento.",
-        "Acabar con sensación de 'podría seguir'."
+        "Fuerza prioridad."
       ],
       "post": {
-        "title": "Post-entreno (importante)",
+        "title": "Post-entreno",
         "items": [
-          "Estirar cuádriceps + isquios + gemelos (10 min)",
-          "Hielo rodillas 10 min (preventivo, aunque no molesten)",
-          "Reportar: sensaciones + estado rodillas + si hiciste fuerza"
+          "Estirar",
+          "Hielo rodillas"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-06-23-fuerza-rodillas",
+      "date": "2026-06-23",
+      "displayDate": "23/06/2026",
+      "kind": "plan",
+      "title": "Martes · Fuerza específica rodillas (sesión 1)",
+      "objective": "Primera sesión semanal de fuerza para rodillas.",
+      "totalDistance": "—",
+      "intensity": "Fuerza moderada",
+      "blocks": [
+        {
+          "name": "Rutina completa (10-15 min)",
+          "tag": "orange",
+          "items": [
+            "Sentadilla isométrica pared: 3×30-45 seg",
+            "Zancadas estáticas: 3×10 por pierna",
+            "Sentadilla búlgara: 2×8 por pierna",
+            "Step-ups: 3×12 por pierna",
+            "Total: ~10-15 min",
+            "Proteína post-sesión (60 min)"
+          ]
+        }
+      ],
+      "rules": [
+        "Técnica > velocidad.",
+        "Proteína dentro de los 60 min siguientes."
+      ],
+      "post": {
+        "title": "Post-sesión",
+        "items": [
+          "Estirar cuádriceps + glúteos",
+          "Hidratación + proteína"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-06-24-miercoles-calidad-consistencia",
+      "date": "2026-06-24",
+      "displayDate": "24/06/2026",
+      "kind": "plan",
+      "title": "Miércoles · Calidad regularidad (4 × 1 km)",
+      "objective": "Repetir nivel ya conseguido (5'40-5'50) buscando REGULARIDAD entre series. No subir velocidad. Foco extra: cadencia 160+ (compensar la baja del lunes).",
+      "totalDistance": "~8,5–9 km",
+      "intensity": "Moderada (regularidad)",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'35–6'50/km",
+            "Muy cómodo",
+            "Revisar tibia, gemelos, rodillas",
+            "Si aparece molestia, observa si disminuye al calentar"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "orange",
+          "items": [
+            "4 × 1 km a 5'40–5'50/km",
+            "Recuperación: 2 min trote muy suave (6'45–7'15/km)",
+            "Serie 1: 5'48–5'50",
+            "Serie 2: 5'45–5'48",
+            "Serie 3: 5'42–5'45",
+            "Serie 4: 5'40–5'45 (sin sprint final)",
+            "CLAVE: regularidad, no velocidad"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'35–7'00/km",
+            "Muy relajado"
+          ]
+        }
+      ],
+      "rules": [
+        "OBJETIVO PRINCIPAL: regularidad entre series, no ir más rápido.",
+        "Si serie 4 más rápida que 5'40 → estás apretando de más.",
+        "NO buscar velocidad nueva, repetir nivel ya conseguido.",
+        "Si rodillas aparecen → paras series.",
+        "Cadencia objetivo: 160+ ppm (compensar la caída del lunes)."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar gemelos + cuádriceps + isquios (10 min)",
+          "Reportar: cada serie + sensaciones + estado rodillas + cadencia"
         ]
       },
       "techFocus": [
-        "Cadera alta → descarga rodillas",
-        "Pasos cortos → menos impacto articular",
-        "En bajadas: controlar con cuádriceps"
+        "Cadencia 160+ (pasos cortos y rápidos)",
+        "Cadera alta en series",
+        "Hombros relajados",
+        "Regularidad por encima de velocidad"
       ]
+    },
+    {
+      "id": "plan-2026-06-25-fuerza-rodillas",
+      "date": "2026-06-25",
+      "displayDate": "25/06/2026",
+      "kind": "plan",
+      "title": "Jueves · Fuerza específica rodillas (sesión 2)",
+      "objective": "Segunda sesión semanal de fuerza.",
+      "totalDistance": "—",
+      "intensity": "Fuerza moderada",
+      "blocks": [
+        {
+          "name": "Rutina completa (10-15 min)",
+          "tag": "orange",
+          "items": [
+            "Sentadilla isométrica pared: 3×30-45 seg",
+            "Zancadas estáticas: 3×10 por pierna",
+            "Sentadilla búlgara: 2×8 por pierna",
+            "Step-ups: 3×12 por pierna",
+            "Total: ~10-15 min",
+            "Proteína post-sesión (60 min)"
+          ]
+        }
+      ],
+      "rules": [
+        "Mantener técnica perfecta.",
+        "Proteína dentro de los 60 min siguientes."
+      ],
+      "post": {
+        "title": "Post-sesión",
+        "items": [
+          "Estirar cuádriceps + glúteos",
+          "Hidratación + proteína"
+        ]
+      }
     },
     {
       "id": "2025-01-21-e-54",
@@ -2649,6 +2765,22 @@
         "elevationM": 86,
         "workoutType": "Tirada larga consolidación",
         "notes": "Molestia rodillas últimos km. Buenas sensaciones generales."
+      }
+    },
+    {
+      "id": "2026-06-22-rodaje-progresivo-80",
+      "date": "2026-06-22",
+      "displayDate": "22/06/2026",
+      "kind": "log",
+      "title": "Rodaje progresivo",
+      "metrics": {
+        "distanceKm": 8.0,
+        "paceAvg": "6'26",
+        "hrAvg": 164,
+        "cadenceAvg": 156,
+        "elevationM": 24,
+        "workoutType": "Rodaje progresivo",
+        "notes": "Buenas sensaciones, ninguna molestia en rodillas, tibia o gemelos. Cadencia algo más baja de lo habitual (156). Cierre progresivo realizado."
       }
     }
   ]
