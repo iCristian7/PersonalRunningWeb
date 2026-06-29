@@ -539,7 +539,7 @@
       "displayDate": "27/06/2026",
       "kind": "plan",
       "title": "Sábado · Tirada larga progresiva 15 km",
-      "objective": "PLAN COMBINADO: Alcanzar 15 km por primera vez (récord distancia) con FOCO PRINCIPAL en cadencia 160+. Construir resistencia para media maratón sin agravar rodillas.",
+      "objective": "15 km + cadencia 160+.",
       "totalDistance": "15 km",
       "intensity": "Aeróbico controlado",
       "blocks": [
@@ -547,52 +547,97 @@
           "name": "1) Calentamiento",
           "tag": "blue",
           "items": [
-            "Km 1–3 a 6'40–6'30/km",
-            "Muy tranquilo",
-            "Foco desde inicio: cadencia 160+ (mirar reloj cada km)",
-            "Revisar: rodillas, tibia, gemelos"
+            "Km 1–3 a 6'40–6'30/km"
           ]
         },
         {
           "name": "2) Bloque principal",
           "tag": "green",
           "items": [
-            "Km 4–12 a 6'20–6'35/km",
-            "Sensación: 'podría mantener este ritmo bastante tiempo'",
-            "FC objetivo: < 172 ppm",
-            "CADENCIA 160+ obligatorio cada km"
+            "Km 4–12 a 6'20–6'35/km"
           ]
         },
         {
-          "name": "3) Cierre adaptativo (km 13–15)",
+          "name": "3) Cierre adaptativo",
           "tag": "orange",
           "items": [
-            "Si sigues cómodo Y sin molestias rodillas: 6'15–6'25/km",
-            "Si aparecen molestias o dudas: mantener 6'20–6'30/km del bloque",
-            "No hace falta acelerar para que el entreno sea un éxito"
+            "Km 13–15 a 6'15–6'25 (si OK)"
           ]
         }
       ],
       "rules": [
-        "REGLA INNEGOCIABLE: si rodillas aparecen antes del km 10 → PARAR en 14 km.",
-        "FOCO PRINCIPAL: cadencia 160+ cada km (lo más importante del día).",
-        "Si cadencia cae a <158 → corregir inmediatamente (pasos más cortos y rápidos).",
-        "Acabar con sensación de reserva, no agotamiento.",
-        "Hidratación durante el entreno (importante en 15 km)."
+        "Si rodillas antes km 10 → parar en 14.",
+        "Cadencia 160+ obligatorio."
       ],
       "post": {
-        "title": "Post-entreno (obligatorio)",
+        "title": "Post-entreno",
         "items": [
-          "Estirar gemelos + cuádriceps + isquios (15 min, más tiempo de lo normal)",
-          "Hielo rodillas 10-15 min (preventivo)",
-          "Reportar: cadencia + sensaciones + estado rodillas + si paraste en 14 o llegaste a 15"
+          "Estirar",
+          "Hielo rodillas"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-06-29-rodaje-recuperacion",
+      "date": "2026-06-29",
+      "displayDate": "29/06/2026",
+      "kind": "plan",
+      "title": "Lunes · Rodaje recuperación combinado 8 km",
+      "objective": "PLAN COMBINADO: Recuperación post 15 km manteniendo 8 km (rutina probada) + foco PRINCIPAL cadencia 160+ (problema persistente 3 semanas).",
+      "totalDistance": "8 km",
+      "intensity": "Suave-moderada",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "Km 1–2 a 6'40–6'50/km",
+            "Muy tranquilo",
+            "Evaluar: gemelos, tibia, rodillas tras 15 km",
+            "🎯 Cadencia 160+ desde el primer km"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "Km 3–7 a 6'25–6'35/km",
+            "Rodaje cómodo",
+            "Sensación: 'podría mantener este ritmo bastante más tiempo'",
+            "FC objetivo: < 168 ppm",
+            "🎯 Cadencia 160+ (foco PRINCIPAL del día)"
+          ]
+        },
+        {
+          "name": "3) Cierre adaptativo",
+          "tag": "orange",
+          "items": [
+            "Si te encuentras muy cómodo: Km 8 a 6'15–6'20/km",
+            "Si notas cualquier molestia: mantener 6'25–6'35/km",
+            "Sin apretar, debe sentirse natural"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 PRIORIDAD #1: cadencia 160+ cada km (problema persistente 3 semanas).",
+        "Usa metrónomo móvil/Spotify a 165 BPM si lo necesitas.",
+        "No bajar de 6'15 en ningún momento.",
+        "FC objetivo: < 168 ppm.",
+        "Acabar con sensación de reserva.",
+        "Si rodillas o tibia molestan → bajar ritmo, no acortar distancia."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar gemelos + cuádriceps + isquios (10 min)",
+          "Reportar: cadencia media (¿conseguido 160+?) + sensaciones"
         ]
       },
       "techFocus": [
-        "🎯 CADENCIA 160+ (foco PRINCIPAL del día)",
+        "🎯 CADENCIA 160+ (foco PRINCIPAL - usa metrónomo)",
         "Pasos cortos y rápidos > pasos largos",
-        "Cadera alta especialmente km 10-15",
-        "Hombros relajados en últimos km"
+        "Cadera alta",
+        "Hombros relajados"
       ]
     },
     {
@@ -601,7 +646,7 @@
       "displayDate": "30/06/2026",
       "kind": "plan",
       "title": "Martes · Fuerza específica rodillas (INICIO)",
-      "objective": "Primera sesión de fuerza tras el aplazamiento de la semana pasada. Foco máximo en técnica de los ejercicios (es el primer día).",
+      "objective": "Primera sesión de fuerza.",
       "totalDistance": "—",
       "intensity": "Fuerza moderada",
       "blocks": [
@@ -619,17 +664,16 @@
         }
       ],
       "rules": [
-        "Empezar con tranquilidad: si no has hecho fuerza antes, prioriza TÉCNICA.",
-        "No buscar el límite el primer día.",
-        "Si algún ejercicio molesta rodilla → reducir rango.",
-        "Proteína dentro de los 60 min siguientes."
+        "Prioriza TÉCNICA.",
+        "No buscar límite el primer día.",
+        "Proteína post-sesión."
       ],
       "post": {
         "title": "Post-sesión",
         "items": [
           "Estirar cuádriceps + glúteos",
           "Hidratación + proteína",
-          "Reportar: cómo te sentiste, cuáles costaron más"
+          "Reportar cómo te sentiste"
         ]
       }
     },
@@ -639,7 +683,7 @@
       "displayDate": "02/07/2026",
       "kind": "plan",
       "title": "Jueves · Fuerza específica rodillas (sesión 2)",
-      "objective": "Segunda sesión semanal de fuerza. Confirmar la rutina del martes.",
+      "objective": "Segunda sesión semanal.",
       "totalDistance": "—",
       "intensity": "Fuerza moderada",
       "blocks": [
@@ -657,10 +701,8 @@
         }
       ],
       "rules": [
-        "Si el martes fue cómodo → mantener intensidad.",
-        "Si te costó → repetir misma intensidad sin subir.",
-        "Técnica > volumen.",
-        "Proteína dentro de los 60 min siguientes."
+        "Mantener técnica perfecta.",
+        "Proteína post-sesión."
       ],
       "post": {
         "title": "Post-sesión",
@@ -2844,6 +2886,22 @@
         "elevationM": 36,
         "workoutType": "Calidad regularidad",
         "notes": "Series: 5'50 / 5'48 / 5'45 / 5'38. Buenas sensaciones sin molestias. Cadencia 158."
+      }
+    },
+    {
+      "id": "2026-06-27-tirada-larga-150",
+      "date": "2026-06-27",
+      "displayDate": "27/06/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 15.0,
+        "paceAvg": "6'28",
+        "hrAvg": 167,
+        "cadenceAvg": 158,
+        "elevationM": 124,
+        "workoutType": "Tirada larga",
+        "notes": "Récord distancia 15 km. Sin molestias rodillas. Buenas sensaciones. Cadencia 158."
       }
     }
   ]
