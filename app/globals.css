@@ -291,3 +291,278 @@ select.input option { background: #111827; color: var(--text); }
   .pf-bars{height:160px}
   .pf-stat-val{font-size:22px}
 }
+
+/* ══════════════════════════════════════════════════════
+   SUB-TABS PARA PLANES (Correr / Fuerza)
+   Pega esto AL FINAL de tu app/globals.css
+   ══════════════════════════════════════════════════════ */
+
+.seg-subtabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 4px 0 14px;
+  padding: 6px;
+  background: rgba(17, 24, 39, 0.4);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.seg-subbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  flex: 1;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.seg-subbtn:hover {
+  color: var(--text);
+  background: rgba(22, 32, 52, 0.6);
+}
+
+.seg-subbtn.active {
+  color: var(--text);
+  border-color: var(--brand);
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.seg-subbtn .seg-count {
+  min-width: 24px;
+  height: 18px;
+  padding: 0 6px;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .seg-subbtn {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   ESTADOS DE PLANES: Siguiente / Hecho / Pendiente
+   Pega esto AL FINAL de tu app/globals.css
+   ══════════════════════════════════════════════════════ */
+
+.plans-status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plan-card {
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+/* NEXT plan: highlighted with brand color glow */
+.plan-card.plan-next {
+  border-color: var(--brand);
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(17, 24, 39, 0.6));
+  box-shadow: 0 0 0 1px var(--brand), 0 4px 20px rgba(96, 165, 250, 0.15);
+}
+
+/* PAST plans: dimmed */
+.plan-card.plan-past {
+  opacity: 0.55;
+  background: rgba(17, 24, 39, 0.3);
+}
+
+.plan-card.plan-past:hover {
+  opacity: 0.85;
+}
+
+/* FUTURE plans: normal appearance */
+.plan-card.plan-future {
+  opacity: 1;
+}
+
+.plan-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.plan-header:hover {
+  background: rgba(22, 32, 52, 0.5);
+}
+
+.plan-badge-wrap {
+  flex-shrink: 0;
+}
+
+.plan-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.plan-badge.next {
+  background: var(--brand);
+  color: #0b1220;
+  animation: pulse-next 2s ease-in-out infinite;
+}
+
+@keyframes pulse-next {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(96, 165, 250, 0); }
+}
+
+.plan-badge.past {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.plan-badge.future {
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.plan-title-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.plan-date {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.plan-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+/* Past plans: strike-through title (subtle) */
+.plan-past .plan-title {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(148, 163, 184, 0.5);
+}
+
+.plan-distance,
+.plan-intensity {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.plan-chevron {
+  color: var(--muted);
+  font-size: 12px;
+  padding-top: 6px;
+  flex-shrink: 0;
+}
+
+.plan-body {
+  padding: 4px 16px 16px;
+  border-top: 1px solid var(--border);
+  background: rgba(11, 18, 32, 0.4);
+}
+
+.plan-section {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.plan-section strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--brand);
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+.plan-section p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.plan-section ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.plan-block {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border-left: 3px solid var(--border);
+  background: rgba(22, 32, 52, 0.4);
+}
+
+.plan-block-blue { border-left-color: #60a5fa; }
+.plan-block-green { border-left-color: #22c55e; }
+.plan-block-orange { border-left-color: #f97316; }
+
+.plan-block-name {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.plan-block ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 12px;
+}
+
+.empty {
+  text-align: center;
+  padding: 32px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .plan-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .plan-chevron {
+    align-self: flex-end;
+    margin-top: -20px;
+  }
+}
