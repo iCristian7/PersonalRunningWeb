@@ -13,31 +13,38 @@ function todayISO(): string {
   return `${yyyy}-${mm}-${dd}`;
 }
 
+function safeDate(w: Workout): string {
+  return w.date ?? '';
+}
+
 function classifyPlans(plans: Workout[]): { plan: Workout; status: PlanStatus }[] {
   const today = todayISO();
-  const sorted = [...plans].sort((a, b) => a.date.localeCompare(b.date));
-  const futureOrToday = sorted.filter(p => p.date >= today);
-  const nextDate = futureOrToday.length > 0 ? futureOrToday[0].date : null;
+  const sorted = [...plans].sort((a, b) => safeDate(a).localeCompare(safeDate(b)));
+  const futureOrToday = sorted.filter(p => safeDate(p) >= today);
+  const nextDate = futureOrToday.length > 0 ? safeDate(futureOrToday[0]) : null;
 
   return sorted.map(plan => {
+    const pDate = safeDate(plan);
     let status: PlanStatus;
-    if (plan.date < today) status = 'past';
-    else if (plan.date === nextDate) status = 'next';
+    if (!pDate || pDate < today) status = 'past';
+    else if (pDate === nextDate) status = 'next';
     else status = 'future';
     return { plan, status };
   });
 }
 
-// Format date DD/MM/YYYY
-function formatDate(iso: string): string {
+function formatDate(iso: string | null | undefined): string {
+  if (!iso) return '—';
   const [y, m, d] = iso.split('-');
+  if (!y || !m || !d) return iso;
   return `${d}/${m}/${y}`;
 }
 
-// Get weekday in Spanish
-function getWeekday(iso: string): string {
+function getWeekday(iso: string | null | undefined): string {
+  if (!iso) return '';
   const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
   const d = new Date(iso + 'T12:00:00');
+  if (isNaN(d.getTime())) return '';
   return days[d.getDay()];
 }
 
@@ -45,7 +52,6 @@ export default function PlansList({ plans }: { plans: Workout[] }) {
   const classified = useMemo(() => classifyPlans(plans), [plans]);
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
-  // Order: next first, then future (chronological), then past (reverse chronological)
   const ordered = useMemo(() => {
     const next = classified.filter(c => c.status === 'next');
     const future = classified.filter(c => c.status === 'future');
@@ -61,6 +67,8 @@ export default function PlansList({ plans }: { plans: Workout[] }) {
     <div className="plans-status-list">
       {ordered.map(({ plan, status }) => {
         const isExpanded = expandedId === plan.id;
+        const weekday = getWeekday(plan.date);
+        const dateStr = formatDate(plan.date);
         return (
           <div
             key={plan.id}
@@ -79,7 +87,7 @@ export default function PlansList({ plans }: { plans: Workout[] }) {
               </div>
               <div className="plan-title-wrap">
                 <div className="plan-date">
-                  {getWeekday(plan.date)} · {formatDate(plan.date)}
+                  {weekday ? `${weekday} · ` : ''}{dateStr}
                 </div>
                 <div className="plan-title">{plan.title}</div>
                 {plan.totalDistance && plan.totalDistance !== '—' && (
