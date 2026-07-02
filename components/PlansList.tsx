@@ -14,7 +14,7 @@ function todayISO(): string {
 }
 
 function safeDate(w: Workout): string {
-  return w.date ?? '';
+  return (w as any).date ?? '';
 }
 
 function classifyPlans(plans: Workout[]): { plan: Workout; status: PlanStatus }[] {
@@ -66,9 +66,11 @@ export default function PlansList({ plans }: { plans: Workout[] }) {
   return (
     <div className="plans-status-list">
       {ordered.map(({ plan, status }) => {
+        // Cast to any to access optional plan-specific fields not in Workout type
+        const p = plan as any;
         const isExpanded = expandedId === plan.id;
-        const weekday = getWeekday(plan.date);
-        const dateStr = formatDate(plan.date);
+        const weekday = getWeekday(p.date);
+        const dateStr = formatDate(p.date);
         return (
           <div
             key={plan.id}
@@ -89,12 +91,12 @@ export default function PlansList({ plans }: { plans: Workout[] }) {
                 <div className="plan-date">
                   {weekday ? `${weekday} · ` : ''}{dateStr}
                 </div>
-                <div className="plan-title">{plan.title}</div>
-                {plan.totalDistance && plan.totalDistance !== '—' && (
-                  <div className="plan-distance">📏 {plan.totalDistance}</div>
+                <div className="plan-title">{p.title}</div>
+                {p.totalDistance && p.totalDistance !== '—' && (
+                  <div className="plan-distance">📏 {p.totalDistance}</div>
                 )}
-                {plan.intensity && (
-                  <div className="plan-intensity">💪 {plan.intensity}</div>
+                {p.intensity && (
+                  <div className="plan-intensity">💪 {p.intensity}</div>
                 )}
               </div>
               <div className="plan-chevron">{isExpanded ? '▲' : '▼'}</div>
@@ -102,16 +104,16 @@ export default function PlansList({ plans }: { plans: Workout[] }) {
 
             {isExpanded && (
               <div className="plan-body">
-                {plan.objective && (
+                {p.objective && (
                   <div className="plan-section">
                     <strong>🎯 Objetivo:</strong>
-                    <p>{plan.objective}</p>
+                    <p>{p.objective}</p>
                   </div>
                 )}
-                {plan.blocks && plan.blocks.length > 0 && (
+                {p.blocks && p.blocks.length > 0 && (
                   <div className="plan-section">
                     <strong>📋 Estructura:</strong>
-                    {plan.blocks.map((b: any, i: number) => (
+                    {p.blocks.map((b: any, i: number) => (
                       <div key={i} className={`plan-block plan-block-${b.tag || 'blue'}`}>
                         <div className="plan-block-name">{b.name}</div>
                         <ul>
@@ -123,32 +125,32 @@ export default function PlansList({ plans }: { plans: Workout[] }) {
                     ))}
                   </div>
                 )}
-                {plan.rules && plan.rules.length > 0 && (
+                {p.rules && p.rules.length > 0 && (
                   <div className="plan-section">
                     <strong>⚠️ Reglas:</strong>
                     <ul>
-                      {plan.rules.map((r: string, i: number) => (
+                      {p.rules.map((r: string, i: number) => (
                         <li key={i}>{r}</li>
                       ))}
                     </ul>
                   </div>
                 )}
-                {plan.techFocus && plan.techFocus.length > 0 && (
+                {p.techFocus && p.techFocus.length > 0 && (
                   <div className="plan-section">
                     <strong>🧠 Focus técnico:</strong>
                     <ul>
-                      {plan.techFocus.map((t: string, i: number) => (
+                      {p.techFocus.map((t: string, i: number) => (
                         <li key={i}>{t}</li>
                       ))}
                     </ul>
                   </div>
                 )}
-                {plan.post && (
+                {p.post && (
                   <div className="plan-section">
-                    <strong>🧊 {plan.post.title}:</strong>
+                    <strong>🧊 {p.post.title}:</strong>
                     <ul>
-                      {plan.post.items.map((p: string, i: number) => (
-                        <li key={i}>{p}</li>
+                      {p.post.items.map((pi: string, i: number) => (
+                        <li key={i}>{pi}</li>
                       ))}
                     </ul>
                   </div>
