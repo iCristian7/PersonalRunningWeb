@@ -3279,6 +3279,18 @@
         "workoutType": "Tirada larga consolidación",
         "notes": "Récord cadencia 168 en tirada larga. Buenas sensaciones. Sin molestias. Consolidación 15 km."
       }
+    },  
+    {
+      "date": "2026-07-06",
+      "kind": "log",
+      "type": "Rodaje suave",
+      "distance_km": 8,
+      "pace": "6:24",
+      "hr_avg": 168,
+      "cadence": 169,
+      "elevation_m": 48,
+      "sensations": "buenas",
+      "notes": "Foco cadencia mantenido (169 spm). Buena recuperación tras bloque de fuerza."
     }
   ]
 }
