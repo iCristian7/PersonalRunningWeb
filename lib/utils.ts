@@ -6,8 +6,11 @@ export type WorkoutMetrics = {
   hrAvg?: number | null;
   cadenceAvg?: number | null;
   elevationM?: number | null;
-  workoutType?: string | null;
+  type?: string | null;      // genérico: Rodaje | Calidad | Tirada larga | Fuerza | Carrera | Otro
+  subtype?: string | null;   // detalle original (ej. "Series", "Tirada progresiva")
   notes?: string | null;
+  sensations?: string | null;
+  splits?: { seg: number; pace: string }[] | null;
 };
 
 export type Workout = {

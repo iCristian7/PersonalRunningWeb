@@ -46,7 +46,7 @@ export default function WorkoutList({
       const hay = norm(
         `${w.date ?? ''} ${w.displayDate ?? ''} ${w.kind} ${w.title} ${w.objective ?? ''} ` +
           `${w.totalDistance ?? ''} ${w.intensity ?? ''} ${m?.distanceKm ?? ''} ${m?.paceAvg ?? ''} ` +
-          `${m?.hrAvg ?? ''} ${m?.cadenceAvg ?? ''} ${m?.elevationM ?? ''} ${m?.workoutType ?? ''} ${m?.notes ?? ''}`
+          `${m?.hrAvg ?? ''} ${m?.cadenceAvg ?? ''} ${m?.elevationM ?? ''} ${m?.type ?? ''} ${m?.subtype ?? ''} ${m?.notes ?? ''}`
       );
       return hay.includes(nq);
     });

@@ -42,8 +42,8 @@ export default function WorkoutDetail({ params }: { params: { id: string } }) {
         <>
           <div className="card">
             <h2>Resumen</h2>
-            <table className="table"><tbody>
-              <tr><td>Tipo</td><td>{m?.workoutType ?? '—'}</td></tr>
+            <table className="table"><tbody>         
+              <tr><td>Tipo</td><td>{m?.type ?? '—'}{m?.subtype && m.subtype !== m.type ? ` · ${m.subtype}` : ''}</td></tr>
               <tr><td>Distancia</td><td>{m?.distanceKm ?? '—'} km</td></tr>
               <tr><td>Ritmo medio</td><td>{m?.paceAvg ?? '—'}</td></tr>
               <tr><td>FC media</td><td>{m?.hrAvg ?? 'N/D'} ppm</td></tr>

@@ -1052,8 +1052,9 @@
         "hrAvg": 170,
         "cadenceAvg": 135,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1068,8 +1069,9 @@
         "hrAvg": 164,
         "cadenceAvg": 131,
         "elevationM": 3,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1084,8 +1086,9 @@
         "hrAvg": 179,
         "cadenceAvg": 140,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1100,8 +1103,9 @@
         "hrAvg": 154,
         "cadenceAvg": 132,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1116,8 +1120,9 @@
         "hrAvg": 163,
         "cadenceAvg": 133,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1132,8 +1137,9 @@
         "hrAvg": 163,
         "cadenceAvg": 135,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1148,8 +1154,9 @@
         "hrAvg": 147,
         "cadenceAvg": 126,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1164,8 +1171,9 @@
         "hrAvg": 146,
         "cadenceAvg": 129,
         "elevationM": 3,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1180,8 +1188,9 @@
         "hrAvg": 160,
         "cadenceAvg": 133,
         "elevationM": 24,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1196,8 +1205,9 @@
         "hrAvg": 159,
         "cadenceAvg": 136,
         "elevationM": 18,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1212,8 +1222,9 @@
         "hrAvg": 159,
         "cadenceAvg": 126,
         "elevationM": 18,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1228,8 +1239,9 @@
         "hrAvg": 170,
         "cadenceAvg": 157,
         "elevationM": 3,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1244,8 +1256,9 @@
         "hrAvg": 150,
         "cadenceAvg": 108,
         "elevationM": 20,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1260,8 +1273,9 @@
         "hrAvg": 171,
         "cadenceAvg": 144,
         "elevationM": 18,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1276,8 +1290,9 @@
         "hrAvg": 168,
         "cadenceAvg": 137,
         "elevationM": 24,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1292,8 +1307,9 @@
         "hrAvg": 159,
         "cadenceAvg": 132,
         "elevationM": 18,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1308,8 +1324,9 @@
         "hrAvg": 169,
         "cadenceAvg": 130,
         "elevationM": 12,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1324,8 +1341,9 @@
         "hrAvg": 178,
         "cadenceAvg": 140,
         "elevationM": 15,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1340,8 +1358,9 @@
         "hrAvg": 188,
         "cadenceAvg": 158,
         "elevationM": null,
-        "workoutType": "Carrera",
-        "notes": "Carrera oficial"
+        "notes": "Carrera oficial",
+        "subtype": "Carrera",
+        "type": "Carrera"
       }
     },
     {
@@ -1356,8 +1375,9 @@
         "hrAvg": 176,
         "cadenceAvg": 158,
         "elevationM": 21,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -1367,13 +1387,14 @@
       "kind": "log",
       "title": "Progresivo",
       "metrics": {
-        "distanceKm": 4.0,
+        "distanceKm": 4,
         "paceAvg": "6'16",
         "hrAvg": 177,
         "cadenceAvg": 157,
         "elevationM": 6,
-        "workoutType": "Progresivo",
-        "notes": "Parciales: 6'23 / 6'22 / 6'08 / 5'51"
+        "notes": "Parciales: 6'23 / 6'22 / 6'08 / 5'51",
+        "subtype": "Progresivo",
+        "type": "Calidad"
       }
     },
     {
@@ -1383,13 +1404,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'26",
         "hrAvg": 178,
         "cadenceAvg": 158,
         "elevationM": 21,
-        "workoutType": "Tirada larga",
-        "notes": null
+        "notes": null,
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -1399,13 +1421,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 4.0,
+        "distanceKm": 4,
         "paceAvg": "6'03",
         "hrAvg": 181,
         "cadenceAvg": 150,
         "elevationM": 12,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -1415,13 +1438,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "6'18",
         "hrAvg": 181,
         "cadenceAvg": 148,
         "elevationM": 6,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -1431,13 +1455,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'24",
         "hrAvg": 170,
         "cadenceAvg": 151,
         "elevationM": 18,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1447,13 +1472,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "6'42",
         "hrAvg": 181,
         "cadenceAvg": 154,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1463,13 +1489,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'23",
         "hrAvg": 181,
         "cadenceAvg": 156,
         "elevationM": 15,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1479,13 +1506,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 9.0,
+        "distanceKm": 9,
         "paceAvg": "6'20",
         "hrAvg": 183,
         "cadenceAvg": 160,
         "elevationM": 15,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1495,13 +1523,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'09",
         "hrAvg": 177,
         "cadenceAvg": 158,
         "elevationM": 3,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1511,13 +1540,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 9.0,
+        "distanceKm": 9,
         "paceAvg": "6'15",
         "hrAvg": 180,
         "cadenceAvg": 157,
         "elevationM": 21,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1527,13 +1557,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 4.0,
+        "distanceKm": 4,
         "paceAvg": "6'26",
         "hrAvg": 177,
         "cadenceAvg": 155,
         "elevationM": 3,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1543,13 +1574,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 4.0,
+        "distanceKm": 4,
         "paceAvg": "6'01",
         "hrAvg": 181,
         "cadenceAvg": 157,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1559,13 +1591,14 @@
       "kind": "race",
       "title": "Carrera",
       "metrics": {
-        "distanceKm": 10.0,
+        "distanceKm": 10,
         "paceAvg": "5'52",
         "hrAvg": 183,
         "cadenceAvg": 158,
         "elevationM": 9,
-        "workoutType": "Carrera",
-        "notes": "Carrera oficial"
+        "notes": "Carrera oficial",
+        "subtype": "Carrera",
+        "type": "Carrera"
       }
     },
     {
@@ -1575,13 +1608,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 4.0,
+        "distanceKm": 4,
         "paceAvg": "6'23",
         "hrAvg": 180,
         "cadenceAvg": 151,
         "elevationM": 3,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1591,13 +1625,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "6'02",
         "hrAvg": 189,
         "cadenceAvg": 156,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1607,13 +1642,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 9.0,
+        "distanceKm": 9,
         "paceAvg": "6'21",
         "hrAvg": 180,
         "cadenceAvg": 158,
         "elevationM": 24,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1623,13 +1659,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "6'30",
         "hrAvg": 180,
         "cadenceAvg": 156,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1639,13 +1676,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'06",
         "hrAvg": 178,
         "cadenceAvg": 157,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1655,13 +1693,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 10.0,
+        "distanceKm": 10,
         "paceAvg": "6'20",
         "hrAvg": 175,
         "cadenceAvg": 159,
         "elevationM": 24,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Tirada larga"
       }
     },
     {
@@ -1671,13 +1710,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "6'18",
         "hrAvg": 168,
         "cadenceAvg": 158,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1687,13 +1727,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'00",
         "hrAvg": 180,
         "cadenceAvg": 156,
         "elevationM": 12,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1703,13 +1744,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 11.0,
+        "distanceKm": 11,
         "paceAvg": "6'14",
         "hrAvg": 177,
         "cadenceAvg": 159,
         "elevationM": 33,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Tirada larga"
       }
     },
     {
@@ -1719,13 +1761,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "6'17",
         "hrAvg": 189,
         "cadenceAvg": 149,
         "elevationM": 15,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1735,13 +1778,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 4.0,
+        "distanceKm": 4,
         "paceAvg": "6'42",
         "hrAvg": 175,
         "cadenceAvg": 148,
         "elevationM": 3,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1751,13 +1795,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 9.0,
+        "distanceKm": 9,
         "paceAvg": "6'33",
         "hrAvg": 181,
         "cadenceAvg": 149,
         "elevationM": 27,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1767,13 +1812,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "6'29",
         "hrAvg": 183,
         "cadenceAvg": 153,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1783,13 +1829,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'29",
         "hrAvg": 183,
         "cadenceAvg": 157,
         "elevationM": 3,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1799,13 +1846,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 9.0,
+        "distanceKm": 9,
         "paceAvg": "6'36",
         "hrAvg": 182,
         "cadenceAvg": 156,
         "elevationM": 24,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1815,13 +1863,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "6'21",
         "hrAvg": 178,
         "cadenceAvg": 157,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1831,13 +1880,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'16",
         "hrAvg": 180,
         "cadenceAvg": 158,
         "elevationM": 6,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1847,13 +1897,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 10.0,
+        "distanceKm": 10,
         "paceAvg": "6'29",
         "hrAvg": 172,
         "cadenceAvg": 161,
         "elevationM": 24,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Tirada larga"
       }
     },
     {
@@ -1863,13 +1914,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'29",
         "hrAvg": 167,
         "cadenceAvg": 157,
         "elevationM": 21,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1879,13 +1931,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 9.0,
+        "distanceKm": 9,
         "paceAvg": "6'10",
         "hrAvg": 170,
         "cadenceAvg": 158,
         "elevationM": 21,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1900,8 +1953,9 @@
         "hrAvg": 169,
         "cadenceAvg": 156,
         "elevationM": 33,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1911,13 +1965,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'10",
         "hrAvg": 177,
         "cadenceAvg": 157,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1927,13 +1982,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 10.0,
+        "distanceKm": 10,
         "paceAvg": "6'22",
         "hrAvg": 174,
         "cadenceAvg": 156,
         "elevationM": 24,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Tirada larga"
       }
     },
     {
@@ -1943,13 +1999,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'00",
         "hrAvg": 175,
         "cadenceAvg": 157,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1959,13 +2016,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'04",
         "hrAvg": 179,
         "cadenceAvg": 158,
         "elevationM": 12,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -1975,13 +2033,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 11.0,
+        "distanceKm": 11,
         "paceAvg": "6'10",
         "hrAvg": 172,
         "cadenceAvg": 152,
         "elevationM": 37,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Tirada larga"
       }
     },
     {
@@ -1991,13 +2050,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'12",
         "hrAvg": 178,
         "cadenceAvg": 156,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2012,8 +2072,9 @@
         "hrAvg": 176,
         "cadenceAvg": 150,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2023,13 +2084,14 @@
       "kind": "race",
       "title": "Carrera",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "5'10",
         "hrAvg": null,
         "cadenceAvg": 159,
         "elevationM": 9,
-        "workoutType": "Carrera",
-        "notes": "Carrera oficial"
+        "notes": "Carrera oficial",
+        "subtype": "Carrera",
+        "type": "Carrera"
       }
     },
     {
@@ -2039,13 +2101,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "6'13",
         "hrAvg": 173,
         "cadenceAvg": 161,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2055,13 +2118,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'12",
         "hrAvg": 181,
         "cadenceAvg": 157,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2071,13 +2135,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'06",
         "hrAvg": 180,
         "cadenceAvg": 158,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2087,13 +2152,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "5'57",
         "hrAvg": 175,
         "cadenceAvg": 158,
         "elevationM": 33,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2103,13 +2169,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 11.0,
+        "distanceKm": 11,
         "paceAvg": "6'04",
         "hrAvg": 181,
         "cadenceAvg": 160,
         "elevationM": 33,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Tirada larga"
       }
     },
     {
@@ -2119,13 +2186,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'09",
         "hrAvg": 178,
         "cadenceAvg": 159,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2135,13 +2203,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'12",
         "hrAvg": 181,
         "cadenceAvg": 158,
         "elevationM": 15,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2151,13 +2220,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 3.0,
+        "distanceKm": 3,
         "paceAvg": "6'53",
         "hrAvg": 181,
         "cadenceAvg": 151,
         "elevationM": 9,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2167,13 +2237,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 4.0,
+        "distanceKm": 4,
         "paceAvg": "6'52",
         "hrAvg": 182,
         "cadenceAvg": 152,
         "elevationM": 24,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2183,13 +2254,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "6'36",
         "hrAvg": 186,
         "cadenceAvg": 153,
         "elevationM": 21,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2199,13 +2271,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'19",
         "hrAvg": 182,
         "cadenceAvg": 155,
         "elevationM": 19,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2215,13 +2288,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'25",
         "hrAvg": 184,
         "cadenceAvg": 158,
         "elevationM": 81,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2231,13 +2305,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'30",
         "hrAvg": 185,
         "cadenceAvg": 159,
         "elevationM": 40,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2247,13 +2322,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'22",
         "hrAvg": 177,
         "cadenceAvg": 161,
         "elevationM": 67,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2268,8 +2344,9 @@
         "hrAvg": 159,
         "cadenceAvg": 159,
         "elevationM": 21,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2279,13 +2356,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'02",
         "hrAvg": 175,
         "cadenceAvg": 159,
         "elevationM": 17,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2295,13 +2373,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "6'06",
         "hrAvg": 166,
         "cadenceAvg": 160,
         "elevationM": 13,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2316,8 +2395,9 @@
         "hrAvg": 175,
         "cadenceAvg": 159,
         "elevationM": 14,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2332,8 +2412,9 @@
         "hrAvg": 159,
         "cadenceAvg": 160,
         "elevationM": 70,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2343,13 +2424,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'04",
         "hrAvg": 163,
         "cadenceAvg": 160,
         "elevationM": 25,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2359,13 +2441,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 5.0,
+        "distanceKm": 5,
         "paceAvg": "5'48",
         "hrAvg": 165,
         "cadenceAvg": 158,
         "elevationM": 24,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2380,8 +2463,9 @@
         "hrAvg": 180,
         "cadenceAvg": 162,
         "elevationM": 47,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Tirada larga"
       }
     },
     {
@@ -2396,8 +2480,9 @@
         "hrAvg": 163,
         "cadenceAvg": 159,
         "elevationM": 41,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2407,13 +2492,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'18",
         "hrAvg": 172,
         "cadenceAvg": 160,
         "elevationM": 11,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2423,13 +2509,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 11.0,
+        "distanceKm": 11,
         "paceAvg": "5'55",
         "hrAvg": 183,
         "cadenceAvg": 164,
         "elevationM": 28,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Tirada larga"
       }
     },
     {
@@ -2439,13 +2526,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'55",
         "hrAvg": 160,
         "cadenceAvg": 161,
         "elevationM": 12,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2460,8 +2548,9 @@
         "hrAvg": 174,
         "cadenceAvg": 159,
         "elevationM": 48,
-        "workoutType": "Series",
-        "notes": "3x1,5km: 5'39 / 5'37 / 5'33"
+        "notes": "3x1,5km: 5'39 / 5'37 / 5'33",
+        "subtype": "Series",
+        "type": "Calidad"
       }
     },
     {
@@ -2471,13 +2560,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 11.0,
+        "distanceKm": 11,
         "paceAvg": "5'56",
         "hrAvg": 177,
         "cadenceAvg": 162,
         "elevationM": 32,
-        "workoutType": "Tirada larga",
-        "notes": "Buen rendimiento"
+        "notes": "Buen rendimiento",
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -2487,13 +2577,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'39",
         "hrAvg": 167,
         "cadenceAvg": 162,
         "elevationM": 34,
-        "workoutType": "Rodaje",
-        "notes": "Ruta con pendientes"
+        "notes": "Ruta con pendientes",
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2508,8 +2599,9 @@
         "hrAvg": 175,
         "cadenceAvg": 163,
         "elevationM": 70,
-        "workoutType": "Series",
-        "notes": "4x1km: 5'28 / 5'30 / 5'29 / 5'34"
+        "notes": "4x1km: 5'28 / 5'30 / 5'29 / 5'34",
+        "subtype": "Series",
+        "type": "Calidad"
       }
     },
     {
@@ -2519,13 +2611,14 @@
       "kind": "log",
       "title": "Quedada/grupo",
       "metrics": {
-        "distanceKm": 10.0,
+        "distanceKm": 10,
         "paceAvg": "5'52",
         "hrAvg": 177,
         "cadenceAvg": 163,
         "elevationM": 46,
-        "workoutType": "Quedada/grupo",
-        "notes": "Buenas sensaciones"
+        "notes": "Buenas sensaciones",
+        "subtype": "Quedada/grupo",
+        "type": "Otro"
       }
     },
     {
@@ -2535,13 +2628,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'33",
         "hrAvg": 164,
         "cadenceAvg": 165,
         "elevationM": 15,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2556,8 +2650,9 @@
         "hrAvg": 167,
         "cadenceAvg": 162,
         "elevationM": 5,
-        "workoutType": "Series",
-        "notes": "5 series: 5'26 / 5'27 / 5'24 / 5'29 / 5'33"
+        "notes": "5 series: 5'26 / 5'27 / 5'24 / 5'29 / 5'33",
+        "subtype": "Series",
+        "type": "Calidad"
       }
     },
     {
@@ -2567,13 +2662,14 @@
       "kind": "log",
       "title": "Recuperación",
       "metrics": {
-        "distanceKm": 4.0,
+        "distanceKm": 4,
         "paceAvg": "7'56",
         "hrAvg": 148,
         "cadenceAvg": 148,
         "elevationM": 13,
-        "workoutType": "Recuperación",
-        "notes": "Tras pádel"
+        "notes": "Tras pádel",
+        "subtype": "Recuperación",
+        "type": "Rodaje"
       }
     },
     {
@@ -2583,13 +2679,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'13",
         "hrAvg": 167,
         "cadenceAvg": 161,
         "elevationM": 77,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2604,8 +2701,9 @@
         "hrAvg": 172,
         "cadenceAvg": 161,
         "elevationM": 7,
-        "workoutType": "Tempo",
-        "notes": "Bloque principal 5km a 5'32"
+        "notes": "Bloque principal 5km a 5'32",
+        "subtype": "Tempo",
+        "type": "Calidad"
       }
     },
     {
@@ -2615,13 +2713,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 11.0,
+        "distanceKm": 11,
         "paceAvg": "5'48",
         "hrAvg": 173,
         "cadenceAvg": 163,
         "elevationM": 89,
-        "workoutType": "Tirada larga",
-        "notes": null
+        "notes": null,
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -2631,13 +2730,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'26",
         "hrAvg": 164,
         "cadenceAvg": 161,
         "elevationM": 10,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2652,8 +2752,9 @@
         "hrAvg": 174,
         "cadenceAvg": 161,
         "elevationM": 31,
-        "workoutType": "Series",
-        "notes": "5'18 / 5'28 / 5'18 / 5'27"
+        "notes": "5'18 / 5'28 / 5'18 / 5'27",
+        "subtype": "Series",
+        "type": "Calidad"
       }
     },
     {
@@ -2668,8 +2769,9 @@
         "hrAvg": 174,
         "cadenceAvg": 158,
         "elevationM": 178,
-        "workoutType": "Rodaje fuerte",
-        "notes": "Muy buenas piernas"
+        "notes": "Muy buenas piernas",
+        "subtype": "Rodaje fuerte",
+        "type": "Rodaje"
       }
     },
     {
@@ -2679,13 +2781,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 6.0,
+        "distanceKm": 6,
         "paceAvg": "5'45",
         "hrAvg": 176,
         "cadenceAvg": 160,
         "elevationM": 24,
-        "workoutType": "Rodaje",
-        "notes": "Antes de viaje"
+        "notes": "Antes de viaje",
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2700,8 +2803,9 @@
         "hrAvg": 165,
         "cadenceAvg": 153,
         "elevationM": 52,
-        "workoutType": "Entreno pre carrera",
-        "notes": "Entreno pre carrera"
+        "notes": "Entreno pre carrera",
+        "subtype": "Entreno pre carrera",
+        "type": "Otro"
       }
     },
     {
@@ -2711,13 +2815,14 @@
       "kind": "race",
       "title": "Carrera 10K",
       "metrics": {
-        "distanceKm": 10.0,
+        "distanceKm": 10,
         "paceAvg": "5'09",
         "hrAvg": null,
         "cadenceAvg": 167,
         "elevationM": 82,
-        "workoutType": "Carrera 10K",
-        "notes": "Tiempo 51'38"
+        "notes": "Tiempo 51'38",
+        "subtype": "Carrera 10K",
+        "type": "Carrera"
       }
     },
     {
@@ -2727,13 +2832,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'10",
         "hrAvg": 168,
         "cadenceAvg": 161,
         "elevationM": 32,
-        "workoutType": "Rodaje",
-        "notes": "Inicio preparación media"
+        "notes": "Inicio preparación media",
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2743,13 +2849,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'08",
         "hrAvg": 168,
         "cadenceAvg": 161,
         "elevationM": 38,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2759,13 +2866,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 7.0,
+        "distanceKm": 7,
         "paceAvg": "6'11",
         "hrAvg": 166,
         "cadenceAvg": 159,
         "elevationM": 24,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2780,8 +2888,9 @@
         "hrAvg": 165,
         "cadenceAvg": 162,
         "elevationM": 36,
-        "workoutType": "Series",
-        "notes": "5'42 / 5'34 / 5'44 / 5'52"
+        "notes": "5'42 / 5'34 / 5'44 / 5'52",
+        "subtype": "Series",
+        "type": "Calidad"
       }
     },
     {
@@ -2791,13 +2900,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 9.0,
+        "distanceKm": 9,
         "paceAvg": "6'35",
         "hrAvg": 167,
         "cadenceAvg": 159,
         "elevationM": 51,
-        "workoutType": "Tirada larga",
-        "notes": "FC difícil de controlar"
+        "notes": "FC difícil de controlar",
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -2807,13 +2917,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'32",
         "hrAvg": 168,
         "cadenceAvg": 159,
         "elevationM": 43,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2828,8 +2939,9 @@
         "hrAvg": 168,
         "cadenceAvg": 161,
         "elevationM": 33,
-        "workoutType": "Series",
-        "notes": "5'30 / 5'36 / 5'47 / 5'42"
+        "notes": "5'30 / 5'36 / 5'47 / 5'42",
+        "subtype": "Series",
+        "type": "Calidad"
       }
     },
     {
@@ -2839,13 +2951,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 10.0,
+        "distanceKm": 10,
         "paceAvg": "6'41",
         "hrAvg": 163,
         "cadenceAvg": 159,
         "elevationM": 71,
-        "workoutType": "Tirada larga",
-        "notes": null
+        "notes": null,
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -2855,13 +2968,14 @@
       "kind": "log",
       "title": "Rodaje",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'27",
         "hrAvg": 163,
         "cadenceAvg": 163,
         "elevationM": 42,
-        "workoutType": "Rodaje",
-        "notes": null
+        "notes": null,
+        "subtype": "Rodaje",
+        "type": "Rodaje"
       }
     },
     {
@@ -2876,8 +2990,9 @@
         "hrAvg": 160,
         "cadenceAvg": 158,
         "elevationM": 29,
-        "workoutType": "Series",
-        "notes": "5'33 / 5'47 / 5'45 / 5'36"
+        "notes": "5'33 / 5'47 / 5'45 / 5'36",
+        "subtype": "Series",
+        "type": "Calidad"
       }
     },
     {
@@ -2887,13 +3002,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 11.0,
+        "distanceKm": 11,
         "paceAvg": "6'25",
         "hrAvg": 177,
         "cadenceAvg": 164,
         "elevationM": 28,
-        "workoutType": "Tirada larga",
-        "notes": "Después de comida pesada + Revolution"
+        "notes": "Después de comida pesada + Revolution",
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -2903,13 +3019,14 @@
       "kind": "log",
       "title": "Entrenamiento",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'25",
         "hrAvg": 161,
         "cadenceAvg": 161,
         "elevationM": 29,
-        "workoutType": null,
-        "notes": null
+        "notes": null,
+        "subtype": null,
+        "type": "Rodaje"
       }
     },
     {
@@ -2924,8 +3041,9 @@
         "hrAvg": 168,
         "cadenceAvg": 161,
         "elevationM": 30,
-        "workoutType": "Series",
-        "notes": "5'38 / 5'54 / 5'47 / 5'40 / 5'38"
+        "notes": "5'38 / 5'54 / 5'47 / 5'40 / 5'38",
+        "subtype": "Series",
+        "type": "Calidad"
       }
     },
     {
@@ -2935,13 +3053,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 12.0,
+        "distanceKm": 12,
         "paceAvg": "6'41",
         "hrAvg": 170,
         "cadenceAvg": 163,
         "elevationM": 48,
-        "workoutType": "Tirada larga",
-        "notes": "Piernas muy pesadas"
+        "notes": "Piernas muy pesadas",
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -2956,8 +3075,9 @@
         "hrAvg": 166,
         "cadenceAvg": 161,
         "elevationM": 30,
-        "workoutType": "Recuperación",
-        "notes": "Molestias tibia/gemelos"
+        "notes": "Molestias tibia/gemelos",
+        "subtype": "Recuperación",
+        "type": "Rodaje"
       }
     },
     {
@@ -2972,8 +3092,9 @@
         "hrAvg": 159,
         "cadenceAvg": 162,
         "elevationM": 15,
-        "workoutType": "Recuperación",
-        "notes": "Molestias leves continuadas"
+        "notes": "Molestias leves continuadas",
+        "subtype": "Recuperación",
+        "type": "Rodaje"
       }
     },
     {
@@ -2983,13 +3104,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 10.0,
+        "distanceKm": 10,
         "paceAvg": "6'35",
         "hrAvg": 170,
         "cadenceAvg": 163,
         "elevationM": 30,
-        "workoutType": "Tirada larga",
-        "notes": "Mucho mejores piernas"
+        "notes": "Mucho mejores piernas",
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -2999,13 +3121,14 @@
       "kind": "log",
       "title": "Rodaje aeróbico controlado",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'19",
         "hrAvg": 168,
         "cadenceAvg": 160,
         "elevationM": 24,
-        "workoutType": "Rodaje aeróbico controlado",
-        "notes": "Piernas poco cargadas, molestia leve"
+        "notes": "Piernas poco cargadas, molestia leve",
+        "subtype": "Rodaje aeróbico controlado",
+        "type": "Rodaje"
       }
     },
     {
@@ -3020,8 +3143,9 @@
         "hrAvg": 167,
         "cadenceAvg": 159,
         "elevationM": 26,
-        "workoutType": "Calidad controlada",
-        "notes": "Series: 5'49 / 5'43 / 5'43"
+        "notes": "Series: 5'49 / 5'43 / 5'43",
+        "subtype": "Calidad controlada",
+        "type": "Calidad"
       }
     },
     {
@@ -3031,13 +3155,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 11.0,
+        "distanceKm": 11,
         "paceAvg": "6'16",
         "hrAvg": 169,
         "cadenceAvg": 158,
         "elevationM": 42,
-        "workoutType": "Tirada larga",
-        "notes": "Buenas sensaciones, acabé con energía"
+        "notes": "Buenas sensaciones, acabé con energía",
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -3047,13 +3172,14 @@
       "kind": "log",
       "title": "Rodaje aerobico controlado",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'23",
         "hrAvg": 159,
         "cadenceAvg": 158,
         "elevationM": 31,
-        "workoutType": "Rodaje aerobico controlado",
-        "notes": "FC reloj no fiable."
+        "notes": "FC reloj no fiable.",
+        "subtype": "Rodaje aerobico controlado",
+        "type": "Rodaje"
       }
     },
     {
@@ -3068,8 +3194,9 @@
         "hrAvg": 165,
         "cadenceAvg": 159,
         "elevationM": 47,
-        "workoutType": "Calidad controlada",
-        "notes": "Series: 5'57 / 5'53 / 5'54"
+        "notes": "Series: 5'57 / 5'53 / 5'54",
+        "subtype": "Calidad controlada",
+        "type": "Calidad"
       }
     },
     {
@@ -3079,13 +3206,14 @@
       "kind": "log",
       "title": "Tirada larga adaptativa",
       "metrics": {
-        "distanceKm": 12.0,
+        "distanceKm": 12,
         "paceAvg": "6'34",
         "hrAvg": 170,
         "cadenceAvg": 160,
         "elevationM": 47,
-        "workoutType": "Tirada larga adaptativa",
-        "notes": "Buenas sensaciones, molestias mínimas, acabé con energía."
+        "notes": "Buenas sensaciones, molestias mínimas, acabé con energía.",
+        "subtype": "Tirada larga adaptativa",
+        "type": "Tirada larga"
       }
     },
     {
@@ -3095,13 +3223,14 @@
       "kind": "log",
       "title": "Rodaje controlado",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'24",
         "hrAvg": 163,
         "cadenceAvg": 160,
         "elevationM": 50,
-        "workoutType": "Rodaje controlado",
-        "notes": "Piernas cansadas al principio, mejorando durante el entreno."
+        "notes": "Piernas cansadas al principio, mejorando durante el entreno.",
+        "subtype": "Rodaje controlado",
+        "type": "Rodaje"
       }
     },
     {
@@ -3116,8 +3245,9 @@
         "hrAvg": 164,
         "cadenceAvg": 161,
         "elevationM": 28,
-        "workoutType": "Calidad con progresión",
-        "notes": "Series: 5'50 / 5'47 / 5'40 / 5'41. Buenas sensaciones."
+        "notes": "Series: 5'50 / 5'47 / 5'40 / 5'41. Buenas sensaciones.",
+        "subtype": "Calidad con progresión",
+        "type": "Calidad"
       }
     },
     {
@@ -3127,13 +3257,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 14.0,
+        "distanceKm": 14,
         "paceAvg": "6'22",
         "hrAvg": 168,
         "cadenceAvg": 160,
         "elevationM": 85,
-        "workoutType": "Tirada larga",
-        "notes": "Mínimas molestias tibia/gemelos. Molestia leve rodillas km 7-8. Récord distancia."
+        "notes": "Mínimas molestias tibia/gemelos. Molestia leve rodillas km 7-8. Récord distancia.",
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -3143,13 +3274,14 @@
       "kind": "log",
       "title": "Rodaje suave",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'32",
         "hrAvg": 162,
         "cadenceAvg": 159,
         "elevationM": 19,
-        "workoutType": "Rodaje suave",
-        "notes": "Mínimas molestias tibia, nada de rodillas. Buenas sensaciones."
+        "notes": "Mínimas molestias tibia, nada de rodillas. Buenas sensaciones.",
+        "subtype": "Rodaje suave",
+        "type": "Rodaje"
       }
     },
     {
@@ -3164,8 +3296,9 @@
         "hrAvg": 170,
         "cadenceAvg": 159,
         "elevationM": 30,
-        "workoutType": "Calidad series largas",
-        "notes": "Series: 5'52 / 5'42 / 5'41. Molestias leves en piernas, buenas sensaciones."
+        "notes": "Series: 5'52 / 5'42 / 5'41. Molestias leves en piernas, buenas sensaciones.",
+        "subtype": "Calidad series largas",
+        "type": "Calidad"
       }
     },
     {
@@ -3175,13 +3308,14 @@
       "kind": "log",
       "title": "Tirada larga consolidación",
       "metrics": {
-        "distanceKm": 14.0,
+        "distanceKm": 14,
         "paceAvg": "6'26",
         "hrAvg": 167,
         "cadenceAvg": 159,
         "elevationM": 86,
-        "workoutType": "Tirada larga consolidación",
-        "notes": "Molestia rodillas últimos km. Buenas sensaciones generales."
+        "notes": "Molestia rodillas últimos km. Buenas sensaciones generales.",
+        "subtype": "Tirada larga consolidación",
+        "type": "Tirada larga"
       }
     },
     {
@@ -3191,13 +3325,14 @@
       "kind": "log",
       "title": "Rodaje progresivo",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'26",
         "hrAvg": 164,
         "cadenceAvg": 156,
         "elevationM": 24,
-        "workoutType": "Rodaje progresivo",
-        "notes": "Buenas sensaciones, ninguna molestia. Cadencia baja 156. Cierre progresivo realizado."
+        "notes": "Buenas sensaciones, ninguna molestia. Cadencia baja 156. Cierre progresivo realizado.",
+        "subtype": "Rodaje progresivo",
+        "type": "Rodaje"
       }
     },
     {
@@ -3212,8 +3347,9 @@
         "hrAvg": 166,
         "cadenceAvg": 158,
         "elevationM": 36,
-        "workoutType": "Calidad regularidad",
-        "notes": "Series: 5'50 / 5'48 / 5'45 / 5'38. Buenas sensaciones sin molestias. Cadencia 158."
+        "notes": "Series: 5'50 / 5'48 / 5'45 / 5'38. Buenas sensaciones sin molestias. Cadencia 158.",
+        "subtype": "Calidad regularidad",
+        "type": "Calidad"
       }
     },
     {
@@ -3223,13 +3359,14 @@
       "kind": "log",
       "title": "Tirada larga",
       "metrics": {
-        "distanceKm": 15.0,
+        "distanceKm": 15,
         "paceAvg": "6'28",
         "hrAvg": 167,
         "cadenceAvg": 158,
         "elevationM": 124,
-        "workoutType": "Tirada larga",
-        "notes": "Récord distancia 15 km. Sin molestias rodillas. Buenas sensaciones. Cadencia 158."
+        "notes": "Récord distancia 15 km. Sin molestias rodillas. Buenas sensaciones. Cadencia 158.",
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
       }
     },
     {
@@ -3239,13 +3376,14 @@
       "kind": "log",
       "title": "Rodaje recuperación + cadencia",
       "metrics": {
-        "distanceKm": 8.0,
+        "distanceKm": 8,
         "paceAvg": "6'22",
         "hrAvg": 165,
         "cadenceAvg": 165,
         "elevationM": 44,
-        "workoutType": "Rodaje recuperación + cadencia",
-        "notes": "Buenas sensaciones. Foco en cadencia conseguido (165, +7 ppm)."
+        "notes": "Buenas sensaciones. Foco en cadencia conseguido (165, +7 ppm).",
+        "subtype": "Rodaje recuperación + cadencia",
+        "type": "Rodaje"
       }
     },
     {
@@ -3260,8 +3398,9 @@
         "hrAvg": 167,
         "cadenceAvg": 166,
         "elevationM": 66,
-        "workoutType": "Calidad consolidación",
-        "notes": "Series: 5'47 / 5'42 / 5'39 / 5'36. Buenas sensaciones. Cadencia 166 sin buscarlo."
+        "notes": "Series: 5'47 / 5'42 / 5'39 / 5'36. Buenas sensaciones. Cadencia 166 sin buscarlo.",
+        "subtype": "Calidad consolidación",
+        "type": "Calidad"
       }
     },
     {
@@ -3271,26 +3410,72 @@
       "kind": "log",
       "title": "Tirada larga consolidación",
       "metrics": {
-        "distanceKm": 15.0,
+        "distanceKm": 15,
         "paceAvg": "6'24",
         "hrAvg": 167,
         "cadenceAvg": 168,
         "elevationM": 78,
-        "workoutType": "Tirada larga consolidación",
-        "notes": "Récord cadencia 168 en tirada larga. Buenas sensaciones. Sin molestias. Consolidación 15 km."
+        "notes": "Récord cadencia 168 en tirada larga. Buenas sensaciones. Sin molestias. Consolidación 15 km.",
+        "subtype": "Tirada larga consolidación",
+        "type": "Tirada larga"
       }
-    },  
+    },
     {
       "date": "2026-07-06",
       "kind": "log",
-      "type": "Rodaje suave",
-      "distance_km": 8,
-      "pace": "6:24",
-      "hr_avg": 168,
-      "cadence": 169,
-      "elevation_m": 48,
-      "sensations": "buenas",
-      "notes": "Foco cadencia mantenido (169 spm). Buena recuperación tras bloque de fuerza."
+      "notes": "Foco cadencia mantenido (169 spm). Buena recuperación tras bloque de fuerza.",
+      "metrics": {
+        "distanceKm": 8,
+        "paceAvg": "6'24",
+        "hrAvg": 168,
+        "cadenceAvg": 169,
+        "elevationM": 48,
+        "notes": "Foco cadencia mantenido (169 spm). Buena recuperación tras bloque de fuerza.",
+        "sensations": "buenas",
+        "splits": null,
+        "subtype": "Rodaje suave",
+        "type": "Rodaje"
+      },
+      "id": "2026-07-06-e-800",
+      "displayDate": "06/07/2026",
+      "title": "Rodaje suave"
+    },
+    {
+      "date": "2026-07-08",
+      "kind": "log",
+      "notes": "Tirada progresiva ejecutada con negative split (5'47 → 5'36). FC alta (177) justificada por calor + migraña + tramos rápidos. Buena progresión técnica.",
+      "metrics": {
+        "distanceKm": 9.16,
+        "paceAvg": "6'12",
+        "hrAvg": 177,
+        "cadenceAvg": 167,
+        "elevationM": 26,
+        "notes": "Tirada progresiva ejecutada con negative split (5'47 → 5'36). FC alta (177) justificada por calor + migraña + tramos rápidos. Buena progresión técnica.",
+        "sensations": "Calor fuerte y migraña, algo fatigado. Sin molestias en piernas ni agujetas. Dificultad para leer el ritmo en el reloj.",
+        "splits": [
+          {
+            "seg": 1,
+            "pace": "5:47"
+          },
+          {
+            "seg": 2,
+            "pace": "5:45"
+          },
+          {
+            "seg": 3,
+            "pace": "5:45"
+          },
+          {
+            "seg": 4,
+            "pace": "5:36"
+          }
+        ],
+        "subtype": "Tirada progresiva",
+        "type": "Calidad"
+      },
+      "id": "2026-07-08-e-916",
+      "displayDate": "08/07/2026",
+      "title": "Tirada progresiva"
     }
   ]
 }

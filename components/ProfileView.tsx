@@ -207,17 +207,31 @@ export default function ProfileView({ profile, workouts }: { profile: ProfileDat
     return pts;
   }, [logs]);
 
-  /* ── Type distribution ───────────────────────────── */
+/* ── Type distribution ───────────────────────────── */
+  const TYPE_COLORS: Record<string, string> = {
+    'Rodaje': '#34d399',
+    'Calidad': '#fb923c',
+    'Tirada larga': '#60a5fa',
+    'Fuerza': '#a78bfa',
+    'Carrera': '#f87171',
+    'Otro': '#fbbf24',
+    'Sin tipo': '#94a3b8',
+  };
+  const TYPE_ORDER = ['Rodaje', 'Calidad', 'Tirada larga', 'Fuerza', 'Carrera', 'Otro', 'Sin tipo'];
+
   const typeDist = useMemo(() => {
     const map = new Map<string, number>();
     for (const w of logs) {
-      const t = w.metrics?.workoutType ?? 'Sin tipo';
+      const t = w.metrics?.type ?? 'Sin tipo';
       map.set(t, (map.get(t) ?? 0) + 1);
     }
-    const colors = ['#60a5fa','#fb923c','#34d399','#f87171','#a78bfa','#fbbf24','#ec4899','#6ee7b7','#93c5fd','#fdba74'];
     return [...map.entries()]
-      .sort((a, b) => b[1] - a[1])
-      .map(([label, value], i) => ({ label, value, color: colors[i % colors.length] }));
+      .sort((a, b) => TYPE_ORDER.indexOf(a[0]) - TYPE_ORDER.indexOf(b[0]))
+      .map(([label, value]) => ({
+        label,
+        value,
+        color: TYPE_COLORS[label] ?? TYPE_COLORS['Sin tipo'],
+      }));
   }, [logs]);
 
   /* ── FC zone distribution ────────────────────────── */
