@@ -3476,6 +3476,304 @@
       "id": "2026-07-08-e-916",
       "displayDate": "08/07/2026",
       "title": "Tirada progresiva"
+    },
+    {
+      "date": "2026-07-11",
+      "kind": "log",
+      "notes": "NUEVO RÉCORD de distancia: 16 km. Cadencia 168 estable. FC 166 controlada. Sin molestias. Primera semana con fuerza real integrada sin limitar el rendimiento.",
+      "metrics": {
+        "distanceKm": 16,
+        "paceAvg": "6'22",
+        "hrAvg": 166,
+        "cadenceAvg": 168,
+        "elevationM": 74,
+        "notes": "NUEVO RÉCORD de distancia: 16 km. Cadencia 168 estable. FC 166 controlada. Sin molestias. Primera semana con fuerza real integrada sin limitar el rendimiento.",
+        "sensations": "buenas, sin molestias",
+        "splits": null,
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
+      },
+      "id": "2026-07-11-tirada-larga-160",
+      "displayDate": "11/07/2026",
+      "title": "Tirada larga"
+    },
+    {
+      "id": "plan-2026-07-13-rodaje-recuperacion",
+      "date": "2026-07-13",
+      "displayDate": "13/07/2026",
+      "kind": "plan",
+      "title": "Lunes · Rodaje aeróbico de recuperación 8 km",
+      "objective": "Recuperar del récord de 16 km. Favorecer adaptación aeróbica. Llegar fresco al miércoles.",
+      "totalDistance": "8 km",
+      "intensity": "Suave (esfuerzo 4/10)",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "Km 1–2 a 6'40–6'50/km",
+            "Muy relajado, comprobar cómo responden las piernas tras la tirada larga"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "Km 3–7 a 6'20–6'35/km",
+            "Ritmo cómodo y constante",
+            "Esfuerzo 4/10"
+          ]
+        },
+        {
+          "name": "3) Cierre adaptativo",
+          "tag": "orange",
+          "items": [
+            "Km 8 a 6'15–6'20/km (si te encuentras muy bien)",
+            "Si notas fatiga, mantener el ritmo del bloque principal"
+          ]
+        }
+      ],
+      "rules": [
+        "No es un entrenamiento para ganar velocidad.",
+        "FC objetivo: < 168 ppm.",
+        "Cadencia natural (ya sale en 168, no forzar)."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar suavemente",
+          "Reportar sensaciones + estado piernas tras 16 km"
+        ]
+      },
+      "techFocus": [
+        "Cadencia natural",
+        "Correr relajado",
+        "Pasos ligeros"
+      ]
+    },
+    {
+      "id": "plan-2026-07-14-fuerza-rodillas",
+      "date": "2026-07-14",
+      "displayDate": "14/07/2026",
+      "kind": "plan",
+      "title": "Martes · Fuerza específica rodillas (volumen ajustado)",
+      "objective": "Sesión de fuerza semanal. Complementar el running sin agotar.",
+      "totalDistance": "—",
+      "intensity": "Fuerza suave-moderada",
+      "blocks": [
+        {
+          "name": "Calentamiento previo (3 min)",
+          "tag": "blue",
+          "items": [
+            "Camina o salta 1-2 min",
+            "10 sentadillas suaves"
+          ]
+        },
+        {
+          "name": "Rutina completa (~10 min)",
+          "tag": "orange",
+          "items": [
+            "Sentadilla isométrica pared: 3×25 seg",
+            "Zancadas estáticas: 2×10 por pierna",
+            "Sentadilla búlgara: 2×6 por pierna",
+            "Step-ups: 2×10 por pierna",
+            "Total: ~10 min",
+            "🎯 REGLA CLAVE: acabar cada ejercicio pensando 'podría hacer 1 serie más'",
+            "Proteína post-sesión (60 min)"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 'Podría hacer 1 serie más'.",
+        "TÉCNICA > intensidad.",
+        "Proteína post-sesión."
+      ],
+      "post": {
+        "title": "Post-sesión",
+        "items": [
+          "Estirar cuádriceps + glúteos",
+          "Hidratación + proteína"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-07-15-miercoles-calidad-volumen",
+      "date": "2026-07-15",
+      "displayDate": "15/07/2026",
+      "kind": "plan",
+      "title": "Miércoles · Calidad progresión volumen (3 × 1,5 km)",
+      "objective": "Progresar en VOLUMEN de calidad (no en velocidad) tras muchas semanas con 4×1km. Series más largas para sostener ritmo más tiempo (específico media maratón). Foco: regularidad + lap pace.",
+      "totalDistance": "~10 km",
+      "intensity": "Moderada (progresión de volumen)",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'35–6'50/km"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "orange",
+          "items": [
+            "3 × 1,5 km a 5'42–5'47/km",
+            "Recuperación: 2'30 trote suave (6'45–7'10/km)",
+            "Bloque 1: empezar muy conservador, no mirar ritmo cada pocos segundos",
+            "Bloque 2: misma sensación de esfuerzo",
+            "Bloque 3: últimos 300–400 m un poco más alegres, SIN esprintar",
+            "🎯 Ser muy CONSTANTE (no buscar 5'35)"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'35–7'00/km"
+          ]
+        },
+        {
+          "name": "🔧 CONFIG RELOJ",
+          "tag": "orange",
+          "items": [
+            "Usar 'Ritmo vuelta actual' (lap pace), NO el instantáneo",
+            "Auto-lap cada 500 m",
+            "Resuelve los trompicones del 08/07"
+          ]
+        }
+      ],
+      "rules": [
+        "OBJETIVO: volumen + regularidad, NO velocidad.",
+        "TOPE DURO: NO bajar de 5'40/km (frena la tendencia a apretar).",
+        "Usa lap pace, no ritmo instantáneo.",
+        "Acabar con sensación de 'podría hacer más'."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar gemelos + cuádriceps + isquios (10 min)",
+          "Reportar: cada bloque + sensaciones + cómo fue con lap pace"
+        ]
+      },
+      "techFocus": [
+        "Regularidad por encima de todo",
+        "Lap pace en vez de instantáneo",
+        "Cadencia natural",
+        "Sostener ritmo, no hacer sprints"
+      ]
+    },
+    {
+      "id": "plan-2026-07-16-fuerza-rodillas",
+      "date": "2026-07-16",
+      "displayDate": "16/07/2026",
+      "kind": "plan",
+      "title": "Jueves · Fuerza específica rodillas (volumen ajustado)",
+      "objective": "Segunda sesión de fuerza semanal.",
+      "totalDistance": "—",
+      "intensity": "Fuerza suave-moderada",
+      "blocks": [
+        {
+          "name": "Calentamiento previo (3 min)",
+          "tag": "blue",
+          "items": [
+            "Camina o salta 1-2 min",
+            "10 sentadillas suaves"
+          ]
+        },
+        {
+          "name": "Rutina completa (~10 min)",
+          "tag": "orange",
+          "items": [
+            "Sentadilla isométrica pared: 3×25 seg",
+            "Zancadas estáticas: 2×10 por pierna",
+            "Sentadilla búlgara: 2×6 por pierna",
+            "Step-ups: 2×10 por pierna",
+            "Total: ~10 min",
+            "🎯 REGLA CLAVE: acabar cada ejercicio pensando 'podría hacer 1 serie más'",
+            "Proteína post-sesión (60 min)"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 'Podría hacer 1 serie más'.",
+        "Mantener misma intensidad que el martes.",
+        "Proteína post-sesión."
+      ],
+      "post": {
+        "title": "Post-sesión",
+        "items": [
+          "Estirar cuádriceps + glúteos",
+          "Hidratación + proteína"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-07-18-tirada-larga-consolidacion-16km",
+      "date": "2026-07-18",
+      "displayDate": "18/07/2026",
+      "kind": "plan",
+      "title": "Sábado · Tirada larga consolidación 16 km",
+      "objective": "Consolidar los 16 km antes de aumentar otra vez la distancia. Misma filosofía que funcionó con 14 y 15 km: consolidar antes de progresar. Si la semana va bien, la próxima saltamos a 17 km.",
+      "totalDistance": "16 km",
+      "intensity": "Aeróbico controlado (esfuerzo 4-5/10)",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "Km 1–3 a 6'40–6'35/km",
+            "Muy tranquilo"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "Km 4–13 a 6'20–6'30/km",
+            "Ritmo cómodo y sostenible",
+            "Esfuerzo 4-5/10",
+            "FC objetivo: < 172 ppm"
+          ]
+        },
+        {
+          "name": "3) Cierre adaptativo",
+          "tag": "orange",
+          "items": [
+            "Km 14–16 a 6'15–6'25/km (si llegas cómodo)",
+            "Si no, mantener el ritmo del bloque principal"
+          ]
+        },
+        {
+          "name": "⚠️ Señales para reducir a 15 km",
+          "tag": "orange",
+          "items": [
+            "Dolor creciente en tibia",
+            "Molestia de rodilla que cambie tu forma de correr",
+            "Fatiga claramente superior a la habitual",
+            "Si solo hay piernas cansadas → continuar con calma"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 ÉXITO = 16 km + buenas sensaciones + sin molestias.",
+        "Debe ser sostenible, NO exigente.",
+        "Cadencia natural.",
+        "Terminar con sensación de 'podría seguir'."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Camina 5-10 min",
+          "Estirar 15 min: cuádriceps, glúteos, gemelos, isquios",
+          "Hidratación + proteína",
+          "Reportar: sensaciones + cadencia + estado piernas"
+        ]
+      },
+      "techFocus": [
+        "Cadencia natural",
+        "Zancada compacta",
+        "Pasos ligeros y relajados"
+      ]
     }
   ]
 }
