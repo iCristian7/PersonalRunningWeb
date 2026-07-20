@@ -3774,6 +3774,219 @@
         "Zancada compacta",
         "Pasos ligeros y relajados"
       ]
+    },
+    {
+      "id": "2026-07-13-rodaje-recuperacion-80",
+      "date": "2026-07-13",
+      "displayDate": "13/07/2026",
+      "kind": "log",
+      "title": "Rodaje recuperación",
+      "metrics": {
+        "distanceKm": 8,
+        "paceAvg": "6'23",
+        "hrAvg": 164,
+        "cadenceAvg": 168,
+        "elevationM": 40,
+        "notes": "Buenas sensaciones. FC baja (164), recuperación perfecta tras 16 km.",
+        "sensations": "buenas",
+        "splits": null,
+        "subtype": "Rodaje recuperación",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-07-15-calidad-volumen-961",
+      "date": "2026-07-15",
+      "displayDate": "15/07/2026",
+      "kind": "log",
+      "title": "Calidad progresión volumen",
+      "metrics": {
+        "distanceKm": 9.61,
+        "paceAvg": "6'08",
+        "hrAvg": 169,
+        "cadenceAvg": 166,
+        "elevationM": 28,
+        "notes": "Primera vez 3×1,5 km. REGULARIDAD PERFECTA: 5'44 / 5'45 / 5'43 (solo 2 seg de variación). Hito: controla el ritmo sin apretar de más.",
+        "sensations": "buenas",
+        "splits": [
+          { "seg": 1, "pace": "5:44" },
+          { "seg": 2, "pace": "5:45" },
+          { "seg": 3, "pace": "5:43" }
+        ],
+        "subtype": "Calidad progresión volumen",
+        "type": "Calidad"
+      }
+    },
+    {
+      "id": "2026-07-18-tirada-larga-170",
+      "date": "2026-07-18",
+      "displayDate": "18/07/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 17,
+        "paceAvg": "6'23",
+        "hrAvg": 168,
+        "cadenceAvg": 171,
+        "elevationM": 28,
+        "notes": "NUEVO RÉCORD distancia (17 km) y cadencia (171). Se vio bien e hizo 1 km más de lo planificado (16→17). FC 168 controlada. Sin molestias.",
+        "sensations": "muy buenas, con energía para más",
+        "splits": null,
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
+      }
+    },
+    {
+      "id": "plan-2026-07-20-rodaje-recuperacion",
+      "date": "2026-07-20",
+      "displayDate": "20/07/2026",
+      "kind": "plan",
+      "title": "Lunes · Rodaje de recuperación 8 km",
+      "objective": "Recuperar de los 17 km. Mantener volumen aeróbico. Semana reorganizada por viaje (jue-dom sin entrenar).",
+      "totalDistance": "8 km",
+      "intensity": "Suave (esfuerzo 4/10)",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "Km 1–2 a 6'40–6'50/km",
+            "Muy relajado"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "Km 3–8 a 6'20–6'35/km",
+            "Ritmo cómodo y constante",
+            "Esfuerzo 4/10"
+          ]
+        }
+      ],
+      "rules": [
+        "Recuperar de los 17 km.",
+        "FC objetivo: < 168 ppm.",
+        "Cadencia natural."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar suavemente",
+          "Reportar sensaciones"
+        ]
+      },
+      "techFocus": [
+        "Cadencia natural",
+        "Correr relajado"
+      ]
+    },
+    {
+      "id": "plan-2026-07-21-fuerza-rodillas",
+      "date": "2026-07-21",
+      "displayDate": "21/07/2026",
+      "kind": "plan",
+      "title": "Martes · Fuerza específica rodillas (volumen ajustado)",
+      "objective": "Sesión de fuerza semanal. Aprovechar que no hay carga de carrera alta ese día.",
+      "totalDistance": "—",
+      "intensity": "Fuerza suave-moderada",
+      "blocks": [
+        {
+          "name": "Calentamiento previo (3 min)",
+          "tag": "blue",
+          "items": [
+            "Camina o salta 1-2 min",
+            "10 sentadillas suaves"
+          ]
+        },
+        {
+          "name": "Rutina completa (~10 min)",
+          "tag": "orange",
+          "items": [
+            "Sentadilla isométrica pared: 3×25 seg",
+            "Zancadas estáticas: 2×10 por pierna",
+            "Sentadilla búlgara: 2×6 por pierna",
+            "Step-ups: 2×10 por pierna",
+            "Total: ~10 min",
+            "🎯 REGLA CLAVE: acabar cada ejercicio pensando 'podría hacer 1 serie más'",
+            "Proteína post-sesión (60 min)"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 'Podría hacer 1 serie más'.",
+        "TÉCNICA > intensidad.",
+        "Proteína post-sesión."
+      ],
+      "post": {
+        "title": "Post-sesión",
+        "items": [
+          "Estirar cuádriceps + glúteos",
+          "Hidratación + proteína"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-07-22-miercoles-calidad-volumen",
+      "date": "2026-07-22",
+      "displayDate": "22/07/2026",
+      "kind": "plan",
+      "title": "Miércoles · Calidad 3 × 1,5 km (sesión clave)",
+      "objective": "Sesión clave de la semana antes del viaje. Mantener nivel SIN dejar fatiga (4 días de parón después). NO subir a 4×1,5 km. Repetir la regularidad clavada el 15/07 (5'43-5'45).",
+      "totalDistance": "~10 km",
+      "intensity": "Moderada (mantener, no cargar)",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'35–6'50/km"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "orange",
+          "items": [
+            "3 × 1,5 km a 5'42–5'45/km",
+            "Recuperación: 2'30 trote suave (6'45–7'10/km)",
+            "Repetir la regularidad del 15/07 (5'44/5'45/5'43)",
+            "🎯 Muy constante, NO buscar 5'40"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'35–7'00/km"
+          ]
+        },
+        {
+          "name": "🔧 CONFIG RELOJ",
+          "tag": "orange",
+          "items": [
+            "Usar 'Ritmo vuelta actual' (lap pace)",
+            "Auto-lap cada 500 m"
+          ]
+        }
+      ],
+      "rules": [
+        "NO subir a 4×1,5 km (justo antes del parón, no meter carga extra).",
+        "TOPE DURO: NO bajar de 5'40/km.",
+        "Llegar al viaje con buenas sensaciones, no con fatiga.",
+        "Usa lap pace."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar gemelos + cuádriceps + isquios (10 min)",
+          "Reportar: cada bloque + sensaciones"
+        ]
+      },
+      "techFocus": [
+        "Regularidad (repetir el 15/07)",
+        "Lap pace",
+        "Cadencia natural"
+      ]
     }
   ]
 }
