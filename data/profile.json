@@ -112,6 +112,13 @@
       "pace": "6'23",
       "date": "18/07/2026",
       "context": "Tirada larga"
+    },
+        {
+      "distance": "18 km",
+      "time": "1:54:36",
+      "pace": "6'22",
+      "date": "15/08/2026",
+      "context": "Tirada larga (142 m desnivel)"
     }
   ],
   "goal": {

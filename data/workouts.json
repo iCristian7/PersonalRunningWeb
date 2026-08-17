@@ -4947,6 +4947,346 @@
         "Zancada compacta",
         "Pasos ligeros y relajados"
       ]
+    },
+        {
+      "id": "2026-08-11-rodaje-aerobico-80",
+      "date": "2026-08-11",
+      "displayDate": "11/08/2026",
+      "kind": "log",
+      "title": "Rodaje aeróbico",
+      "metrics": {
+        "distanceKm": 8,
+        "paceAvg": "6'31",
+        "hrAvg": 163,
+        "cadenceAvg": 168,
+        "elevationM": 26,
+        "notes": "Recuperación tranquila tras 17 km. FC 163 normal, buenas sensaciones.",
+        "sensations": "buenas",
+        "splits": null,
+        "subtype": "Rodaje aeróbico",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-08-13-calidad-volumen-1149",
+      "date": "2026-08-13",
+      "displayDate": "13/08/2026",
+      "kind": "log",
+      "title": "Calidad progresión volumen",
+      "metrics": {
+        "distanceKm": 11.49,
+        "paceAvg": "6'05",
+        "hrAvg": 166,
+        "cadenceAvg": 166,
+        "elevationM": 38,
+        "notes": "4×1,5 km. Regularidad perfecta: 5'45 / 5'43 / 5'44 / 5'42 (3 seg variación). FC 166 baja. Volumen consolidado.",
+        "sensations": "buenas",
+        "splits": [
+          { "seg": 1, "pace": "5:45" },
+          { "seg": 2, "pace": "5:43" },
+          { "seg": 3, "pace": "5:44" },
+          { "seg": 4, "pace": "5:42" }
+        ],
+        "subtype": "Calidad progresión volumen",
+        "type": "Calidad"
+      }
+    },
+    {
+      "id": "2026-08-15-tirada-larga-180",
+      "date": "2026-08-15",
+      "displayDate": "15/08/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 18,
+        "paceAvg": "6'22",
+        "hrAvg": 167,
+        "cadenceAvg": 169,
+        "elevationM": 142,
+        "notes": "NUEVO RÉCORD distancia (18 km). Perfil MUY exigente (142 m desnivel, casi el doble de lo habitual) y aún así ritmo 6'22 con FC 167 (la más baja). Decidido antes de salir. Sin molestias. Salto de rendimiento notable.",
+        "sensations": "buenas",
+        "splits": null,
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
+      }
+    },
+        {
+      "id": "plan-2026-08-17-rodaje-recuperacion",
+      "date": "2026-08-17",
+      "displayDate": "17/08/2026",
+      "kind": "plan",
+      "title": "Lunes · Rodaje fácil de recuperación",
+      "objective": "Recuperación tras los 18 km. Última semana antes de Canadá (pico de volumen).",
+      "totalDistance": "8 km (7 si cargado)",
+      "intensity": "Suave (esfuerzo 3-4/10)",
+      "blocks": [
+        {
+          "name": "1) Rodaje completo",
+          "tag": "green",
+          "items": [
+            "8 km a 6'25–6'40/km",
+            "Terreno cómodo, sin series",
+            "Poder hablar con relativa facilidad",
+            "Si las piernas están cargadas por los 18 km → hacer 7 km"
+          ]
+        }
+      ],
+      "rules": [
+        "NO convertir en calidad.",
+        "FC similar o inferior a tus últimos rodajes fáciles.",
+        "Esfuerzo 3-4/10."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar suavemente",
+          "Reportar: cómo están las piernas tras los 18 km (decide la calidad del miércoles)"
+        ]
+      },
+      "techFocus": [
+        "Correr relajado",
+        "Cadencia natural"
+      ]
+    },
+    {
+      "id": "plan-2026-08-18-fuerza-rodillas",
+      "date": "2026-08-18",
+      "displayDate": "18/08/2026",
+      "kind": "plan",
+      "title": "Martes · Fuerza específica rodillas (sesión 1)",
+      "objective": "Primera sesión de fuerza de la semana.",
+      "totalDistance": "—",
+      "intensity": "Fuerza suave-moderada",
+      "blocks": [
+        {
+          "name": "Calentamiento previo (3 min)",
+          "tag": "blue",
+          "items": [
+            "Camina o salta 1-2 min",
+            "10 sentadillas suaves"
+          ]
+        },
+        {
+          "name": "Rutina completa (~10 min)",
+          "tag": "orange",
+          "items": [
+            "Sentadilla isométrica pared: 3×25 seg",
+            "Zancadas estáticas: 2×10 por pierna",
+            "Sentadilla búlgara: 2×6 por pierna",
+            "Step-ups: 2×10 por pierna",
+            "Total: ~10 min",
+            "🎯 REGLA CLAVE: acabar cada ejercicio pensando 'podría hacer 1 serie más'",
+            "Proteína post-sesión (60 min)"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 'Podría hacer 1 serie más'.",
+        "TÉCNICA > intensidad.",
+        "Proteína post-sesión."
+      ],
+      "post": {
+        "title": "Post-sesión",
+        "items": [
+          "Estirar cuádriceps + glúteos",
+          "Hidratación + proteína"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-08-19-miercoles-calidad-volumen",
+      "date": "2026-08-19",
+      "displayDate": "19/08/2026",
+      "kind": "plan",
+      "title": "Miércoles · Calidad 4 × 1,5 km",
+      "objective": "Mantener el volumen de calidad ya consolidado (5 sesiones clavadas en 5'42-5'45). Construir resistencia alrededor de una intensidad controlada, no perseguir ritmos más rápidos.",
+      "totalDistance": "~11,5–12 km",
+      "intensity": "Moderada (consolidación)",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km suaves",
+            "Movilidad dinámica",
+            "3-4 progresivos cortos"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "orange",
+          "items": [
+            "4 × 1,5 km a 5'40–5'45/km",
+            "Recuperación: 2 min trote suave",
+            "Buscar regularidad: 5'44 → 5'43 → 5'43 → 5'42",
+            "🎯 NO buscar 5'35, las 4 lo más regulares posible"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "1,5-2 km suaves"
+          ]
+        },
+        {
+          "name": "🔧 CONFIG RELOJ",
+          "tag": "orange",
+          "items": [
+            "Usar 'Ritmo vuelta actual' (lap pace)",
+            "Auto-lap cada 500 m"
+          ]
+        }
+      ],
+      "rules": [
+        "OBJETIVO: regularidad, NO velocidad.",
+        "TOPE DURO: NO bajar de 5'40/km.",
+        "EXCEPCIÓN: si el lunes llegaste muy fatigado o con molestias → bajar a 4×1,2 km.",
+        "Usa lap pace."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar gemelos + cuádriceps + isquios (10 min)",
+          "Reportar: cada serie + sensaciones"
+        ]
+      },
+      "techFocus": [
+        "Regularidad por encima de todo",
+        "Lap pace",
+        "Cadencia natural"
+      ]
+    },
+    {
+      "id": "plan-2026-08-20-fuerza-rodillas",
+      "date": "2026-08-20",
+      "displayDate": "20/08/2026",
+      "kind": "plan",
+      "title": "Jueves · Fuerza específica rodillas (sesión 2)",
+      "objective": "Segunda sesión de fuerza de la semana.",
+      "totalDistance": "—",
+      "intensity": "Fuerza suave-moderada",
+      "blocks": [
+        {
+          "name": "Calentamiento previo (3 min)",
+          "tag": "blue",
+          "items": [
+            "Camina o salta 1-2 min",
+            "10 sentadillas suaves"
+          ]
+        },
+        {
+          "name": "Rutina completa (~10 min)",
+          "tag": "orange",
+          "items": [
+            "Sentadilla isométrica pared: 3×25 seg",
+            "Zancadas estáticas: 2×10 por pierna",
+            "Sentadilla búlgara: 2×6 por pierna",
+            "Step-ups: 2×10 por pierna",
+            "Total: ~10 min",
+            "🎯 REGLA CLAVE: acabar cada ejercicio pensando 'podría hacer 1 serie más'",
+            "Proteína post-sesión (60 min)"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 'Podría hacer 1 serie más'.",
+        "Suave (víspera de tirada larga de 19 km).",
+        "Proteína post-sesión."
+      ],
+      "post": {
+        "title": "Post-sesión",
+        "items": [
+          "Estirar cuádriceps + glúteos",
+          "Hidratación + proteína"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-08-22-tirada-larga-19km",
+      "date": "2026-08-22",
+      "displayDate": "22/08/2026",
+      "kind": "plan",
+      "title": "Sábado · Tirada larga 19 km (último pico pre-Canadá)",
+      "objective": "Salto a 19 km tras el 18 km resuelto con solvencia (incluso con 142 m de desnivel). Último pico de volumen antes del viaje a Canadá (24-31 ago = descanso natural). NO es una carrera, es construir resistencia a intensidad controlada.",
+      "totalDistance": "19 km",
+      "intensity": "Aeróbico controlado (esfuerzo 4-5/10)",
+      "blocks": [
+        {
+          "name": "🚦 DECISIÓN antes de salir",
+          "tag": "orange",
+          "items": [
+            "19 km DECIDIDO antes de salir",
+            "NO es una carrera de 19 km, es un entrenamiento sólido"
+          ]
+        },
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "Km 1–3 a 6'35–6'45/km",
+            "Muy tranquilo"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "Km 4–15 a 6'20–6'30/km",
+            "Ritmo cómodo y sostenible",
+            "Esfuerzo 4-5/10",
+            "FC objetivo: < 172 ppm"
+          ]
+        },
+        {
+          "name": "3) Cierre adaptativo",
+          "tag": "orange",
+          "items": [
+            "Km 16–19 a 6'15–6'25/km (solo si sigues cómodo)",
+            "No necesitas acelerar al final"
+          ]
+        },
+        {
+          "name": "☀️ Calor / viento / desnivel",
+          "tag": "orange",
+          "items": [
+            "Si hay calor, viento, desnivel o la FC sube demasiado → mantener 6'25–6'40/km sin problema",
+            "El objetivo es el esfuerzo, no el ritmo"
+          ]
+        },
+        {
+          "name": "⚠️ Regla de seguridad (reducir distancia)",
+          "tag": "orange",
+          "items": [
+            "Dolor creciente en tibia/tibial anterior",
+            "Dolor de rodilla que cambie la zancada",
+            "Dolor significativo de gemelo",
+            "Fatiga anormal o síntomas del resfriado que reaparezcan",
+            "→ NO hacer 19 km por obligación, reducir la sesión"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 ÉXITO = 19 km sólido + sin molestias (el ritmo da igual).",
+        "Con calor/desnivel: por esfuerzo, no por ritmo.",
+        "Si aparecen molestias → reducir sin dudar.",
+        "Cadencia natural."
+      ],
+      "post": {
+        "title": "Post-entreno (récord distancia)",
+        "items": [
+          "Camina 5-10 min",
+          "Estirar 15 min: cuádriceps, glúteos, gemelos, isquios",
+          "Hidratación abundante + proteína",
+          "Hielo rodillas si molestia",
+          "Reportar: distancia final + FC + sensaciones + cadencia + estado piernas (24-48h post decide el siguiente paso)"
+        ]
+      },
+      "techFocus": [
+        "Cadencia natural",
+        "Zancada compacta",
+        "Intensidad controlada, no perseguir ritmo"
+      ]
     }
   ]
 }
