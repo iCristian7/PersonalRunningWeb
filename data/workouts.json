@@ -5287,6 +5287,214 @@
         "Zancada compacta",
         "Intensidad controlada, no perseguir ritmo"
       ]
+    },
+        {
+      "id": "2026-08-17-rodaje-z2-80",
+      "date": "2026-08-17",
+      "displayDate": "17/08/2026",
+      "kind": "log",
+      "title": "Rodaje Z2 (experimento)",
+      "metrics": {
+        "distanceKm": 8,
+        "paceAvg": "8'27",
+        "hrAvg": 145,
+        "cadenceAvg": 164,
+        "elevationM": 32,
+        "notes": "Experimento Z2: rodaje con techo 150 ppm. 8'27 a 145 ppm. NO es el ritmo Z2 real (rodaje muy conservador tras 18 km), pero demuestra control de intensidad. Primer punto de referencia FC/ritmo.",
+        "sensations": "buenas",
+        "splits": null,
+        "subtype": "Rodaje Z2",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-08-19-calidad-volumen-1107",
+      "date": "2026-08-19",
+      "displayDate": "19/08/2026",
+      "kind": "log",
+      "title": "Calidad progresión volumen",
+      "metrics": {
+        "distanceKm": 11.07,
+        "paceAvg": "6'29",
+        "hrAvg": 161,
+        "cadenceAvg": 167,
+        "elevationM": 56,
+        "notes": "4×1,5 km. Regularidad perfecta: 5'46 / 5'45 / 5'42 / 5'42 (4 seg variación). FC 161 muy baja. Confirma que 4×1,5 era la decisión correcta.",
+        "sensations": "buenas",
+        "splits": [
+          { "seg": 1, "pace": "5:46" },
+          { "seg": 2, "pace": "5:45" },
+          { "seg": 3, "pace": "5:42" },
+          { "seg": 4, "pace": "5:42" }
+        ],
+        "subtype": "Calidad progresión volumen",
+        "type": "Calidad"
+      }
+    },
+    {
+      "id": "2026-08-22-tirada-larga-190",
+      "date": "2026-08-22",
+      "displayDate": "22/08/2026",
+      "kind": "log",
+      "title": "Tirada larga",
+      "metrics": {
+        "distanceKm": 19,
+        "paceAvg": "6'12",
+        "hrAvg": 170,
+        "cadenceAvg": 174,
+        "elevationM": 54,
+        "notes": "NUEVO RÉCORD distancia (19 km) y cadencia (174). Último pico pre-Canadá. Se pasó de ritmo (6'12 vs 6'20-6'30 plan, FC 170). Buenas sensaciones y sin molestias. Aprendizaje: las tiradas largas no deben ir todas a este ritmo, parte deben ser realmente aeróbicas (FC más baja).",
+        "sensations": "buenas (fue más rápido de lo planificado)",
+        "splits": null,
+        "subtype": "Tirada larga",
+        "type": "Tirada larga"
+      }
+    },
+        {
+      "id": "plan-2026-09-02-rodaje-z2",
+      "date": "2026-09-02",
+      "displayDate": "02/09/2026",
+      "kind": "plan",
+      "title": "Miércoles · Rodaje Z2 real (vuelta de Canadá)",
+      "objective": "Primer entreno tras 10 días de parón (Canadá). Reactivar el sistema aeróbico Y empezar a mapear la Z2 real por FC. Correr por pulsaciones, NO por ritmo.",
+      "totalDistance": "8 km",
+      "intensity": "Z2 aeróbica (esfuerzo 3/10)",
+      "blocks": [
+        {
+          "name": "🫀 Rodaje Z2 completo",
+          "tag": "green",
+          "items": [
+            "8 km · FC objetivo ~145 ppm (rango 140-150)",
+            "Ritmo: EL QUE SALGA, sin objetivo de ritmo",
+            "Poner la pantalla del reloj en FC, no en ritmo",
+            "Si subes de 150 → anda o trota suavísimo hasta bajar",
+            "Esfuerzo 3/10, conversación cómoda",
+            "Mira la FC solo ocasionalmente, deja que el ritmo salga solo"
+          ]
+        }
+      ],
+      "rules": [
+        "🫀 POR FC, NO POR RITMO. Aceptar ir lento aunque cueste al ego.",
+        "Mantener ~145 ppm (mismo objetivo que el 17/08 para poder comparar).",
+        "No corregir el ritmo constantemente.",
+        "Sin series."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar suavemente",
+          "📝 REPORTAR: ritmo medio a ~145 ppm (comparar con 17/08 → 8'27 a 145)",
+          "¿Te costó ir lento mentalmente?",
+          "Sensaciones de las piernas tras 10 días parado"
+        ]
+      },
+      "techFocus": [
+        "Correr por FC, no por ritmo",
+        "Cadencia natural",
+        "Aceptar el ritmo lento"
+      ]
+    },
+    {
+      "id": "plan-2026-09-03-fuerza-rodillas",
+      "date": "2026-09-03",
+      "displayDate": "03/09/2026",
+      "kind": "plan",
+      "title": "Jueves · Fuerza específica rodillas (opcional)",
+      "objective": "Sesión de fuerza, solo si el cuerpo responde bien al miércoles. Si las piernas están dormidas del parón, mover o descansar.",
+      "totalDistance": "—",
+      "intensity": "Fuerza suave-moderada",
+      "blocks": [
+        {
+          "name": "Calentamiento previo (3 min)",
+          "tag": "blue",
+          "items": [
+            "Camina o salta 1-2 min",
+            "10 sentadillas suaves"
+          ]
+        },
+        {
+          "name": "Rutina completa (~10 min)",
+          "tag": "orange",
+          "items": [
+            "Sentadilla isométrica pared: 3×25 seg",
+            "Zancadas estáticas: 2×10 por pierna",
+            "Sentadilla búlgara: 2×6 por pierna",
+            "Step-ups: 2×10 por pierna",
+            "Total: ~10 min",
+            "🎯 REGLA CLAVE: acabar cada ejercicio pensando 'podría hacer 1 serie más'",
+            "Proteína post-sesión (60 min)"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 'Podría hacer 1 serie más'.",
+        "Opcional: si notas las piernas muy dormidas del parón → descansar.",
+        "Proteína post-sesión."
+      ],
+      "post": {
+        "title": "Post-sesión",
+        "items": [
+          "Estirar cuádriceps + glúteos",
+          "Hidratación + proteína"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-09-05-tirada-larga-reactivacion",
+      "date": "2026-09-05",
+      "displayDate": "05/09/2026",
+      "kind": "plan",
+      "title": "Sábado · Tirada larga de reactivación (16 km)",
+      "objective": "Primera tirada larga tras el parón de Canadá. NO retomar con 19-20 km. Reactivar a esfuerzo fácil y confirmar que las piernas responden. Aplicar la lección del 22/08: controlada, FC baja, NO carrera.",
+      "totalDistance": "16 km (14 si piernas dormidas)",
+      "intensity": "Aeróbico fácil (esfuerzo 4/10)",
+      "blocks": [
+        {
+          "name": "🚦 DECISIÓN según el miércoles",
+          "tag": "orange",
+          "items": [
+            "Miércoles respondió bien → 16 km",
+            "Piernas muy dormidas del parón → 14 km",
+            "Decidir tras el rodaje Z2 del miércoles"
+          ]
+        },
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "Km 1–3 muy cómodos"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "Km 4–16 a esfuerzo fácil",
+            "FC ~145-155 ppm si las condiciones lo permiten",
+            "RITMO completamente secundario",
+            "Sin progresión obligatoria al final"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 Aplicar lección del 22/08: tirada CONTROLADA, no rápida.",
+        "FC baja (<168), ritmo secundario.",
+        "Si acabas sorprendentemente fresco → perfecto, margen para subir.",
+        "Cadencia natural."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar 15 min: cuádriceps, glúteos, gemelos, isquios",
+          "Hidratación + proteína",
+          "Reportar: distancia + FC + sensaciones + cómo respondieron las piernas tras el parón"
+        ]
+      },
+      "techFocus": [
+        "Esfuerzo aeróbico bajo (no perseguir ritmo)",
+        "Cadencia natural",
+        "Zancada compacta"
+      ]
     }
   ]
 }
