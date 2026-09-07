@@ -276,6 +276,37 @@ export default function ProfileView({ profile, workouts }: { profile: ProfileDat
         </div>
       </div>
 
+            {/* ── Zapatillas ── */}
+      <div className="pf-section">
+        <div className="card">
+          <h2>👟 Zapatillas</h2>
+          {(profile.shoes as any[]).map((s, i) => {
+            const total = s.totalKm ?? 0;
+            const limit = s.replaceAtKm ?? 700;
+            const pct = Math.min(100, Math.round((total / limit) * 100));
+            const left = Math.max(0, limit - total);
+            const status = pct >= 90 ? 'red' : pct >= 70 ? 'orange' : 'green';
+            return (
+              <div key={i} className="shoe-row">
+                <div className="shoe-head">
+                  <div>
+                    <div className="shoe-name">{s.name}</div>
+                    <div className="shoe-role muted">{s.role}</div>
+                  </div>
+                  <div className="shoe-km">{total} / {limit} km</div>
+                </div>
+                <div className="shoe-track">
+                  <div className={`shoe-fill ${status}`} style={{ width: `${pct}%` }} />
+                </div>
+                <div className="shoe-foot muted">
+                  {left > 0 ? `Quedan ~${left} km para reemplazar` : '⚠️ Recomendado reemplazar'}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
       {/* ── Goal ───────────────────────────────────── */}
       <div className="pf-section">
         <div className="card pf-goal">

@@ -5495,6 +5495,88 @@
         "Cadencia natural",
         "Zancada compacta"
       ]
+    },
+        {
+      "id": "2026-09-02-rodaje-z2-80",
+      "date": "2026-09-02",
+      "displayDate": "02/09/2026",
+      "kind": "log",
+      "title": "Rodaje Z2 (vuelta Canadá)",
+      "metrics": {
+        "distanceKm": 8,
+        "paceAvg": "9'30",
+        "hrAvg": 151,
+        "cadenceAvg": 162,
+        "elevationM": 35,
+        "notes": "Primer día tras 10 días parado (Canadá). Jet lag + migrañas → dato Z2 NO fiable. Costó mantener FC baja. Sin molestias en piernas. Estreno Nike Pegasus Trail 5 GTX.",
+        "sensations": "migrañas por jet lag, costó mantener FC baja",
+        "shoe": "Nike Pegasus Trail 5 GTX",
+        "splits": null,
+        "subtype": "Rodaje Z2",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-09-05-tirada-larga-reactivacion-160",
+      "date": "2026-09-05",
+      "displayDate": "05/09/2026",
+      "kind": "log",
+      "title": "Tirada larga reactivación",
+      "metrics": {
+        "distanceKm": 16,
+        "paceAvg": "7'28",
+        "hrAvg": 160,
+        "cadenceAvg": 167,
+        "elevationM": 61,
+        "notes": "Reactivación tras Canadá, sin migrañas. Dato Z2 más limpio: 7'28 a FC 160. Cuesta mantener pulsaciones bajas. Sin molestias. Nike Pegasus Trail 5 GTX.",
+        "sensations": "buenas, costó mantener FC baja",
+        "shoe": "Nike Pegasus Trail 5 GTX",
+        "splits": null,
+        "subtype": "Tirada larga reactivación",
+        "type": "Tirada larga"
+      }
+    },
+        {
+      "id": "plan-2026-09-07-rodaje-facil-rpe",
+      "date": "2026-09-07",
+      "displayDate": "07/09/2026",
+      "kind": "plan",
+      "title": "Lunes · Rodaje fácil por sensación (RPE + talk test)",
+      "objective": "Dato limpio tras el parón (sin jet lag/migraña). Correr aeróbico por SENSACIÓN, no por número. La FC es dato secundario. Este entreno decide el miércoles.",
+      "totalDistance": "8 km",
+      "intensity": "Fácil (RPE 3/10)",
+      "blocks": [
+        {
+          "name": "🫀 Rodaje completo por sensación",
+          "tag": "green",
+          "items": [
+            "8 km a RPE 3/10 + talk test",
+            "Debes poder hablar en frases completas sin ahogarte",
+            "FC como dato SECUNDARIO (no perseguir número)",
+            "Si rondas 150-155 → perfecto",
+            "Si puntualmente 158-160 respirando muy cómodo → no frenes desesperado",
+            "Si vas continuamente a 160+ y ya es rodaje moderado → baja"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 Correr por RPE + talk test, NO por FC exacta.",
+        "No perseguir 145 ni declarar ninguna zona todavía.",
+        "Sin series.",
+        "Este dato (más limpio que el 02/09) decide el miércoles."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar suavemente",
+          "📝 REPORTAR: ritmo + FC media + sobre todo cómo de CÓMODA fue la respiración"
+        ]
+      },
+      "techFocus": [
+        "Correr por sensación",
+        "Talk test (hablar en frases completas)",
+        "FC como referencia, no objetivo"
+      ]
     }
   ]
 }

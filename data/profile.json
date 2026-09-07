@@ -3,14 +3,20 @@
   "weightKg": 79,
   "heightCm": 183,
   "device": "Samsung Galaxy Watch 7",
-  "shoes": [
+    "shoes": [
     {
-      "name": "Nike Pegasus",
-      "role": "Principal"
+      "name": "Nike Pegasus 41",
+      "role": "Principal (asfalto)",
+      "totalKm": 370,
+      "replaceAtKm": 700,
+      "active": true
     },
     {
-      "name": "Nike Revolution 5",
-      "role": "Ocasional"
+      "name": "Nike Pegasus Trail 5 GTX",
+      "role": "Trail / lluvia",
+      "totalKm": 24,
+      "replaceAtKm": 700,
+      "active": true
     }
   ],
   "terrain": "Asfalto urbano",

@@ -566,3 +566,17 @@ select.input option { background: #111827; color: var(--text); }
     margin-top: -20px;
   }
 }
+
+/* ── Zapatillas ── */
+.shoe-row { margin-bottom: 16px; }
+.shoe-row:last-child { margin-bottom: 0; }
+.shoe-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 6px; }
+.shoe-name { font-weight: 700; font-size: 14px; color: var(--text); }
+.shoe-role { font-size: 12px; }
+.shoe-km { font-size: 13px; font-weight: 600; white-space: nowrap; color: var(--text); }
+.shoe-track { height: 10px; border-radius: 6px; background: rgba(34,48,72,.5); overflow: hidden; }
+.shoe-fill { height: 100%; border-radius: 6px; transition: width .4s ease; }
+.shoe-fill.green { background: #34d399; }
+.shoe-fill.orange { background: #fb923c; }
+.shoe-fill.red { background: #f87171; }
+.shoe-foot { font-size: 12px; margin-top: 4px; }
