@@ -7,14 +7,14 @@
     {
       "name": "Nike Pegasus 41",
       "role": "Principal (asfalto)",
-      "totalKm": 370,
+      "totalKm": 399,
       "replaceAtKm": 700,
       "active": true
     },
     {
       "name": "Nike Pegasus Trail 5 GTX",
-      "role": "Trail / lluvia",
-      "totalKm": 32,
+      "role": "Trail / lluvia / senderismo",
+      "totalKm": 41,
       "replaceAtKm": 700,
       "active": true
     }
