@@ -6,15 +6,15 @@
     "shoes": [
     {
       "name": "Nike Pegasus 41",
-      "role": "Principal (asfalto)",
-      "totalKm": 399,
+      "role": "Principal (asfalto) · Zapatilla de carrera Galway",
+      "totalKm": 418,
       "replaceAtKm": 700,
       "active": true
     },
     {
       "name": "Nike Pegasus Trail 5 GTX",
       "role": "Trail / lluvia / senderismo",
-      "totalKm": 41,
+      "totalKm": 60,
       "replaceAtKm": 700,
       "active": true
     }

@@ -6033,6 +6033,260 @@
         "Eficiencia aeróbica",
         "Cadencia natural"
       ]
+    },
+        {
+      "id": "2026-09-14-rodaje-z2-80",
+      "date": "2026-09-14",
+      "displayDate": "14/09/2026",
+      "kind": "log",
+      "title": "Rodaje Z2",
+      "metrics": {
+        "distanceKm": 8,
+        "paceAvg": "7'55",
+        "hrAvg": 146,
+        "cadenceAvg": 166,
+        "elevationM": 38,
+        "notes": "Mejor rodaje de baja intensidad hasta ahora. FC 146 = zona de conversación fluida del talk test. Z2 pura conseguida sin pelearse con el reloj. Trail.",
+        "sensations": "buenas",
+        "shoe": "Nike Pegasus Trail 5 GTX",
+        "splits": null,
+        "subtype": "Rodaje Z2",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-09-16-calidad-1113",
+      "date": "2026-09-16",
+      "displayDate": "16/09/2026",
+      "kind": "log",
+      "title": "Calidad 4 × 1,5 km",
+      "metrics": {
+        "distanceKm": 11.13,
+        "paceAvg": "6'29",
+        "hrAvg": 161,
+        "cadenceAvg": 165,
+        "elevationM": 69,
+        "notes": "Series 5'46 / 5'46 / 5'46 / 5'44 → regularidad de relojero (2 seg variación). FC 161 (vs 163 la semana pasada) → reasentado tras Canadá. Trail.",
+        "sensations": "buenas",
+        "shoe": "Nike Pegasus Trail 5 GTX",
+        "splits": [
+          { "seg": 1, "pace": "5:46" },
+          { "seg": 2, "pace": "5:46" },
+          { "seg": 3, "pace": "5:46" },
+          { "seg": 4, "pace": "5:44" }
+        ],
+        "subtype": "Calidad",
+        "type": "Calidad"
+      }
+    },
+    {
+      "id": "2026-09-19-tirada-larga-190",
+      "date": "2026-09-19",
+      "displayDate": "19/09/2026",
+      "kind": "log",
+      "title": "Tirada larga (último pico)",
+      "metrics": {
+        "distanceKm": 19,
+        "paceAvg": "7'48",
+        "hrAvg": 153,
+        "cadenceAvg": 164,
+        "elevationM": 116,
+        "notes": "ÚLTIMO PICO pre-Galway. FC 153 justo en el centro del rango objetivo (148-155). Comparativa clave: mismos 19 km que el 22/08 pero con 17 ppm MENOS (170 → 153) y el doble de desnivel. Control del esfuerzo en tirada larga conseguido. Pegasus 41.",
+        "sensations": "buenas",
+        "shoe": "Nike Pegasus 41",
+        "splits": null,
+        "subtype": "Tirada larga aeróbica",
+        "type": "Tirada larga"
+      }
+    },
+        {
+      "id": "plan-2026-09-21-rodaje-z2",
+      "date": "2026-09-21",
+      "displayDate": "21/09/2026",
+      "kind": "plan",
+      "title": "Lunes · Z2 fácil (inicio tapering)",
+      "objective": "Recuperar del 19 km del sábado y mantener trabajo aeróbico. Primera sesión del tapering hacia Galway (03/10).",
+      "totalDistance": "7-8 km",
+      "intensity": "Fácil (RPE 2-3/10, FC 145-150)",
+      "blocks": [
+        {
+          "name": "🫀 Rodaje completo",
+          "tag": "green",
+          "items": [
+            "7-8 km · FC 145-150 ppm (hasta 152 si hablas cómodo)",
+            "Ritmo SIN objetivo",
+            "Talk test: frases largas sin dificultad",
+            "Si piernas cargadas de los 19 km → 6-7 km y listo"
+          ]
+        }
+      ],
+      "rules": [
+        "No perseguir 145 si obliga a caminar continuamente.",
+        "Referencia: 14/09 fue perfecto (7'55 a 146 ppm).",
+        "Recuperación activa, no carga."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar suavemente",
+          "Reportar: ritmo + FC + sensaciones"
+        ]
+      },
+      "techFocus": [
+        "Talk test",
+        "Cadencia natural"
+      ]
+    },
+    {
+      "id": "plan-2026-09-22-fuerza-ligera",
+      "date": "2026-09-22",
+      "displayDate": "22/09/2026",
+      "kind": "plan",
+      "title": "Martes · Fuerza ligera (última antes de Galway)",
+      "objective": "Sesión de fuerza muy ligera. ÚLTIMA antes de la media maratón. Mantener activación sin generar fatiga.",
+      "totalDistance": "—",
+      "intensity": "Fuerza muy ligera (15-20 min)",
+      "blocks": [
+        {
+          "name": "Rutina ligera (15-20 min)",
+          "tag": "orange",
+          "items": [
+            "Core: plancha 3×30 seg",
+            "Glúteo: puente de glúteo 2×12",
+            "Estabilidad: equilibrio monopodal 2×30 seg por pierna",
+            "Sentadilla isométrica pared: 2×20 seg",
+            "POCO volumen de pierna (mañana es el test)",
+            "Proteína post-sesión"
+          ]
+        }
+      ],
+      "rules": [
+        "⚠️ ÚLTIMA sesión de fuerza antes de Galway.",
+        "Muy suave: mañana es el test sub-2h.",
+        "Nada de llegar al límite."
+      ],
+      "post": {
+        "title": "Post-sesión",
+        "items": [
+          "Estirar cuádriceps + glúteos",
+          "Hidratación + proteína"
+        ]
+      }
+    },
+    {
+      "id": "plan-2026-09-23-test-sub2h",
+      "date": "2026-09-23",
+      "displayDate": "23/09/2026",
+      "kind": "plan",
+      "title": "🧪 Miércoles · TEST SUB-2H (sesión clave)",
+      "objective": "Medir si el ritmo sub-2h (5'41/km) es sostenible. Este test decide el objetivo real para Galway. Datos a recoger: FC media en los 3 km, FC final, talk test y sensación honesta.",
+      "totalDistance": "~10,5 km",
+      "intensity": "Test (moderada-alta)",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km a 6'40-6'55",
+            "Movilidad dinámica",
+            "2-3 progresivos cortos"
+          ]
+        },
+        {
+          "name": "2) Activación",
+          "tag": "orange",
+          "items": [
+            "2 × 1,5 km a 5'45",
+            "Recuperación: 2 min trote suave",
+            "Luego 3 min trote muy suave antes del test"
+          ]
+        },
+        {
+          "name": "🧪 3) TEST: 3 km continuos a 5'41",
+          "tag": "orange",
+          "items": [
+            "3 km CONTINUOS a 5'41/km (ritmo sub-2h)",
+            "Lo más REGULARES posible (usar lap pace)",
+            "NO salir a 5'30 y morir → falsearía el test",
+            "📊 MEDIR: FC media, FC del último km, talk test, sensación"
+          ]
+        },
+        {
+          "name": "4) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "1,5 km suaves"
+          ]
+        }
+      ],
+      "rules": [
+        "🚦 INTERPRETACIÓN: FC < 168 + 'podría seguir bastante' → sub-2h posible",
+        "🚦 FC 168-173 + 'duro pero controlable' → objetivo ~2h05-2h10",
+        "🚦 FC > 175 o ahogado → sub-2h no sostenible 21 km",
+        "Regularidad en los 3 km es CLAVE para que el test sea válido.",
+        "Usar lap pace, no ritmo instantáneo."
+      ],
+      "post": {
+        "title": "Post-test (datos críticos)",
+        "items": [
+          "Estirar gemelos + cuádriceps + isquios",
+          "📊 REPORTAR: FC media de los 3 km + FC del último km",
+          "📊 ¿Podrías haber hecho 3 km más? ¿6 más?",
+          "📊 Talk test durante el test: ¿podías decir frases cortas?"
+        ]
+      },
+      "techFocus": [
+        "Regularidad absoluta en los 3 km",
+        "Lap pace",
+        "Cadencia natural"
+      ]
+    },
+    {
+      "id": "plan-2026-09-26-tirada-aerobica-14km",
+      "date": "2026-09-26",
+      "displayDate": "26/09/2026",
+      "kind": "plan",
+      "title": "Sábado · Tirada aeróbica 14 km (tapering)",
+      "objective": "Tirada reducida (19 → 14 km) para mantener resistencia sin acumular fatiga a una semana de Galway. Solo aeróbica: el trabajo de ritmo ya se hizo el miércoles.",
+      "totalDistance": "14 km",
+      "intensity": "Aeróbico controlado (148-155 ppm)",
+      "blocks": [
+        {
+          "name": "1) Km 1–3",
+          "tag": "blue",
+          "items": [
+            "Muy cómodos (~145-150 ppm si sale natural)",
+            "Ritmo secundario"
+          ]
+        },
+        {
+          "name": "2) Km 4–14",
+          "tag": "green",
+          "items": [
+            "Esfuerzo aeróbico controlado (~148-155 ppm)",
+            "Talk test razonablemente cómodo",
+            "SIN objetivo de ritmo"
+          ]
+        }
+      ],
+      "rules": [
+        "🎯 SIN progresión final. Aunque en el km 11 te sientas genial, NO conviertas los últimos 3 km en tempo.",
+        "Terminar pensando: 'podría seguir varios kilómetros más'.",
+        "Eso es exactamente lo correcto a una semana de Galway."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar 15 min",
+          "Hidratación + proteína",
+          "Reportar: ritmo + FC + sensaciones"
+        ]
+      },
+      "techFocus": [
+        "Aeróbico puro",
+        "Cadencia natural",
+        "Contener el impulso de acelerar"
+      ]
     }
   ]
 }
