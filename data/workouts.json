@@ -6287,6 +6287,247 @@
         "Cadencia natural",
         "Contener el impulso de acelerar"
       ]
+    },
+        {
+      "id": "2026-09-21-rodaje-z2-80",
+      "date": "2026-09-21",
+      "displayDate": "21/09/2026",
+      "kind": "log",
+      "title": "Rodaje Z2 (inicio tapering)",
+      "metrics": {
+        "distanceKm": 8,
+        "paceAvg": "8'09",
+        "hrAvg": 148,
+        "cadenceAvg": 160,
+        "elevationM": 21,
+        "notes": "Z2 perfecta (FC 148). Recuperación del 19 km. Primera sesión del tapering hacia Galway. Pegasus 41.",
+        "sensations": "buenas",
+        "shoe": "Nike Pegasus 41",
+        "splits": null,
+        "subtype": "Rodaje Z2",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-09-23-test-sub2h-1026",
+      "date": "2026-09-23",
+      "displayDate": "23/09/2026",
+      "kind": "log",
+      "title": "🧪 Test sub-2h",
+      "metrics": {
+        "distanceKm": 10.26,
+        "paceAvg": "6'04",
+        "hrAvg": 165,
+        "cadenceAvg": 166,
+        "elevationM": 30,
+        "notes": "TEST sub-2h. Tramos: calentamiento 2 km @6'40 (149 ppm) · activación ~3,76 km @5'46 (170 ppm) · TEST 3 km @5'44 (173 ppm) · enfriamiento 1,5 km @6'45 (161 ppm). Splits del test: 5'48 (169) / 5'35 (175) / 5'48 (174). FC final 179-180, picos 180+. Sensación: frases muy cortas, podría haber seguido varios km. Reloj: VT1 150 · VT2 166 · FCmáx 185 · VO2max 45,1. CONCLUSIÓN: test a 7 ppm por encima de VT2 → 5'41 no es ritmo sostenible 21 km. Pegasus 41.",
+        "sensations": "buenas, frases muy cortas, podría haber seguido varios km",
+        "shoe": "Nike Pegasus 41",
+        "splits": [
+          { "seg": 1, "pace": "5:48" },
+          { "seg": 2, "pace": "5:35" },
+          { "seg": 3, "pace": "5:48" }
+        ],
+        "subtype": "Test ritmo objetivo",
+        "type": "Calidad"
+      }
+    },
+    {
+      "id": "2026-09-26-tirada-aerobica-140",
+      "date": "2026-09-26",
+      "displayDate": "26/09/2026",
+      "kind": "log",
+      "title": "Tirada aeróbica (tapering)",
+      "metrics": {
+        "distanceKm": 14,
+        "paceAvg": "7'20",
+        "hrAvg": 154,
+        "cadenceAvg": 167,
+        "elevationM": 88,
+        "notes": "Última tirada antes de Galway. Tapering ejecutado bien: 19 → 14 km. 28 seg/km más rápido que la semana anterior con FC similar (154) → señal de frescura. Sin progresión final.",
+        "sensations": "buenas",
+        "shoe": "Nike Pegasus 41",
+        "splits": null,
+        "subtype": "Tirada aeróbica",
+        "type": "Tirada larga"
+      }
+    },
+        {
+      "id": "plan-2026-09-30-activacion-pre-galway",
+      "date": "2026-09-30",
+      "displayDate": "30/09/2026",
+      "kind": "plan",
+      "title": "Miércoles · Activación (única sesión pre-Galway)",
+      "objective": "Mover las piernas y recordar un ritmo rápido SIN generar ninguna fatiga. Última carrera antes de la media maratón.",
+      "totalDistance": "~5 km",
+      "intensity": "Muy suave con toques rápidos",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km muy fáciles (RPE 2/10, conversación completa)",
+            "Ritmo irrelevante (probablemente >7'00/km)",
+            "Movilidad dinámica breve: tobillos y cadera",
+            "2 progresivos de 15-20 seg (sin sprintar)"
+          ]
+        },
+        {
+          "name": "2) Activación",
+          "tag": "orange",
+          "items": [
+            "3 × 1 minuto a 5'35–5'45/km",
+            "Recuperación: 2 min trote muy suave entre cada uno",
+            "Sensación: rápido + cómodo + controlado",
+            "NO es una serie, son recordatorios neuromusculares"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "Trote muy suave hasta completar ~5 km"
+          ]
+        }
+      ],
+      "rules": [
+        "⚠️ SOLO 3 repeticiones, aunque te encuentres genial.",
+        "Si sale a 5'20 porque te sientes bien → FRENA.",
+        "Acabar pensando: 'podría haber hecho otras cinco perfectamente'.",
+        "Sin fuerza esta semana."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Estirar suavemente",
+          "Jue 1 y Vie 2: descanso TOTAL (nada de running ni fuerza)"
+        ]
+      },
+      "techFocus": [
+        "Piernas despiertas, no cansadas",
+        "Lap pace"
+      ]
+    },
+    {
+      "id": "plan-2026-10-03-media-maraton-galway",
+      "date": "2026-10-03",
+      "displayDate": "03/10/2026",
+      "kind": "race",
+      "title": "🏁 MEDIA MARATÓN DE GALWAY (21,1 km)",
+      "objective": "Primera media maratón. Estrategia: construir la carrera de atrás hacia delante. Salida conservadora + chequeo en km 12. Objetivo realista 2h03-2h07, con sub-2h vivo si el día acompaña. VT2 = 166 ppm (referencia clave).",
+      "totalDistance": "21,1 km",
+      "intensity": "Competición",
+      "blocks": [
+        {
+          "name": "⏰ HORARIO DEL DÍA (salida 9:30)",
+          "tag": "blue",
+          "items": [
+            "6:15 · Despertar",
+            "6:30 · Desayuno (3h antes de la salida)",
+            "7:00-7:45 · Baño, vestirse, preparar con calma",
+            "7:45 · Salir hacia la zona de salida",
+            "8:15-8:30 · Llegar, dorsal, ubicarse",
+            "8:45 · Último baño",
+            "8:55-9:05 · Calentamiento (8-10 min)",
+            "9:10 · Últimos sorbos de agua + al cajón",
+            "9:30 · 🏁 SALIDA"
+          ]
+        },
+        {
+          "name": "🍽️ DESAYUNO (6:30) — ~400-500 kcal",
+          "tag": "green",
+          "items": [
+            "Pan blanco tostado (2-3 rebanadas) con mermelada o miel",
+            "1 plátano maduro",
+            "Café (solo si lo tomas habitualmente)",
+            "Agua: 400-500 ml",
+            "Alternativa: avena con plátano y miel",
+            "❌ EVITAR: fibra, grasa, bollería, lácteos en cantidad",
+            "❌ NADA que no hayas probado antes"
+          ]
+        },
+        {
+          "name": "💧 HIDRATACIÓN",
+          "tag": "blue",
+          "items": [
+            "Al levantarte: 200-300 ml",
+            "Con el desayuno: 400-500 ml",
+            "7:30-8:30: sorbos pequeños (~300 ml)",
+            "9:10: último trago (100-150 ml)",
+            "⚠️ No beber mucho tras las 8:45"
+          ]
+        },
+        {
+          "name": "🏃 CALENTAMIENTO (8:55-9:05)",
+          "tag": "orange",
+          "items": [
+            "5 min trote muy suave",
+            "Movilidad: tobillos, caderas, rodillas",
+            "2 progresivos de 15 seg",
+            "Tranquilo hasta la salida",
+            "⚠️ No llegar sudando ni cansado"
+          ]
+        },
+        {
+          "name": "🏁 ESTRATEGIA DE RITMO",
+          "tag": "orange",
+          "items": [
+            "Km 1-5: 5'55–6'00/km (te parecerá lento, es a propósito)",
+            "Km 6-11: 5'50/km (trabajando pero controlado)",
+            "🚦 Km 12: CHEQUEO → sobrado: bajar a 5'40-5'45 y a por sub-2h | justo: mantener 5'50 (~2h03-2h05) | sufriendo: 6'00 y acabar fuerte",
+            "Km 12-18: según el chequeo, aquí se define la carrera",
+            "Km 19-21: a competir, lo que quede"
+          ]
+        },
+        {
+          "name": "⛽ AVITUALLAMIENTO",
+          "tag": "green",
+          "items": [
+            "Km ~5: sorbos de agua",
+            "Km ~10: agua + gel SOLO si lo has probado antes",
+            "Km ~15: agua",
+            "Km ~18: sorbos (opcional)",
+            "⚠️ NO estrenar geles el día de la carrera"
+          ]
+        },
+        {
+          "name": "🎒 PREPARAR LA NOCHE ANTES (viernes)",
+          "tag": "blue",
+          "items": [
+            "👟 Nike Pegasus 41 (las rodadas, nada nuevo)",
+            "Dorsal con imperdibles ya puesto",
+            "Ropa de carrera + calcetines de siempre",
+            "Reloj CARGADO con lap pace visible",
+            "Vaselina en zonas de roce",
+            "Ropa seca de abrigo para después",
+            "Cena temprana (~20:00): pasta/arroz + pollo o pescado",
+            "Acostarse 22:30-23:00"
+          ]
+        }
+      ],
+      "rules": [
+        "🚨 SEÑAL DE ALARMA: si antes del km 10 solo puedes decir 2-3 palabras → vas demasiado rápido, baja 10 seg/km.",
+        "📱 LAP PACE en pantalla, NUNCA ritmo instantáneo.",
+        "❤️ NO correr mirando la FC (en carrera miente: adrenalina, sensor, temperatura). Guía: lap pace + respiración.",
+        "Si el km 1 sale a 5'25-5'30 por la adrenalina → FRENAR inmediatamente.",
+        "☔ Galway en octubre: ~10-14°C, viento y posible lluvia. No abrigarse de más."
+      ],
+      "post": {
+        "title": "Post-carrera",
+        "items": [
+          "Caminar 10 min, no sentarse de golpe",
+          "Ropa seca cuanto antes (te enfriarás rápido)",
+          "Hidratación + hidratos + proteína en la primera hora",
+          "Estirar suave (nada agresivo)",
+          "¡DISFRUTAR! 🎉"
+        ]
+      },
+      "techFocus": [
+        "Paciencia en los primeros 5 km",
+        "Lap pace, no instantáneo",
+        "Cadencia natural",
+        "Construir la carrera de atrás hacia delante"
+      ]
     }
   ]
 }
