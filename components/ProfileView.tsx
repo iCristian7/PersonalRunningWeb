@@ -128,7 +128,13 @@ type ProfileData = {
   weightKg: number;
   heightCm: number;
   device: string;
-  shoes: { name: string; role: string }[];
+  shoes: {
+    name: string;
+    role: string;
+    totalKm: number;
+    replaceAtKm: number;
+    active: boolean;
+  }[];
   terrain: string;
   trainingDays: string[];
   strengthDays: string[];
@@ -280,7 +286,7 @@ export default function ProfileView({ profile, workouts }: { profile: ProfileDat
       <div className="pf-section">
         <div className="card">
           <h2>👟 Zapatillas</h2>
-          {(profile.shoes as any[]).map((s, i) => {
+          {profile.shoes.map((s, i) => {
             const total = s.totalKm ?? 0;
             const limit = s.replaceAtKm ?? 700;
             const pct = Math.min(100, Math.round((total / limit) * 100));
@@ -330,7 +336,7 @@ export default function ProfileView({ profile, workouts }: { profile: ProfileDat
           <Stat label="Carreras" value={String(stats.races)} accent="var(--accent)" />
           <Stat label="Ritmo medio" value={stats.avgPace} sub="/km" />
           <Stat label="FC media" value={`${stats.avgHr}`} sub="ppm" />
-          <Stat label="Cadencia media" value={`${stats.avgCad}`} sub="ppm" />
+          <Stat label="Cadencia media" value={`${stats.avgCad}`} sub="spm" />
           <Stat label="Desnivel total" value={`${stats.totalElev}`} sub="m" />
           <Stat label="Tirada más larga" value={`${stats.maxDist}`} sub="km" accent="var(--warn)" />
         </div>
