@@ -4,19 +4,10 @@ import { useMemo, useState } from 'react';
 import WorkoutList from '@/components/WorkoutList';
 import ProfileView from '@/components/ProfileView';
 import PlansList from '@/components/PlansList';
-import { type Workout } from '@/lib/utils';
+import { type ProfileData, type Workout } from '@/lib/utils';
 
 type Tab = 'entrenos' | 'planes' | 'perfil';
 type PlanSubTab = 'correr' | 'fuerza';
-
-type ProfileData = {
-  name: string; weightKg: number; heightCm: number; device: string;
-  shoes: { name: string; role: string }[]; terrain: string;
-  trainingDays: string[]; strengthDays: string[];
-  fcMax: number; fcZones: { zone: string; label: string; min: number; max: number }[];
-  pbs: { distance: string; time: string; pace: string; date: string; context: string }[];
-  goal: { event: string; distance: string; date: string }; longTermGoal: string;
-};
 
 function isStrengthPlan(w: Workout): boolean {
   if (w.kind !== 'plan') return false;
