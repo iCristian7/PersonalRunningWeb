@@ -1,3 +1,25 @@
+export type ProfileData = {
+  name: string;
+  weightKg: number;
+  heightCm: number;
+  device: string;
+  shoes: {
+    name: string;
+    role: string;
+    totalKm: number;
+    replaceAtKm: number;
+    active: boolean;
+  }[];
+  terrain: string;
+  trainingDays: string[];
+  strengthDays: string[];
+  fcMax: number;
+  fcZones: { zone: string; label: string; min: number; max: number }[];
+  pbs: { distance: string; time: string; pace: string; date: string; context: string }[];
+  goal: { event: string; distance: string; date: string };
+  longTermGoal: string;
+};
+
 export type WorkoutKind = 'log' | 'plan' | 'race';
 export type WorkoutBlock = { name: string; tag: 'blue' | 'orange' | 'green' | 'red'; items: string[] };
 export type WorkoutMetrics = {
