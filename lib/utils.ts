@@ -26,8 +26,11 @@ export type WorkoutMetrics = {
   distanceKm?: number;
   paceAvg?: string | null;
   hrAvg?: number | null;
+  hrMax?: number | null;
   cadenceAvg?: number | null;
   elevationM?: number | null;
+  caloriesKcal?: number | null;
+  durationActive?: string | null;
   type?: string | null;      // genérico: Rodaje | Calidad | Tirada larga | Fuerza | Carrera | Otro
   subtype?: string | null;   // detalle original (ej. "Series", "Tirada progresiva")
   notes?: string | null;
