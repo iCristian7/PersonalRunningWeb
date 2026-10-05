@@ -6655,7 +6655,7 @@
       "date": "2026-10-03",
       "displayDate": "03/10/2026",
       "kind": "race",
-      "title": "🏁 Media Maratón de Galway",
+      "title": "🏁 Media Maratón de Galway · 1:54:42 oficial",
       "metrics": {
         "distanceKm": 21.28,
         "paceAvg": "5'23",
@@ -6665,10 +6665,99 @@
         "elevationM": 47,
         "caloriesKcal": 1806.79,
         "durationActive": "1:54:43",
-        "notes": "Primera media maratón. Fuente: Samsung Health mediante Health Connect. Distancia registrada por el reloj: 21,28 km. Duración activa: 1:54:43. FC máxima registrada: 198 ppm. Solo se registran datos sincronizados; no se estiman tiempo oficial, posición ni parciales.",
+        "notes": "Primera media maratón. Tiempo oficial/chip: 1:54:42 · posición: 618. Samsung Health registró 21,28 km en 1:54:43 de duración activa, ritmo GPS 5'23/km, FC media 183, FC máxima 198, cadencia 172 y +47 m. Avituallamiento: 1 gel en el km 12. Sensaciones: muy buenas piernas durante la carrera; algo de agujetas al día siguiente. Parciales guardados por km; tramo final 0,28 km a 4'59/km. Solo se usan datos disponibles; no se estiman métricas ausentes.",
         "sensations": "buenas",
         "shoe": "Nike Pegasus 41",
-        "splits": null,
+        "splits": [
+          {
+            "seg": 1,
+            "pace": "5:48"
+          },
+          {
+            "seg": 2,
+            "pace": "5:31"
+          },
+          {
+            "seg": 3,
+            "pace": "5:32"
+          },
+          {
+            "seg": 4,
+            "pace": "5:19"
+          },
+          {
+            "seg": 5,
+            "pace": "5:20"
+          },
+          {
+            "seg": 6,
+            "pace": "5:23"
+          },
+          {
+            "seg": 7,
+            "pace": "5:17"
+          },
+          {
+            "seg": 8,
+            "pace": "5:24"
+          },
+          {
+            "seg": 9,
+            "pace": "5:16"
+          },
+          {
+            "seg": 10,
+            "pace": "5:18"
+          },
+          {
+            "seg": 11,
+            "pace": "5:19"
+          },
+          {
+            "seg": 12,
+            "pace": "5:17"
+          },
+          {
+            "seg": 13,
+            "pace": "5:11"
+          },
+          {
+            "seg": 14,
+            "pace": "5:38"
+          },
+          {
+            "seg": 15,
+            "pace": "5:38"
+          },
+          {
+            "seg": 16,
+            "pace": "5:34"
+          },
+          {
+            "seg": 17,
+            "pace": "5:29"
+          },
+          {
+            "seg": 18,
+            "pace": "5:16"
+          },
+          {
+            "seg": 19,
+            "pace": "5:10"
+          },
+          {
+            "seg": 20,
+            "pace": "5:11"
+          },
+          {
+            "seg": 21,
+            "pace": "5:17"
+          },
+          {
+            "seg": 22,
+            "pace": "4:59"
+          }
+        ],
         "subtype": "Media maratón",
         "type": "Carrera"
       }
