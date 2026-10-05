@@ -4,3 +4,11 @@ out
 .env*.local
 .vercel
 .DS_Store
+*.tsbuildinfo
+android/.gradle/
+android/.kotlin/
+android/**/build/
+android/local.properties
+.android-sdk/
+.android-tools/
+downloads/

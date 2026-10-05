@@ -580,3 +580,11 @@ select.input option { background: #111827; color: var(--text); }
 .shoe-fill.orange { background: #fb923c; }
 .shoe-fill.red { background: #f87171; }
 .shoe-foot { font-size: 12px; margin-top: 4px; }
+
+.health-panel { display: grid; gap: 16px; }
+.health-form { display: grid; gap: 12px; max-width: 640px; }
+.health-form label, .health-actions label { display: grid; gap: 6px; }
+.health-form textarea { min-height: 80px; resize: vertical; }
+.health-actions { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+.health-report { display: block; width: 100%; min-height: 360px; resize: vertical; margin: 12px 0; line-height: 1.6; }
+.health-session h3 { margin-top: 0; }

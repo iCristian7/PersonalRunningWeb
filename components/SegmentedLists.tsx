@@ -4,9 +4,10 @@ import { useMemo, useState } from 'react';
 import WorkoutList from '@/components/WorkoutList';
 import ProfileView from '@/components/ProfileView';
 import PlansList from '@/components/PlansList';
+import SamsungHealth from '@/components/SamsungHealth';
 import { type ProfileData, type Workout } from '@/lib/utils';
 
-type Tab = 'entrenos' | 'planes' | 'perfil';
+type Tab = 'entrenos' | 'planes' | 'perfil' | 'samsung';
 type PlanSubTab = 'correr' | 'fuerza';
 
 function isStrengthPlan(w: Workout): boolean {
@@ -29,6 +30,9 @@ export default function SegmentedLists({ workouts, profile }: { workouts: Workou
   return (
     <>
       <div className="seg-tabs">
+        <button type="button" className={`seg-btn ${tab === 'samsung' ? 'active' : ''}`} onClick={() => setTab('samsung')}>
+          Samsung Health
+        </button>
         <button type="button" className={`seg-btn ${tab === 'entrenos' ? 'active' : ''}`} onClick={() => setTab('entrenos')}>
           🏃 Entrenos
           <span className="seg-count">{train.length}</span>
@@ -71,6 +75,7 @@ export default function SegmentedLists({ workouts, profile }: { workouts: Workou
       )}
 
       {tab === 'perfil' && <ProfileView profile={profile} workouts={workouts} />}
+      {tab === 'samsung' && <SamsungHealth profile={profile} />}
     </>
   );
 }
