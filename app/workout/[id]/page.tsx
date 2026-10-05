@@ -6,8 +6,9 @@ function Tag({ color, children }: { color: string; children: React.ReactNode }) 
   return <span className={`tag ${color}`}>{children}</span>;
 }
 
-export default function WorkoutDetail({ params }: { params: { id: string } }) {
-  const w = (data.workouts as Workout[]).find(x => x.id === params.id);
+export default async function WorkoutDetail({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const w = (data.workouts as Workout[]).find(x => x.id === id);
   if (!w) return <div className="card"><h1 className="h1">No encontrado</h1><Link className="btn" href="/">Volver</Link></div>;
 
   const dateLabel = formatDateES(w.date, w.displayDate);
