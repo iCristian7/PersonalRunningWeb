@@ -3809,9 +3809,18 @@
         "notes": "Primera vez 3×1,5 km. REGULARIDAD PERFECTA: 5'44 / 5'45 / 5'43 (solo 2 seg de variación). Hito: controla el ritmo sin apretar de más.",
         "sensations": "buenas",
         "splits": [
-          { "seg": 1, "pace": "5:44" },
-          { "seg": 2, "pace": "5:45" },
-          { "seg": 3, "pace": "5:43" }
+          {
+            "seg": 1,
+            "pace": "5:44"
+          },
+          {
+            "seg": 2,
+            "pace": "5:45"
+          },
+          {
+            "seg": 3,
+            "pace": "5:43"
+          }
         ],
         "subtype": "Calidad progresión volumen",
         "type": "Calidad"
@@ -3988,7 +3997,7 @@
         "Cadencia natural"
       ]
     },
-        {
+    {
       "id": "2026-07-20-rodaje-recuperacion-80",
       "date": "2026-07-20",
       "displayDate": "20/07/2026",
@@ -4022,15 +4031,24 @@
         "notes": "3×1,5 km. REGULARIDAD PERFECTA: 5'43 / 5'43 / 5'42 (solo 1 seg de variación). FC 163 muy baja para calidad. Regularidad definitivamente consolidada.",
         "sensations": "buenas",
         "splits": [
-          { "seg": 1, "pace": "5:43" },
-          { "seg": 2, "pace": "5:43" },
-          { "seg": 3, "pace": "5:42" }
+          {
+            "seg": 1,
+            "pace": "5:43"
+          },
+          {
+            "seg": 2,
+            "pace": "5:43"
+          },
+          {
+            "seg": 3,
+            "pace": "5:42"
+          }
         ],
         "subtype": "Calidad progresión volumen",
         "type": "Calidad"
       }
     },
-        {
+    {
       "id": "plan-2026-07-27-rodaje-reactivacion",
       "date": "2026-07-27",
       "displayDate": "27/07/2026",
@@ -4295,7 +4313,7 @@
         "Pasos ligeros"
       ]
     },
-        {
+    {
       "id": "2026-07-27-rodaje-reactivacion-80",
       "date": "2026-07-27",
       "displayDate": "27/07/2026",
@@ -4329,16 +4347,28 @@
         "notes": "Primera vez 4×1,5 km (salto de volumen). Series 5'45 / 5'42 / 5'42 / 5'40 (5 seg variación, negativa controlada). Serie 4 clavada en el tope 5'40 sin pasarse. FC 164 muy baja. Volumen consolidado desde el día 1.",
         "sensations": "buenas",
         "splits": [
-          { "seg": 1, "pace": "5:45" },
-          { "seg": 2, "pace": "5:42" },
-          { "seg": 3, "pace": "5:42" },
-          { "seg": 4, "pace": "5:40" }
+          {
+            "seg": 1,
+            "pace": "5:45"
+          },
+          {
+            "seg": 2,
+            "pace": "5:42"
+          },
+          {
+            "seg": 3,
+            "pace": "5:42"
+          },
+          {
+            "seg": 4,
+            "pace": "5:40"
+          }
         ],
         "subtype": "Calidad progresión volumen",
         "type": "Calidad"
       }
     },
-        {
+    {
       "id": "plan-2026-08-03-rodaje-reactivacion",
       "date": "2026-08-03",
       "displayDate": "03/08/2026",
@@ -4612,7 +4642,7 @@
         "Pasos ligeros"
       ]
     },
-        {
+    {
       "id": "2026-08-03-rodaje-reactivacion-80",
       "date": "2026-08-03",
       "displayDate": "03/08/2026",
@@ -4646,10 +4676,22 @@
         "notes": "4×1,5 km. Regularidad perfecta: 5'44 / 5'44 / 5'42 / 5'41 (3 seg variación). FC 166 baja. Calidad intacta pese al resfriado.",
         "sensations": "buenas (con algo de mocos)",
         "splits": [
-          { "seg": 1, "pace": "5:44" },
-          { "seg": 2, "pace": "5:44" },
-          { "seg": 3, "pace": "5:42" },
-          { "seg": 4, "pace": "5:41" }
+          {
+            "seg": 1,
+            "pace": "5:44"
+          },
+          {
+            "seg": 2,
+            "pace": "5:44"
+          },
+          {
+            "seg": 3,
+            "pace": "5:42"
+          },
+          {
+            "seg": 4,
+            "pace": "5:41"
+          }
         ],
         "subtype": "Calidad progresión volumen",
         "type": "Calidad"
@@ -4674,7 +4716,7 @@
         "type": "Tirada larga"
       }
     },
-        {
+    {
       "id": "plan-2026-08-10-fuerza-rodillas",
       "date": "2026-08-10",
       "displayDate": "10/08/2026",
@@ -4948,7 +4990,7 @@
         "Pasos ligeros y relajados"
       ]
     },
-        {
+    {
       "id": "2026-08-11-rodaje-aerobico-80",
       "date": "2026-08-11",
       "displayDate": "11/08/2026",
@@ -4982,10 +5024,22 @@
         "notes": "4×1,5 km. Regularidad perfecta: 5'45 / 5'43 / 5'44 / 5'42 (3 seg variación). FC 166 baja. Volumen consolidado.",
         "sensations": "buenas",
         "splits": [
-          { "seg": 1, "pace": "5:45" },
-          { "seg": 2, "pace": "5:43" },
-          { "seg": 3, "pace": "5:44" },
-          { "seg": 4, "pace": "5:42" }
+          {
+            "seg": 1,
+            "pace": "5:45"
+          },
+          {
+            "seg": 2,
+            "pace": "5:43"
+          },
+          {
+            "seg": 3,
+            "pace": "5:44"
+          },
+          {
+            "seg": 4,
+            "pace": "5:42"
+          }
         ],
         "subtype": "Calidad progresión volumen",
         "type": "Calidad"
@@ -5010,7 +5064,7 @@
         "type": "Tirada larga"
       }
     },
-        {
+    {
       "id": "plan-2026-08-17-rodaje-recuperacion",
       "date": "2026-08-17",
       "displayDate": "17/08/2026",
@@ -5288,7 +5342,7 @@
         "Intensidad controlada, no perseguir ritmo"
       ]
     },
-        {
+    {
       "id": "2026-08-17-rodaje-z2-80",
       "date": "2026-08-17",
       "displayDate": "17/08/2026",
@@ -5322,10 +5376,22 @@
         "notes": "4×1,5 km. Regularidad perfecta: 5'46 / 5'45 / 5'42 / 5'42 (4 seg variación). FC 161 muy baja. Confirma que 4×1,5 era la decisión correcta.",
         "sensations": "buenas",
         "splits": [
-          { "seg": 1, "pace": "5:46" },
-          { "seg": 2, "pace": "5:45" },
-          { "seg": 3, "pace": "5:42" },
-          { "seg": 4, "pace": "5:42" }
+          {
+            "seg": 1,
+            "pace": "5:46"
+          },
+          {
+            "seg": 2,
+            "pace": "5:45"
+          },
+          {
+            "seg": 3,
+            "pace": "5:42"
+          },
+          {
+            "seg": 4,
+            "pace": "5:42"
+          }
         ],
         "subtype": "Calidad progresión volumen",
         "type": "Calidad"
@@ -5350,7 +5416,7 @@
         "type": "Tirada larga"
       }
     },
-        {
+    {
       "id": "plan-2026-09-02-rodaje-z2",
       "date": "2026-09-02",
       "displayDate": "02/09/2026",
@@ -5496,7 +5562,7 @@
         "Zancada compacta"
       ]
     },
-        {
+    {
       "id": "2026-09-02-rodaje-z2-80",
       "date": "2026-09-02",
       "displayDate": "02/09/2026",
@@ -5536,7 +5602,7 @@
         "type": "Tirada larga"
       }
     },
-        {
+    {
       "id": "plan-2026-09-07-rodaje-facil-rpe",
       "date": "2026-09-07",
       "displayDate": "07/09/2026",
@@ -5578,7 +5644,7 @@
         "FC como referencia, no objetivo"
       ]
     },
-        {
+    {
       "id": "2026-09-07-rodaje-facil-rpe-80",
       "date": "2026-09-07",
       "displayDate": "07/09/2026",
@@ -5598,7 +5664,7 @@
         "type": "Rodaje"
       }
     },
-        {
+    {
       "id": "plan-2026-09-09-miercoles-calidad-reencuentro",
       "date": "2026-09-09",
       "displayDate": "09/09/2026",
@@ -5724,7 +5790,7 @@
         "Cadencia natural"
       ]
     },
-        {
+    {
       "id": "2026-09-09-calidad-reencuentro-1111",
       "date": "2026-09-09",
       "displayDate": "09/09/2026",
@@ -5740,10 +5806,22 @@
         "sensations": "buenas, pulsaciones altas en series",
         "shoe": "Nike Pegasus 41",
         "splits": [
-          { "seg": 1, "pace": "5:46" },
-          { "seg": 2, "pace": "5:46" },
-          { "seg": 3, "pace": "5:44" },
-          { "seg": 4, "pace": "5:44" }
+          {
+            "seg": 1,
+            "pace": "5:46"
+          },
+          {
+            "seg": 2,
+            "pace": "5:46"
+          },
+          {
+            "seg": 3,
+            "pace": "5:44"
+          },
+          {
+            "seg": 4,
+            "pace": "5:44"
+          }
         ],
         "subtype": "Calidad reencuentro",
         "type": "Calidad"
@@ -5789,7 +5867,7 @@
         "type": "Otro"
       }
     },
-        {
+    {
       "id": "plan-2026-09-14-rodaje-z2",
       "date": "2026-09-14",
       "displayDate": "14/09/2026",
@@ -6034,7 +6112,7 @@
         "Cadencia natural"
       ]
     },
-        {
+    {
       "id": "2026-09-14-rodaje-z2-80",
       "date": "2026-09-14",
       "displayDate": "14/09/2026",
@@ -6070,10 +6148,22 @@
         "sensations": "buenas",
         "shoe": "Nike Pegasus Trail 5 GTX",
         "splits": [
-          { "seg": 1, "pace": "5:46" },
-          { "seg": 2, "pace": "5:46" },
-          { "seg": 3, "pace": "5:46" },
-          { "seg": 4, "pace": "5:44" }
+          {
+            "seg": 1,
+            "pace": "5:46"
+          },
+          {
+            "seg": 2,
+            "pace": "5:46"
+          },
+          {
+            "seg": 3,
+            "pace": "5:46"
+          },
+          {
+            "seg": 4,
+            "pace": "5:44"
+          }
         ],
         "subtype": "Calidad",
         "type": "Calidad"
@@ -6099,7 +6189,7 @@
         "type": "Tirada larga"
       }
     },
-        {
+    {
       "id": "plan-2026-09-21-rodaje-z2",
       "date": "2026-09-21",
       "displayDate": "21/09/2026",
@@ -6288,7 +6378,7 @@
         "Contener el impulso de acelerar"
       ]
     },
-        {
+    {
       "id": "2026-09-21-rodaje-z2-80",
       "date": "2026-09-21",
       "displayDate": "21/09/2026",
@@ -6324,9 +6414,18 @@
         "sensations": "buenas, frases muy cortas, podría haber seguido varios km",
         "shoe": "Nike Pegasus 41",
         "splits": [
-          { "seg": 1, "pace": "5:48" },
-          { "seg": 2, "pace": "5:35" },
-          { "seg": 3, "pace": "5:48" }
+          {
+            "seg": 1,
+            "pace": "5:48"
+          },
+          {
+            "seg": 2,
+            "pace": "5:35"
+          },
+          {
+            "seg": 3,
+            "pace": "5:48"
+          }
         ],
         "subtype": "Test ritmo objetivo",
         "type": "Calidad"
@@ -6352,7 +6451,7 @@
         "type": "Tirada larga"
       }
     },
-        {
+    {
       "id": "plan-2026-09-30-activacion-pre-galway",
       "date": "2026-09-30",
       "displayDate": "30/09/2026",
@@ -6527,6 +6626,177 @@
         "Lap pace, no instantáneo",
         "Cadencia natural",
         "Construir la carrera de atrás hacia delante"
+      ]
+    },
+    {
+      "id": "2026-09-30-activacion-pre-galway-501",
+      "date": "2026-09-30",
+      "displayDate": "30/09/2026",
+      "kind": "log",
+      "title": "Activación pre-Galway",
+      "metrics": {
+        "distanceKm": 5.01,
+        "paceAvg": "6'45",
+        "hrAvg": 158,
+        "hrMax": 187,
+        "cadenceAvg": 162,
+        "elevationM": 22,
+        "caloriesKcal": 417.5,
+        "notes": "Última sesión antes de Galway. Fuente: Samsung Health mediante Health Connect. Duración activa: 0:37:29. Solo se registran datos sincronizados; no se estiman datos ausentes.",
+        "sensations": "buenas",
+        "shoe": "Nike Pegasus 41",
+        "splits": null,
+        "subtype": "Activación pre-carrera",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-10-03-media-maraton-galway-2128",
+      "date": "2026-10-03",
+      "displayDate": "03/10/2026",
+      "kind": "race",
+      "title": "🏁 Media Maratón de Galway",
+      "metrics": {
+        "distanceKm": 21.28,
+        "paceAvg": "5'23",
+        "hrAvg": 183,
+        "hrMax": 198,
+        "cadenceAvg": 172,
+        "elevationM": 47,
+        "caloriesKcal": 1806.79,
+        "durationActive": "1:54:43",
+        "notes": "Primera media maratón. Fuente: Samsung Health mediante Health Connect. Distancia registrada por el reloj: 21,28 km. Duración activa: 1:54:43. FC máxima registrada: 198 ppm. Solo se registran datos sincronizados; no se estiman tiempo oficial, posición ni parciales.",
+        "sensations": "buenas",
+        "shoe": "Nike Pegasus 41",
+        "splits": null,
+        "subtype": "Media maratón",
+        "type": "Carrera"
+      }
+    },
+    {
+      "id": "plan-2026-10-05-descanso-post-media",
+      "date": "2026-10-05",
+      "displayDate": "05/10/2026",
+      "kind": "plan",
+      "title": "Lunes · Descanso post-media",
+      "objective": "Priorizar recuperación 48 h después de la Media Maratón de Galway. No hay ninguna adaptación útil que ganar hoy corriendo.",
+      "totalDistance": "0 km",
+      "intensity": "Descanso / recuperación",
+      "blocks": [
+        {
+          "name": "Recuperación",
+          "tag": "green",
+          "items": [
+            "No correr",
+            "Paseo suave 20–40 min solo si apetece y las piernas responden bien",
+            "Movilidad suave 5–10 min, sin estiramientos agresivos",
+            "Hidratación, hidratos y proteína suficientes"
+          ]
+        }
+      ],
+      "rules": [
+        "Nada de fuerza de piernas.",
+        "Si hay dolor localizado, cojera o dolor que empeora al caminar, priorizar descanso y valorar recuperación antes de volver a correr."
+      ],
+      "post": {
+        "title": "Chequeo",
+        "items": [
+          "Valorar agujetas, rodillas, tibias, gemelos y fatiga general al levantarte el miércoles."
+        ]
+      },
+      "techFocus": [
+        "Recuperar",
+        "Dormir bien"
+      ]
+    },
+    {
+      "id": "plan-2026-10-07-rodaje-recuperacion-post-media",
+      "date": "2026-10-07",
+      "displayDate": "07/10/2026",
+      "kind": "plan",
+      "title": "Miércoles · Rodaje de recuperación post-media",
+      "objective": "Primer trote después de Galway. Comprobar recuperación musculoesquelética sin buscar ritmo ni forma.",
+      "totalDistance": "5–6 km",
+      "intensity": "Muy suave (RPE 2–3/10)",
+      "blocks": [
+        {
+          "name": "1) Inicio",
+          "tag": "blue",
+          "items": [
+            "Primeros 10 min muy suaves",
+            "Talk test: conversación completa"
+          ]
+        },
+        {
+          "name": "2) Rodaje",
+          "tag": "green",
+          "items": [
+            "Completar 5–6 km solo si las piernas se sienten normales",
+            "FC orientativa ~145–150 ppm, sin perseguir el número",
+            "Ritmo libre"
+          ]
+        }
+      ],
+      "rules": [
+        "Si hay agujetas claras o molestias al bajar escaleras → sustituir por 30–40 min caminando.",
+        "Si aparece dolor que cambia la zancada → parar.",
+        "Nada de series, progresivos ni cierre rápido."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Reportar ritmo, FC, cadencia, molestias y sensación de piernas."
+        ]
+      },
+      "techFocus": [
+        "Talk test",
+        "Zancada natural",
+        "No perseguir ritmo"
+      ]
+    },
+    {
+      "id": "plan-2026-10-10-rodaje-suave-post-media",
+      "date": "2026-10-10",
+      "displayDate": "10/10/2026",
+      "kind": "plan",
+      "title": "Sábado · Rodaje suave post-media",
+      "objective": "Seguir recuperando y reintroducir volumen suave una semana después de Galway.",
+      "totalDistance": "8 km",
+      "intensity": "Aeróbico muy cómodo (RPE 3/10)",
+      "blocks": [
+        {
+          "name": "1) Km 1–3",
+          "tag": "blue",
+          "items": [
+            "Muy suaves",
+            "Conversación completa"
+          ]
+        },
+        {
+          "name": "2) Km 4–8",
+          "tag": "green",
+          "items": [
+            "Mantener esfuerzo cómodo",
+            "FC orientativa 145–155 ppm según sensaciones y terreno",
+            "Sin objetivo de ritmo"
+          ]
+        }
+      ],
+      "rules": [
+        "Sin progresión final.",
+        "Si el miércoles deja fatiga o aparecen molestias → reducir a 6 km.",
+        "No convertir el buen estado de forma de Galway en motivo para acelerar esta semana."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Reportar especialmente molestias residuales y sensación al día siguiente."
+        ]
+      },
+      "techFocus": [
+        "Recuperación",
+        "Aeróbico fácil",
+        "Cadencia natural"
       ]
     }
   ]
