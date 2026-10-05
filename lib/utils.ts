@@ -10,6 +10,7 @@ export type WorkoutMetrics = {
   subtype?: string | null;   // detalle original (ej. "Series", "Tirada progresiva")
   notes?: string | null;
   sensations?: string | null;
+  shoe?: string | null;
   splits?: { seg: number; pace: string }[] | null;
 };
 
@@ -24,6 +25,7 @@ export type Workout = {
   intensity?: string;
   blocks?: WorkoutBlock[];
   rules?: string[];
+  techFocus?: string[];
   post?: { title: string; items: string[] };
   meta?: { plan?: string; goal?: string; eventDate?: string };
   metrics?: WorkoutMetrics;
