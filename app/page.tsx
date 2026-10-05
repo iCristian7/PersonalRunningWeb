@@ -14,7 +14,7 @@ export default function Home() {
         <div className="badge">v7 · Vercel</div>
       </div>
 
-      <SegmentedLists workouts={data.workouts as Workout[]} profile={profile as any} />
+      <SegmentedLists workouts={data.workouts as Workout[]} profile={profile} />
 
       <div className="footer">
         <span>API: <a className="btn small" href="/api/workouts">/api/workouts</a></span>
