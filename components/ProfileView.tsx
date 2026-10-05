@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import { type Workout, isValidISODate } from '@/lib/utils';
+import { type ProfileData, type Workout, isValidISODate } from '@/lib/utils';
 
 /* ── Helpers ───────────────────────────────────────── */
 
@@ -123,28 +123,6 @@ function ZoneBar({ zone, label, min, max: mx, pct, color }: { zone: string; labe
 }
 
 /* ── Main component ────────────────────────────────── */
-type ProfileData = {
-  name: string;
-  weightKg: number;
-  heightCm: number;
-  device: string;
-  shoes: {
-    name: string;
-    role: string;
-    totalKm: number;
-    replaceAtKm: number;
-    active: boolean;
-  }[];
-  terrain: string;
-  trainingDays: string[];
-  strengthDays: string[];
-  fcMax: number;
-  fcZones: { zone: string; label: string; min: number; max: number }[];
-  pbs: { distance: string; time: string; pace: string; date: string; context: string }[];
-  goal: { event: string; distance: string; date: string };
-  longTermGoal: string;
-};
-
 export default function ProfileView({ profile, workouts }: { profile: ProfileData; workouts: Workout[] }) {
   const logs = useMemo(() => workouts.filter(w => w.kind !== 'plan').sort((a, b) => (a.date ?? '').localeCompare(b.date ?? '')), [workouts]);
 
