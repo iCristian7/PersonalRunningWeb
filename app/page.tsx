@@ -11,7 +11,7 @@ export default function Home() {
           <h1 className="h1">Running · Histórico & Plan</h1>
           <div className="sub">Entrenos · Planes · Perfil & Estadísticas</div>
         </div>
-        <div className="badge">v8 · Vercel</div>
+        <div className="badge">v8.1 · Vercel</div>
       </div>
 
       <SegmentedLists workouts={data.workouts as Workout[]} profile={profile} />
