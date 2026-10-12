@@ -7,14 +7,14 @@
     {
       "name": "Nike Pegasus 41",
       "role": "Principal (asfalto)",
-      "totalKm": 476.29,
+      "totalKm": 484.3,
       "replaceAtKm": 700,
       "active": true
     },
     {
       "name": "Nike Pegasus Trail 5 GTX",
       "role": "Trail / lluvia / senderismo",
-      "totalKm": 60,
+      "totalKm": 66.01,
       "replaceAtKm": 700,
       "active": true
     }
@@ -142,9 +142,9 @@
     }
   ],
   "goal": {
-    "event": "Recuperación post-Media de Galway",
-    "distance": "Semana regenerativa",
-    "date": "05/10/2026–11/10/2026"
+    "event": "Mejorar eficiencia aeróbica",
+    "distance": "Bloque base",
+    "date": "Oct–Dic 2026"
   },
   "longTermGoal": "Maratón completa"
 }
