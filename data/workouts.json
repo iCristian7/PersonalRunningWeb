@@ -6887,6 +6887,196 @@
         "Aeróbico fácil",
         "Cadencia natural"
       ]
+    },
+    {
+      "id": "2026-10-07-recuperacion-post-galway-601",
+      "date": "2026-10-07",
+      "displayDate": "07/10/2026",
+      "kind": "log",
+      "title": "Rodaje recuperación post-Galway",
+      "metrics": {
+        "distanceKm": 6.01,
+        "durationActive": "0:46:59",
+        "paceAvg": "7'49",
+        "hrAvg": 153,
+        "hrMax": 172,
+        "cadenceAvg": 162,
+        "elevationM": 20,
+        "caloriesKcal": 522.3,
+        "notes": "Fuente: Samsung Health mediante Health Connect. Primer rodaje tras Galway. Buenas sensaciones. Solo se registran datos sincronizados; no se estiman datos ausentes.",
+        "sensations": "Buenas sensaciones",
+        "shoe": "Nike Pegasus Trail 5 GTX",
+        "splits": null,
+        "subtype": "Recuperación post-carrera",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-10-10-rodaje-suave-post-galway-801",
+      "date": "2026-10-10",
+      "displayDate": "10/10/2026",
+      "kind": "log",
+      "title": "Rodaje suave post-Galway",
+      "metrics": {
+        "distanceKm": 8.01,
+        "durationActive": "1:05:49",
+        "paceAvg": "8'13",
+        "hrAvg": 158,
+        "hrMax": 176,
+        "cadenceAvg": 163,
+        "elevationM": 22,
+        "caloriesKcal": 710.2,
+        "notes": "Fuente: Samsung Health mediante Health Connect. Piernas con buenas sensaciones, pero costó mantener pulsaciones bajas. La noche anterior hubo salida de fiesta y malestar de estómago; la FC de esta sesión no se toma como referencia limpia de eficiencia aeróbica.",
+        "sensations": "Buenas piernas; dificultad para mantener FC baja",
+        "shoe": "Nike Pegasus 41",
+        "splits": null,
+        "subtype": "Rodaje suave post-carrera",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "plan-2026-10-12-rodaje-z2-eficiencia",
+      "date": "2026-10-12",
+      "displayDate": "12/10/2026",
+      "kind": "plan",
+      "title": "Lunes · Rodaje aeróbico de referencia",
+      "objective": "Empezar el bloque de eficiencia aeróbica: correr cómodo y observar la relación ritmo/FC sin forzar el ritmo.",
+      "totalDistance": "7 km",
+      "intensity": "Muy suave / aeróbico",
+      "blocks": [
+        {
+          "name": "1) Inicio",
+          "tag": "blue",
+          "items": [
+            "10 min muy suaves",
+            "Dejar que la FC suba de forma natural; no luchar por un número desde el primer minuto"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "green",
+          "items": [
+            "Completar 7 km a conversación cómoda",
+            "Referencia de FC: ~145–150 ppm si sale natural",
+            "Ritmo libre: NO perseguir un ritmo concreto"
+          ]
+        }
+      ],
+      "rules": [
+        "Si para mantener 145 ppm tienes que romper continuamente el trote, priorizar talk test y comodidad.",
+        "Si aparecen molestias post-Galway, acortar a 5–6 km.",
+        "Registrar especialmente ritmo medio, FC media y sensaciones para comparar en próximas semanas."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Hidratación normal",
+          "Reportar ritmo + FC + sensaciones"
+        ]
+      },
+      "techFocus": [
+        "Talk test",
+        "Eficiencia aeróbica",
+        "Cadencia natural"
+      ]
+    },
+    {
+      "id": "plan-2026-10-14-rodaje-suave-strides",
+      "date": "2026-10-14",
+      "displayDate": "14/10/2026",
+      "kind": "plan",
+      "title": "Miércoles · Rodaje suave + activaciones",
+      "objective": "Reintroducir un pequeño estímulo de velocidad sin convertir la sesión en calidad dura.",
+      "totalDistance": "8 km",
+      "intensity": "Suave con 4 activaciones cortas",
+      "blocks": [
+        {
+          "name": "1) Rodaje",
+          "tag": "green",
+          "items": [
+            "6,5–7 km muy cómodos",
+            "Talk test completo",
+            "FC orientativa ~145–152 ppm; ritmo libre"
+          ]
+        },
+        {
+          "name": "2) Activaciones",
+          "tag": "orange",
+          "items": [
+            "4 × 20 s rápidos pero relajados",
+            "NO sprintar",
+            "90 s–2 min de trote muy suave entre activaciones"
+          ]
+        },
+        {
+          "name": "3) Cierre",
+          "tag": "blue",
+          "items": [
+            "Trote suave hasta completar ~8 km"
+          ]
+        }
+      ],
+      "rules": [
+        "Las activaciones son técnicas/neuromusculares, no series.",
+        "Si las piernas siguen pesadas de Galway, omitir las 4 activaciones y hacer todo suave.",
+        "Acabar fresco."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Reportar si las activaciones se sintieron fluidas o pesadas"
+        ]
+      },
+      "techFocus": [
+        "Relajación",
+        "Zancada fluida",
+        "No mirar ritmo instantáneo"
+      ]
+    },
+    {
+      "id": "plan-2026-10-17-tirada-aerobica-10km",
+      "date": "2026-10-17",
+      "displayDate": "17/10/2026",
+      "kind": "plan",
+      "title": "Sábado · Tirada aeróbica 10 km",
+      "objective": "Volver gradualmente a una tirada de doble dígito manteniendo el foco en eficiencia aeróbica y recuperación completa.",
+      "totalDistance": "10 km",
+      "intensity": "Aeróbico cómodo (RPE 3/10)",
+      "blocks": [
+        {
+          "name": "1) Km 1–3",
+          "tag": "blue",
+          "items": [
+            "Muy cómodos",
+            "Conversación completa"
+          ]
+        },
+        {
+          "name": "2) Km 4–10",
+          "tag": "green",
+          "items": [
+            "Mantener esfuerzo aeróbico estable",
+            "Referencia de FC ~145–155 ppm según terreno y sensaciones",
+            "Sin objetivo de ritmo"
+          ]
+        }
+      ],
+      "rules": [
+        "Sin progresión final.",
+        "Si la FC es anormalmente alta pero las sensaciones son buenas, revisar sueño, hidratación, temperatura y sensor antes de interpretar el dato.",
+        "Si aparecen molestias → reducir a 8 km."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Comparar primera y segunda mitad: ritmo/FC y sensación de deriva"
+        ]
+      },
+      "techFocus": [
+        "Eficiencia aeróbica",
+        "Talk test",
+        "Esfuerzo constante"
+      ]
     }
   ]
 }
