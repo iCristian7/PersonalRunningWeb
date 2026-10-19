@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { localWorkoutDate, weekDates, weekWorkouts, weeklyReport, paceLabel, workoutPace } from '../lib/weekly-report.ts';
+import { localWorkoutDate, weekDates, weekWorkouts, weeklyReport, paceLabel, workoutPace, lapReport } from '../lib/weekly-report.ts';
 
 const session = (overrides = {}) => ({
   id: 'id', user_id: 'owner', source_id: 'health-id', title: 'Running',
@@ -8,6 +8,31 @@ const session = (overrides = {}) => ({
   distance_m: 8000, active_duration_s: 3800, hr_avg: 146, hr_max: 165,
   cadence_avg: 166, elevation_gain_m: 38, calories_kcal: null,
   sensations: 'buenas', shoe: 'Trail', notes: null, laps: null, ...overrides,
+});
+
+test('kilometre splits retain different paces and label the partial kilometre as estimated', () => {
+  const text = lapReport(session({ distance_m: 2500, sync_details: {
+    km_split_status: 'calculated', km_split_integrated_m: 2490, km_split_gap_s: 60,
+    km_splits: [{ distance_m: 1000, duration_s: 400, partial: false },
+      { distance_m: 1000, duration_s: 350, partial: false },
+      { distance_m: 500, duration_s: 180, partial: true }],
+  } })).join('\n');
+  assert.match(text, /aproximados por kilómetro/);
+  assert.match(text, /Km 1:.*6'40/);
+  assert.match(text, /Km 2:.*5'50/);
+  assert.match(text, /Tramo final 3: 500 m;.*6'00/);
+  assert.match(text, /se ajusta proporcionalmente/);
+  assert.match(text, /pausas inferidas/);
+  assert.match(text, /No es una confirmación/);
+});
+
+test('failed reconstruction explains missing splits and preserves original laps', () => {
+  const text = lapReport(session({ sync_details: { km_split_status: 'duration_mismatch' },
+    laps: [{ distance_m: 1000, duration_s: 300 }] })).join('\n');
+  assert.match(text, /no coincide suficientemente/);
+  assert.match(text, /Vuelta 1/);
+  assert.doesNotMatch(text, /Km 1:/);
+  assert.match(lapReport(session({ sync_details: { km_split_status: 'no_speed_samples' } })).join('\n'), /suficientes muestras de velocidad/);
 });
 
 test('week boundaries cover Monday through Sunday across years', () => {

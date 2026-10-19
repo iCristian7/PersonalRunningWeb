@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
         fun button(value: String, action: () -> Unit): Button = Button(this).apply {
             text = value; setOnClickListener { action() }; layout.addView(this); controls.add(this)
         }
-        text("Running Sync · 0.3.0", 26f)
+        text("Running Sync · 0.4.0", 26f)
         text("Métricas originales de Samsung Health → tu web. Duración, distancia, velocidad media, cadencia, desnivel, FC, calorías y notas disponibles en el SDK. No se solicitan rutas GPS ni se modifica Samsung Health.")
         status = text("Primero conecta Samsung Health y entra con tu cuenta de entrenos.")
         button("1. Conectar Samsung Health") {
@@ -122,7 +122,8 @@ class MainActivity : ComponentActivity() {
                     val noCadence = rows.count { it.isNull("cadence_avg") }
                     val noElevation = rows.count { it.isNull("elevation_gain_m") }
                     val noLaps = rows.count { it.isNull("laps") }
-                    status.text = "Sincronizados ${rows.size} entrenos desde el SDK de Samsung Health. Conservadas sensaciones, notas adicionales y zapatillas.\n$missing sesiones sin distancia o FC media; $noCadence sin cadencia; $noElevation sin desnivel; $noLaps sin vueltas nuevas.\nEl ritmo se obtiene de la velocidad media original cuando está disponible. El SDK no expone vueltas de running: se conservan las anteriores o se añaden las compartidas por Health Connect. Abre la web y pulsa Actualizar."
+                    val withKmSplits = rows.count { it.getJSONObject("sync_details").optString("km_split_status") == "calculated" }
+                    status.text = "Sincronizados ${rows.size} entrenos desde el SDK de Samsung Health. Conservadas sensaciones, notas adicionales y zapatillas.\n$missing sesiones sin distancia o FC media; $noCadence sin cadencia; $noElevation sin desnivel.\nParciales por km calculados en $withKmSplits/${rows.size} entrenos. Si faltan, la web indica el motivo. Son aproximados a partir del registro de velocidad, no las vueltas originales de Samsung.\n$noLaps entrenos sin vueltas originales nuevas. Abre la web y pulsa Actualizar."
                 }
             }
         }

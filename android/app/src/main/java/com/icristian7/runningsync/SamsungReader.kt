@@ -9,6 +9,7 @@ import com.samsung.android.sdk.health.data.request.DataTypes
 import com.samsung.android.sdk.health.data.request.DataType
 import com.samsung.android.sdk.health.data.request.InstantTimeFilter
 import org.json.JSONObject
+import org.json.JSONArray
 import java.time.Duration
 import java.time.LocalDate
 import java.time.ZoneId
@@ -44,8 +45,10 @@ class SamsungReader(context: Context) {
                     if (local.isBefore(monday) || !local.isBefore(monday.plusDays(7))) continue
                     val id = "samsung:${point.uid}:${session.startTime}"
                     val pace = SamsungMetrics.secondsPerKm(session.meanSpeed?.toDouble())
+                    val km = KilometreSplits.calculate(session.startTime, session.endTime, session.duration.toMillis() / 1000.0,
+                        session.distance?.toDouble(), session.log.orEmpty().map { SpeedPoint(it.timestamp, it.speed?.toDouble()) })
                     val details = JSONObject()
-                        .put("reader_version", "0.3.0").put("provider", "samsung_sdk")
+                        .put("reader_version", "0.4.0").put("provider", "samsung_sdk")
                         .put("samsung_id", id).put("duration_basis", "samsung_session_duration")
                         .put("samsung_mean_speed_mps", session.meanSpeed ?: JSONObject.NULL)
                         .put("pace_avg_s_per_km", pace ?: JSONObject.NULL)
@@ -53,6 +56,15 @@ class SamsungReader(context: Context) {
                         .put("elevation_status", if (session.altitudeGain != null) "samsung_session" else "not_exposed_by_sdk")
                         .put("notes_status", if (!session.comment.isNullOrBlank()) "samsung_comment" else "not_exposed_by_sdk")
                         .put("lap_source", "not_exposed_by_sdk")
+                        .put("km_split_status", km.status)
+                        .put("km_split_integrated_m", km.integratedMeters ?: JSONObject.NULL)
+                        .put("km_split_distance_scale", km.distanceScale ?: JSONObject.NULL)
+                        .put("km_split_covered_s", km.coveredSeconds ?: JSONObject.NULL)
+                        .put("km_split_gap_s", km.gapSeconds)
+                        .put("km_split_trailing_s", km.trailingSeconds)
+                        .put("km_splits", if (km.splits.isEmpty()) JSONObject.NULL else JSONArray(km.splits.map {
+                            JSONObject().put("distance_m", it.distanceMeters).put("duration_s", it.seconds).put("partial", it.partial)
+                        }))
                     rows.add(JSONObject()
                         .put("user_id", userId).put("source", "samsung_health").put("source_id", id)
                         .put("title", session.customTitle ?: point.getValue(DataType.ExerciseType.CUSTOM_TITLE) ?: "Running")

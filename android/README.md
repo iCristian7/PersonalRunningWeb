@@ -1,5 +1,11 @@
 # Running Sync (personal Android companion)
 
+## Version 0.4.0: estimated kilometre splits
+
+Install `downloads/RunningSync-0.4.0.apk` over the previous version, sync the week again, then refresh the web. No new SQL migration is needed. The report and workout details now show estimated 1 km splits and the final partial kilometre, calculated from Samsung's timestamped speed samples. These are not Samsung's original automatic laps and may differ from its UI.
+
+The calculation integrates linearly interpolated speed, adjusts integrated distance proportionally to the original total (only within 5%), and interpolates each kilometre crossing. It does not distribute the overall average pace. Samples must cover the session edges within two seconds; intervals over 30 seconds are excluded only when the remaining covered time agrees with original duration within 0.5% or five seconds. Such gaps are explicitly labeled inferred pauses, not confirmed pauses. Invalid, contradictory, incomplete or inconsistent traces produce an explanation instead of splits. Raw speed traces and GPS routes are not uploaded or stored; only calculated summaries and validation metadata are sent.
+
 ## Version 0.3.0: direct Samsung Health reader
 
 The default sync now uses the official Samsung Health Data SDK 1.1.0 provided by the project owner. It requests only EXERCISE read access and uses each running session's original duration, distance, mean speed, mean/max heart rate, mean cadence, altitude gain, calories and comment. It skips unfinished recordings. Missing fields remain unknown. Pace is converted from Samsung's mean speed when available, otherwise explicitly calculated from Samsung duration/distance. Rounding may differ from the Samsung UI; validate on a physical device before claiming an exact match.
@@ -14,7 +20,7 @@ This APK is a private development build for the owner developing/testing this ap
 
 ### Running laps
 
-SDK 1.1.0 does not expose running laps. Health Connect is optional and only supplements laps when a unique session timestamp match exists. Lap origin and calculated pace are labeled; no fictional km splits are generated and no GPS is saved or sent. Without new shared laps, existing imported laps remain stored.
+SDK 1.1.0 does not expose original running laps. Health Connect is optional and only supplements laps when a unique session timestamp match exists. Lap origin and calculated pace are labeled. Version 0.4.0 separately estimates kilometre splits from speed samples as described above. No GPS is saved or sent. Without new shared laps, existing imported laps remain stored.
 
 ### Rebuild from source
 

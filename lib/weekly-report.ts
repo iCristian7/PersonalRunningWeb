@@ -14,6 +14,10 @@ export type SyncedWorkout = {
     cadence_status?: string; cadence_samples?: number;
     elevation_status?: string; elevation_records?: number;
     notes_status?: string; lap_count?: number;
+    km_split_status?: string;
+    km_split_integrated_m?: number | null; km_split_distance_scale?: number | null;
+    km_split_covered_s?: number | null; km_split_gap_s?: number; km_split_trailing_s?: number;
+    km_splits?: { distance_m: number; duration_s: number; partial: boolean }[] | null;
   } | null;
   laps: { distance_m: number | null; duration_s: number; active_duration_s?: number | null; started_at?: string; ended_at?: string }[] | null;
 };
@@ -65,14 +69,39 @@ export function availabilityLabel(status: string | undefined): string {
   return 'no disponible en esta sincronización';
 }
 export function lapReport(w: SyncedWorkout): string[] {
-  if (!w.laps?.length) return [w.sync_details?.provider === 'samsung_sdk' ? 'Vueltas: el SDK de Samsung no expone vueltas de running y no se han recibido de Health Connect.' : 'Vueltas: no compartidas en esta sincronización; no se generan vueltas ficticias.'];
-  return ['Vueltas registradas (no necesariamente series):', 'Fuente de las vueltas: Health Connect; el ritmo de cada vuelta es calculado.', ...w.laps.map((lap, i) => {
+  const details = w.sync_details;
+  if (details?.km_split_status === 'calculated' && details.km_splits?.length) {
+    return [
+      'Parciales aproximados por kilómetro (calculados, no importados de Samsung):',
+      'Método: integración de muestras de velocidad e interpolación de los cruces de kilómetro. La distancia integrada se ajusta proporcionalmente a la distancia total original; no se ajustan los tiempos al ritmo medio.',
+      ...(details.km_split_integrated_m != null && w.distance_m != null ? [`Distancia integrada antes del ajuste: ${metric(details.km_split_integrated_m, 'm')}; distancia original: ${metric(w.distance_m, 'm')}.`] : []),
+      ...((details.km_split_gap_s ?? 0) > 0 ? [`Hay ${durationLabel(details.km_split_gap_s!)} sin muestras: se excluyen como pausas inferidas porque el resto es coherente con la duración original. No es una confirmación de las pausas de Samsung.`] : []),
+      ...details.km_splits.map((split, i) => `${split.partial ? `Tramo final ${i + 1}` : `Km ${i + 1}`}: ${metric(split.distance_m, 'm')}; tiempo estimado ${durationLabel(split.duration_s)}; ritmo medio estimado ${paceLabel(split.distance_m, split.duration_s)}`),
+      ...((details.km_split_trailing_s ?? 0) > 0.01 ? [`Tiempo sin desplazamiento al final del registro, fuera de los parciales: ${durationLabel(details.km_split_trailing_s!)}.`] : []),
+    ];
+  }
+  const reason = details?.km_split_status && details.km_split_status !== 'calculated'
+    ? [`Parciales por km no calculados: ${splitFailureReason(details.km_split_status)}.`] : [];
+  if (!w.laps?.length) return [...reason, w.sync_details?.provider === 'samsung_sdk' ? 'Vueltas originales: el SDK de Samsung no expone vueltas de running y no se han recibido de Health Connect.' : 'Vueltas: no compartidas en esta sincronización; no se generan vueltas ficticias.'];
+  return [...reason, 'Vueltas registradas (no necesariamente series):', 'Fuente de las vueltas: Health Connect; el ritmo de cada vuelta es calculado.', ...w.laps.map((lap, i) => {
     const active = lap.active_duration_s;
     const seconds = active ?? lap.duration_s;
     return `Vuelta ${i + 1}: distancia ${metric(lap.distance_m, 'm')}; tiempo transcurrido ${durationLabel(lap.duration_s)}` +
       (active != null ? `; tiempo descontando pausas compartidas ${durationLabel(active)}` : '') +
       `; ritmo medio calculado ${paceLabel(lap.distance_m, seconds)} (${active != null ? 'descontando pausas compartidas' : 'tiempo transcurrido; pausas no verificadas'})`;
   })];
+}
+function splitFailureReason(status: string): string {
+  switch (status) {
+    case 'no_speed_samples': return 'Samsung no ha proporcionado suficientes muestras de velocidad';
+    case 'incomplete_edges': return 'faltan muestras al inicio o al final del entreno';
+    case 'duration_mismatch': return 'el tiempo cubierto por las muestras no coincide suficientemente con la duración original; no se pueden resolver las pausas o los huecos';
+    case 'distance_mismatch': return 'la distancia integrada difiere más del 5 % de la original o no hay distancia reconstruible';
+    case 'invalid_speed': return 'hay muestras de velocidad inválidas o fuera del rango admitido para running';
+    case 'conflicting_samples': return 'hay muestras contradictorias para el mismo instante';
+    case 'missing_totals': return 'faltan duración o distancia originales válidas';
+    default: return 'el registro no supera las comprobaciones de coherencia';
+  }
 }
 export function durationLabel(seconds: number): string {
   const s = Math.round(seconds);

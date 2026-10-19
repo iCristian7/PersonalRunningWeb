@@ -40,7 +40,7 @@ function SessionCard({ workout, shoes, onSaved }: { workout: SyncedWorkout; shoe
     <p>Cadencia: {workout.cadence_avg == null ? availabilityLabel(workout.sync_details?.cadence_status) : `${workout.cadence_avg.toLocaleString('es-ES', { maximumFractionDigits: 1 })} pasos/min${workout.sync_details?.cadence_status === 'sample_mean' ? ' (media calculada de muestras)' : ''}`}.</p>
     <p>Desnivel positivo: {workout.elevation_gain_m == null ? availabilityLabel(workout.sync_details?.elevation_status) : `${workout.elevation_gain_m} m`}.</p>
     <p style={{ whiteSpace: 'pre-wrap' }}><strong>Notas de Samsung Health:</strong> {workout.source_notes || 'No compartidas en esta sincronización'}</p>
-    <details><summary>Vueltas del entreno</summary>{lapReport(workout).map((line, i) => <p key={i}>{line}</p>)}</details>
+    <details><summary>Parciales por km y vueltas</summary>{lapReport(workout).map((line, i) => <p key={i}>{line}</p>)}</details>
     <form onSubmit={save} className="health-form">
       <label>Sensaciones<input className="input" value={sensations} maxLength={1000} onChange={e => setSensations(e.target.value)} placeholder="Buenas, cansancio, molestias…" /></label>
       <label>Zapatillas<select className="input" value={shoe} onChange={e => setShoe(e.target.value)}>
