@@ -2,6 +2,8 @@
 
 ## Initial setup
 
+For Android v0.2.0, also run `migrations/202610190001_workout_details.sql` after the initial migration. It is additive and safe to rerun; it does not delete or overwrite existing workouts or manual notes. Re-sync existing sessions to populate the new fields.
+
 1. Open the Supabase project's SQL Editor and run `migrations/202610050001_workouts.sql` once.
 2. In the project's Connect dialog, copy the project URL and publishable key.
 3. Copy `.env.example` to `.env.local` and fill those two values. Add the same variables in Vercel when deploying the integration.

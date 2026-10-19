@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
         fun button(value: String, action: () -> Unit): Button = Button(this).apply {
             text = value; setOnClickListener { action() }; layout.addView(this); controls.add(this)
         }
-        text("Running Sync", 26f)
+        text("Running Sync · 0.2.0", 26f)
         text("Samsung Health → tu web. Se leen solo carreras de Samsung Health de la semana seleccionada. No se solicitan rutas GPS ni se modifica Samsung Health.")
         button("1. Conceder permisos") {
             if (health == null) status.text = "Health Connect no está disponible. Actualiza Android y Health Connect."
@@ -93,7 +93,11 @@ class MainActivity : ComponentActivity() {
                     status.text = "Enviando ${rows.size} entrenos a tu cuenta…"
                     cloud.upload(rows, refreshed)
                     val missing = rows.count { it.isNull("distance_m") || it.isNull("hr_avg") }
-                    status.text = "Sincronizados ${rows.size} entrenos. Las sincronizaciones repetidas actualizan las mismas sesiones y conservan sensaciones, notas y zapatillas.\n$missing sesiones sin distancia o FC media compartidas por Samsung Health. Abre la web y pulsa Actualizar."
+                    val noCadence = rows.count { it.isNull("cadence_avg") }
+                    val noElevation = rows.count { it.isNull("elevation_gain_m") }
+                    val noLaps = rows.count { it.isNull("laps") }
+                    val noPauses = rows.count { it.getJSONObject("sync_details").optInt("pause_segments") == 0 }
+                    status.text = "Sincronizados ${rows.size} entrenos. Conservadas sensaciones, notas adicionales y zapatillas.\n$missing sesiones sin distancia o FC media; $noCadence sin cadencia; $noElevation sin desnivel; $noLaps sin vueltas compartidas.\n$noPauses sesiones sin pausas compartidas: su duración y ritmo no se pueden equiparar al valor de Samsung. Abre la web y pulsa Actualizar."
                 }
             }
         }

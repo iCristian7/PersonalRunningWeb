@@ -28,6 +28,8 @@ class CloudClient {
             connection.outputStream.use { it.write(body.toByteArray(Charsets.UTF_8)) }
             val status = connection.responseCode
             if (status !in 200..299) {
+                val code = try { JSONObject(connection.errorStream?.bufferedReader()?.use { it.readText() } ?: "{}").optString("code") } catch (_: Exception) { "" }
+                if (code == "PGRST204") throw IllegalStateException("Falta actualizar la tabla de Supabase. Ejecuta la migración 202610190001_workout_details.sql antes de sincronizar con esta versión.")
                 // Do not expose response bodies, tokens or health payloads in logs/errors.
                 throw IllegalStateException(when (status) {
                     400, 401 -> "No se pudo autenticar o enviar los datos. Confirma el correo, revisa la contraseña y vuelve a entrar."

@@ -1,5 +1,14 @@
 # Running Sync (personal Android companion)
 
+## Version 0.2.0: details and timing
+
+Before installing the updated APK, run `supabase/migrations/202610190001_workout_details.sql` in Supabase SQL Editor. This adds source notes, elapsed duration and per-session provenance, preserving existing data and RLS. Then install `downloads/RunningSync-0.2.0.apk` over the previous app and synchronize the same week again.
+
+This version imports `ExerciseSessionRecord.notes` into `source_notes`, without overwriting manual `notes`. It discounts explicitly shared PAUSE segments, including overlapping and lap-clipped intervals. Without PAUSE segments, the Health Connect duration remains labeled unverified: absence of exported pauses does not prove uninterrupted running. It reads all cadence sample pages if an aggregate is unavailable, labels that sample mean as calculated, and checks elevation records without inventing an altitude gain from the difference between maximum and minimum altitude. Laps are listed individually with their time, distance and calculated pace; missing laps are not fabricated.
+
+This does not yet use Samsung Health Data SDK. Its official download at https://developer.samsung.com/health/data/overview.html requires Samsung account login and acceptance of the SDK agreement. The current API documents original `duration`, `meanSpeed`, `meanCadence`, `altitudeGain`, heart-rate statistics and `comment` on ExerciseSession. It does not document running lap data. To integrate original metrics, obtain the official SDK first and validate its access on the phone. Do not promise that Health Connect reproduces all values visible in Samsung Health.
+
+
 Reads Samsung Health running/treadmill sessions through Health Connect and sends weekly summaries to the owner's Supabase account. Intended for Cristian's Android 15 phone; Android 14 or newer is required.
 
 ## Install and use

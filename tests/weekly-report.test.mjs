@@ -46,3 +46,29 @@ test('empty weeks do not fabricate workouts or summaries', () => {
   assert.match(weeklyReport([], '2026-09-16'), /No hay entrenos/);
   assert.equal(weeklyReport([], ''), '');
 });
+
+test('imported Samsung notes and manual notes both survive in the report', () => {
+  const text = weeklyReport([session({ source_notes: 'Rodaje con viento', notes: 'Zapatillas nuevas' })], '2026-09-16');
+  assert.match(text, /Notas de Samsung Health: Rodaje con viento/);
+  assert.match(text, /Notas adicionales: Zapatillas nuevas/);
+});
+
+test('legacy or unverified durations are not presented as Samsung active time', () => {
+  const text = weeklyReport([session()], '2026-09-16');
+  assert.match(text, /Duración Health Connect \(pausas no verificadas\)/);
+  assert.doesNotMatch(text, /Duración activa:/);
+  assert.match(text, /no es el valor original de Samsung/);
+});
+
+test('lap pace uses shared pause-adjusted duration when available', () => {
+  const text = weeklyReport([session({ laps: [{ distance_m: 1000, duration_s: 400, active_duration_s: 346 }] })], '2026-09-16');
+  assert.match(text, /Vuelta 1: distancia 1000 m; tiempo transcurrido 0:06:40/);
+  assert.match(text, /tiempo descontando pausas compartidas 0:05:46/);
+  assert.match(text, /ritmo medio calculado 5'46"\/km/);
+});
+
+test('missing permissions are distinguished from missing upstream records', () => {
+  const text = weeklyReport([session({ cadence_avg: null, elevation_gain_m: null, sync_details: { cadence_status: 'permission_denied', elevation_status: 'not_shared' } })], '2026-09-16');
+  assert.match(text, /Cadencia ausente: permiso no concedido/);
+  assert.match(text, /Desnivel ausente: sin registros compartidos/);
+});

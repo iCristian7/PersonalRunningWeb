@@ -16,7 +16,7 @@ class PrivacyActivity : Activity() {
 
                 App personal de Cristian para llevar sus entrenos de Samsung Health a PersonalRunningWeb.
 
-                Solo se leen carreras de Samsung Health de la semana elegida. Según los permisos concedidos y los datos compartidos, se leen fecha, duración, distancia, frecuencia cardíaca, cadencia, desnivel, calorías y vueltas. No se leen rutas GPS ni se escribe en Health Connect o Samsung Health.
+                Solo se leen carreras de Samsung Health de la semana elegida. Según los permisos concedidos y los datos compartidos, se leen fecha, duración, pausas, distancia, frecuencia cardíaca, cadencia, desnivel, calorías, vueltas y notas del entreno. No se leen rutas GPS ni se escribe en Health Connect o Samsung Health. Las notas de Samsung se conservan aparte de las notas adicionales escritas en la web.
 
                 Al pulsar Sincronizar, los resúmenes se envían mediante HTTPS al proyecto mepqzdircyjyrzkdncju.supabase.co y se guardan vinculados a tu cuenta. No se envían automáticamente a ChatGPT. Tú decides cuándo copiar el resumen y compartirlo.
 
