@@ -8,6 +8,8 @@ export type SyncedWorkout = {
   source_notes?: string | null;
   elapsed_duration_s?: number | null;
   sync_details?: {
+    provider?: string; samsung_id?: string; samsung_mean_speed_mps?: number | null;
+    pace_avg_s_per_km?: number | null; lap_source?: string;
     duration_basis?: string; pause_segments?: number;
     cadence_status?: string; cadence_samples?: number;
     elevation_status?: string; elevation_records?: number;
@@ -51,18 +53,20 @@ const numberES = (value: number) => value.toLocaleString('es-ES', { maximumFract
 const dateES = (iso: string) => iso.split('-').reverse().join('/');
 const metric = (value: number | null, unit: string) => value == null ? 'No disponible' : `${numberES(value)} ${unit}`;
 export function durationBasisLabel(w: SyncedWorkout): string {
+  if (w.sync_details?.provider === 'samsung_sdk') return 'Duración original de Samsung Health';
   return w.sync_details?.duration_basis === 'session_pause_segments'
     ? 'Duración descontando pausas compartidas'
     : 'Duración Health Connect (pausas no verificadas)';
 }
 export function availabilityLabel(status: string | undefined): string {
+  if (status === 'not_exposed_by_sdk') return 'no facilitado por el SDK de Samsung Health';
   if (status === 'permission_denied') return 'permiso no concedido; revísalo en Health Connect';
   if (status === 'not_shared') return 'sin registros compartidos por Samsung Health en Health Connect';
   return 'no disponible en esta sincronización';
 }
 export function lapReport(w: SyncedWorkout): string[] {
-  if (!w.laps?.length) return ['Vueltas: no compartidas en esta sincronización; no se generan vueltas ficticias.'];
-  return ['Vueltas registradas (no necesariamente series):', ...w.laps.map((lap, i) => {
+  if (!w.laps?.length) return [w.sync_details?.provider === 'samsung_sdk' ? 'Vueltas: el SDK de Samsung no expone vueltas de running y no se han recibido de Health Connect.' : 'Vueltas: no compartidas en esta sincronización; no se generan vueltas ficticias.'];
+  return ['Vueltas registradas (no necesariamente series):', 'Fuente de las vueltas: Health Connect; el ritmo de cada vuelta es calculado.', ...w.laps.map((lap, i) => {
     const active = lap.active_duration_s;
     const seconds = active ?? lap.duration_s;
     return `Vuelta ${i + 1}: distancia ${metric(lap.distance_m, 'm')}; tiempo transcurrido ${durationLabel(lap.duration_s)}` +
@@ -80,6 +84,16 @@ export function paceLabel(distance: number | null, seconds: number | null): stri
   return `${Math.floor(pace / 60)}'${String(pace % 60).padStart(2, '0')}\"/km`;
 }
 
+export function workoutPace(w: SyncedWorkout): { value: string; basis: string } {
+  const speed = w.sync_details?.samsung_mean_speed_mps;
+  if (w.sync_details?.provider === 'samsung_sdk' && typeof speed === 'number' && Number.isFinite(speed) && speed > 0) {
+    return { value: paceLabel(1000, 1000 / speed), basis: 'a partir de la velocidad media original de Samsung Health' };
+  }
+  return { value: paceLabel(w.distance_m, w.active_duration_s), basis: w.sync_details?.provider === 'samsung_sdk'
+    ? 'calculado con duración y distancia originales de Samsung; velocidad media no disponible'
+    : 'calculado con duración importada y distancia; no es el valor original de Samsung' };
+}
+
 export function weeklyReport(rows: SyncedWorkout[], date: string): string {
   if (!date) return '';
   const { start, end } = weekDates(date);
@@ -92,10 +106,11 @@ export function weeklyReport(rows: SyncedWorkout[], date: string): string {
   const sections = sessions.map(w => [
     `Fecha: ${dateES(localWorkoutDate(w))}`,
     `Entreno: ${w.title}`,
+    `Origen de las métricas: ${w.sync_details?.provider === 'samsung_sdk' ? 'Samsung Health Data SDK (lectura directa)' : 'Health Connect'}`,
     `Distancia: ${metric(w.distance_m == null ? null : w.distance_m / 1000, 'km')}`,
     `Tiempo transcurrido de la sesión: ${durationLabel(w.elapsed_duration_s ?? (new Date(w.ended_at).getTime() - new Date(w.started_at).getTime()) / 1000)}`,
     `${durationBasisLabel(w)}: ${w.active_duration_s == null ? 'No disponible' : durationLabel(w.active_duration_s)}`,
-    `Ritmo medio calculado (duración importada/distancia; no es el valor original de Samsung): ${paceLabel(w.distance_m, w.active_duration_s)}`,
+    `Ritmo medio (${workoutPace(w).basis}): ${workoutPace(w).value}`,
     `FC media: ${metric(w.hr_avg, 'ppm')}`,
     `FC máxima: ${metric(w.hr_max, 'ppm')}`,
     `Cadencia: ${metric(w.cadence_avg, 'pasos/min')}`,
@@ -111,7 +126,7 @@ export function weeklyReport(rows: SyncedWorkout[], date: string): string {
   ].join('\n'));
   return [
     `Detalle entrenamientos del ${dateES(start)} al ${dateES(end)}.`,
-    'Fuente: Samsung Health mediante Health Connect. Solo sesiones sincronizadas; los datos no disponibles no se estiman.',
+    'Datos de Samsung Health. Se indica la fuente de cada entreno y la base del ritmo. Los datos no disponibles no se inventan.',
     `Sesiones: ${sessions.length}`,
     `Distancia total conocida: ${numberES(totalDistance / 1000)} km (${distanceKnown.length}/${sessions.length} sesiones con distancia)`,
     `Duración importada total conocida: ${durationLabel(totalDuration)} (${durationKnown.length}/${sessions.length} sesiones con duración; revisar la base de tiempos de cada entreno)`,

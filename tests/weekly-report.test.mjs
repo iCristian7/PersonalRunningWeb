@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { localWorkoutDate, weekDates, weekWorkouts, weeklyReport, paceLabel } from '../lib/weekly-report.ts';
+import { localWorkoutDate, weekDates, weekWorkouts, weeklyReport, paceLabel, workoutPace } from '../lib/weekly-report.ts';
 
 const session = (overrides = {}) => ({
   id: 'id', user_id: 'owner', source_id: 'health-id', title: 'Running',
@@ -71,4 +71,28 @@ test('missing permissions are distinguished from missing upstream records', () =
   const text = weeklyReport([session({ cadence_avg: null, elevation_gain_m: null, sync_details: { cadence_status: 'permission_denied', elevation_status: 'not_shared' } })], '2026-09-16');
   assert.match(text, /Cadencia ausente: permiso no concedido/);
   assert.match(text, /Desnivel ausente: sin registros compartidos/);
+});
+
+test('Samsung mean speed takes precedence over duration/distance-derived pace', () => {
+  const workout = session({ distance_m: 10000, active_duration_s: 5000, sync_details: { provider: 'samsung_sdk', samsung_mean_speed_mps: 2.0 } });
+  assert.equal(workoutPace(workout).value, '8\'20"/km');
+  assert.match(workoutPace(workout).basis, /velocidad media original/);
+  const text = weeklyReport([workout], '2026-09-16');
+  assert.match(text, /Duración original de Samsung Health/);
+  assert.match(text, /Samsung Health Data SDK \(lectura directa\)/);
+  assert.doesNotMatch(text, /pausas no verificadas/);
+});
+
+test('missing or invalid native speed is explicitly labeled as calculated', () => {
+  for (const speed of [null, 0, -1, Infinity]) {
+    const workout = session({ sync_details: { provider: 'samsung_sdk', samsung_mean_speed_mps: speed } });
+    assert.equal(workoutPace(workout).value, '7\'55"/km');
+    assert.match(workoutPace(workout).basis, /velocidad media no disponible/);
+  }
+});
+
+test('SDK workouts preserve the Health Connect lap provenance', () => {
+  const text = weeklyReport([session({ sync_details: { provider: 'samsung_sdk' }, laps: [{ distance_m: 1000, duration_s: 300 }] })], '2026-09-16');
+  assert.match(text, /Fuente de las vueltas: Health Connect/);
+  assert.match(text, /ritmo medio calculado 5'00"\/km/);
 });

@@ -31,6 +31,27 @@ class HealthReader(private val client: HealthConnectClient) {
 
     private val origins = setOf(DataOrigin("com.sec.android.app.shealth"))
 
+    /** Optional lap source only; original Samsung summary metrics are never replaced with aggregates. */
+    suspend fun readLapRows(monday: LocalDate): List<JSONObject> {
+        if (requiredPermission !in client.permissionController.getGrantedPermissions()) return emptyList()
+        val zone = ZoneId.systemDefault()
+        val start = monday.atStartOfDay(zone).toInstant().minusSeconds(86400)
+        val end = monday.plusDays(7).atStartOfDay(zone).toInstant().plusSeconds(86400)
+        return readRecords(ExerciseSessionRecord::class, start, end).filter {
+            it.exerciseType in setOf(ExerciseSessionRecord.EXERCISE_TYPE_RUNNING, ExerciseSessionRecord.EXERCISE_TYPE_RUNNING_TREADMILL) && it.laps.isNotEmpty()
+        }.map { session ->
+            val pauses = session.segments.filter { it.segmentType == ExerciseSegment.EXERCISE_SEGMENT_TYPE_PAUSE }.map { TimeWindow(it.startTime, it.endTime) }
+            JSONObject().put("source_id", session.metadata.id)
+                .put("started_at", session.startTime.toString()).put("ended_at", session.endTime.toString())
+                .put("laps", JSONArray(session.laps.map { lap ->
+                    JSONObject().put("distance_m", lap.length?.inMeters ?: JSONObject.NULL)
+                        .put("duration_s", Duration.between(lap.startTime, lap.endTime).toMillis() / 1000.0)
+                        .put("active_duration_s", if (pauses.isNotEmpty()) WorkoutTiming.activeSeconds(lap.startTime, lap.endTime, pauses) else JSONObject.NULL)
+                        .put("started_at", lap.startTime.toString()).put("ended_at", lap.endTime.toString())
+                }))
+        }
+    }
+
     private suspend fun <T : Record> readRecords(type: KClass<T>, start: Instant, end: Instant): List<T> {
         val result = mutableListOf<T>()
         var token: String? = null

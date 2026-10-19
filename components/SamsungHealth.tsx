@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { type User } from '@supabase/supabase-js';
 import { getSupabase } from '@/lib/supabase';
-import { localWorkoutDate, paceLabel, durationLabel, durationBasisLabel, availabilityLabel, lapReport, weekDates, weekWorkouts, weeklyReport, type SyncedWorkout } from '@/lib/weekly-report';
+import { localWorkoutDate, workoutPace, durationLabel, durationBasisLabel, availabilityLabel, lapReport, weekDates, weekWorkouts, weeklyReport, type SyncedWorkout } from '@/lib/weekly-report';
 import type { ProfileData } from '@/lib/utils';
 
 function errorText(error: { message: string; code?: string }): string {
@@ -35,8 +35,8 @@ function SessionCard({ workout, shoes, onSaved }: { workout: SyncedWorkout; shoe
   }
   return <article className="card health-session">
     <h3>{workout.title} · {localWorkoutDate(workout).split('-').reverse().join('/')}</h3>
-    <p className="muted">{workout.distance_m == null ? 'Distancia no disponible' : `${(workout.distance_m / 1000).toLocaleString('es-ES', { maximumFractionDigits: 2 })} km`} · {paceLabel(workout.distance_m, workout.active_duration_s)} · FC media: {workout.hr_avg == null ? 'N/D' : `${Math.round(workout.hr_avg)} ppm`}</p>
-    <p>{durationBasisLabel(workout)}: {workout.active_duration_s == null ? 'No disponible' : durationLabel(workout.active_duration_s)}. Ritmo calculado; no importado de la pantalla de Samsung.</p>
+    <p className="muted">{workout.distance_m == null ? 'Distancia no disponible' : `${(workout.distance_m / 1000).toLocaleString('es-ES', { maximumFractionDigits: 2 })} km`} · {workoutPace(workout).value} · FC media: {workout.hr_avg == null ? 'N/D' : `${Math.round(workout.hr_avg)} ppm`}</p>
+    <p>{durationBasisLabel(workout)}: {workout.active_duration_s == null ? 'No disponible' : durationLabel(workout.active_duration_s)}. Ritmo {workoutPace(workout).basis}.</p>
     <p>Cadencia: {workout.cadence_avg == null ? availabilityLabel(workout.sync_details?.cadence_status) : `${workout.cadence_avg.toLocaleString('es-ES', { maximumFractionDigits: 1 })} pasos/min${workout.sync_details?.cadence_status === 'sample_mean' ? ' (media calculada de muestras)' : ''}`}.</p>
     <p>Desnivel positivo: {workout.elevation_gain_m == null ? availabilityLabel(workout.sync_details?.elevation_status) : `${workout.elevation_gain_m} m`}.</p>
     <p style={{ whiteSpace: 'pre-wrap' }}><strong>Notas de Samsung Health:</strong> {workout.source_notes || 'No compartidas en esta sincronización'}</p>
@@ -156,7 +156,7 @@ export default function SamsungHealth({ profile }: { profile: ProfileData }) {
     {!loading && !loadError && sessions.map(w => <SessionCard key={w.id} workout={w} shoes={profile.shoes} onSaved={updated => setRows(previous => previous.map(row => row.id === updated.id ? updated : row))} />)}
     {!loading && !loadError && sessions.length > 0 && <div className="card">
       <h3>Texto para ChatGPT</h3>
-      <p className="muted">Revisa sensaciones y zapatillas antes de copiar. El ritmo se calcula a partir de la duración importada y la distancia. Las pausas solo se descuentan cuando están disponibles; el valor puede diferir del reloj.</p>
+      <p className="muted">Revisa sensaciones y zapatillas antes de copiar. Cada sesión indica su fuente: lectura directa de Samsung o Health Connect. El ritmo utiliza la velocidad media original si está disponible; si no, se identifica como calculado.</p>
       <textarea className="input health-report" aria-label="Resumen semanal para ChatGPT" readOnly value={report} />
       <button className="btn" onClick={async () => { try { await navigator.clipboard.writeText(report); setCopyMessage('Resumen copiado. Ya puedes pegarlo en ChatGPT.'); } catch { setCopyMessage('Selecciona el texto del resumen y cópialo manualmente.'); } }}>Copiar resumen para ChatGPT</button>
       <p role="status">{copyMessage}</p>

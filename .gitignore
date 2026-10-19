@@ -12,3 +12,4 @@ android/local.properties
 .android-sdk/
 .android-tools/
 downloads/
+android/app/libs/*.aar
