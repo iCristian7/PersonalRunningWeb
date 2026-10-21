@@ -7077,6 +7077,177 @@
         "Talk test",
         "Esfuerzo constante"
       ]
+    },
+    {
+      "id": "2026-10-12-rodaje-aerobico-700",
+      "date": "2026-10-12",
+      "displayDate": "12/10/2026",
+      "kind": "log",
+      "title": "Rodaje aeróbico",
+      "metrics": {
+        "distanceKm": 7,
+        "durationActive": "0:52:58",
+        "paceAvg": "7'34",
+        "hrAvg": 155,
+        "hrMax": 166,
+        "cadenceAvg": 163.06,
+        "elevationM": 13.14,
+        "caloriesKcal": 604.32,
+        "notes": "Samsung Health Data SDK (lectura directa). Tiempo transcurrido: 0:53:04. Duración original Samsung Health: 0:52:58. Ritmo medio derivado de la velocidad media original de Samsung Health. Buenas sensaciones. No se estiman datos no disponibles.",
+        "sensations": "Buenas",
+        "shoe": "Nike Pegasus 41",
+        "splits": null,
+        "subtype": "Rodaje aeróbico",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-10-14-rodaje-activaciones-800",
+      "date": "2026-10-14",
+      "displayDate": "14/10/2026",
+      "kind": "log",
+      "title": "Rodaje aeróbico",
+      "metrics": {
+        "distanceKm": 8,
+        "durationActive": "1:00:08",
+        "paceAvg": "7'31",
+        "hrAvg": 152,
+        "hrMax": 170,
+        "cadenceAvg": 160.61,
+        "elevationM": 72.24,
+        "caloriesKcal": 688.37,
+        "notes": "Samsung Health Data SDK (lectura directa). Tiempo transcurrido: 1:04:11. Duración original Samsung Health: 1:00:08. Ritmo medio derivado de la velocidad media original de Samsung Health. Buenas sensaciones. No hay datos sincronizados que confirmen por separado las 4 activaciones de 20 s, por lo que no se registran como completadas.",
+        "sensations": "Buenas",
+        "shoe": "Nike Pegasus 41",
+        "splits": null,
+        "subtype": "Rodaje aeróbico",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-10-17-tirada-aerobica-1001",
+      "date": "2026-10-17",
+      "displayDate": "17/10/2026",
+      "kind": "log",
+      "title": "Tirada aeróbica 10 km",
+      "metrics": {
+        "distanceKm": 10.01,
+        "durationActive": "1:17:52",
+        "paceAvg": "7'47",
+        "hrAvg": 152,
+        "hrMax": 165,
+        "cadenceAvg": 165.92,
+        "elevationM": 35.69,
+        "caloriesKcal": 858.82,
+        "notes": "Samsung Health Data SDK (lectura directa). Tiempo transcurrido: 1:21:51. Duración original Samsung Health: 1:17:52. Ritmo medio derivado de la velocidad media original de Samsung Health. Buenas sensaciones. No se estiman datos no disponibles.",
+        "sensations": "Buenas",
+        "shoe": "Nike Pegasus 41",
+        "splits": null,
+        "subtype": "Tirada aeróbica",
+        "type": "Tirada larga"
+      }
+    },
+    {
+      "id": "plan-2026-10-21-tempo-controlado",
+      "date": "2026-10-21",
+      "displayDate": "21/10/2026",
+      "kind": "plan",
+      "title": "Miércoles · Tempo aeróbico controlado",
+      "objective": "Introducir la primera calidad estructurada tras Galway para mejorar eficiencia aeróbica y elevar el ritmo sostenible sin acumular fatiga.",
+      "totalDistance": "~8,5–9 km",
+      "intensity": "Moderada controlada (RPE 5–6/10)",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km muy suaves",
+            "Talk test completo",
+            "Movilidad breve de tobillo/cadera si lo necesitas"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "orange",
+          "items": [
+            "3 × 6 min a esfuerzo 'alegre pero controlado'",
+            "Referencia de ritmo aproximada: 5'55–6'10/km, sin perseguir el número",
+            "Recuperación: 2 min de trote muy suave",
+            "Debes poder decir frases cortas; no llegar a sensación de serie dura"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "Trote muy suave hasta completar ~8,5–9 km"
+          ]
+        }
+      ],
+      "rules": [
+        "El lunes 19 se perdió por migraña: NO se compensa volumen.",
+        "Si reaparece dolor de cabeza, mareo o malestar general, convertir todo en 6–7 km suaves o parar.",
+        "La tercera repetición debe parecer igual de controlada que la primera.",
+        "No bajar de 5'50/km intencionadamente."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Reportar ritmo/FC de cada bloque si Samsung Health los ofrece",
+          "Reportar sensación global y si podías hablar en frases cortas"
+        ]
+      },
+      "techFocus": [
+        "Regularidad",
+        "Respiración controlada",
+        "No perseguir FC"
+      ]
+    },
+    {
+      "id": "plan-2026-10-24-tirada-aerobica-12km",
+      "date": "2026-10-24",
+      "displayDate": "24/10/2026",
+      "kind": "plan",
+      "title": "Sábado · Tirada aeróbica 12 km",
+      "objective": "Ampliar progresivamente la resistencia mientras mantenemos el foco en eficiencia aeróbica.",
+      "totalDistance": "12 km",
+      "intensity": "Aeróbico cómodo (RPE 3–4/10)",
+      "blocks": [
+        {
+          "name": "1) Km 1–3",
+          "tag": "blue",
+          "items": [
+            "Muy cómodos",
+            "Conversación completa"
+          ]
+        },
+        {
+          "name": "2) Km 4–12",
+          "tag": "green",
+          "items": [
+            "Esfuerzo aeróbico estable",
+            "Referencia de FC ~148–155 ppm si sale natural",
+            "Ritmo libre: observar qué ritmo aparece para ese esfuerzo"
+          ]
+        }
+      ],
+      "rules": [
+        "Sin progresión final.",
+        "No intentar compensar el rodaje perdido del lunes.",
+        "Si el miércoles deja fatiga muscular clara, reducir a 10 km.",
+        "Si la FC sube con el mismo esfuerzo, priorizar sensaciones/talk test y registrar el contexto."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Si es posible, comparar FC/ritmo de los primeros 6 km frente a los últimos 6 km."
+        ]
+      },
+      "techFocus": [
+        "Eficiencia aeróbica",
+        "Deriva cardíaca",
+        "Talk test"
+      ]
     }
   ]
 }
