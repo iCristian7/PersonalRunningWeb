@@ -7300,47 +7300,54 @@
       "date": "2026-10-28",
       "displayDate": "28/10/2026",
       "kind": "plan",
-      "title": "Miércoles · Vuelta suave tras resfriado",
-      "objective": "Comprobar recuperación del resfriado sin añadir estrés. Mantener continuidad y proteger el bloque de eficiencia aeróbica.",
-      "totalDistance": "5–7 km",
-      "intensity": "Muy suave (RPE 2–3/10)",
+      "title": "Miércoles · Calidad controlada post-resfriado",
+      "objective": "Retomar el trabajo de calidad al encontrarse ya asintomático, usando el calentamiento como comprobación final de recuperación.",
+      "totalDistance": "~8–9 km",
+      "intensity": "Moderada controlada (RPE 5–6/10)",
       "blocks": [
         {
-          "name": "1) Primeros 10–15 min",
+          "name": "1) Calentamiento",
           "tag": "blue",
           "items": [
-            "Trote muy suave",
-            "Conversación completa",
-            "No perseguir ritmo ni FC"
+            "2 km muy suaves",
+            "Comprobar que respiración, piernas y energía se sienten completamente normales"
           ]
         },
         {
-          "name": "2) Si todo se siente normal",
-          "tag": "green",
+          "name": "2) Bloque principal",
+          "tag": "orange",
           "items": [
-            "Completar 5–7 km cómodos",
-            "FC orientativa ~145–155 ppm si sale natural",
-            "Ritmo libre"
+            "3 × 5 min a esfuerzo alegre pero controlado",
+            "Referencia aproximada: 5'55–6'10/km si sale natural",
+            "2 min de trote muy suave entre bloques",
+            "Acabar cada bloque con sensación de poder hacer uno más"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "Trote suave hasta completar ~8–9 km"
           ]
         }
       ],
       "rules": [
-        "Nada de tempo, series ni activaciones hoy.",
-        "Si aparecen mareo, debilidad, falta de aire inusual, dolor de pecho, fiebre o empeoran claramente los síntomas → parar.",
-        "Si sigues con congestión pero energía normal y sin síntomas de pecho/fiebre, mantenerlo estrictamente fácil.",
-        "No compensar el lunes 26 perdido."
+        "Si durante los 2 km de calentamiento todo se siente normal, hacer la sesión completa.",
+        "Si la FC es inusualmente alta para el esfuerzo o reaparece cualquier síntoma, convertir en rodaje suave.",
+        "No perseguir ritmo ni bajar deliberadamente de 5'50/km.",
+        "No compensar el lunes perdido con más volumen."
       ],
       "post": {
-        "title": "Chequeo",
+        "title": "Post-entreno",
         "items": [
-          "Valorar cómo te encuentras durante el resto del día y al levantarte mañana.",
-          "Reportar ritmo, FC y si el resfriado afectó a la respiración."
+          "Reportar ritmo y FC de cada bloque si están disponibles.",
+          "Valorar sensaciones 1–2 h después para confirmar recuperación completa."
         ]
       },
       "techFocus": [
-        "Recuperación",
-        "Talk test",
-        "Esfuerzo fácil"
+        "Regularidad",
+        "Respiración controlada",
+        "Acabar con margen"
       ]
     },
     {
@@ -7348,16 +7355,16 @@
       "date": "2026-10-31",
       "displayDate": "31/10/2026",
       "kind": "plan",
-      "title": "Sábado · Rodaje aeróbico 10 km",
-      "objective": "Retomar volumen aeróbico sin convertir la semana de recuperación del resfriado en una semana de carga.",
-      "totalDistance": "8–10 km",
-      "intensity": "Aeróbico cómodo (RPE 3/10)",
+      "title": "Sábado · Tirada aeróbica 11–12 km",
+      "objective": "Recuperar una tirada normal del bloque aeróbico si la sesión del miércoles confirma recuperación completa.",
+      "totalDistance": "11–12 km",
+      "intensity": "Aeróbico cómodo (RPE 3–4/10)",
       "blocks": [
         {
           "name": "1) Km 1–3",
           "tag": "blue",
           "items": [
-            "Muy suaves",
+            "Muy cómodos",
             "Conversación completa"
           ]
         },
@@ -7365,28 +7372,28 @@
           "name": "2) Resto",
           "tag": "green",
           "items": [
-            "Mantener esfuerzo estable",
+            "Mantener esfuerzo aeróbico estable",
             "Referencia de FC ~148–155 ppm si sale natural",
-            "Sin objetivo de ritmo"
+            "Ritmo libre"
           ]
         }
       ],
       "rules": [
-        "Solo hacer 10 km si el miércoles no provoca recaída y el viernes estás prácticamente recuperado.",
-        "Si quedan síntomas o fatiga → 8 km fáciles.",
-        "Sin progresión final ni trabajo de calidad.",
-        "Si reaparece fiebre o síntomas de pecho, no correr."
+        "Hacer 12 km si hoy sale limpio y el viernes sigues completamente asintomático.",
+        "Reducir a 10–11 km si queda fatiga residual.",
+        "Sin progresión final.",
+        "No convertir la tirada en una sesión de ritmo."
       ],
       "post": {
         "title": "Post-entreno",
         "items": [
-          "Si el entrenamiento sale limpio, la semana siguiente podremos reintroducir calidad controlada."
+          "Comparar FC/ritmo de primera y segunda mitad si Samsung Health lo permite."
         ]
       },
       "techFocus": [
         "Eficiencia aeróbica",
         "Talk test",
-        "Esfuerzo constante"
+        "Esfuerzo estable"
       ]
     }
   ]
