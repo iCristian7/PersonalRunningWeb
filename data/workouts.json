@@ -7248,6 +7248,146 @@
         "Deriva cardíaca",
         "Talk test"
       ]
+    },
+    {
+      "id": "2026-10-21-tempo-controlado-900",
+      "date": "2026-10-21",
+      "displayDate": "21/10/2026",
+      "kind": "log",
+      "title": "Rodaje con trabajo controlado",
+      "metrics": {
+        "distanceKm": 9,
+        "durationActive": "0:59:54",
+        "paceAvg": "6'39",
+        "hrAvg": 161,
+        "hrMax": 181,
+        "cadenceAvg": 166.96,
+        "elevationM": 26.52,
+        "caloriesKcal": 758.67,
+        "notes": "Samsung Health Data SDK (lectura directa). Tiempo transcurrido: 1:02:51. Duración original Samsung Health: 0:59:54. Ritmo medio derivado de la velocidad media original de Samsung Health. Buenas sensaciones. Sin parciales/bloques sincronizados no se puede confirmar la ejecución exacta del 3×6 min planificado.",
+        "sensations": "buenas",
+        "shoe": "Nike Pegasus 41",
+        "splits": null,
+        "subtype": "Calidad controlada",
+        "type": "Calidad"
+      }
+    },
+    {
+      "id": "2026-10-25-tirada-aerobica-1200",
+      "date": "2026-10-25",
+      "displayDate": "25/10/2026",
+      "kind": "log",
+      "title": "Tirada aeróbica 12 km",
+      "metrics": {
+        "distanceKm": 12,
+        "durationActive": "1:20:46",
+        "paceAvg": "6'44",
+        "hrAvg": 163,
+        "hrMax": 186,
+        "cadenceAvg": 167.23,
+        "elevationM": 200.52,
+        "caloriesKcal": 1026.68,
+        "notes": "Samsung Health Data SDK (lectura directa). Tiempo transcurrido: 1:26:38. Duración original Samsung Health: 1:20:46. Ritmo medio derivado de la velocidad media original de Samsung Health. Se realizó el domingo porque el sábado hubo temporal. Persistía viento fuerte y había síntomas de resfriado; por ese contexto la FC no se usa como referencia limpia de eficiencia aeróbica.",
+        "sensations": "Pendiente de completar",
+        "shoe": "Nike Pegasus Trail 5 GTX",
+        "splits": null,
+        "subtype": "Tirada aeróbica con viento/resfriado",
+        "type": "Tirada larga"
+      }
+    },
+    {
+      "id": "plan-2026-10-28-vuelta-resfriado",
+      "date": "2026-10-28",
+      "displayDate": "28/10/2026",
+      "kind": "plan",
+      "title": "Miércoles · Vuelta suave tras resfriado",
+      "objective": "Comprobar recuperación del resfriado sin añadir estrés. Mantener continuidad y proteger el bloque de eficiencia aeróbica.",
+      "totalDistance": "5–7 km",
+      "intensity": "Muy suave (RPE 2–3/10)",
+      "blocks": [
+        {
+          "name": "1) Primeros 10–15 min",
+          "tag": "blue",
+          "items": [
+            "Trote muy suave",
+            "Conversación completa",
+            "No perseguir ritmo ni FC"
+          ]
+        },
+        {
+          "name": "2) Si todo se siente normal",
+          "tag": "green",
+          "items": [
+            "Completar 5–7 km cómodos",
+            "FC orientativa ~145–155 ppm si sale natural",
+            "Ritmo libre"
+          ]
+        }
+      ],
+      "rules": [
+        "Nada de tempo, series ni activaciones hoy.",
+        "Si aparecen mareo, debilidad, falta de aire inusual, dolor de pecho, fiebre o empeoran claramente los síntomas → parar.",
+        "Si sigues con congestión pero energía normal y sin síntomas de pecho/fiebre, mantenerlo estrictamente fácil.",
+        "No compensar el lunes 26 perdido."
+      ],
+      "post": {
+        "title": "Chequeo",
+        "items": [
+          "Valorar cómo te encuentras durante el resto del día y al levantarte mañana.",
+          "Reportar ritmo, FC y si el resfriado afectó a la respiración."
+        ]
+      },
+      "techFocus": [
+        "Recuperación",
+        "Talk test",
+        "Esfuerzo fácil"
+      ]
+    },
+    {
+      "id": "plan-2026-10-31-rodaje-aerobico-10km",
+      "date": "2026-10-31",
+      "displayDate": "31/10/2026",
+      "kind": "plan",
+      "title": "Sábado · Rodaje aeróbico 10 km",
+      "objective": "Retomar volumen aeróbico sin convertir la semana de recuperación del resfriado en una semana de carga.",
+      "totalDistance": "8–10 km",
+      "intensity": "Aeróbico cómodo (RPE 3/10)",
+      "blocks": [
+        {
+          "name": "1) Km 1–3",
+          "tag": "blue",
+          "items": [
+            "Muy suaves",
+            "Conversación completa"
+          ]
+        },
+        {
+          "name": "2) Resto",
+          "tag": "green",
+          "items": [
+            "Mantener esfuerzo estable",
+            "Referencia de FC ~148–155 ppm si sale natural",
+            "Sin objetivo de ritmo"
+          ]
+        }
+      ],
+      "rules": [
+        "Solo hacer 10 km si el miércoles no provoca recaída y el viernes estás prácticamente recuperado.",
+        "Si quedan síntomas o fatiga → 8 km fáciles.",
+        "Sin progresión final ni trabajo de calidad.",
+        "Si reaparece fiebre o síntomas de pecho, no correr."
+      ],
+      "post": {
+        "title": "Post-entreno",
+        "items": [
+          "Si el entrenamiento sale limpio, la semana siguiente podremos reintroducir calidad controlada."
+        ]
+      },
+      "techFocus": [
+        "Eficiencia aeróbica",
+        "Talk test",
+        "Esfuerzo constante"
+      ]
     }
   ]
 }
