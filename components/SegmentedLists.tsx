@@ -1,13 +1,14 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import Dashboard from '@/components/Dashboard';
 import WorkoutList from '@/components/WorkoutList';
 import ProfileView from '@/components/ProfileView';
 import PlansList from '@/components/PlansList';
 import SamsungHealth from '@/components/SamsungHealth';
 import { type ProfileData, type Workout } from '@/lib/utils';
 
-type Tab = 'entrenos' | 'planes' | 'perfil' | 'samsung';
+type Tab = 'resumen' | 'entrenos' | 'planes' | 'perfil' | 'samsung';
 type PlanSubTab = 'correr' | 'fuerza';
 
 function isStrengthPlan(w: Workout): boolean {
@@ -18,7 +19,7 @@ function isStrengthPlan(w: Workout): boolean {
 }
 
 export default function SegmentedLists({ workouts, profile }: { workouts: Workout[]; profile: ProfileData }) {
-  const [tab, setTab] = useState<Tab>('entrenos');
+  const [tab, setTab] = useState<Tab>('resumen');
   const [planSubTab, setPlanSubTab] = useState<PlanSubTab>('correr');
 
   const plans = useMemo(() => workouts.filter(w => w.kind === 'plan'), [workouts]);
@@ -29,7 +30,8 @@ export default function SegmentedLists({ workouts, profile }: { workouts: Workou
 
   return (
     <>
-      <div className="seg-tabs">
+      <div className="seg-tabs" aria-label="Secciones principales">
+<button type="button" className={`seg-btn ${tab === 'resumen' ? 'active' : ''}`} aria-pressed={tab === 'resumen'} onClick={() => setTab('resumen')}>Resumen</button>
         <button type="button" className={`seg-btn ${tab === 'samsung' ? 'active' : ''}`} onClick={() => setTab('samsung')}>
           Samsung Health
         </button>
@@ -46,7 +48,8 @@ export default function SegmentedLists({ workouts, profile }: { workouts: Workou
         </button>
       </div>
 
-      {tab === 'entrenos' && <WorkoutList workouts={train} hideKindSelect />}
+      {tab === 'resumen' && <Dashboard workouts={train} profile={profile} />}
+{tab === 'entrenos' && <WorkoutList workouts={train} hideKindSelect />}
 
       {tab === 'planes' && (
         <>

@@ -63,7 +63,7 @@ function LineChart({ data, color = '#60a5fa', height = 160 }: { data: { x: numbe
   const minX = Math.min(...xs), maxX = Math.max(...xs);
   const minY = Math.min(...ys) * 0.95, maxY = Math.max(...ys) * 1.05;
   const w = 600, h = height;
-  const pad = { l: 0, r: 0, t: 10, b: 10 };
+  const pad = { l: 42, r: 12, t: 14, b: 26 };
   const pw = w - pad.l - pad.r, ph = h - pad.t - pad.b;
 
   const points = data.map(d => {
@@ -75,13 +75,15 @@ function LineChart({ data, color = '#60a5fa', height = 160 }: { data: { x: numbe
   const areaPoints = points + ` ${pad.l + pw},${pad.t + ph} ${pad.l},${pad.t + ph}`;
 
   return (
-    <svg viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none" style={{ width: '100%', height, display: 'block' }}>
+    <svg role="img" aria-label="Evolución por sesión, con escala numérica" viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none" style={{ width: '100%', height, display: 'block' }}>
       <defs>
         <linearGradient id={`grad-${color.replace('#','')}`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={color} stopOpacity="0.3" />
           <stop offset="100%" stopColor={color} stopOpacity="0.02" />
         </linearGradient>
       </defs>
+      {[0, 0.5, 1].map(f => <g key={f}><line x1={pad.l} x2={w-pad.r} y1={pad.t + ph*f} y2={pad.t+ph*f} stroke="var(--border)" strokeDasharray="3 5"/><text x={pad.l-8} y={pad.t+ph*f+4} textAnchor="end" fontSize="11" fill="var(--muted)">{(maxY-(maxY-minY)*f).toFixed(1)}</text></g>)}
+      <text x={pad.l} y={h-4} fontSize="10" fill="var(--muted)">Sesión {minX+1}</text><text x={w-pad.r} y={h-4} textAnchor="end" fontSize="10" fill="var(--muted)">Sesión {maxX+1}</text>
       <polygon points={areaPoints} fill={`url(#grad-${color.replace('#','')})`} />
       <polyline points={points} fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
@@ -312,7 +314,7 @@ export default function ProfileView({ profile, workouts }: { profile: ProfileDat
           <Stat label="Sesiones" value={String(stats.total)} accent="var(--brand)" />
           <Stat label="Km totales" value={String(stats.totalKm)} sub="km" accent="var(--ok)" />
           <Stat label="Carreras" value={String(stats.races)} accent="var(--accent)" />
-          <Stat label="Ritmo medio" value={stats.avgPace} sub="/km" />
+          <Stat label="Media de ritmos por sesión" value={stats.avgPace} sub="/km" />
           <Stat label="FC media" value={`${stats.avgHr}`} sub="ppm" />
           <Stat label="Cadencia media" value={`${stats.avgCad}`} sub="spm" />
           <Stat label="Desnivel total" value={`${stats.totalElev}`} sub="m" />
