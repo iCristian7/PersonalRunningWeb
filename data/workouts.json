@@ -7584,6 +7584,52 @@
         "Deriva cardíaca",
         "Esfuerzo constante"
       ]
+    },
+    {
+      "id": "race-2027-02-17-run-the-night-dublin-5mi",
+      "date": "2027-02-17",
+      "displayDate": "17/02/2027",
+      "kind": "plan",
+      "title": "🏁 Run the Night Dublin · 5 Mile",
+      "objective": "Primer objetivo de carrera de 2027 y referencia intermedia antes de la preparación específica para la Dublin Marathon.",
+      "totalDistance": "5 miles · ~8,05 km",
+      "intensity": "Competición",
+      "blocks": [
+        {
+          "name": "Objetivo provisional",
+          "tag": "orange",
+          "items": [
+            "Tiempo estimado de inscripción: 42:00",
+            "Ritmo equivalente aproximado: 5'13/km",
+            "El objetivo real se ajustará según la evolución de enero y febrero"
+          ]
+        },
+        {
+          "name": "Evento",
+          "tag": "blue",
+          "items": [
+            "Miércoles 17 de febrero de 2027",
+            "North Quays, Dublin",
+            "Carrera nocturna, distancia oficial 5 miles"
+          ]
+        }
+      ],
+      "rules": [
+        "No fijar todavía un objetivo definitivo de tiempo.",
+        "Usar enero y principios de febrero para decidir estrategia de carrera según entrenamientos recientes.",
+        "Esta carrera es un objetivo intermedio; el objetivo principal de 2027 sigue siendo la Dublin Marathon."
+      ],
+      "post": {
+        "title": "Después de la carrera",
+        "items": [
+          "Usar el resultado para recalibrar ritmos de entrenamiento y objetivos de primavera."
+        ]
+      },
+      "techFocus": [
+        "Ritmo controlado",
+        "Competición 5 miles",
+        "Referencia de forma"
+      ]
     }
   ]
 }
