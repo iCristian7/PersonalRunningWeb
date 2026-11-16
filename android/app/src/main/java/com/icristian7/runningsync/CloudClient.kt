@@ -65,7 +65,7 @@ class CloudClient {
         val existing = mutableListOf<JSONObject>()
         var offset = 0
         do {
-            val page = JSONArray(request("/rest/v1/synced_workouts?user_id=eq.${current.userId}&source=eq.samsung_health&started_at=gte.$first&started_at=lte.$last&select=source_id,started_at,ended_at,sync_details,laps&order=started_at,source_id&limit=1000&offset=$offset", token = current.accessToken))
+            val page = JSONArray(request("/rest/v1/synced_workouts?user_id=eq.${current.userId}&source=eq.samsung_health&started_at=gte.$first&started_at=lte.$last&select=source_id,started_at,ended_at,sync_details&order=started_at,source_id&limit=1000&offset=$offset", token = current.accessToken))
             for (i in 0 until page.length()) existing.add(page.getJSONObject(i))
             offset += page.length()
         } while (page.length() == 1000)
@@ -79,13 +79,11 @@ class CloudClient {
             if (match != null) {
                 row.put("source_id", match.sourceId)
                 val previous = existing.single { it.getString("source_id") == match.sourceId }
-                previous.optJSONObject("sync_details")?.let { saved ->
-                    for (key in listOf("analysis_config", "original_laps", "report_include_estimates")) {
-                        if (saved.has(key)) row.getJSONObject("sync_details").put(key, saved.get(key))
-                    }
-                }
-                if (!row.has("laps") && (previous.optJSONArray("laps")?.length() ?: 0) > 0)
-                    row.getJSONObject("sync_details").put("lap_source", "health_connect_preserved")
+                // Retain stored metadata without re-reading or recalculating retired features.
+                val merged = JSONObject(previous.optJSONObject("sync_details")?.toString() ?: "{}")
+                val fresh = row.getJSONObject("sync_details")
+                fresh.keys().forEach { key -> merged.put(key, fresh.get(key)) }
+                row.put("sync_details", merged)
             }
         }
         check(rows.map { it.getString("source_id") }.distinct().size == rows.size) {

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { localWorkoutDate, weekDates, weekWorkouts, weeklyReport, paceLabel, workoutPace, lapReport, splitDiagnostics } from '../lib/weekly-report.ts';
+import { localWorkoutDate, weekDates, weekWorkouts, weeklyReport, paceLabel, workoutPace } from '../lib/weekly-report.ts';
 
 const session = (overrides = {}) => ({
   id: 'id', user_id: 'owner', source_id: 'health-id', title: 'Running',
@@ -8,70 +8,6 @@ const session = (overrides = {}) => ({
   distance_m: 8000, active_duration_s: 3800, hr_avg: 146, hr_max: 165,
   cadence_avg: 166, elevation_gain_m: 38, calories_kcal: null,
   sensations: 'buenas', shoe: 'Trail', notes: null, laps: null, ...overrides,
-});
-
-test('elapsed kilometre splits disclose time basis and estimated edges in the report', () => {
-  const text = weeklyReport([session({ sync_details: {
-    report_include_estimates:true, km_split_status: 'calculated', km_split_time_basis: 'elapsed_time', km_split_edge_estimated_s: 10,
-    km_splits: [{ distance_m: 1000, duration_s: 500, hr_avg: 145, partial: false }],
-  } })], '2026-09-16');
-  assert.match(text, /Tiempo de los parciales: transcurrido/);
-  assert.match(text, /Se estiman 10 s en los extremos/);
-  assert.match(text, /Km 1:.*8'20.*FC media estimada 145 ppm/);
-});
-
-test('user-defined time blocks replace kilometre rows without exporting raw trace', () => {
-  const text = weeklyReport([session({ distance_m:2000, elapsed_duration_s:1000, active_duration_s:1000, sync_details:{
-    report_include_estimates:true, exercise_trace:Array.from({length:1001},(_,t)=>[t,2,150]),
-    analysis_config:{ mode:'intervals',clock:'observed',blocks:[{label:'Trabajo 1',basis:'time',value:480},{label:'Recuperación 1',basis:'time',value:120}] },
-    km_split_status:'calculated',km_splits:[{distance_m:1000,duration_s:500,partial:false}],
-  } })], '2026-09-16');
-  assert.match(text,/estructura indicada por el usuario/);
-  assert.match(text,/Trabajo 1: distancia estimada 960 m; tiempo 0:08:00; ritmo medio estimado 8'20.*FC media estimada 150 ppm/);
-  assert.match(text,/Recuperación 1: distancia estimada 240 m/);
-  assert.doesNotMatch(text,/Km 1:|exercise_trace/);
-});
-
-test('observed-time kilometre report retains the inferred-pause disclosure', () => {
-  const text = lapReport(session({sync_details:{km_split_status:'calculated',km_split_time_basis:'observed_time_inferred_pauses',km_split_gap_s:300,km_splits:[{distance_m:1000,duration_s:500,partial:false}]}})).join('\n');
-  assert.match(text,/pausas inferidas/);
-  assert.match(text,/margen temporal 2 %/);
-  assert.match(text,/0:05:00/);
-});
-
-test('sync diagnostics show edge gaps separately from the clean ChatGPT report', () => {
-  const row = session({ sync_details: { reader_version: '0.6.0', km_split_status: 'incomplete_edges',
-    km_split_start_gap_s: 45, km_split_end_gap_s: 2, km_split_log_count: 100 } });
-  const diagnostic = splitDiagnostics(row).join('\n');
-  assert.match(diagnostic, /0.6.0/);
-  assert.match(diagnostic, /45 s al inicio y 2 s al final/);
-  assert.match(diagnostic, /Muestras recibidas: 100/);
-  assert.doesNotMatch(weeklyReport([row], '2026-09-16'), /incomplete_edges|45 s al inicio|no calculados|No disponible/);
-});
-
-test('kilometre splits retain different paces and label the partial kilometre as estimated', () => {
-  const text = lapReport(session({ distance_m: 2500, sync_details: {
-    km_split_status: 'calculated', km_split_integrated_m: 2490, km_split_gap_s: 60,
-    km_splits: [{ distance_m: 1000, duration_s: 400, partial: false },
-      { distance_m: 1000, duration_s: 350, partial: false },
-      { distance_m: 500, duration_s: 180, partial: true }],
-  } })).join('\n');
-  assert.match(text, /aproximados por kilómetro/);
-  assert.match(text, /Km 1:.*6'40/);
-  assert.match(text, /Km 2:.*5'50/);
-  assert.match(text, /Tramo final 3: 500 m;.*6'00/);
-  assert.match(text, /se ajusta proporcionalmente/);
-  assert.match(text, /pausas inferidas/);
-  assert.match(text, /No es una confirmación/);
-});
-
-test('failed reconstruction explains missing splits and preserves original laps', () => {
-  const text = lapReport(session({ sync_details: { km_split_status: 'duration_mismatch' },
-    laps: [{ distance_m: 1000, duration_s: 300 }] })).join('\n');
-  assert.match(text, /no coincide suficientemente/);
-  assert.match(text, /Vuelta 1/);
-  assert.doesNotMatch(text, /Km 1:/);
-  assert.match(lapReport(session({ sync_details: { km_split_status: 'no_speed_samples' } })).join('\n'), /suficientes muestras de velocidad/);
 });
 
 test('week boundaries cover Monday through Sunday across years', () => {
@@ -101,11 +37,6 @@ test('unknown metrics stay unknown and totals indicate partial coverage', () => 
   assert.doesNotMatch(text, /Sensaciones: Pendiente de completar/);
   assert.match(text, /Zapatillas: Trail/);
 });
-test('laps are not incorrectly labeled as interval series', () => {
-  const text = weeklyReport([session({ laps: [{ distance_m: 1000, duration_s: 346 }] })], '2026-09-16');
-  assert.match(text, /Vueltas registradas \(no necesariamente series\)/);
-  assert.match(text, /5'46"\/km/);
-});
 test('empty weeks do not fabricate workouts or summaries', () => {
   assert.match(weeklyReport([], '2026-09-16'), /No hay entrenos/);
   assert.equal(weeklyReport([], ''), '');
@@ -122,13 +53,6 @@ test('legacy or unverified durations are not presented as Samsung active time', 
   assert.match(text, /Duración Health Connect \(pausas no verificadas\)/);
   assert.doesNotMatch(text, /Duración activa:/);
   assert.match(text, /no es el valor original de Samsung/);
-});
-
-test('lap pace uses shared pause-adjusted duration when available', () => {
-  const text = weeklyReport([session({ laps: [{ distance_m: 1000, duration_s: 400, active_duration_s: 346 }] })], '2026-09-16');
-  assert.match(text, /Vuelta 1: distancia 1000 m; tiempo transcurrido 0:06:40/);
-  assert.match(text, /tiempo descontando pausas compartidas 0:05:46/);
-  assert.match(text, /ritmo medio calculado 5'46"\/km/);
 });
 
 test('missing permissions are distinguished from missing upstream records', () => {
@@ -155,15 +79,16 @@ test('missing or invalid native speed is explicitly labeled as calculated', () =
   }
 });
 
-test('SDK workouts preserve the Health Connect lap provenance', () => {
-  const text = weeklyReport([session({ sync_details: { provider: 'samsung_sdk' }, laps: [{ distance_m: 1000, duration_s: 300 }] })], '2026-09-16');
-  assert.match(text, /Fuente de las vueltas: Health Connect/);
-  assert.match(text, /ritmo medio calculado 5'00"\/km/);
+test('retired detail metadata is ignored without changing stored data', () => {
+ const row = session({ sync_details: { provider: 'samsung_sdk', original_laps: { laps: [{ label: 'Legacy imported row' }] }, km_splits: [{ distance_m: 1000, duration_s: 360 }], analysis_config: { mode: 'intervals' }, report_include_estimates: true }, laps: [{ distance_m: 1000, duration_s: 360 }] });
+ const before = JSON.stringify(row);
+ const text = weeklyReport([row], '2026-09-16');
+ assert.doesNotMatch(text, /Vuelta|Parcial|Intervalo|Legacy imported row|estimad|Diagnóstico/i);
+ assert.match(text, /FC media: 146 ppm/);
+ assert.equal(JSON.stringify(row), before);
 });
-
-test('report omits empty notes and retains split heart rate and real zero elevation', () => {
- const text = weeklyReport([session({ source_notes: '  ', notes: '', sensations: null, shoe: null, elevation_gain_m: 0, sync_details: { report_include_estimates:true, km_split_status: 'calculated', km_splits: [{ distance_m: 1000, duration_s: 360, partial: false, hr_avg: 150 }] } })], '2026-09-16');
+test('empty fields are omitted while original zero values remain', () => {
+ const text = weeklyReport([session({ source_notes: '  ', notes: '', sensations: null, shoe: null, elevation_gain_m: 0 })], '2026-09-16');
  assert.doesNotMatch(text, /Notas de Samsung|Notas adicionales|Sensaciones:|Zapatillas:/);
- assert.match(text, /FC media estimada 150 ppm/);
  assert.match(text, /Desnivel positivo: 0 m/);
 });

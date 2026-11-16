@@ -7,8 +7,8 @@ android {
         applicationId = "com.icristian7.runningsync"
         minSdk = 34
         targetSdk = 35
-        versionCode = 9
-        versionName = "0.9.0"
+        versionCode = 10
+        versionName = "0.10.0"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -25,5 +25,4 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     implementation("androidx.activity:activity-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.4")
-    implementation("androidx.health.connect:connect-client:1.1.0")
 }

@@ -8,13 +8,10 @@ import android.text.InputType
 import android.view.WindowManager
 import android.widget.*
 import androidx.activity.ComponentActivity
-import androidx.health.connect.client.HealthConnectClient
-import androidx.health.connect.client.PermissionController
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
-import java.time.Instant
 import com.samsung.android.sdk.health.data.error.HealthDataException
 import com.samsung.android.sdk.health.data.error.ErrorCode
 
@@ -27,17 +24,9 @@ class MainActivity : ComponentActivity() {
     private lateinit var email: EditText
     private lateinit var password: EditText
     private val controls = mutableListOf<Button>()
-    private var health: HealthConnectClient? = null
-    private val permissionLauncher = registerForActivityResult(PermissionController.createRequestPermissionResultContract()) { granted ->
-        status.text = if (HealthReader.requiredPermission in granted)
-            "Permiso de ejercicios concedido. Los campos opcionales solo se leerán si los autorizas."
-        else "Se necesita el permiso de ejercicios para sincronizar."
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
-        health = if (HealthConnectClient.getSdkStatus(this) == HealthConnectClient.SDK_AVAILABLE) HealthConnectClient.getOrCreate(this) else null
         val layout = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             fitsSystemWindows = true
@@ -50,7 +39,7 @@ class MainActivity : ComponentActivity() {
         fun button(value: String, action: () -> Unit): Button = Button(this).apply {
             text = value; setOnClickListener { action() }; layout.addView(this); controls.add(this)
         }
-        text("Running Sync · 0.9.0", 26f)
+        text("Running Sync · 0.10.0", 26f)
         text("Métricas originales de Samsung Health → tu web. Duración, distancia, velocidad media, cadencia, desnivel, FC, calorías y notas disponibles en el SDK. No se solicitan rutas GPS ni se modifica Samsung Health.")
         status = text("Primero conecta Samsung Health y entra con tu cuenta de entrenos.")
         status.setTextIsSelectable(true)
@@ -61,10 +50,6 @@ class MainActivity : ComponentActivity() {
             }
         }
         text("Versión personal de desarrollo: Samsung debe autorizar la lectura del SDK (modo de lectura de pruebas o app registrada). Si no está autorizado, se mostrará un error; no se cambiará silenciosamente a métricas aproximadas.", 14f)
-        button("Opcional: permitir vueltas de Health Connect") {
-            if (health == null) status.text = "Health Connect no está disponible. Actualiza Android y Health Connect."
-            else permissionLauncher.launch(setOf(HealthReader.requiredPermission))
-        }
         text("2. Entra con la cuenta que creaste en la pestaña Samsung Health de tu web. Confirma antes el correo de registro.")
         email = EditText(this).apply {
             hint = "Correo"; inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
@@ -98,27 +83,6 @@ class MainActivity : ComponentActivity() {
                 val refreshed = cloud.refresh(current)
                 session = refreshed
                 val rows = SamsungReader(this).readWeek(monday, refreshed.userId)
-                // Optional laps must match one original session unambiguously; no metrics are substituted.
-                val lapRows = try { health?.let { HealthReader(it).readLapRows(monday) }.orEmpty() }
-                    catch (error: kotlinx.coroutines.CancellationException) { throw error }
-                    catch (_: Exception) {
-                        rows.forEach { it.getJSONObject("sync_details").put("lap_read_status", "health_connect_unavailable") }
-                        emptyList()
-                    }
-                for (row in rows) {
-                    val matches = lapRows.filter { lap ->
-                        kotlin.math.abs(java.time.Duration.between(Instant.parse(row.getString("started_at")), Instant.parse(lap.getString("started_at"))).toMillis()) <= 2000 &&
-                        kotlin.math.abs(java.time.Duration.between(Instant.parse(row.getString("ended_at")), Instant.parse(lap.getString("ended_at"))).toMillis()) <= 2000
-                    }
-                    if (matches.size == 1) {
-                        val matched = matches.single()
-                        row.getJSONObject("sync_details").put("shared_pauses", matched.getJSONArray("shared_pauses"))
-                        if (matched.getJSONArray("laps").length() > 0) {
-                            row.put("laps", matched.getJSONArray("laps"))
-                            row.getJSONObject("sync_details").put("lap_source", "health_connect")
-                        }
-                    }
-                }
                 if (rows.isEmpty()) status.text = "No se encontraron carreras en Samsung Health para esta semana. Sincroniza primero el reloj con Samsung Health y revisa la semana elegida."
                 else {
                     status.text = "Enviando ${rows.size} entrenos a tu cuenta…"
@@ -126,21 +90,7 @@ class MainActivity : ComponentActivity() {
                     val missing = rows.count { it.isNull("distance_m") || it.isNull("hr_avg") }
                     val noCadence = rows.count { it.isNull("cadence_avg") }
                     val noElevation = rows.count { it.isNull("elevation_gain_m") }
-                    val noLaps = rows.count { it.isNull("laps") }
-                    val withKmSplits = rows.count { it.getJSONObject("sync_details").optString("km_split_status") == "calculated" }
-                    val splitResults = rows.joinToString("\n") { row ->
-                        val d = row.getJSONObject("sync_details")
-                        val count = d.optJSONArray("km_splits")?.length() ?: 0
-                        val detail = if (count > 0) "$count parciales calculados" else when (d.optString("km_split_status")) {
-                            "incomplete_edges" -> "sin parciales: faltan ${d.opt("km_split_start_gap_s")} s al inicio y ${d.opt("km_split_end_gap_s")} s al final"
-                            "no_speed_samples" -> "sin parciales: Samsung no proporcionó suficientes muestras de velocidad"
-                            "duration_mismatch" -> "sin parciales: hay huecos de tiempo que no se pueden resolver"
-                            "distance_mismatch" -> "sin parciales: distancia reconstruida incompatible con el total"
-                            else -> "sin parciales: ${d.optString("km_split_status")}; consulta Diagnóstico de sincronización en la web"
-                        }
-                        "${row.getString("started_at").take(10)}: $detail."
-                    }
-                    status.text = "Sincronizados ${rows.size} entrenos desde el SDK de Samsung Health. Conservadas sensaciones, notas adicionales y zapatillas.\n$missing sesiones sin distancia o FC media; $noCadence sin cadencia; $noElevation sin desnivel.\nParciales por km calculados en $withKmSplits/${rows.size} entrenos. Son aproximados a partir del registro de velocidad.\n$splitResults\n$noLaps entrenos sin vueltas originales nuevas. Abre la web y pulsa Actualizar."
+                    status.text = "Sincronizados ${rows.size} entrenos desde Samsung Health. Conservadas sensaciones, notas adicionales y zapatillas.\n$missing sesiones sin distancia o FC media; $noCadence sin cadencia; $noElevation sin desnivel.\nAbre la web y pulsa Actualizar."
                 }
             }
         }
@@ -164,7 +114,7 @@ class MainActivity : ComponentActivity() {
                     else -> "Samsung Health no pudo completar la lectura (código ${error.errorCode ?: 0}). Abre Samsung Health y vuelve a intentarlo."
                 }
             }
-            catch (_: SecurityException) { status.text = "Permisos revocados. Vuelve a concederlos en Health Connect." }
+            catch (_: SecurityException) { status.text = "Permisos revocados. Pulsa Conectar Samsung Health para conceder la lectura de ejercicios." }
             catch (error: Exception) {
                 status.text = if (error is IllegalStateException) error.message ?: "No se pudo completar la operación." else "No se pudo completar la operación. Comprueba internet y los permisos, y vuelve a intentarlo."
             }

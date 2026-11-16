@@ -590,9 +590,6 @@ select.input option { background: #111827; color: var(--text); }
 .health-session h3 { margin-top: 0; }
 
 /* Running journal design system */
-.exercise-editor { margin:16px 0; }
-.exercise-block-row { display:grid; gap:10px; border:1px solid var(--border); border-radius:12px; min-width:0; }
-.exercise-block-row .input { width:100%; min-width:0; }
 :root { --bg:#0b1417; --bg2:#18332f; --card:#132125; --card-h:#192e31; --brand:#a7e8c0; --border:#2b4043; --border2:#81bda2; --muted:#a4b6b8; --text:#edf4ef; --radius:20px; }
 body { background-image:radial-gradient(ellipse at 90% 0%,#21473b70,transparent 55%); }
 .container { max-width:1240px; padding-top:40px; }
