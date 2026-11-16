@@ -7842,6 +7842,321 @@
         "Deriva cardíaca",
         "Esfuerzo constante"
       ]
+    },
+    {
+      "id": "2026-11-09-rodaje-aerobico-802",
+      "date": "2026-11-09",
+      "displayDate": "09/11/2026",
+      "kind": "log",
+      "title": "Rodaje aeróbico fácil",
+      "metrics": {
+        "distanceKm": 8.02,
+        "durationActive": "1:02:18",
+        "paceAvg": "7'46",
+        "hrAvg": 150,
+        "hrMax": 168,
+        "cadenceAvg": 160.21,
+        "elevationM": 34.01,
+        "caloriesKcal": 687.16,
+        "notes": "Samsung Health Data SDK (lectura directa). Tiempo transcurrido: 1:09:10. Duración original Samsung Health: 1:02:18. Ritmo medio derivado de la velocidad media original de Samsung Health. Buenas sensaciones. Parciales por km recibidos: 7:08/140, 8:14/149, 8:03/151, 8:09/151, 7:47/149, 7:45/150, 7:44/154, 7:13/155. La segunda mitad fue más rápida y con FC algo mayor, por lo que no se toma como benchmark perfectamente uniforme.",
+        "sensations": "Buenas",
+        "shoe": "Nike Pegasus Trail 5 GTX",
+        "splits": [
+          {
+            "seg": 1,
+            "pace": "7:08"
+          },
+          {
+            "seg": 2,
+            "pace": "8:14"
+          },
+          {
+            "seg": 3,
+            "pace": "8:03"
+          },
+          {
+            "seg": 4,
+            "pace": "8:09"
+          },
+          {
+            "seg": 5,
+            "pace": "7:47"
+          },
+          {
+            "seg": 6,
+            "pace": "7:45"
+          },
+          {
+            "seg": 7,
+            "pace": "7:44"
+          },
+          {
+            "seg": 8,
+            "pace": "7:13"
+          }
+        ],
+        "subtype": "Rodaje aeróbico",
+        "type": "Rodaje"
+      }
+    },
+    {
+      "id": "2026-11-11-tempo-983",
+      "date": "2026-11-11",
+      "displayDate": "11/11/2026",
+      "kind": "log",
+      "title": "3×8 min tempo controlado",
+      "metrics": {
+        "distanceKm": 9.83,
+        "durationActive": "1:07:00",
+        "paceAvg": "6'49",
+        "hrAvg": 156,
+        "hrMax": 177,
+        "cadenceAvg": 164.49,
+        "elevationM": 32.54,
+        "caloriesKcal": 837.71,
+        "notes": "Samsung Health Data SDK (lectura directa). Tiempo transcurrido: 1:10:03. Duración original Samsung Health: 1:07:00. Ritmo medio derivado de la velocidad media original de Samsung Health. Buenas sensaciones. Intervalos confirmados por Samsung Health: calentamiento 2,00 km en 14:42 (7:21/km, FC 148); 8 min a 5:54/km, 1,35 km, FC 166; recuperación 2 min a 7:32/km, FC 155; 8 min a 5:57/km, 1,34 km, FC 164; recuperación 2 min a 7:39/km, FC 157; 8 min a 5:54/km, 1,35 km, FC 166; recuperación 2 min a 7:44/km, FC 159; cierre 3,00 km en 22:16 (7:25/km, FC 152). Ejecución muy regular y controlada.",
+        "sensations": "Buenas",
+        "shoe": "Nike Pegasus Trail 5 GTX",
+        "splits": [
+          {
+            "seg": 1,
+            "pace": "5:54"
+          },
+          {
+            "seg": 2,
+            "pace": "5:57"
+          },
+          {
+            "seg": 3,
+            "pace": "5:54"
+          }
+        ],
+        "subtype": "Tempo controlado 3×8 min",
+        "type": "Calidad"
+      }
+    },
+    {
+      "id": "2026-11-14-tirada-aerobica-1401",
+      "date": "2026-11-14",
+      "displayDate": "14/11/2026",
+      "kind": "log",
+      "title": "Tirada aeróbica 14 km",
+      "metrics": {
+        "distanceKm": 14.01,
+        "durationActive": "1:41:36",
+        "paceAvg": "7'15",
+        "hrAvg": 155,
+        "hrMax": 177,
+        "cadenceAvg": 162.9,
+        "elevationM": 71.31,
+        "caloriesKcal": 1162.6,
+        "notes": "Samsung Health Data SDK (lectura directa). Tiempo transcurrido: 1:54:51. Duración original Samsung Health: 1:41:36. Ritmo medio derivado de la velocidad media original de Samsung Health. Buenas sensaciones. Parciales por km recibidos: 6:50/143, 6:46/145, 6:48/153, 7:09/154, 7:20/158, 7:32/159, 7:29/159, 7:23/156, 7:24/158, 7:29/157, 7:27/161, 7:24/155, 7:13/157, 7:11/159. Los dos primeros km muestran FC inusualmente baja frente al resto, por lo que la comparación bruta entre mitades puede exagerar la deriva.",
+        "sensations": "Buenas",
+        "shoe": "Nike Pegasus Trail 5 GTX",
+        "splits": [
+          {
+            "seg": 1,
+            "pace": "6:50"
+          },
+          {
+            "seg": 2,
+            "pace": "6:46"
+          },
+          {
+            "seg": 3,
+            "pace": "6:48"
+          },
+          {
+            "seg": 4,
+            "pace": "7:09"
+          },
+          {
+            "seg": 5,
+            "pace": "7:20"
+          },
+          {
+            "seg": 6,
+            "pace": "7:32"
+          },
+          {
+            "seg": 7,
+            "pace": "7:29"
+          },
+          {
+            "seg": 8,
+            "pace": "7:23"
+          },
+          {
+            "seg": 9,
+            "pace": "7:24"
+          },
+          {
+            "seg": 10,
+            "pace": "7:29"
+          },
+          {
+            "seg": 11,
+            "pace": "7:27"
+          },
+          {
+            "seg": 12,
+            "pace": "7:24"
+          },
+          {
+            "seg": 13,
+            "pace": "7:13"
+          },
+          {
+            "seg": 14,
+            "pace": "7:11"
+          }
+        ],
+        "subtype": "Tirada aeróbica",
+        "type": "Tirada larga"
+      }
+    },
+    {
+      "id": "plan-2026-11-16-rodaje-aerobico",
+      "date": "2026-11-16",
+      "displayDate": "16/11/2026",
+      "kind": "plan",
+      "title": "Lunes · Rodaje aeróbico fácil",
+      "objective": "Consolidar volumen y eficiencia sin acumular fatiga antes de la calidad del miércoles.",
+      "totalDistance": "8 km",
+      "intensity": "Fácil (RPE 3/10)",
+      "blocks": [
+        {
+          "name": "1) Km 1–2",
+          "tag": "blue",
+          "items": [
+            "Muy suaves",
+            "Dejar que FC y respiración se estabilicen"
+          ]
+        },
+        {
+          "name": "2) Km 3–8",
+          "tag": "green",
+          "items": [
+            "Conversación completa",
+            "Referencia de FC ~148–154 ppm si sale natural",
+            "Ritmo uniforme y sin progresión final"
+          ]
+        }
+      ],
+      "rules": [
+        "No perseguir ritmo.",
+        "Priorizar talk test si el reloj muestra una FC extraña.",
+        "Acabar fresco."
+      ],
+      "post": {
+        "title": "Dato útil",
+        "items": [
+          "Guardar parciales de ritmo y FC si están disponibles."
+        ]
+      },
+      "techFocus": [
+        "Eficiencia aeróbica",
+        "Regularidad",
+        "Talk test"
+      ]
+    },
+    {
+      "id": "plan-2026-11-18-4x6-controlado",
+      "date": "2026-11-18",
+      "displayDate": "18/11/2026",
+      "kind": "plan",
+      "title": "Miércoles · 4×6 min controlados",
+      "objective": "Mantener 24 min de trabajo de calidad, pero desplazar ligeramente el estímulo hacia ritmos más específicos para 5 miles sin convertirlo en una sesión máxima.",
+      "totalDistance": "~9,5–10 km",
+      "intensity": "Moderada-alta controlada (RPE 6–7/10)",
+      "blocks": [
+        {
+          "name": "1) Calentamiento",
+          "tag": "blue",
+          "items": [
+            "2 km muy suaves",
+            "Respiración cómoda"
+          ]
+        },
+        {
+          "name": "2) Bloque principal",
+          "tag": "orange",
+          "items": [
+            "4 × 6 min",
+            "Ritmo orientativo ~5'45–5'55/km si sale natural",
+            "2 min de trote muy suave entre bloques",
+            "Buscar cuatro repeticiones regulares"
+          ]
+        },
+        {
+          "name": "3) Enfriamiento",
+          "tag": "blue",
+          "items": [
+            "Trote suave hasta completar ~9,5–10 km"
+          ]
+        }
+      ],
+      "rules": [
+        "El objetivo no es ir a tope.",
+        "Si el primer bloque ya exige más de RPE 7, bajar el ritmo.",
+        "La cuarta repetición debe seguir siendo técnicamente limpia."
+      ],
+      "post": {
+        "title": "Dato clave",
+        "items": [
+          "Guardar ritmo y FC media de cada bloque."
+        ]
+      },
+      "techFocus": [
+        "Regularidad",
+        "Ritmo 5-mile",
+        "Control de esfuerzo"
+      ]
+    },
+    {
+      "id": "plan-2026-11-21-tirada-aerobica-15km",
+      "date": "2026-11-21",
+      "displayDate": "21/11/2026",
+      "kind": "plan",
+      "title": "Sábado · Tirada aeróbica 15 km",
+      "objective": "Consolidar resistencia y seguir construyendo base hacia 2027 sin aumentar agresivamente el volumen semanal.",
+      "totalDistance": "15 km",
+      "intensity": "Aeróbico cómodo (RPE 3–4/10)",
+      "blocks": [
+        {
+          "name": "1) Km 1–3",
+          "tag": "blue",
+          "items": [
+            "Muy cómodos",
+            "Conversación completa"
+          ]
+        },
+        {
+          "name": "2) Km 4–15",
+          "tag": "green",
+          "items": [
+            "Esfuerzo estable",
+            "Referencia de FC ~148–155 ppm si sale natural",
+            "Sin objetivo de ritmo"
+          ]
+        }
+      ],
+      "rules": [
+        "Sin final rápido.",
+        "Si hay viento o desnivel, mantener esfuerzo en vez de perseguir ritmo.",
+        "Terminar con margen."
+      ],
+      "post": {
+        "title": "Análisis",
+        "items": [
+          "Con parciales, comparar la parte central y final evitando sobreinterpretar los primeros km si el sensor tarda en estabilizarse."
+        ]
+      },
+      "techFocus": [
+        "Eficiencia aeróbica",
+        "Resistencia",
+        "Esfuerzo constante"
+      ]
     }
   ]
 }
