@@ -45,10 +45,12 @@ class SamsungReader(context: Context) {
                     if (local.isBefore(monday) || !local.isBefore(monday.plusDays(7))) continue
                     val id = "samsung:${point.uid}:${session.startTime}"
                     val pace = SamsungMetrics.secondsPerKm(session.meanSpeed?.toDouble())
+                    val samples = session.log.orEmpty().map { SpeedPoint(it.timestamp, it.speed?.toDouble(), it.heartRate?.toDouble()) }
+                    val speedSamples = samples.filter { it.metersPerSecond != null && it.time >= session.startTime && it.time <= session.endTime }
                     val km = KilometreSplits.calculate(session.startTime, session.endTime, session.duration.toMillis() / 1000.0,
-                        session.distance?.toDouble(), session.log.orEmpty().map { SpeedPoint(it.timestamp, it.speed?.toDouble(), it.heartRate?.toDouble()) })
+                        session.distance?.toDouble(), samples)
                     val details = JSONObject()
-                        .put("reader_version", "0.5.0").put("provider", "samsung_sdk")
+                        .put("reader_version", "0.6.0").put("provider", "samsung_sdk")
                         .put("samsung_id", id).put("duration_basis", "samsung_session_duration")
                         .put("samsung_mean_speed_mps", session.meanSpeed ?: JSONObject.NULL)
                         .put("pace_avg_s_per_km", pace ?: JSONObject.NULL)
@@ -57,6 +59,13 @@ class SamsungReader(context: Context) {
                         .put("notes_status", if (!session.comment.isNullOrBlank()) "samsung_comment" else "not_exposed_by_sdk")
                         .put("lap_source", "not_exposed_by_sdk")
                         .put("km_split_status", km.status)
+                        .put("km_split_time_basis", km.timeBasis)
+                        .put("km_split_edge_estimated_s", km.edgeEstimatedSeconds)
+                        .put("km_split_log_count", samples.size)
+                        .put("km_split_speed_count", samples.count { it.metersPerSecond != null })
+                        .put("km_split_hr_count", samples.count { it.heartRate != null })
+                        .put("km_split_start_gap_s", speedSamples.minByOrNull { it.time }?.let { Duration.between(session.startTime, it.time).toMillis() / 1000.0 } ?: JSONObject.NULL)
+                        .put("km_split_end_gap_s", speedSamples.maxByOrNull { it.time }?.let { Duration.between(it.time, session.endTime).toMillis() / 1000.0 } ?: JSONObject.NULL)
                         .put("km_split_integrated_m", km.integratedMeters ?: JSONObject.NULL)
                         .put("km_split_distance_scale", km.distanceScale ?: JSONObject.NULL)
                         .put("km_split_covered_s", km.coveredSeconds ?: JSONObject.NULL)

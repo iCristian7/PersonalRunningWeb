@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { localWorkoutDate, weekDates, weekWorkouts, weeklyReport, paceLabel, workoutPace, lapReport } from '../lib/weekly-report.ts';
+import { localWorkoutDate, weekDates, weekWorkouts, weeklyReport, paceLabel, workoutPace, lapReport, splitDiagnostics } from '../lib/weekly-report.ts';
 
 const session = (overrides = {}) => ({
   id: 'id', user_id: 'owner', source_id: 'health-id', title: 'Running',
@@ -8,6 +8,26 @@ const session = (overrides = {}) => ({
   distance_m: 8000, active_duration_s: 3800, hr_avg: 146, hr_max: 165,
   cadence_avg: 166, elevation_gain_m: 38, calories_kcal: null,
   sensations: 'buenas', shoe: 'Trail', notes: null, laps: null, ...overrides,
+});
+
+test('elapsed kilometre splits disclose time basis and estimated edges in the report', () => {
+  const text = weeklyReport([session({ sync_details: {
+    km_split_status: 'calculated', km_split_time_basis: 'elapsed_time', km_split_edge_estimated_s: 10,
+    km_splits: [{ distance_m: 1000, duration_s: 500, hr_avg: 145, partial: false }],
+  } })], '2026-09-16');
+  assert.match(text, /Tiempo de los parciales: transcurrido/);
+  assert.match(text, /Se estiman 10 s en los extremos/);
+  assert.match(text, /Km 1:.*8'20.*FC media estimada 145 ppm/);
+});
+
+test('sync diagnostics show edge gaps separately from the clean ChatGPT report', () => {
+  const row = session({ sync_details: { reader_version: '0.6.0', km_split_status: 'incomplete_edges',
+    km_split_start_gap_s: 45, km_split_end_gap_s: 2, km_split_log_count: 100 } });
+  const diagnostic = splitDiagnostics(row).join('\n');
+  assert.match(diagnostic, /0.6.0/);
+  assert.match(diagnostic, /45 s al inicio y 2 s al final/);
+  assert.match(diagnostic, /Muestras recibidas: 100/);
+  assert.doesNotMatch(weeklyReport([row], '2026-09-16'), /incomplete_edges|45 s al inicio|no calculados|No disponible/);
 });
 
 test('kilometre splits retain different paces and label the partial kilometre as estimated', () => {

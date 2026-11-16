@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { type User } from '@supabase/supabase-js';
 import { getSupabase } from '@/lib/supabase';
-import { localWorkoutDate, workoutPace, durationLabel, durationBasisLabel, availabilityLabel, lapReport, weekDates, weekWorkouts, weeklyReport, type SyncedWorkout } from '@/lib/weekly-report';
+import { localWorkoutDate, workoutPace, durationLabel, durationBasisLabel, availabilityLabel, lapReport, splitDiagnostics, weekDates, weekWorkouts, weeklyReport, type SyncedWorkout } from '@/lib/weekly-report';
 import type { ProfileData } from '@/lib/utils';
 
 function errorText(error: { message: string; code?: string }): string {
@@ -41,6 +41,7 @@ function SessionCard({ workout, shoes, onSaved }: { workout: SyncedWorkout; shoe
     <p>Desnivel positivo: {workout.elevation_gain_m == null ? availabilityLabel(workout.sync_details?.elevation_status) : `${workout.elevation_gain_m} m`}.</p>
     <p style={{ whiteSpace: 'pre-wrap' }}><strong>Notas de Samsung Health:</strong> {workout.source_notes || 'No compartidas en esta sincronización'}</p>
     <details><summary>Parciales por km y vueltas</summary>{lapReport(workout).map((line, i) => <p key={i}>{line}</p>)}</details>
+    <details><summary>Diagnóstico de sincronización</summary>{splitDiagnostics(workout).map((line, i) => <p key={i}>{line}</p>)}</details>
     <form onSubmit={save} className="health-form">
       <label>Sensaciones<input className="input" value={sensations} maxLength={1000} onChange={e => setSensations(e.target.value)} placeholder="Buenas, cansancio, molestias…" /></label>
       <label>Zapatillas<select className="input" value={shoe} onChange={e => setShoe(e.target.value)}>

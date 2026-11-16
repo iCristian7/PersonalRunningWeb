@@ -1,5 +1,13 @@
 # Running Sync (personal Android companion)
 
+## Version 0.6.0: session-edge regression fix
+
+Versions 0.4/0.5 rejected a complete workout if the speed trace started or ended more than two seconds from the session boundary. The new reader estimates small edge offsets using the nearest observed speed, capped at 30 seconds per edge and 2% of original duration overall. It reports the estimated seconds explicitly, does not invent heart rate for these edges, and retains the 5% distance consistency check. Larger missing edges still fail with their exact lengths shown in the app and the web's separate sync diagnostics.
+
+Continuous traces with a different active duration now produce explicitly labeled **elapsed-time** splits; time is not scaled to the original active duration. Unexplained interior gaps still fail. Each split retains its time-weighted heart rate when coverage is at least 80%. The ChatGPT report omits empty fields and diagnostics, while keeping the estimation and timing disclosures for available splits.
+
+Install `downloads/RunningSync-0.6.0.apk` over the previous version and sync the same week again. No SQL change or new permission is needed. Diagnostic counts and edge lengths are stored in the existing `sync_details`; raw logs and routes are not uploaded. Regression tests cover offset edges, incomplete traces, elapsed timing and per-kilometre heart rate; real Samsung workout validation remains necessary.
+
 ## Version 0.4.0: estimated kilometre splits
 
 Install `downloads/RunningSync-0.4.0.apk` over the previous version, sync the week again, then refresh the web. No new SQL migration is needed. The report and workout details now show estimated 1 km splits and the final partial kilometre, calculated from Samsung's timestamped speed samples. These are not Samsung's original automatic laps and may differ from its UI.

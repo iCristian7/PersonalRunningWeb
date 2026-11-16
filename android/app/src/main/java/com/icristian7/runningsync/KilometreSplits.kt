@@ -12,12 +12,13 @@ data class SplitCalculation(
     val status: String, val splits: List<KilometreSplit> = emptyList(),
     val integratedMeters: Double? = null, val distanceScale: Double? = null,
     val coveredSeconds: Double? = null, val gapSeconds: Double = 0.0,
-    val trailingSeconds: Double = 0.0
+    val trailingSeconds: Double = 0.0,
+    val timeBasis: String = "active_time_consistent",
+    val edgeEstimatedSeconds: Double = 0.0
 )
 
 object KilometreSplits {
     private const val MAX_INTERVAL_SECONDS = 30.0
-    private const val MAX_EDGE_SECONDS = 2.0
     private const val MAX_DISTANCE_ERROR = 0.05
 
     /** Approximation from the speed trace, not an import of Samsung's original laps.
@@ -33,11 +34,18 @@ object KilometreSplits {
             return SplitCalculation("invalid_speed")
         val groups = points.groupBy { it.time }
         if (groups.values.any { group -> group.map { it.metersPerSecond }.distinct().size > 1 }) return SplitCalculation("conflicting_samples")
-        val unique = groups.values.map { it.first() }
+        val unique = groups.values.map { group -> group.first().copy(heartRate = group.mapNotNull { it.heartRate }.firstOrNull()) }.toMutableList()
         if (unique.size < 2) return SplitCalculation("no_speed_samples")
         fun seconds(a: Instant, b: Instant) = Duration.between(a, b).toMillis() / 1000.0
-        if (seconds(start, unique.first().time) > MAX_EDGE_SECONDS || seconds(unique.last().time, end) > MAX_EDGE_SECONDS)
+        // A trace need not land on session boundaries. Permit small startup/stop offsets,
+        // bounded to 30 seconds per edge and 2% of duration overall, and disclose them.
+        val edgeLimit = MAX_INTERVAL_SECONDS
+        val firstGap = seconds(start, unique.first().time)
+        val lastGap = seconds(unique.last().time, end)
+        if (firstGap > edgeLimit || lastGap > edgeLimit || firstGap + lastGap > activeSeconds * 0.02)
             return SplitCalculation("incomplete_edges")
+        if (firstGap > 0) unique.add(0, unique.first().copy(time = start, heartRate = null))
+        if (lastGap > 0) unique.add(unique.last().copy(time = end, heartRate = null))
 
         data class Interval(val seconds: Double, val startSpeed: Double, val endSpeed: Double, val meters: Double, val hr0: Double?, val hr1: Double?)
         val intervals = mutableListOf<Interval>()
@@ -50,7 +58,10 @@ object KilometreSplits {
         }
         val covered = intervals.sumOf { it.seconds }
         val integrated = intervals.sumOf { it.meters }
-        if (abs(covered - activeSeconds) > max(5.0, activeSeconds * 0.005))
+        val activeConsistent = abs(covered - activeSeconds) <= max(5.0, activeSeconds * 0.005)
+        // With continuous observations we can report elapsed splits even when Samsung's
+        // active duration excludes pauses. Do not remove time or rescale it to force a match.
+        if (!activeConsistent && gap > 0)
             return SplitCalculation("duration_mismatch", integratedMeters = integrated, coveredSeconds = covered, gapSeconds = gap)
         if (integrated <= 0 || abs(integrated - distanceMeters) / distanceMeters > MAX_DISTANCE_ERROR)
             return SplitCalculation("distance_mismatch", integratedMeters = integrated, coveredSeconds = covered, gapSeconds = gap)
@@ -91,6 +102,7 @@ object KilometreSplits {
             splits.add(KilometreSplit(distanceMeters - lastBoundaryMeters, totalSeconds - lastBoundarySeconds, true, averageHr(totalSeconds - lastBoundarySeconds)))
             lastBoundarySeconds = totalSeconds
         }
-        return SplitCalculation("calculated", splits, integrated, scale, covered, gap, max(0.0, totalSeconds - lastBoundarySeconds))
+        return SplitCalculation("calculated", splits, integrated, scale, covered, gap, max(0.0, totalSeconds - lastBoundarySeconds),
+            if (activeConsistent) "active_time_consistent" else "elapsed_time", firstGap + lastGap)
     }
 }

@@ -71,7 +71,31 @@ class KilometreSplitsTest {
     }
     @Test fun refusesMissingTraceAndMissingEdges() {
         assertEquals("no_speed_samples", calculate(500, 1000.0, emptyList()).status)
-        assertEquals("incomplete_edges", calculate(500, 1000.0, constant(500).drop(2)).status)
+        assertEquals("incomplete_edges", calculate(500, 1000.0, constant(500).drop(8)).status)
+        assertEquals("incomplete_edges", calculate(100, 200.0, constant(100).drop(1)).status)
+    }
+    @Test fun reconstructsKilometresWithSmallMissingEdgesAndReportsEstimate() {
+        // Regression: SDK trace starts 5s after start and ends 5s before end.
+        // v0.5.0 discarded the entire workout before integrating any of its samples.
+        val points = (5..995 step 5).map { SpeedPoint(start.plusSeconds(it.toLong()), 2.0, 150.0) }
+        val result = calculate(1000, 2000.0, points)
+        assertEquals("calculated", result.status)
+        assertEquals(10.0, result.edgeEstimatedSeconds, 1e-6)
+        assertEquals(2, result.splits.size)
+        result.splits.forEach {
+            assertEquals(1000.0, it.distanceMeters, 1e-6)
+            assertEquals(500.0, it.seconds, 1e-6)
+            assertEquals(150.0, it.heartRate!!, 1e-6)
+        }
+    }
+    @Test fun continuousTraceWithPausesReturnsElapsedSplitsWithoutScalingTime() {
+        val result = calculate(1000, 2000.0, constant(1000), active = 950.0)
+        assertEquals("calculated", result.status)
+        assertEquals("elapsed_time", result.timeBasis)
+        assertEquals(1000.0, result.splits.sumOf { it.seconds }, 1e-6)
+    }
+    @Test fun smallEdgesDoNotOverrideDistanceValidation() {
+        assertEquals("distance_mismatch", calculate(1000, 2500.0, constant(1000).drop(1).dropLast(1)).status)
     }
     @Test fun refusesConflictingOrInvalidSpeeds() {
         assertEquals("conflicting_samples", calculate(500, 1000.0, constant(500) + p(10, 3.0)).status)

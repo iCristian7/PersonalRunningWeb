@@ -50,9 +50,10 @@ class MainActivity : ComponentActivity() {
         fun button(value: String, action: () -> Unit): Button = Button(this).apply {
             text = value; setOnClickListener { action() }; layout.addView(this); controls.add(this)
         }
-        text("Running Sync · 0.5.0", 26f)
+        text("Running Sync · 0.6.0", 26f)
         text("Métricas originales de Samsung Health → tu web. Duración, distancia, velocidad media, cadencia, desnivel, FC, calorías y notas disponibles en el SDK. No se solicitan rutas GPS ni se modifica Samsung Health.")
         status = text("Primero conecta Samsung Health y entra con tu cuenta de entrenos.")
+        status.setTextIsSelectable(true)
         button("1. Conectar Samsung Health") {
             runTask {
                 val granted = SamsungReader(this).requestPermission(this)
@@ -123,7 +124,19 @@ class MainActivity : ComponentActivity() {
                     val noElevation = rows.count { it.isNull("elevation_gain_m") }
                     val noLaps = rows.count { it.isNull("laps") }
                     val withKmSplits = rows.count { it.getJSONObject("sync_details").optString("km_split_status") == "calculated" }
-                    status.text = "Sincronizados ${rows.size} entrenos desde el SDK de Samsung Health. Conservadas sensaciones, notas adicionales y zapatillas.\n$missing sesiones sin distancia o FC media; $noCadence sin cadencia; $noElevation sin desnivel.\nParciales por km calculados en $withKmSplits/${rows.size} entrenos. Si faltan, la web indica el motivo. Son aproximados a partir del registro de velocidad, no las vueltas originales de Samsung.\n$noLaps entrenos sin vueltas originales nuevas. Abre la web y pulsa Actualizar."
+                    val splitResults = rows.joinToString("\n") { row ->
+                        val d = row.getJSONObject("sync_details")
+                        val count = d.optJSONArray("km_splits")?.length() ?: 0
+                        val detail = if (count > 0) "$count parciales calculados" else when (d.optString("km_split_status")) {
+                            "incomplete_edges" -> "sin parciales: faltan ${d.opt("km_split_start_gap_s")} s al inicio y ${d.opt("km_split_end_gap_s")} s al final"
+                            "no_speed_samples" -> "sin parciales: Samsung no proporcionó suficientes muestras de velocidad"
+                            "duration_mismatch" -> "sin parciales: hay huecos de tiempo que no se pueden resolver"
+                            "distance_mismatch" -> "sin parciales: distancia reconstruida incompatible con el total"
+                            else -> "sin parciales: ${d.optString("km_split_status")}; consulta Diagnóstico de sincronización en la web"
+                        }
+                        "${row.getString("started_at").take(10)}: $detail."
+                    }
+                    status.text = "Sincronizados ${rows.size} entrenos desde el SDK de Samsung Health. Conservadas sensaciones, notas adicionales y zapatillas.\n$missing sesiones sin distancia o FC media; $noCadence sin cadencia; $noElevation sin desnivel.\nParciales por km calculados en $withKmSplits/${rows.size} entrenos. Son aproximados a partir del registro de velocidad.\n$splitResults\n$noLaps entrenos sin vueltas originales nuevas. Abre la web y pulsa Actualizar."
                 }
             }
         }

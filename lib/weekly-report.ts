@@ -14,7 +14,10 @@ export type SyncedWorkout = {
     cadence_status?: string; cadence_samples?: number;
     elevation_status?: string; elevation_records?: number;
     notes_status?: string; lap_count?: number;
-    km_split_status?: string;
+    reader_version?: string; km_split_status?: string;
+    km_split_time_basis?: string; km_split_edge_estimated_s?: number;
+    km_split_log_count?: number; km_split_speed_count?: number; km_split_hr_count?: number;
+    km_split_start_gap_s?: number | null; km_split_end_gap_s?: number | null;
     km_split_integrated_m?: number | null; km_split_distance_scale?: number | null;
     km_split_covered_s?: number | null; km_split_gap_s?: number; km_split_trailing_s?: number;
     km_splits?: { distance_m: number; duration_s: number; partial: boolean; hr_avg?: number | null }[] | null;
@@ -74,6 +77,8 @@ export function lapReport(w: SyncedWorkout): string[] {
     return [
       'Parciales aproximados por kilómetro (calculados, no importados de Samsung):',
       'Método: integración de muestras de velocidad e interpolación de los cruces de kilómetro. La distancia integrada se ajusta proporcionalmente a la distancia total original; no se ajustan los tiempos al ritmo medio.',
+      ...(details.km_split_time_basis === 'elapsed_time' ? ['Tiempo de los parciales: transcurrido, incluidas las pausas presentes en las muestras. Puede diferir del ritmo activo de Samsung.'] : []),
+      ...((details.km_split_edge_estimated_s ?? 0) > 0 ? [`Se estiman ${numberES(details.km_split_edge_estimated_s!)} s en los extremos usando la velocidad de la muestra más cercana.`] : []),
       ...(details.km_split_integrated_m != null && w.distance_m != null ? [`Distancia integrada antes del ajuste: ${metric(details.km_split_integrated_m, 'm')}; distancia original: ${metric(w.distance_m, 'm')}.`] : []),
       ...((details.km_split_gap_s ?? 0) > 0 ? [`Hay ${durationLabel(details.km_split_gap_s!)} sin muestras: se excluyen como pausas inferidas porque el resto es coherente con la duración original. No es una confirmación de las pausas de Samsung.`] : []),
       ...details.km_splits.map((split, i) => `${split.partial ? `Tramo final ${i + 1}` : `Km ${i + 1}`}: ${metric(split.distance_m, 'm')}; tiempo estimado ${durationLabel(split.duration_s)}; ritmo medio estimado ${paceLabel(split.distance_m, split.duration_s)}${split.hr_avg != null ? `; FC media estimada ${metric(split.hr_avg, "ppm")}` : ""}`),
@@ -91,10 +96,22 @@ export function lapReport(w: SyncedWorkout): string[] {
       `; ritmo medio calculado ${paceLabel(lap.distance_m, seconds)} (${active != null ? 'descontando pausas compartidas' : 'tiempo transcurrido; pausas no verificadas'})`;
   })];
 }
+export function splitDiagnostics(w: SyncedWorkout): string[] {
+  const d = w.sync_details;
+  if (!d?.km_split_status) return ['Esta sincronización no incluye diagnóstico de parciales. Actualiza Running Sync y vuelve a sincronizar.'];
+  return [
+    `Versión de sincronización: ${d.reader_version ?? 'anterior'}. Estado: ${d.km_split_status}.`,
+    ...(d.km_split_status !== 'calculated' ? [splitFailureReason(d.km_split_status)] : []),
+    ...(d.km_split_log_count != null ? [`Muestras recibidas: ${d.km_split_log_count}; con velocidad: ${d.km_split_speed_count ?? 0}; con FC: ${d.km_split_hr_count ?? 0}.`] : []),
+    ...(d.km_split_start_gap_s != null && d.km_split_end_gap_s != null ? [`Sin muestras: ${numberES(d.km_split_start_gap_s)} s al inicio y ${numberES(d.km_split_end_gap_s)} s al final. Se admiten hasta 30 s por extremo y un 2 % de la duración en conjunto.`] : []),
+    ...(d.km_split_covered_s != null ? [`Tiempo de muestras: ${durationLabel(d.km_split_covered_s)}; duración original: ${w.active_duration_s == null ? 'sin dato' : durationLabel(w.active_duration_s)}.`] : []),
+    ...(d.km_split_integrated_m != null ? [`Distancia reconstruida: ${numberES(d.km_split_integrated_m)} m; original: ${w.distance_m == null ? 'sin dato' : numberES(w.distance_m) + ' m'}.`] : []),
+  ];
+}
 function splitFailureReason(status: string): string {
   switch (status) {
     case 'no_speed_samples': return 'Samsung no ha proporcionado suficientes muestras de velocidad';
-    case 'incomplete_edges': return 'faltan muestras al inicio o al final del entreno';
+      case 'incomplete_edges': return 'faltan muestras al inicio o al final del entreno por encima del margen permitido';
     case 'duration_mismatch': return 'el tiempo cubierto por las muestras no coincide suficientemente con la duración original; no se pueden resolver las pausas o los huecos';
     case 'distance_mismatch': return 'la distancia integrada difiere más del 5 % de la original o no hay distancia reconstruible';
     case 'invalid_speed': return 'hay muestras de velocidad inválidas o fuera del rango admitido para running';
