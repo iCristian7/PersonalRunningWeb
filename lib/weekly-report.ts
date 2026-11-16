@@ -1,4 +1,5 @@
 import { analyseExercise, type AnalysisConfig, type TraceSample } from './exercise-analysis.ts';
+import { validateOriginalLaps, type OriginalLaps } from './original-laps.ts';
 
 export type SyncedWorkout = {
   id: string; user_id: string; source_id: string; title: string;
@@ -10,6 +11,8 @@ export type SyncedWorkout = {
   source_notes?: string | null;
   elapsed_duration_s?: number | null;
   sync_details?: {
+    original_laps?: OriginalLaps;
+    report_include_estimates?: boolean;
     exercise_trace?: TraceSample[];
     analysis_config?: AnalysisConfig;
     shared_pauses?: [number, number][];
@@ -76,8 +79,19 @@ export function availabilityLabel(status: string | undefined): string {
   if (status === 'not_shared') return 'sin registros compartidos por Samsung Health en Health Connect';
   return 'no disponible en esta sincronización';
 }
-export function lapReport(w: SyncedWorkout): string[] {
-  const details = w.sync_details;
+export function lapReport(w: SyncedWorkout, options: {includeEstimates?: boolean} = {}): string[] {
+  if (w.sync_details?.original_laps) {
+    try {
+      const table = validateOriginalLaps(w.sync_details.original_laps);
+      if (table.workout_date !== localWorkoutDate(w) || w.distance_m == null || Math.abs(table.session_distance_m-w.distance_m)>Math.max(20,w.distance_m*.005)) throw Error('Sesión distinta');
+      return [
+        table.kind === 'intervals' ? 'Intervalos de la tabla de Samsung Health (transcritos de captura):' : 'Vueltas de la tabla de Samsung Health (transcritas de captura):',
+        'Se conservan los tiempos, distancias, FC y ritmos mostrados por Samsung. Sus valores están redondeados; no se recalculan ni se ajustan al total.',
+        ...table.laps.map(row => `${row.label}: distancia ${metric(row.distance_m,'m')}; tiempo ${durationLabel(row.duration_s)}${row.pace_s_per_km != null ? `; ritmo medio ${paceLabel(1000,row.pace_s_per_km)}` : ''}${row.hr_avg != null ? `; FC media ${metric(row.hr_avg,'ppm')}` : ''}`),
+      ];
+    } catch { return options.includeEstimates === false ? [] : ['Tabla original inválida o de otra sesión. Revisa la importación.']; }
+  }
+  const details = options.includeEstimates === false ? null : w.sync_details;
   if (details?.analysis_config) {
     const config = details.analysis_config;
     const result = analyseExercise(details.exercise_trace ?? [], w.elapsed_duration_s ?? (Date.parse(w.ended_at)-Date.parse(w.started_at))/1000,
@@ -107,7 +121,7 @@ export function lapReport(w: SyncedWorkout): string[] {
   }
   const reason = details?.km_split_status && details.km_split_status !== 'calculated'
     ? [`Parciales por km no calculados: ${splitFailureReason(details.km_split_status)}.`] : [];
-  if (!w.laps?.length) return [...reason, w.sync_details?.provider === 'samsung_sdk' ? 'Vueltas originales: el SDK de Samsung no expone vueltas de running y no se han recibido de Health Connect.' : 'Vueltas: no compartidas en esta sincronización; no se generan vueltas ficticias.'];
+  if (!w.laps?.length) return options.includeEstimates === false ? [] : [...reason, w.sync_details?.provider === 'samsung_sdk' ? 'Vueltas originales: el SDK de Samsung no expone vueltas de running y no se han recibido de Health Connect.' : 'Vueltas: no compartidas en esta sincronización; no se generan vueltas ficticias.'];
   return [...reason, 'Vueltas registradas (no necesariamente series):', 'Fuente de las vueltas: Health Connect; el ritmo de cada vuelta es calculado.', ...w.laps.map((lap, i) => {
     const active = lap.active_duration_s;
     const seconds = active ?? lap.duration_s;
@@ -186,7 +200,7 @@ export function weeklyReport(rows: SyncedWorkout[], date: string): string {
     `Calorías: ${metric(w.calories_kcal, 'kcal')}`,
     ...(w.sensations?.trim() ? [`Sensaciones: ${w.sensations.trim()}`] : []),
     ...(w.shoe?.trim() ? [`Zapatillas: ${w.shoe.trim()}`] : []),
-    ...lapReport(w).map(line => line.split("; ").filter(part => !part.includes("No disponible")).join("; ")),
+    ...lapReport(w, {includeEstimates:w.sync_details?.report_include_estimates === true}).map(line => line.split("; ").filter(part => !part.includes("No disponible")).join("; ")),
     ...(w.source_notes?.trim() ? [`Notas de Samsung Health: ${w.source_notes.trim()}`] : []),
     ...(w.notes?.trim() ? [`Notas adicionales: ${w.notes.trim()}`] : []),
   ].filter(line => !/^(?:Análisis de bloques pendiente:|Cadencia ausente:|Desnivel ausente:|Parciales por km no calculados:|Vueltas originales:|Vueltas: no compartidas)/i.test(line) && !/: No disponible$/.test(line)).filter(line => line !== 'Entreno: ').join('\n'));

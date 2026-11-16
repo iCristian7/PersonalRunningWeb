@@ -28,7 +28,7 @@ export default function ExerciseBlocks({ workout, onSaved }: { workout: SyncedWo
     finally {setBusy(false);}
   }
   return <details className="exercise-editor"><summary>Configurar kilómetros o intervalos</summary>
-    <p>Samsung no exporta el objetivo ni los intervalos del reloj. Indica la estructura realizada para calcular distancia, ritmo y FC por bloque. Los resultados son aproximados.</p>
+    <p>Samsung no exporta el objetivo ni los intervalos del reloj mediante este SDK. Esta reconstrucción es exploratoria: puede diferir de los límites y resultados originales. Para reproducir la tabla de Samsung utiliza «Importar tabla original».</p>
     <div className="health-form">
       <label>Desglose<select className="input" value={config.mode} onChange={e => setConfig(c => ({...c,mode:e.target.value as AnalysisConfig['mode']}))}><option value="kilometres">Cada kilómetro</option><option value="intervals">Bloques de intervalos indicados por mí</option></select></label>
       <label>Reloj de los bloques<select className="input" value={config.clock} onChange={e => setConfig(c => ({...c,clock:e.target.value as AnalysisConfig['clock']}))}>
@@ -44,7 +44,7 @@ export default function ExerciseBlocks({ workout, onSaved }: { workout: SyncedWo
         {config.blocks.map((b,i)=><fieldset className="exercise-block-row" key={i}><legend>Bloque {i+1}</legend><label>Nombre<input className="input" value={b.label} onChange={e=>edit(i,{label:e.target.value})}/></label><label>Medida<select className="input" value={b.basis} onChange={e=>edit(i,{basis:e.target.value as 'distance'|'time'})}><option value="time">Tiempo (segundos)</option><option value="distance">Distancia (metros)</option></select></label><label>Cantidad<input className="input" type="number" min="1" value={b.value} onChange={e=>edit(i,{value:Number(e.target.value)})}/></label><button className="btn" type="button" onClick={()=>setConfig(c=>({...c,blocks:c.blocks.filter((_,j)=>j!==i)}))}>Quitar bloque {i+1}</button></fieldset>)}
         <button className="btn" type="button" onClick={()=>setConfig(c=>({...c,blocks:[...c.blocks,{label:`Bloque ${c.blocks.length+1}`,basis:'time',value:60}]}))}>Añadir bloque</button>
       </>}
-      {preview.error ? <p role="status">{preview.error}</p> : <><p>Vista previa calculada. Guarda para incluirla en el informe.</p>{preview.blocks.map((b,i)=><p key={i}>{b.label}: {Math.round(b.distance)} m · {Math.round(b.seconds)} s · {paceLabel(b.distance,b.seconds)}{b.heartRate != null ? ` · FC ${Math.round(b.heartRate)} ppm` : ''}</p>)}</>}
+      {preview.error ? <p role="status">{preview.error}</p> : <><p>Vista previa calculada. Para exportarla debes guardar y activar «Incluir estimaciones». Una tabla original importada tiene prioridad.</p>{preview.blocks.map((b,i)=><p key={i}>{b.label}: {Math.round(b.distance)} m · {Math.round(b.seconds)} s · {paceLabel(b.distance,b.seconds)}{b.heartRate != null ? ` · FC ${Math.round(b.heartRate)} ppm` : ''}</p>)}</>}
       <button className="btn" type="button" disabled={busy || !!preview.error} onClick={()=>void save()}>{busy?'Guardando…':'Guardar desglose'}</button>
       <p role="status">{message}</p>
     </div>

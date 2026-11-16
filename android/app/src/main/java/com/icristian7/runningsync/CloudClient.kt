@@ -79,8 +79,10 @@ class CloudClient {
             if (match != null) {
                 row.put("source_id", match.sourceId)
                 val previous = existing.single { it.getString("source_id") == match.sourceId }
-                previous.optJSONObject("sync_details")?.optJSONObject("analysis_config")?.let {
-                    row.getJSONObject("sync_details").put("analysis_config", it)
+                previous.optJSONObject("sync_details")?.let { saved ->
+                    for (key in listOf("analysis_config", "original_laps", "report_include_estimates")) {
+                        if (saved.has(key)) row.getJSONObject("sync_details").put(key, saved.get(key))
+                    }
                 }
                 if (!row.has("laps") && (previous.optJSONArray("laps")?.length() ?: 0) > 0)
                     row.getJSONObject("sync_details").put("lap_source", "health_connect_preserved")

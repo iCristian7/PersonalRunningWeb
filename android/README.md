@@ -1,5 +1,13 @@
 # Running Sync (personal Android companion)
 
+## Version 0.9.0: original displayed tables take priority
+
+Comparisons with Samsung's displayed tables demonstrated that integrating sampled speed, inferring pauses and globally scaling distance cannot reproduce the watch's original kilometre/interval boundaries. The web now omits reconstructed splits from the ChatGPT report by default. The user can explicitly opt in per workout; estimates remain available for exploration and are labeled accordingly.
+
+The **Importar tabla original de Samsung** control accepts a JSON table (or array) using `lib/original-laps.ts`'s schema, matches the selected workout by local date and distance, previews the rows, then requires Save. These are explicitly screenshot transcriptions, not SDK exports or automatically verified records. Each displayed duration, distance, heart rate and pace is retained independently; rounding does not trigger ratio recalculation or forced reconciliation with the session total. Missing fields remain omitted. Imported tables take precedence over any reconstruction or manual interval plan.
+
+The 0.9.0 app preserves `original_laps`, `report_include_estimates` and `analysis_config` metadata on re-sync. Install `downloads/RunningSync-0.9.0.apk` before synchronizing again; older APKs do not preserve newly imported tables. No SQL change is required. Private transcriptions prepared from user screenshots belong only in ignored `downloads/`, never in public source or test fixtures. An authenticated real-account import test has not been performed because browser access to the deployment remains blocked.
+
 ## Version 0.8.0: observed-time kilometres and configurable interval blocks
 
 Long gaps now yield explicitly labeled observed-time splits if the remaining observed duration fits the native duration within 2%/10 seconds and reconstructed distance fits within 5%. Gaps are inferred pauses, not verified watch events. There is no scaling of time. Otherwise the reader retains the missing-data diagnosis.

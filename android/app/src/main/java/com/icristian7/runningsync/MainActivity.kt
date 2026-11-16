@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
         fun button(value: String, action: () -> Unit): Button = Button(this).apply {
             text = value; setOnClickListener { action() }; layout.addView(this); controls.add(this)
         }
-        text("Running Sync · 0.8.0", 26f)
+        text("Running Sync · 0.9.0", 26f)
         text("Métricas originales de Samsung Health → tu web. Duración, distancia, velocidad media, cadencia, desnivel, FC, calorías y notas disponibles en el SDK. No se solicitan rutas GPS ni se modifica Samsung Health.")
         status = text("Primero conecta Samsung Health y entra con tu cuenta de entrenos.")
         status.setTextIsSelectable(true)

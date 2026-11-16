@@ -6,6 +6,7 @@ import { getSupabase } from '@/lib/supabase';
 import { localWorkoutDate, workoutPace, durationLabel, durationBasisLabel, availabilityLabel, lapReport, splitDiagnostics, weekDates, weekWorkouts, weeklyReport, type SyncedWorkout } from '@/lib/weekly-report';
 import type { ProfileData } from '@/lib/utils';
 import ExerciseBlocks from '@/components/ExerciseBlocks';
+import OriginalLapsImport from '@/components/OriginalLapsImport';
 
 function errorText(error: { message: string; code?: string }): string {
   if (error.code === '42P01' || error.code === 'PGRST205') return 'Falta crear la tabla de entrenos en Supabase. Ejecuta el archivo de tablas en SQL Editor.';
@@ -43,6 +44,7 @@ function SessionCard({ workout, shoes, onSaved }: { workout: SyncedWorkout; shoe
     <p style={{ whiteSpace: 'pre-wrap' }}><strong>Notas de Samsung Health:</strong> {workout.source_notes || 'No compartidas en esta sincronización'}</p>
     <details><summary>Parciales por km y vueltas</summary>{lapReport(workout).map((line, i) => <p key={i}>{line}</p>)}</details>
     <details><summary>Diagnóstico de sincronización</summary>{splitDiagnostics(workout).map((line, i) => <p key={i}>{line}</p>)}</details>
+    <OriginalLapsImport workout={workout} onSaved={onSaved} />
     <ExerciseBlocks workout={workout} onSaved={onSaved} />
     <form onSubmit={save} className="health-form">
       <label>Sensaciones<input className="input" value={sensations} maxLength={1000} onChange={e => setSensations(e.target.value)} placeholder="Buenas, cansancio, molestias…" /></label>

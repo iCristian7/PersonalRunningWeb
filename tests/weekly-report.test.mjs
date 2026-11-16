@@ -12,7 +12,7 @@ const session = (overrides = {}) => ({
 
 test('elapsed kilometre splits disclose time basis and estimated edges in the report', () => {
   const text = weeklyReport([session({ sync_details: {
-    km_split_status: 'calculated', km_split_time_basis: 'elapsed_time', km_split_edge_estimated_s: 10,
+    report_include_estimates:true, km_split_status: 'calculated', km_split_time_basis: 'elapsed_time', km_split_edge_estimated_s: 10,
     km_splits: [{ distance_m: 1000, duration_s: 500, hr_avg: 145, partial: false }],
   } })], '2026-09-16');
   assert.match(text, /Tiempo de los parciales: transcurrido/);
@@ -22,7 +22,7 @@ test('elapsed kilometre splits disclose time basis and estimated edges in the re
 
 test('user-defined time blocks replace kilometre rows without exporting raw trace', () => {
   const text = weeklyReport([session({ distance_m:2000, elapsed_duration_s:1000, active_duration_s:1000, sync_details:{
-    exercise_trace:Array.from({length:1001},(_,t)=>[t,2,150]),
+    report_include_estimates:true, exercise_trace:Array.from({length:1001},(_,t)=>[t,2,150]),
     analysis_config:{ mode:'intervals',clock:'observed',blocks:[{label:'Trabajo 1',basis:'time',value:480},{label:'Recuperación 1',basis:'time',value:120}] },
     km_split_status:'calculated',km_splits:[{distance_m:1000,duration_s:500,partial:false}],
   } })], '2026-09-16');
@@ -162,7 +162,7 @@ test('SDK workouts preserve the Health Connect lap provenance', () => {
 });
 
 test('report omits empty notes and retains split heart rate and real zero elevation', () => {
- const text = weeklyReport([session({ source_notes: '  ', notes: '', sensations: null, shoe: null, elevation_gain_m: 0, sync_details: { km_split_status: 'calculated', km_splits: [{ distance_m: 1000, duration_s: 360, partial: false, hr_avg: 150 }] } })], '2026-09-16');
+ const text = weeklyReport([session({ source_notes: '  ', notes: '', sensations: null, shoe: null, elevation_gain_m: 0, sync_details: { report_include_estimates:true, km_split_status: 'calculated', km_splits: [{ distance_m: 1000, duration_s: 360, partial: false, hr_avg: 150 }] } })], '2026-09-16');
  assert.doesNotMatch(text, /Notas de Samsung|Notas adicionales|Sensaciones:|Zapatillas:/);
  assert.match(text, /FC media estimada 150 ppm/);
  assert.match(text, /Desnivel positivo: 0 m/);
