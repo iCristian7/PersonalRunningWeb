@@ -17,7 +17,7 @@ export type SyncedWorkout = {
     km_split_status?: string;
     km_split_integrated_m?: number | null; km_split_distance_scale?: number | null;
     km_split_covered_s?: number | null; km_split_gap_s?: number; km_split_trailing_s?: number;
-    km_splits?: { distance_m: number; duration_s: number; partial: boolean }[] | null;
+    km_splits?: { distance_m: number; duration_s: number; partial: boolean; hr_avg?: number | null }[] | null;
   } | null;
   laps: { distance_m: number | null; duration_s: number; active_duration_s?: number | null; started_at?: string; ended_at?: string }[] | null;
 };
@@ -76,7 +76,7 @@ export function lapReport(w: SyncedWorkout): string[] {
       'Método: integración de muestras de velocidad e interpolación de los cruces de kilómetro. La distancia integrada se ajusta proporcionalmente a la distancia total original; no se ajustan los tiempos al ritmo medio.',
       ...(details.km_split_integrated_m != null && w.distance_m != null ? [`Distancia integrada antes del ajuste: ${metric(details.km_split_integrated_m, 'm')}; distancia original: ${metric(w.distance_m, 'm')}.`] : []),
       ...((details.km_split_gap_s ?? 0) > 0 ? [`Hay ${durationLabel(details.km_split_gap_s!)} sin muestras: se excluyen como pausas inferidas porque el resto es coherente con la duración original. No es una confirmación de las pausas de Samsung.`] : []),
-      ...details.km_splits.map((split, i) => `${split.partial ? `Tramo final ${i + 1}` : `Km ${i + 1}`}: ${metric(split.distance_m, 'm')}; tiempo estimado ${durationLabel(split.duration_s)}; ritmo medio estimado ${paceLabel(split.distance_m, split.duration_s)}`),
+      ...details.km_splits.map((split, i) => `${split.partial ? `Tramo final ${i + 1}` : `Km ${i + 1}`}: ${metric(split.distance_m, 'm')}; tiempo estimado ${durationLabel(split.duration_s)}; ritmo medio estimado ${paceLabel(split.distance_m, split.duration_s)}${split.hr_avg != null ? `; FC media estimada ${metric(split.hr_avg, "ppm")}` : ""}`),
       ...((details.km_split_trailing_s ?? 0) > 0.01 ? [`Tiempo sin desplazamiento al final del registro, fuera de los parciales: ${durationLabel(details.km_split_trailing_s!)}.`] : []),
     ];
   }
@@ -147,18 +147,18 @@ export function weeklyReport(rows: SyncedWorkout[], date: string): string {
     `Desnivel positivo: ${metric(w.elevation_gain_m, 'm')}`,
     ...(w.elevation_gain_m == null ? [`Desnivel ausente: ${availabilityLabel(w.sync_details?.elevation_status)}.`] : []),
     `Calorías: ${metric(w.calories_kcal, 'kcal')}`,
-    `Sensaciones: ${w.sensations?.trim() || 'Pendiente de completar'}`,
-    `Zapatillas: ${w.shoe?.trim() || 'Pendiente de completar'}`,
-    ...lapReport(w),
-    `Notas de Samsung Health: ${w.source_notes?.trim() || 'No compartidas en esta sincronización'}`,
+    ...(w.sensations?.trim() ? [`Sensaciones: ${w.sensations.trim()}`] : []),
+    ...(w.shoe?.trim() ? [`Zapatillas: ${w.shoe.trim()}`] : []),
+    ...lapReport(w).map(line => line.split("; ").filter(part => !part.includes("No disponible")).join("; ")),
+    ...(w.source_notes?.trim() ? [`Notas de Samsung Health: ${w.source_notes.trim()}`] : []),
     ...(w.notes?.trim() ? [`Notas adicionales: ${w.notes.trim()}`] : []),
-  ].join('\n'));
+  ].filter(line => !/^(?:Cadencia ausente:|Desnivel ausente:|Parciales por km no calculados:|Vueltas originales:|Vueltas: no compartidas)/i.test(line) && !/: No disponible$/.test(line)).filter(line => line !== 'Entreno: ').join('\n'));
   return [
     `Detalle entrenamientos del ${dateES(start)} al ${dateES(end)}.`,
     'Datos de Samsung Health. Se indica la fuente de cada entreno y la base del ritmo. Los datos no disponibles no se inventan.',
     `Sesiones: ${sessions.length}`,
-    `Distancia total conocida: ${numberES(totalDistance / 1000)} km (${distanceKnown.length}/${sessions.length} sesiones con distancia)`,
-    `Duración importada total conocida: ${durationLabel(totalDuration)} (${durationKnown.length}/${sessions.length} sesiones con duración; revisar la base de tiempos de cada entreno)`,
+    ...(distanceKnown.length ? [`Distancia total conocida: ${numberES(totalDistance / 1000)} km (${distanceKnown.length}/${sessions.length} sesiones con distancia)`] : []),
+    ...(durationKnown.length ? [`Duración importada total conocida: ${durationLabel(totalDuration)} (${durationKnown.length}/${sessions.length} sesiones con duración; revisar la base de tiempos de cada entreno)`] : []),
     '', sections.join('\n\n------------------------------------------\n\n'), '',
     'Analiza esta semana y propón la siguiente teniendo en cuenta mis objetivos, sensaciones y planes anteriores. Señala los datos que falten.',
   ].join('\n');

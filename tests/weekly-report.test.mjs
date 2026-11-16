@@ -58,8 +58,8 @@ test('pace rounding carries seconds into minutes', () => {
 test('unknown metrics stay unknown and totals indicate partial coverage', () => {
   const text = weeklyReport([session(), session({ id: 'missing', started_at: '2026-09-16T08:00:00Z', distance_m: null, active_duration_s: null, hr_avg: null, sensations: null, shoe: null })], '2026-09-16');
   assert.match(text, /8 km \(1\/2 sesiones con distancia\)/);
-  assert.match(text, /FC media: No disponible/);
-  assert.match(text, /Sensaciones: Pendiente de completar/);
+  assert.doesNotMatch(text, /FC media: No disponible/);
+  assert.doesNotMatch(text, /Sensaciones: Pendiente de completar/);
   assert.match(text, /Zapatillas: Trail/);
 });
 test('laps are not incorrectly labeled as interval series', () => {
@@ -94,8 +94,8 @@ test('lap pace uses shared pause-adjusted duration when available', () => {
 
 test('missing permissions are distinguished from missing upstream records', () => {
   const text = weeklyReport([session({ cadence_avg: null, elevation_gain_m: null, sync_details: { cadence_status: 'permission_denied', elevation_status: 'not_shared' } })], '2026-09-16');
-  assert.match(text, /Cadencia ausente: permiso no concedido/);
-  assert.match(text, /Desnivel ausente: sin registros compartidos/);
+  assert.doesNotMatch(text, /Cadencia ausente:/);
+  assert.doesNotMatch(text, /Desnivel ausente:/);
 });
 
 test('Samsung mean speed takes precedence over duration/distance-derived pace', () => {
@@ -120,4 +120,11 @@ test('SDK workouts preserve the Health Connect lap provenance', () => {
   const text = weeklyReport([session({ sync_details: { provider: 'samsung_sdk' }, laps: [{ distance_m: 1000, duration_s: 300 }] })], '2026-09-16');
   assert.match(text, /Fuente de las vueltas: Health Connect/);
   assert.match(text, /ritmo medio calculado 5'00"\/km/);
+});
+
+test('report omits empty notes and retains split heart rate and real zero elevation', () => {
+ const text = weeklyReport([session({ source_notes: '  ', notes: '', sensations: null, shoe: null, elevation_gain_m: 0, sync_details: { km_split_status: 'calculated', km_splits: [{ distance_m: 1000, duration_s: 360, partial: false, hr_avg: 150 }] } })], '2026-09-16');
+ assert.doesNotMatch(text, /Notas de Samsung|Notas adicionales|Sensaciones:|Zapatillas:/);
+ assert.match(text, /FC media estimada 150 ppm/);
+ assert.match(text, /Desnivel positivo: 0 m/);
 });

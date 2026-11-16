@@ -6,8 +6,8 @@ import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.sqrt
 
-data class SpeedPoint(val time: Instant, val metersPerSecond: Double?)
-data class KilometreSplit(val distanceMeters: Double, val seconds: Double, val partial: Boolean)
+data class SpeedPoint(val time: Instant, val metersPerSecond: Double?, val heartRate: Double? = null)
+data class KilometreSplit(val distanceMeters: Double, val seconds: Double, val partial: Boolean, val heartRate: Double? = null)
 data class SplitCalculation(
     val status: String, val splits: List<KilometreSplit> = emptyList(),
     val integratedMeters: Double? = null, val distanceScale: Double? = null,
@@ -39,14 +39,14 @@ object KilometreSplits {
         if (seconds(start, unique.first().time) > MAX_EDGE_SECONDS || seconds(unique.last().time, end) > MAX_EDGE_SECONDS)
             return SplitCalculation("incomplete_edges")
 
-        data class Interval(val seconds: Double, val startSpeed: Double, val endSpeed: Double, val meters: Double)
+        data class Interval(val seconds: Double, val startSpeed: Double, val endSpeed: Double, val meters: Double, val hr0: Double?, val hr1: Double?)
         val intervals = mutableListOf<Interval>()
         var gap = 0.0
         for ((a, b) in unique.zipWithNext()) {
             val dt = seconds(a.time, b.time)
             if (dt > MAX_INTERVAL_SECONDS) { gap += dt; continue }
             val v0 = a.metersPerSecond!!; val v1 = b.metersPerSecond!!
-            intervals.add(Interval(dt, v0, v1, (v0 + v1) * dt / 2.0))
+            intervals.add(Interval(dt, v0, v1, (v0 + v1) * dt / 2.0, a.heartRate, b.heartRate))
         }
         val covered = intervals.sumOf { it.seconds }
         val integrated = intervals.sumOf { it.meters }
@@ -59,22 +59,36 @@ object KilometreSplits {
         var totalMeters = 0.0; var totalSeconds = 0.0
         var lastBoundaryMeters = 0.0; var lastBoundarySeconds = 0.0
         var nextBoundary = 1000.0
+        var hrIntegral = 0.0; var hrSeconds = 0.0
+        fun averageHr(duration: Double): Double? = if (hrSeconds > 0 && hrSeconds >= duration * 0.8) hrIntegral / hrSeconds else null
+        fun addHr(interval: Interval, from: Double, to: Double) {
+            val a = interval.hr0; val b = interval.hr1
+            if (a == null || b == null || !a.isFinite() || !b.isFinite() || a <= 0 || b <= 0) return
+            val slope = (b - a) / interval.seconds
+            hrIntegral += (a + slope * (from + to) / 2) * (to - from)
+            hrSeconds += to - from
+        }
         for (interval in intervals) {
             val adjustedMeters = interval.meters * scale
+            var used = 0.0
             while (interval.meters > 0 && nextBoundary <= distanceMeters + 1e-6 && nextBoundary <= totalMeters + adjustedMeters + 1e-6) {
                 val needed = ((nextBoundary - totalMeters) / scale).coerceIn(0.0, interval.meters)
                 val acceleration = (interval.endSpeed - interval.startSpeed) / interval.seconds
                 val root = sqrt(max(0.0, interval.startSpeed * interval.startSpeed + 2 * acceleration * needed))
                 val at = if (needed <= 1e-9) 0.0 else (2 * needed / (interval.startSpeed + root)).coerceIn(0.0, interval.seconds)
                 val boundarySeconds = totalSeconds + at
-                splits.add(KilometreSplit(nextBoundary - lastBoundaryMeters, boundarySeconds - lastBoundarySeconds, false))
+                addHr(interval, used, at)
+                used = at
+                splits.add(KilometreSplit(nextBoundary - lastBoundaryMeters, boundarySeconds - lastBoundarySeconds, false, averageHr(boundarySeconds - lastBoundarySeconds)))
+                hrIntegral = 0.0; hrSeconds = 0.0
                 lastBoundaryMeters = nextBoundary; lastBoundarySeconds = boundarySeconds
                 nextBoundary += 1000.0
             }
+            addHr(interval, used, interval.seconds)
             totalMeters += adjustedMeters; totalSeconds += interval.seconds
         }
         if (distanceMeters - lastBoundaryMeters > 1e-6) {
-            splits.add(KilometreSplit(distanceMeters - lastBoundaryMeters, totalSeconds - lastBoundarySeconds, true))
+            splits.add(KilometreSplit(distanceMeters - lastBoundaryMeters, totalSeconds - lastBoundarySeconds, true, averageHr(totalSeconds - lastBoundarySeconds)))
             lastBoundarySeconds = totalSeconds
         }
         return SplitCalculation("calculated", splits, integrated, scale, covered, gap, max(0.0, totalSeconds - lastBoundarySeconds))

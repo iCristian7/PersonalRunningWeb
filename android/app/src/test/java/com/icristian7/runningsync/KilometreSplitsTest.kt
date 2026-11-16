@@ -5,6 +5,17 @@ import org.junit.Test
 import java.time.Instant
 
 class KilometreSplitsTest {
+    @Test fun heartRateIsAveragedSeparatelyForEachKilometre() {
+        val points = (0..1000 step 5).map {
+            SpeedPoint(start.plusSeconds(it.toLong()), 2.0, 100.0 + it / 10.0)
+        }
+        val result = calculate(1000, 2000.0, points)
+        assertEquals(125.0, result.splits[0].heartRate!!, 1e-6)
+        assertEquals(175.0, result.splits[1].heartRate!!, 1e-6)
+        assertNull(calculate(500, 1000.0, constant(500)).splits.single().heartRate)
+        val sparse = points.mapIndexed { i, point -> if (i % 2 == 0) point.copy(heartRate = null) else point }
+        assertTrue(calculate(1000, 2000.0, sparse).splits.all { it.heartRate == null })
+    }
     private val start = Instant.parse("2026-01-01T08:00:00Z")
     private fun p(seconds: Long, speed: Double?) = SpeedPoint(start.plusSeconds(seconds), speed)
     private fun constant(end: Int, speed: Double = 2.0) = (0..end step 5).map { p(it.toLong(), speed) }

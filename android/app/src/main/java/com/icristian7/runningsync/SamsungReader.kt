@@ -46,9 +46,9 @@ class SamsungReader(context: Context) {
                     val id = "samsung:${point.uid}:${session.startTime}"
                     val pace = SamsungMetrics.secondsPerKm(session.meanSpeed?.toDouble())
                     val km = KilometreSplits.calculate(session.startTime, session.endTime, session.duration.toMillis() / 1000.0,
-                        session.distance?.toDouble(), session.log.orEmpty().map { SpeedPoint(it.timestamp, it.speed?.toDouble()) })
+                        session.distance?.toDouble(), session.log.orEmpty().map { SpeedPoint(it.timestamp, it.speed?.toDouble(), it.heartRate?.toDouble()) })
                     val details = JSONObject()
-                        .put("reader_version", "0.4.0").put("provider", "samsung_sdk")
+                        .put("reader_version", "0.5.0").put("provider", "samsung_sdk")
                         .put("samsung_id", id).put("duration_basis", "samsung_session_duration")
                         .put("samsung_mean_speed_mps", session.meanSpeed ?: JSONObject.NULL)
                         .put("pace_avg_s_per_km", pace ?: JSONObject.NULL)
@@ -63,7 +63,7 @@ class SamsungReader(context: Context) {
                         .put("km_split_gap_s", km.gapSeconds)
                         .put("km_split_trailing_s", km.trailingSeconds)
                         .put("km_splits", if (km.splits.isEmpty()) JSONObject.NULL else JSONArray(km.splits.map {
-                            JSONObject().put("distance_m", it.distanceMeters).put("duration_s", it.seconds).put("partial", it.partial)
+                            JSONObject().put("distance_m", it.distanceMeters).put("duration_s", it.seconds).put("partial", it.partial).put("hr_avg", it.heartRate ?: JSONObject.NULL)
                         }))
                     rows.add(JSONObject()
                         .put("user_id", userId).put("source", "samsung_health").put("source_id", id)
