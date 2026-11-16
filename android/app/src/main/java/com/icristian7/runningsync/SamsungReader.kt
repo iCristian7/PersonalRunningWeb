@@ -50,7 +50,7 @@ class SamsungReader(context: Context) {
                     val km = KilometreSplits.calculate(session.startTime, session.endTime, session.duration.toMillis() / 1000.0,
                         session.distance?.toDouble(), samples)
                     val details = JSONObject()
-                        .put("reader_version", "0.6.0").put("provider", "samsung_sdk")
+                        .put("reader_version", "0.7.0").put("provider", "samsung_sdk")
                         .put("samsung_id", id).put("duration_basis", "samsung_session_duration")
                         .put("samsung_mean_speed_mps", session.meanSpeed ?: JSONObject.NULL)
                         .put("pace_avg_s_per_km", pace ?: JSONObject.NULL)

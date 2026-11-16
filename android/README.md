@@ -1,5 +1,11 @@
 # Running Sync (personal Android companion)
 
+## Version 0.7.0: bounded interior gaps and separate heart-rate samples
+
+The SDK can deliver heart rate and speed as separate timestamped entries. Heart rate is now interpolated onto speed timestamps only when the surrounding heart-rate observations are at most 30 seconds apart. The existing 80% coverage check remains; long speed gaps do not count toward heart-rate coverage.
+
+Interior speed gaps of up to 120 seconds are integrated using linear interpolation, capped at 120 seconds in total when the trace differs from active duration. Such results use explicitly disclosed elapsed time, including pauses, and retain the 5% original-distance validation. Larger gaps still fail instead of fabricating kilometre times. Install `downloads/RunningSync-0.7.0.apk` and sync again. The previous 0.6.0 gap-exclusion behavior above is superseded by this version.
+
 ## Version 0.6.0: session-edge regression fix
 
 Versions 0.4/0.5 rejected a complete workout if the speed trace started or ended more than two seconds from the session boundary. The new reader estimates small edge offsets using the nearest observed speed, capped at 30 seconds per edge and 2% of original duration overall. It reports the estimated seconds explicitly, does not invent heart rate for these edges, and retains the 5% distance consistency check. Larger missing edges still fail with their exact lengths shown in the app and the web's separate sync diagnostics.

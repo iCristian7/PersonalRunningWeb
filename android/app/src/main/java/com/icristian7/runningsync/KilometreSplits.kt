@@ -28,7 +28,19 @@ object KilometreSplits {
     fun calculate(start: Instant, end: Instant, activeSeconds: Double, distanceMeters: Double?, input: List<SpeedPoint>): SplitCalculation {
         if (distanceMeters == null || !distanceMeters.isFinite() || distanceMeters <= 0 ||
             !activeSeconds.isFinite() || activeSeconds <= 0 || end <= start) return SplitCalculation("missing_totals")
-        val points = input.filter { it.time >= start && it.time <= end && it.metersPerSecond != null }.sortedBy { it.time }
+        val hearts = input.filter { it.heartRate != null && it.heartRate.isFinite() && it.heartRate > 0 }.sortedBy { it.time }
+        fun heartAt(time: Instant): Double? {
+            val index = hearts.binarySearchBy(time) { it.time }
+            if (index >= 0) return hearts[index].heartRate
+            val position = -index - 1
+            val a = hearts.getOrNull(position - 1) ?: return null
+            val b = hearts.getOrNull(position) ?: return null
+            val span = Duration.between(a.time, b.time).toMillis().toDouble()
+            if (span <= 0 || span > 30000) return null
+            return a.heartRate!! + (b.heartRate!! - a.heartRate) * Duration.between(a.time, time).toMillis() / span
+        }
+        val points = input.filter { it.time >= start && it.time <= end && it.metersPerSecond != null }
+            .map { it.copy(heartRate = heartAt(it.time)) }.sortedBy { it.time }
         if (points.size < 2) return SplitCalculation("no_speed_samples")
         if (points.any { !it.metersPerSecond!!.isFinite() || it.metersPerSecond < 0 || it.metersPerSecond > 20 })
             return SplitCalculation("invalid_speed")
@@ -52,7 +64,10 @@ object KilometreSplits {
         var gap = 0.0
         for ((a, b) in unique.zipWithNext()) {
             val dt = seconds(a.time, b.time)
-            if (dt > MAX_INTERVAL_SECONDS) { gap += dt; continue }
+            if (dt > MAX_INTERVAL_SECONDS) {
+                gap += dt
+                if (dt > 120) return SplitCalculation("duration_mismatch", gapSeconds = gap)
+            }
             val v0 = a.metersPerSecond!!; val v1 = b.metersPerSecond!!
             intervals.add(Interval(dt, v0, v1, (v0 + v1) * dt / 2.0, a.heartRate, b.heartRate))
         }
@@ -61,7 +76,7 @@ object KilometreSplits {
         val activeConsistent = abs(covered - activeSeconds) <= max(5.0, activeSeconds * 0.005)
         // With continuous observations we can report elapsed splits even when Samsung's
         // active duration excludes pauses. Do not remove time or rescale it to force a match.
-        if (!activeConsistent && gap > 0)
+        if (!activeConsistent && gap > 120)
             return SplitCalculation("duration_mismatch", integratedMeters = integrated, coveredSeconds = covered, gapSeconds = gap)
         if (integrated <= 0 || abs(integrated - distanceMeters) / distanceMeters > MAX_DISTANCE_ERROR)
             return SplitCalculation("distance_mismatch", integratedMeters = integrated, coveredSeconds = covered, gapSeconds = gap)
@@ -74,7 +89,7 @@ object KilometreSplits {
         fun averageHr(duration: Double): Double? = if (hrSeconds > 0 && hrSeconds >= duration * 0.8) hrIntegral / hrSeconds else null
         fun addHr(interval: Interval, from: Double, to: Double) {
             val a = interval.hr0; val b = interval.hr1
-            if (a == null || b == null || !a.isFinite() || !b.isFinite() || a <= 0 || b <= 0) return
+            if (interval.seconds > MAX_INTERVAL_SECONDS || a == null || b == null || !a.isFinite() || !b.isFinite() || a <= 0 || b <= 0) return
             val slope = (b - a) / interval.seconds
             hrIntegral += (a + slope * (from + to) / 2) * (to - from)
             hrSeconds += to - from
@@ -103,6 +118,6 @@ object KilometreSplits {
             lastBoundarySeconds = totalSeconds
         }
         return SplitCalculation("calculated", splits, integrated, scale, covered, gap, max(0.0, totalSeconds - lastBoundarySeconds),
-            if (activeConsistent) "active_time_consistent" else "elapsed_time", firstGap + lastGap)
+            if (activeConsistent && gap == 0.0) "active_time_consistent" else "elapsed_time", firstGap + lastGap)
     }
 }

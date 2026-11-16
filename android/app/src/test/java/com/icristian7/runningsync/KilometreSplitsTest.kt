@@ -13,7 +13,7 @@ class KilometreSplitsTest {
         assertEquals(125.0, result.splits[0].heartRate!!, 1e-6)
         assertEquals(175.0, result.splits[1].heartRate!!, 1e-6)
         assertNull(calculate(500, 1000.0, constant(500)).splits.single().heartRate)
-        val sparse = points.mapIndexed { i, point -> if (i % 2 == 0) point.copy(heartRate = null) else point }
+        val sparse = points.mapIndexed { i, point -> if (i % 10 != 0) point.copy(heartRate = null) else point }
         assertTrue(calculate(1000, 2000.0, sparse).splits.all { it.heartRate == null })
     }
     private val start = Instant.parse("2026-01-01T08:00:00Z")
@@ -52,13 +52,14 @@ class KilometreSplitsTest {
         assertEquals(750.0, result.splits.single().distanceMeters, 1e-6)
         assertEquals(375.0, result.splits.single().seconds, 1e-6)
     }
-    @Test fun longGapRequiresAgreementWithOriginalActiveTime() {
-        val points = constant(500) + (620..1120 step 5).map { p(it.toLong(), 2.0) }
-        val accepted = calculate(1120, 2000.0, points, active = 1000.0)
-        assertEquals("calculated", accepted.status)
-        assertEquals(120.0, accepted.gapSeconds, 1e-6)
-        assertEquals(listOf(500.0, 500.0), accepted.splits.map { it.seconds })
-        assertEquals("duration_mismatch", calculate(1120, 2000.0, points).status)
+    @Test fun boundedGapUsesElapsedTimeAndSeparateHeartSamples() {
+        val speeds = constant(500) + (560..1060 step 5).map { p(it.toLong(), 2.0) }
+        val hearts = (0..1060 step 5).map { SpeedPoint(start.plusSeconds(it.toLong()), null, 150.0) }
+        val result = calculate(1060, 2120.0, speeds + hearts, active = 1000.0)
+        assertEquals("calculated", result.status)
+        assertEquals("elapsed_time", result.timeBasis)
+        assertEquals(1060.0, result.splits.sumOf { it.seconds }, 1e-6)
+        assertEquals(150.0, result.splits.first().heartRate!!, 1e-6)
     }
     @Test fun rejectsDistanceMismatchRatherThanManufacturingSplits() {
         assertEquals("distance_mismatch", calculate(500, 1200.0, constant(500)).status)

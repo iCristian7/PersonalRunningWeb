@@ -77,10 +77,10 @@ export function lapReport(w: SyncedWorkout): string[] {
     return [
       'Parciales aproximados por kilómetro (calculados, no importados de Samsung):',
       'Método: integración de muestras de velocidad e interpolación de los cruces de kilómetro. La distancia integrada se ajusta proporcionalmente a la distancia total original; no se ajustan los tiempos al ritmo medio.',
-      ...(details.km_split_time_basis === 'elapsed_time' ? ['Tiempo de los parciales: transcurrido, incluidas las pausas presentes en las muestras. Puede diferir del ritmo activo de Samsung.'] : []),
+      ...(details.km_split_time_basis === 'elapsed_time' ? ['Tiempo de los parciales: transcurrido, incluidas las pausas presentes en las muestras; los huecos entre muestras se interpolan. Puede diferir del ritmo activo de Samsung.'] : []),
       ...((details.km_split_edge_estimated_s ?? 0) > 0 ? [`Se estiman ${numberES(details.km_split_edge_estimated_s!)} s en los extremos usando la velocidad de la muestra más cercana.`] : []),
       ...(details.km_split_integrated_m != null && w.distance_m != null ? [`Distancia integrada antes del ajuste: ${metric(details.km_split_integrated_m, 'm')}; distancia original: ${metric(w.distance_m, 'm')}.`] : []),
-      ...((details.km_split_gap_s ?? 0) > 0 ? [`Hay ${durationLabel(details.km_split_gap_s!)} sin muestras: se excluyen como pausas inferidas porque el resto es coherente con la duración original. No es una confirmación de las pausas de Samsung.`] : []),
+      ...((details.km_split_gap_s ?? 0) > 0 && details.km_split_time_basis !== 'elapsed_time' ? [`Hay ${durationLabel(details.km_split_gap_s!)} sin muestras: se excluyen como pausas inferidas porque el resto es coherente con la duración original. No es una confirmación de las pausas de Samsung.`] : []),
       ...details.km_splits.map((split, i) => `${split.partial ? `Tramo final ${i + 1}` : `Km ${i + 1}`}: ${metric(split.distance_m, 'm')}; tiempo estimado ${durationLabel(split.duration_s)}; ritmo medio estimado ${paceLabel(split.distance_m, split.duration_s)}${split.hr_avg != null ? `; FC media estimada ${metric(split.hr_avg, "ppm")}` : ""}`),
       ...((details.km_split_trailing_s ?? 0) > 0.01 ? [`Tiempo sin desplazamiento al final del registro, fuera de los parciales: ${durationLabel(details.km_split_trailing_s!)}.`] : []),
     ];
