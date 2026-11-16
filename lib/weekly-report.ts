@@ -1,3 +1,5 @@
+import { analyseExercise, type AnalysisConfig, type TraceSample } from './exercise-analysis.ts';
+
 export type SyncedWorkout = {
   id: string; user_id: string; source_id: string; title: string;
   started_at: string; ended_at: string; timezone: string;
@@ -8,6 +10,9 @@ export type SyncedWorkout = {
   source_notes?: string | null;
   elapsed_duration_s?: number | null;
   sync_details?: {
+    exercise_trace?: TraceSample[];
+    analysis_config?: AnalysisConfig;
+    shared_pauses?: [number, number][];
     provider?: string; samsung_id?: string; samsung_mean_speed_mps?: number | null;
     pace_avg_s_per_km?: number | null; lap_source?: string;
     duration_basis?: string; pause_segments?: number;
@@ -73,11 +78,26 @@ export function availabilityLabel(status: string | undefined): string {
 }
 export function lapReport(w: SyncedWorkout): string[] {
   const details = w.sync_details;
+  if (details?.analysis_config) {
+    const config = details.analysis_config;
+    const result = analyseExercise(details.exercise_trace ?? [], w.elapsed_duration_s ?? (Date.parse(w.ended_at)-Date.parse(w.started_at))/1000,
+      w.distance_m, config, details.shared_pauses, w.active_duration_s);
+    if (result.error) return [`Análisis de bloques pendiente: ${result.error}`];
+    return [
+      config.mode === 'intervals' ? 'Bloques aproximados según estructura indicada por el usuario (no exportados como intervalos por Samsung):' : 'Parciales aproximados por kilómetro:',
+      `Base de tiempos: ${config.clock === 'elapsed' ? 'transcurrido, incluidas pausas' : config.clock === 'observed' ? 'tiempo observado; huecos excluidos como pausas inferidas, sin confirmación del reloj' : 'tiempo sin las pausas indicadas o compartidas'}.`,
+      `Distancias calculadas integrando velocidad y ajustadas al total original (factor ${numberES(result.scale!)}). Los tiempos no se ajustan al ritmo medio.`,
+      ...(result.edgeSeconds ? [`Extremos estimados: ${numberES(result.edgeSeconds)} s.`] : []),
+      ...(result.gapSeconds ? [`Tiempo de huecos entre muestras: ${durationLabel(result.gapSeconds)}; ${config.clock === 'observed' ? 'excluido del cálculo' : 'interpolado en los tramos no marcados como pausa'}.`] : []),
+      ...result.blocks.map(b => `${b.label}: distancia estimada ${metric(b.distance,'m')}; tiempo ${durationLabel(b.seconds)}${b.distance > 0 ? `; ritmo medio estimado ${paceLabel(b.distance,b.seconds)}` : ''}${b.heartRate != null ? `; FC media estimada ${metric(b.heartRate,'ppm')}` : ''}`),
+    ];
+  }
   if (details?.km_split_status === 'calculated' && details.km_splits?.length) {
     return [
       'Parciales aproximados por kilómetro (calculados, no importados de Samsung):',
       'Método: integración de muestras de velocidad e interpolación de los cruces de kilómetro. La distancia integrada se ajusta proporcionalmente a la distancia total original; no se ajustan los tiempos al ritmo medio.',
       ...(details.km_split_time_basis === 'elapsed_time' ? ['Tiempo de los parciales: transcurrido, incluidas las pausas presentes en las muestras; los huecos entre muestras se interpolan. Puede diferir del ritmo activo de Samsung.'] : []),
+      ...(details.km_split_time_basis === 'observed_time_inferred_pauses' ? ['Tiempo de los parciales: observado. Los huecos se excluyen como pausas inferidas por coherencia con la duración y distancia originales (margen temporal 2 %). Puede diferir del tiempo activo y de las vueltas del reloj.'] : []),
       ...((details.km_split_edge_estimated_s ?? 0) > 0 ? [`Se estiman ${numberES(details.km_split_edge_estimated_s!)} s en los extremos usando la velocidad de la muestra más cercana.`] : []),
       ...(details.km_split_integrated_m != null && w.distance_m != null ? [`Distancia integrada antes del ajuste: ${metric(details.km_split_integrated_m, 'm')}; distancia original: ${metric(w.distance_m, 'm')}.`] : []),
       ...((details.km_split_gap_s ?? 0) > 0 && details.km_split_time_basis !== 'elapsed_time' ? [`Hay ${durationLabel(details.km_split_gap_s!)} sin muestras: se excluyen como pausas inferidas porque el resto es coherente con la duración original. No es una confirmación de las pausas de Samsung.`] : []),
@@ -169,7 +189,7 @@ export function weeklyReport(rows: SyncedWorkout[], date: string): string {
     ...lapReport(w).map(line => line.split("; ").filter(part => !part.includes("No disponible")).join("; ")),
     ...(w.source_notes?.trim() ? [`Notas de Samsung Health: ${w.source_notes.trim()}`] : []),
     ...(w.notes?.trim() ? [`Notas adicionales: ${w.notes.trim()}`] : []),
-  ].filter(line => !/^(?:Cadencia ausente:|Desnivel ausente:|Parciales por km no calculados:|Vueltas originales:|Vueltas: no compartidas)/i.test(line) && !/: No disponible$/.test(line)).filter(line => line !== 'Entreno: ').join('\n'));
+  ].filter(line => !/^(?:Análisis de bloques pendiente:|Cadencia ausente:|Desnivel ausente:|Parciales por km no calculados:|Vueltas originales:|Vueltas: no compartidas)/i.test(line) && !/: No disponible$/.test(line)).filter(line => line !== 'Entreno: ').join('\n'));
   return [
     `Detalle entrenamientos del ${dateES(start)} al ${dateES(end)}.`,
     'Datos de Samsung Health. Se indica la fuente de cada entreno y la base del ritmo. Los datos no disponibles no se inventan.',

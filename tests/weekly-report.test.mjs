@@ -20,6 +20,25 @@ test('elapsed kilometre splits disclose time basis and estimated edges in the re
   assert.match(text, /Km 1:.*8'20.*FC media estimada 145 ppm/);
 });
 
+test('user-defined time blocks replace kilometre rows without exporting raw trace', () => {
+  const text = weeklyReport([session({ distance_m:2000, elapsed_duration_s:1000, active_duration_s:1000, sync_details:{
+    exercise_trace:Array.from({length:1001},(_,t)=>[t,2,150]),
+    analysis_config:{ mode:'intervals',clock:'observed',blocks:[{label:'Trabajo 1',basis:'time',value:480},{label:'Recuperación 1',basis:'time',value:120}] },
+    km_split_status:'calculated',km_splits:[{distance_m:1000,duration_s:500,partial:false}],
+  } })], '2026-09-16');
+  assert.match(text,/estructura indicada por el usuario/);
+  assert.match(text,/Trabajo 1: distancia estimada 960 m; tiempo 0:08:00; ritmo medio estimado 8'20.*FC media estimada 150 ppm/);
+  assert.match(text,/Recuperación 1: distancia estimada 240 m/);
+  assert.doesNotMatch(text,/Km 1:|exercise_trace/);
+});
+
+test('observed-time kilometre report retains the inferred-pause disclosure', () => {
+  const text = lapReport(session({sync_details:{km_split_status:'calculated',km_split_time_basis:'observed_time_inferred_pauses',km_split_gap_s:300,km_splits:[{distance_m:1000,duration_s:500,partial:false}]}})).join('\n');
+  assert.match(text,/pausas inferidas/);
+  assert.match(text,/margen temporal 2 %/);
+  assert.match(text,/0:05:00/);
+});
+
 test('sync diagnostics show edge gaps separately from the clean ChatGPT report', () => {
   const row = session({ sync_details: { reader_version: '0.6.0', km_split_status: 'incomplete_edges',
     km_split_start_gap_s: 45, km_split_end_gap_s: 2, km_split_log_count: 100 } });

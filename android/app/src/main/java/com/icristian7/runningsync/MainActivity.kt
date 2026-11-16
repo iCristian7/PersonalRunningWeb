@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
         fun button(value: String, action: () -> Unit): Button = Button(this).apply {
             text = value; setOnClickListener { action() }; layout.addView(this); controls.add(this)
         }
-        text("Running Sync · 0.7.0", 26f)
+        text("Running Sync · 0.8.0", 26f)
         text("Métricas originales de Samsung Health → tu web. Duración, distancia, velocidad media, cadencia, desnivel, FC, calorías y notas disponibles en el SDK. No se solicitan rutas GPS ni se modifica Samsung Health.")
         status = text("Primero conecta Samsung Health y entra con tu cuenta de entrenos.")
         status.setTextIsSelectable(true)
@@ -111,8 +111,12 @@ class MainActivity : ComponentActivity() {
                         kotlin.math.abs(java.time.Duration.between(Instant.parse(row.getString("ended_at")), Instant.parse(lap.getString("ended_at"))).toMillis()) <= 2000
                     }
                     if (matches.size == 1) {
-                        row.put("laps", matches.single().getJSONArray("laps"))
-                        row.getJSONObject("sync_details").put("lap_source", "health_connect")
+                        val matched = matches.single()
+                        row.getJSONObject("sync_details").put("shared_pauses", matched.getJSONArray("shared_pauses"))
+                        if (matched.getJSONArray("laps").length() > 0) {
+                            row.put("laps", matched.getJSONArray("laps"))
+                            row.getJSONObject("sync_details").put("lap_source", "health_connect")
+                        }
                     }
                 }
                 if (rows.isEmpty()) status.text = "No se encontraron carreras en Samsung Health para esta semana. Sincroniza primero el reloj con Samsung Health y revisa la semana elegida."

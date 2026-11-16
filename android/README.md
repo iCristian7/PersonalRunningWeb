@@ -1,5 +1,15 @@
 # Running Sync (personal Android companion)
 
+## Version 0.8.0: observed-time kilometres and configurable interval blocks
+
+Long gaps now yield explicitly labeled observed-time splits if the remaining observed duration fits the native duration within 2%/10 seconds and reconstructed distance fits within 5%. Gaps are inferred pauses, not verified watch events. There is no scaling of time. Otherwise the reader retains the missing-data diagnosis.
+
+For owner-private recalculation the app now uploads the exercise's relative timestamps, speeds and heart-rate observations into `sync_details.exercise_trace`. This supersedes the earlier versions' summary-only storage statements. No route, coordinates, password or additional credentials are stored in these samples. The existing owner RLS applies and the new privacy screen explains storage. No new SQL migration is required. Optional Health Connect reading also collects explicitly shared pauses even when no laps exist.
+
+Samsung SDK 1.1.0 exports neither the running objective nor interval-block definitions. The web's **Configurar kilómetros o intervalos** editor lets the owner provide mixed distance/time blocks, preview their measured distance/pace/heart rate, choose elapsed time, verified active time or approximate observed time, and save the configuration for subsequent reports. The three-by-eight-minute template is a user-selected example, never automatically asserted as the watch's workout. Active time requires shared/provided pauses or explicit confirmation that there were none; inferred pauses are labeled and not guaranteed to align with the watch's interval alerts. Structures extending beyond the trace fail instead of inventing the remaining blocks. Resynchronization preserves `analysis_config`, sensations, shoes and manual notes.
+
+Install `downloads/RunningSync-0.8.0.apk`, synchronize again, refresh the web, then configure the interval session and save. Authenticated live inspection was blocked by browser policy; no account credentials or real workout samples were committed to the repository. Synthetic tests cover long pause gaps, independent speed/heart streams, mixed blocks, verified pauses, incomplete structures and missing heart coverage.
+
 ## Version 0.7.0: bounded interior gaps and separate heart-rate samples
 
 The SDK can deliver heart rate and speed as separate timestamped entries. Heart rate is now interpolated onto speed timestamps only when the surrounding heart-rate observations are at most 30 seconds apart. The existing 80% coverage check remains; long speed gaps do not count toward heart-rate coverage.

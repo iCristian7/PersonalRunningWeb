@@ -50,7 +50,7 @@ class SamsungReader(context: Context) {
                     val km = KilometreSplits.calculate(session.startTime, session.endTime, session.duration.toMillis() / 1000.0,
                         session.distance?.toDouble(), samples)
                     val details = JSONObject()
-                        .put("reader_version", "0.7.0").put("provider", "samsung_sdk")
+                        .put("reader_version", "0.8.0").put("provider", "samsung_sdk")
                         .put("samsung_id", id).put("duration_basis", "samsung_session_duration")
                         .put("samsung_mean_speed_mps", session.meanSpeed ?: JSONObject.NULL)
                         .put("pace_avg_s_per_km", pace ?: JSONObject.NULL)
@@ -64,6 +64,15 @@ class SamsungReader(context: Context) {
                         .put("km_split_log_count", samples.size)
                         .put("km_split_speed_count", samples.count { it.metersPerSecond != null })
                         .put("km_split_hr_count", samples.count { it.heartRate != null })
+                        // Owner-private samples for recalculation and user-defined interval blocks.
+                        // Relative seconds only: no route, coordinates or account information.
+                        .put("exercise_trace", JSONArray(samples.filter {
+                            it.time >= session.startTime && it.time <= session.endTime
+                        }.map {
+                            JSONArray().put(Duration.between(session.startTime, it.time).toMillis() / 1000.0)
+                                .put(it.metersPerSecond?.takeIf { v -> v.isFinite() } ?: JSONObject.NULL)
+                                .put(it.heartRate?.takeIf { v -> v.isFinite() && v > 0 } ?: JSONObject.NULL)
+                        }))
                         .put("km_split_start_gap_s", speedSamples.minByOrNull { it.time }?.let { Duration.between(session.startTime, it.time).toMillis() / 1000.0 } ?: JSONObject.NULL)
                         .put("km_split_end_gap_s", speedSamples.maxByOrNull { it.time }?.let { Duration.between(it.time, session.endTime).toMillis() / 1000.0 } ?: JSONObject.NULL)
                         .put("km_split_integrated_m", km.integratedMeters ?: JSONObject.NULL)

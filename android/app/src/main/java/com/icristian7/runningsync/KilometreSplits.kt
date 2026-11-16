@@ -61,22 +61,30 @@ object KilometreSplits {
 
         data class Interval(val seconds: Double, val startSpeed: Double, val endSpeed: Double, val meters: Double, val hr0: Double?, val hr1: Double?)
         val intervals = mutableListOf<Interval>()
+        val observedIntervals = mutableListOf<Interval>()
         var gap = 0.0
         for ((a, b) in unique.zipWithNext()) {
             val dt = seconds(a.time, b.time)
             if (dt > MAX_INTERVAL_SECONDS) {
                 gap += dt
-                if (dt > 120) return SplitCalculation("duration_mismatch", gapSeconds = gap)
             }
             val v0 = a.metersPerSecond!!; val v1 = b.metersPerSecond!!
             intervals.add(Interval(dt, v0, v1, (v0 + v1) * dt / 2.0, a.heartRate, b.heartRate))
+            if (dt <= MAX_INTERVAL_SECONDS) observedIntervals.add(intervals.last())
         }
+        // Watch pause gaps often contain no speed observations. Preserve observed-time
+        // splits only if both observed duration and distance independently fit the summary.
+        val observedTime = observedIntervals.sumOf { it.seconds }
+        val observedDistance = observedIntervals.sumOf { it.meters }
+        val inferPauses = gap > 0 && abs(observedTime-activeSeconds) <= max(10.0, activeSeconds*.02) &&
+            observedDistance > 0 && abs(observedDistance-distanceMeters)/distanceMeters <= MAX_DISTANCE_ERROR
+        if (inferPauses) { intervals.clear(); intervals.addAll(observedIntervals) }
         val covered = intervals.sumOf { it.seconds }
         val integrated = intervals.sumOf { it.meters }
         val activeConsistent = abs(covered - activeSeconds) <= max(5.0, activeSeconds * 0.005)
         // With continuous observations we can report elapsed splits even when Samsung's
         // active duration excludes pauses. Do not remove time or rescale it to force a match.
-        if (!activeConsistent && gap > 120)
+        if (!inferPauses && gap > 120)
             return SplitCalculation("duration_mismatch", integratedMeters = integrated, coveredSeconds = covered, gapSeconds = gap)
         if (integrated <= 0 || abs(integrated - distanceMeters) / distanceMeters > MAX_DISTANCE_ERROR)
             return SplitCalculation("distance_mismatch", integratedMeters = integrated, coveredSeconds = covered, gapSeconds = gap)
@@ -118,6 +126,6 @@ object KilometreSplits {
             lastBoundarySeconds = totalSeconds
         }
         return SplitCalculation("calculated", splits, integrated, scale, covered, gap, max(0.0, totalSeconds - lastBoundarySeconds),
-            if (activeConsistent && gap == 0.0) "active_time_consistent" else "elapsed_time", firstGap + lastGap)
+            if (inferPauses) "observed_time_inferred_pauses" else if (activeConsistent && gap == 0.0) "active_time_consistent" else "elapsed_time", firstGap + lastGap)
     }
 }

@@ -18,7 +18,9 @@ class PrivacyActivity : Activity() {
 
                 Se leen carreras de Samsung Health de la semana elegida mediante Samsung Health Data SDK: fecha, duración, distancia, velocidad media, frecuencia cardíaca, cadencia, desnivel, calorías y comentarios cuando estén disponibles. Las vueltas se añaden desde Health Connect si autorizas esa lectura. No se guardan ni envían rutas GPS ni se escribe en Samsung Health o Health Connect. Las notas de Samsung se conservan aparte de las notas adicionales escritas en la web.
 
-                Al pulsar Sincronizar, los resúmenes se envían mediante HTTPS al proyecto mepqzdircyjyrzkdncju.supabase.co y se guardan vinculados a tu cuenta. No se envían automáticamente a ChatGPT. Tú decides cuándo copiar el resumen y compartirlo.
+                Para recalcular kilómetros y bloques de intervalos en tu cuenta privada, se conservan muestras de velocidad y pulso con segundos relativos al inicio, además de las pausas que Health Connect comparta. No se incluyen coordenadas. El SDK no exporta el objetivo de intervalos: la estructura se indica manualmente en la web.
+
+                Al pulsar Sincronizar, los resúmenes y estas muestras se envían mediante HTTPS al proyecto mepqzdircyjyrzkdncju.supabase.co y se guardan vinculados a tu cuenta. No se envían automáticamente a ChatGPT. Tú decides cuándo copiar el resumen y compartirlo.
 
                 La contraseña y los tokens no se guardan en archivos ni registros. La sesión permanece en memoria mientras la app está abierta. La base de datos limita el acceso a las sesiones de su propietario.
 

@@ -61,6 +61,15 @@ class KilometreSplitsTest {
         assertEquals(1060.0, result.splits.sumOf { it.seconds }, 1e-6)
         assertEquals(150.0, result.splits.first().heartRate!!, 1e-6)
     }
+    @Test fun longPauseLikeGapCanYieldObservedSplitsWithIndependentConsistencyChecks() {
+        val points = constant(500) + (800..1300 step 5).map { SpeedPoint(start.plusSeconds(it.toLong()),2.0,150.0) }
+        val result = calculate(1300,2000.0,points,active=1000.0)
+        assertEquals("calculated",result.status)
+        assertEquals("observed_time_inferred_pauses",result.timeBasis)
+        assertEquals(300.0,result.gapSeconds,1e-6)
+        assertEquals(listOf(500.0,500.0),result.splits.map { it.seconds })
+        assertEquals("duration_mismatch",calculate(1300,2000.0,points,active=800.0).status)
+    }
     @Test fun rejectsDistanceMismatchRatherThanManufacturingSplits() {
         assertEquals("distance_mismatch", calculate(500, 1200.0, constant(500)).status)
     }
